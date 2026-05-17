@@ -1,0 +1,158 @@
+{
+  "entity_word": "pln",
+  "mention_count": 113,
+  "co_occurring_entities": [
+    {
+      "word": "jakarta",
+      "entity_group": "GPE",
+      "co_occurrence_count": 45
+    },
+    {
+      "word": "pt pln ( persero )",
+      "entity_group": "ORG",
+      "co_occurrence_count": 18
+    },
+    {
+      "word": "republika. co. id",
+      "entity_group": "ORG",
+      "co_occurrence_count": 10
+    },
+    {
+      "word": "kamis ( 23 / 4 / 2026 )",
+      "entity_group": "DAT",
+      "co_occurrence_count": 6
+    },
+    {
+      "word": "100 persen",
+      "entity_group": "PRC",
+      "co_occurrence_count": 6
+    },
+    {
+      "word": "kamis ( 23 / 4 )",
+      "entity_group": "DAT",
+      "co_occurrence_count": 6
+    },
+    {
+      "word": "plts",
+      "entity_group": "PRD",
+      "co_occurrence_count": 5
+    },
+    {
+      "word": "pt pln",
+      "entity_group": "ORG",
+      "co_occurrence_count": 4
+    },
+    {
+      "word": "esdm",
+      "entity_group": "ORG",
+      "co_occurrence_count": 4
+    },
+    {
+      "word": "kamis",
+      "entity_group": "DAT",
+      "co_occurrence_count": 3
+    }
+  ],
+  "links": [
+    {
+      "source": "jakarta",
+      "target": "pln",
+      "weight": 120
+    },
+    {
+      "source": "100 persen",
+      "target": "jakarta",
+      "weight": 22
+    },
+    {
+      "source": "pln",
+      "target": "plts",
+      "weight": 18
+    },
+    {
+      "source": "pln",
+      "target": "pt pln ( persero )",
+      "weight": 18
+    },
+    {
+      "source": "jakarta",
+      "target": "pt pln ( persero )",
+      "weight": 17
+    },
+    {
+      "source": "100 persen",
+      "target": "pln",
+      "weight": 14
+    },
+    {
+      "source": "jakarta",
+      "target": "kamis ( 23 / 4 / 2026 )",
+      "weight": 12
+    },
+    {
+      "source": "jakarta",
+      "target": "kamis ( 23 / 4 )",
+      "weight": 11
+    },
+    {
+      "source": "pln",
+      "target": "republika. co. id",
+      "weight": 11
+    },
+    {
+      "source": "jakarta",
+      "target": "republika. co. id",
+      "weight": 11
+    },
+    {
+      "source": "plts",
+      "target": "pulau tunda",
+      "weight": 10
+    },
+    {
+      "source": "13",
+      "target": "pln",
+      "weight": 10
+    },
+    {
+      "source": "100 persen",
+      "target": "pt pln ( persero )",
+      "weight": 8
+    },
+    {
+      "source": "pertamina",
+      "target": "pln",
+      "weight": 8
+    },
+    {
+      "source": "pln",
+      "target": "unops",
+      "weight": 8
+    },
+    {
+      "source": "kamis ( 23 / 4 / 2026 )",
+      "target": "pln",
+      "weight": 7
+    },
+    {
+      "source": "listrik",
+      "target": "pln",
+      "weight": 7
+    },
+    {
+      "source": "esdm",
+      "target": "pln",
+      "weight": 7
+    },
+    {
+      "source": "kamis ( 23 / 4 )",
+      "target": "pln",
+      "weight": 7
+    },
+    {
+      "source": "pt pln ( persero )",
+      "target": "republika. co. id",
+      "weight": 7
+    }
+  ]
+}

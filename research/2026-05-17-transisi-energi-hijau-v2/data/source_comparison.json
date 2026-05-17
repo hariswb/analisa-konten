@@ -1,0 +1,458 @@
+[
+  {
+    "source": "kompas",
+    "article_count": 16,
+    "avg_sentiment_score": -4.69,
+    "sentiment_distribution": {
+      "positive": 4,
+      "negative": 12,
+      "neutral": 0,
+      "total": 16
+    },
+    "top_entities": [
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 6
+      },
+      {
+        "word": "indosaku",
+        "entity_group": "ORG",
+        "count": 3
+      },
+      {
+        "word": "ojk",
+        "entity_group": "ORG",
+        "count": 2
+      },
+      {
+        "word": "mobil",
+        "entity_group": "PRD",
+        "count": 2
+      },
+      {
+        "word": "pasar kemis",
+        "entity_group": "LOC",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "source": "detik_berita",
+    "article_count": 10,
+    "avg_sentiment_score": -3.3,
+    "sentiment_distribution": {
+      "positive": 2,
+      "negative": 7,
+      "neutral": 1,
+      "total": 10
+    },
+    "top_entities": [
+      {
+        "word": "polisi",
+        "entity_group": "NOR",
+        "count": 3
+      },
+      {
+        "word": "semarang",
+        "entity_group": "GPE",
+        "count": 2
+      },
+      {
+        "word": "ambulans",
+        "entity_group": "PRD",
+        "count": 2
+      },
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 2
+      },
+      {
+        "word": "sleman",
+        "entity_group": "GPE",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "source": "kumparan",
+    "article_count": 9,
+    "avg_sentiment_score": -6.89,
+    "sentiment_distribution": {
+      "positive": 2,
+      "negative": 7,
+      "neutral": 0,
+      "total": 9
+    },
+    "top_entities": [
+      {
+        "word": "polisi",
+        "entity_group": "NOR",
+        "count": 4
+      },
+      {
+        "word": "mobil",
+        "entity_group": "PRD",
+        "count": 2
+      },
+      {
+        "word": "4",
+        "entity_group": "CRD",
+        "count": 1
+      },
+      {
+        "word": "babel",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "5",
+        "entity_group": "CRD",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "media_indonesia",
+    "article_count": 6,
+    "avg_sentiment_score": -0.67,
+    "sentiment_distribution": {
+      "positive": 3,
+      "negative": 2,
+      "neutral": 1,
+      "total": 6
+    },
+    "top_entities": [
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 2
+      },
+      {
+        "word": "22 juni",
+        "entity_group": "DAT",
+        "count": 1
+      },
+      {
+        "word": "247",
+        "entity_group": "CRD",
+        "count": 1
+      },
+      {
+        "word": "bappebti",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "206",
+        "entity_group": "CRD",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "cnbc_market",
+    "article_count": 5,
+    "avg_sentiment_score": -6.8,
+    "sentiment_distribution": {
+      "positive": 1,
+      "negative": 3,
+      "neutral": 1,
+      "total": 5
+    },
+    "top_entities": [
+      {
+        "word": "ojk",
+        "entity_group": "ORG",
+        "count": 3
+      },
+      {
+        "word": "daring",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "debt",
+        "entity_group": "PRD",
+        "count": 1
+      },
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "af",
+        "entity_group": "PER",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "detik_finance",
+    "article_count": 5,
+    "avg_sentiment_score": -0.2,
+    "sentiment_distribution": {
+      "positive": 2,
+      "negative": 3,
+      "neutral": 0,
+      "total": 5
+    },
+    "top_entities": [
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 3
+      },
+      {
+        "word": "indosaku",
+        "entity_group": "ORG",
+        "count": 2
+      },
+      {
+        "word": "semarang",
+        "entity_group": "GPE",
+        "count": 2
+      },
+      {
+        "word": "18 / 4 )",
+        "entity_group": "DAT",
+        "count": 1
+      },
+      {
+        "word": "dc",
+        "entity_group": "ORG",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "liputan6_news",
+    "article_count": 5,
+    "avg_sentiment_score": -12.4,
+    "sentiment_distribution": {
+      "positive": 0,
+      "negative": 5,
+      "neutral": 0,
+      "total": 5
+    },
+    "top_entities": [
+      {
+        "word": "polisi",
+        "entity_group": "NOR",
+        "count": 2
+      },
+      {
+        "word": "debt collector pinjol",
+        "entity_group": "ORG",
+        "count": 2
+      },
+      {
+        "word": "damkar kota semarang",
+        "entity_group": "NOR",
+        "count": 1
+      },
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "debt collec",
+        "entity_group": "ORG",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "tirto",
+    "article_count": 4,
+    "avg_sentiment_score": -5.25,
+    "sentiment_distribution": {
+      "positive": 1,
+      "negative": 3,
+      "neutral": 0,
+      "total": 4
+    },
+    "top_entities": [
+      {
+        "word": "ojk",
+        "entity_group": "ORG",
+        "count": 3
+      },
+      {
+        "word": "indosaku",
+        "entity_group": "ORG",
+        "count": 2
+      },
+      {
+        "word": "cakung",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "debt",
+        "entity_group": "PRD",
+        "count": 1
+      },
+      {
+        "word": "deb",
+        "entity_group": "PRD",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "cnn_ekonomi",
+    "article_count": 3,
+    "avg_sentiment_score": 6.67,
+    "sentiment_distribution": {
+      "positive": 3,
+      "negative": 0,
+      "neutral": 0,
+      "total": 3
+    },
+    "top_entities": [
+      {
+        "word": "indosaku",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "ketua meti",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "meti",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "norman ginting",
+        "entity_group": "PER",
+        "count": 1
+      },
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "cnbc_news",
+    "article_count": 3,
+    "avg_sentiment_score": -17.67,
+    "sentiment_distribution": {
+      "positive": 0,
+      "negative": 3,
+      "neutral": 0,
+      "total": 3
+    },
+    "top_entities": [
+      {
+        "word": "purbaya",
+        "entity_group": "PER",
+        "count": 2
+      },
+      {
+        "word": "3",
+        "entity_group": "CRD",
+        "count": 1
+      },
+      {
+        "word": "asia tenggara",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "global debt monitor",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "20",
+        "entity_group": "CRD",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "republika",
+    "article_count": 3,
+    "avg_sentiment_score": 9.67,
+    "sentiment_distribution": {
+      "positive": 2,
+      "negative": 1,
+      "neutral": 0,
+      "total": 3
+    },
+    "top_entities": [
+      {
+        "word": "republika. co. id",
+        "entity_group": "ORG",
+        "count": 2
+      },
+      {
+        "word": "b50",
+        "entity_group": "PRD",
+        "count": 1
+      },
+      {
+        "word": "direktur",
+        "entity_group": "NOR",
+        "count": 1
+      },
+      {
+        "word": "ebt",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "50 persen",
+        "entity_group": "PRC",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "cnn_nasional",
+    "article_count": 3,
+    "avg_sentiment_score": -11.0,
+    "sentiment_distribution": {
+      "positive": 0,
+      "negative": 3,
+      "neutral": 0,
+      "total": 3
+    },
+    "top_entities": [
+      {
+        "word": "4",
+        "entity_group": "CRD",
+        "count": 1
+      },
+      {
+        "word": "debt collec",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "debt collector",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "empat",
+        "entity_group": "CRD",
+        "count": 1
+      },
+      {
+        "word": "26",
+        "entity_group": "CRD",
+        "count": 1
+      }
+    ]
+  }
+]
