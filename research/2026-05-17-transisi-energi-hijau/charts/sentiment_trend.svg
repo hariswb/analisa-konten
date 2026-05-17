@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+<rect width="900" height="400" fill="#f8f9fa"/>
+<text x="450.0" y="25" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#333">Daily Sentiment Trend — Transisi Energi Hijau</text>
+<line x1="60" y1="340.0" x2="870" y2="340.0" stroke="#ddd" stroke-width="0.5"/>
+<text x="52" y="344.0" text-anchor="end" font-family="sans-serif" font-size="10" fill="#999">0</text>
+<line x1="60" y1="275.48387096774195" x2="870" y2="275.48387096774195" stroke="#ddd" stroke-width="0.5"/>
+<text x="52" y="279.48387096774195" text-anchor="end" font-family="sans-serif" font-size="10" fill="#999">20</text>
+<line x1="60" y1="210.96774193548387" x2="870" y2="210.96774193548387" stroke="#ddd" stroke-width="0.5"/>
+<text x="52" y="214.96774193548387" text-anchor="end" font-family="sans-serif" font-size="10" fill="#999">40</text>
+<line x1="60" y1="146.45161290322582" x2="870" y2="146.45161290322582" stroke="#ddd" stroke-width="0.5"/>
+<text x="52" y="150.45161290322582" text-anchor="end" font-family="sans-serif" font-size="10" fill="#999">60</text>
+<line x1="60" y1="81.93548387096774" x2="870" y2="81.93548387096774" stroke="#ddd" stroke-width="0.5"/>
+<text x="52" y="85.93548387096774" text-anchor="end" font-family="sans-serif" font-size="10" fill="#999">80</text>
+<path d="M60.0,175.48387096774195 L87.0,243.22580645161293 L114.0,252.9032258064516 L141.0,204.51612903225808 L168.0,156.1290322580645 L195.0,94.83870967741933 L222.0,88.38709677419354 L249.0,201.29032258064518 L276.0,269.0322580645161 L303.0,275.48387096774195 L330.0,230.32258064516128 L357.0,236.77419354838707 L384.0,227.09677419354838 L411.0,201.29032258064518 L438.0,275.48387096774195 L465.0,233.5483870967742 L492.0,294.83870967741933 L519.0,120.64516129032256 L546.0,204.51612903225808 L573.0,233.5483870967742 L600.0,249.67741935483872 L627.0,210.96774193548387 L654.0,310.9677419354839 L681.0,310.9677419354839 L708.0,223.8709677419355 L735.0,204.51612903225808 L762.0,149.67741935483872 L789.0,252.9032258064516 L816.0,281.93548387096774 L843.0,317.4193548387097 L870.0,307.741935483871" stroke="#e74c3c" stroke-width="2" fill="none"/>
+<circle cx="60.0" cy="175.48387096774195" r="2.5" fill="#e74c3c"/>
+<circle cx="87.0" cy="243.22580645161293" r="2.5" fill="#e74c3c"/>
+<circle cx="114.0" cy="252.9032258064516" r="2.5" fill="#e74c3c"/>
+<circle cx="141.0" cy="204.51612903225808" r="2.5" fill="#e74c3c"/>
+<circle cx="168.0" cy="156.1290322580645" r="2.5" fill="#e74c3c"/>
+<circle cx="195.0" cy="94.83870967741933" r="2.5" fill="#e74c3c"/>
+<circle cx="222.0" cy="88.38709677419354" r="2.5" fill="#e74c3c"/>
+<circle cx="249.0" cy="201.29032258064518" r="2.5" fill="#e74c3c"/>
+<circle cx="276.0" cy="269.0322580645161" r="2.5" fill="#e74c3c"/>
+<circle cx="303.0" cy="275.48387096774195" r="2.5" fill="#e74c3c"/>
+<circle cx="330.0" cy="230.32258064516128" r="2.5" fill="#e74c3c"/>
+<circle cx="357.0" cy="236.77419354838707" r="2.5" fill="#e74c3c"/>
+<circle cx="384.0" cy="227.09677419354838" r="2.5" fill="#e74c3c"/>
+<circle cx="411.0" cy="201.29032258064518" r="2.5" fill="#e74c3c"/>
+<circle cx="438.0" cy="275.48387096774195" r="2.5" fill="#e74c3c"/>
+<circle cx="465.0" cy="233.5483870967742" r="2.5" fill="#e74c3c"/>
+<circle cx="492.0" cy="294.83870967741933" r="2.5" fill="#e74c3c"/>
+<circle cx="519.0" cy="120.64516129032256" r="2.5" fill="#e74c3c"/>
+<circle cx="546.0" cy="204.51612903225808" r="2.5" fill="#e74c3c"/>
+<circle cx="573.0" cy="233.5483870967742" r="2.5" fill="#e74c3c"/>
+<circle cx="600.0" cy="249.67741935483872" r="2.5" fill="#e74c3c"/>
+<circle cx="627.0" cy="210.96774193548387" r="2.5" fill="#e74c3c"/>
+<circle cx="654.0" cy="310.9677419354839" r="2.5" fill="#e74c3c"/>
+<circle cx="681.0" cy="310.9677419354839" r="2.5" fill="#e74c3c"/>
+<circle cx="708.0" cy="223.8709677419355" r="2.5" fill="#e74c3c"/>
+<circle cx="735.0" cy="204.51612903225808" r="2.5" fill="#e74c3c"/>
+<circle cx="762.0" cy="149.67741935483872" r="2.5" fill="#e74c3c"/>
+<circle cx="789.0" cy="252.9032258064516" r="2.5" fill="#e74c3c"/>
+<circle cx="816.0" cy="281.93548387096774" r="2.5" fill="#e74c3c"/>
+<circle cx="843.0" cy="317.4193548387097" r="2.5" fill="#e74c3c"/>
+<circle cx="870.0" cy="307.741935483871" r="2.5" fill="#e74c3c"/>
+<path d="M60.0,217.41935483870967 L87.0,220.6451612903226 L114.0,236.77419354838707 L141.0,136.7741935483871 L168.0,243.22580645161293 L195.0,172.25806451612905 L222.0,207.74193548387098 L249.0,230.32258064516128 L276.0,291.61290322580646 L303.0,269.0322580645161 L330.0,210.96774193548387 L357.0,278.7096774193548 L384.0,162.5806451612903 L411.0,210.96774193548387 L438.0,259.35483870967744 L465.0,262.5806451612903 L492.0,275.48387096774195 L519.0,165.8064516129032 L546.0,220.6451612903226 L573.0,214.19354838709677 L600.0,201.29032258064518 L627.0,149.67741935483872 L654.0,281.93548387096774 L681.0,304.51612903225805 L708.0,204.51612903225808 L735.0,246.4516129032258 L762.0,110.96774193548387 L789.0,246.4516129032258 L816.0,256.1290322580645 L843.0,301.2903225806452 L870.0,294.83870967741933" stroke="#2ecc71" stroke-width="2" fill="none"/>
+<circle cx="60.0" cy="217.41935483870967" r="2.5" fill="#2ecc71"/>
+<circle cx="87.0" cy="220.6451612903226" r="2.5" fill="#2ecc71"/>
+<circle cx="114.0" cy="236.77419354838707" r="2.5" fill="#2ecc71"/>
+<circle cx="141.0" cy="136.7741935483871" r="2.5" fill="#2ecc71"/>
+<circle cx="168.0" cy="243.22580645161293" r="2.5" fill="#2ecc71"/>
+<circle cx="195.0" cy="172.25806451612905" r="2.5" fill="#2ecc71"/>
+<circle cx="222.0" cy="207.74193548387098" r="2.5" fill="#2ecc71"/>
+<circle cx="249.0" cy="230.32258064516128" r="2.5" fill="#2ecc71"/>
+<circle cx="276.0" cy="291.61290322580646" r="2.5" fill="#2ecc71"/>
+<circle cx="303.0" cy="269.0322580645161" r="2.5" fill="#2ecc71"/>
+<circle cx="330.0" cy="210.96774193548387" r="2.5" fill="#2ecc71"/>
+<circle cx="357.0" cy="278.7096774193548" r="2.5" fill="#2ecc71"/>
+<circle cx="384.0" cy="162.5806451612903" r="2.5" fill="#2ecc71"/>
+<circle cx="411.0" cy="210.96774193548387" r="2.5" fill="#2ecc71"/>
+<circle cx="438.0" cy="259.35483870967744" r="2.5" fill="#2ecc71"/>
+<circle cx="465.0" cy="262.5806451612903" r="2.5" fill="#2ecc71"/>
+<circle cx="492.0" cy="275.48387096774195" r="2.5" fill="#2ecc71"/>
+<circle cx="519.0" cy="165.8064516129032" r="2.5" fill="#2ecc71"/>
+<circle cx="546.0" cy="220.6451612903226" r="2.5" fill="#2ecc71"/>
+<circle cx="573.0" cy="214.19354838709677" r="2.5" fill="#2ecc71"/>
+<circle cx="600.0" cy="201.29032258064518" r="2.5" fill="#2ecc71"/>
+<circle cx="627.0" cy="149.67741935483872" r="2.5" fill="#2ecc71"/>
+<circle cx="654.0" cy="281.93548387096774" r="2.5" fill="#2ecc71"/>
+<circle cx="681.0" cy="304.51612903225805" r="2.5" fill="#2ecc71"/>
+<circle cx="708.0" cy="204.51612903225808" r="2.5" fill="#2ecc71"/>
+<circle cx="735.0" cy="246.4516129032258" r="2.5" fill="#2ecc71"/>
+<circle cx="762.0" cy="110.96774193548387" r="2.5" fill="#2ecc71"/>
+<circle cx="789.0" cy="246.4516129032258" r="2.5" fill="#2ecc71"/>
+<circle cx="816.0" cy="256.1290322580645" r="2.5" fill="#2ecc71"/>
+<circle cx="843.0" cy="301.2903225806452" r="2.5" fill="#2ecc71"/>
+<circle cx="870.0" cy="294.83870967741933" r="2.5" fill="#2ecc71"/>
+<text x="60.0" y="358" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666" transform="rotate(-40,60.0,358)">04-17</text>
+<text x="195.0" y="358" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666" transform="rotate(-40,195.0,358)">04-22</text>
+<text x="330.0" y="358" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666" transform="rotate(-40,330.0,358)">04-27</text>
+<text x="465.0" y="358" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666" transform="rotate(-40,465.0,358)">05-02</text>
+<text x="600.0" y="358" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666" transform="rotate(-40,600.0,358)">05-07</text>
+<text x="735.0" y="358" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666" transform="rotate(-40,735.0,358)">05-12</text>
+<text x="870.0" y="358" text-anchor="end" font-family="sans-serif" font-size="9" fill="#666" transform="rotate(-40,870.0,358)">05-17</text>
+<rect x="720" y="40" width="14" height="14" fill="#2ecc71" rx="2"/>
+<text x="740" y="52" font-family="sans-serif" font-size="12" fill="#333">Positive</text>
+<rect x="720" y="62" width="14" height="14" fill="#e74c3c" rx="2"/>
+<text x="740" y="74" font-family="sans-serif" font-size="12" fill="#333">Negative</text>
+</svg>
