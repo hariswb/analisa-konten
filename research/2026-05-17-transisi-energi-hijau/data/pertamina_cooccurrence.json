@@ -1,0 +1,233 @@
+{
+  "entity_word": "pertamina",
+  "mention_count": 307,
+  "co_occurring_entities": [
+    {
+      "word": "bbm",
+      "entity_group": "PRD",
+      "co_occurrence_count": 62
+    },
+    {
+      "word": "lpg",
+      "entity_group": "PRD",
+      "co_occurrence_count": 25
+    },
+    {
+      "word": "indonesia",
+      "entity_group": "GPE",
+      "co_occurrence_count": 23
+    },
+    {
+      "word": "republika. co. id",
+      "entity_group": "ORG",
+      "co_occurrence_count": 22
+    },
+    {
+      "word": "jakarta",
+      "entity_group": "GPE",
+      "co_occurrence_count": 21
+    },
+    {
+      "word": "pertamina dex",
+      "entity_group": "PRD",
+      "co_occurrence_count": 19
+    },
+    {
+      "word": "pertamax turbo",
+      "entity_group": "PRD",
+      "co_occurrence_count": 17
+    },
+    {
+      "word": "pertamax",
+      "entity_group": "PRD",
+      "co_occurrence_count": 16
+    },
+    {
+      "word": "dua",
+      "entity_group": "CRD",
+      "co_occurrence_count": 16
+    },
+    {
+      "word": "pt pertamina ( persero )",
+      "entity_group": "ORG",
+      "co_occurrence_count": 15
+    },
+    {
+      "word": "bbm nonsubsidi",
+      "entity_group": "PRD",
+      "co_occurrence_count": 14
+    },
+    {
+      "word": "dexlite",
+      "entity_group": "PRD",
+      "co_occurrence_count": 14
+    },
+    {
+      "word": "pemerintah",
+      "entity_group": "NOR",
+      "co_occurrence_count": 13
+    },
+    {
+      "word": "minyak mentah",
+      "entity_group": "PRD",
+      "co_occurrence_count": 12
+    },
+    {
+      "word": "18 april 2026",
+      "entity_group": "DAT",
+      "co_occurrence_count": 12
+    }
+  ],
+  "links": [
+    {
+      "source": "bbm",
+      "target": "pertamina",
+      "weight": 132
+    },
+    {
+      "source": "lpg",
+      "target": "pertamina",
+      "weight": 45
+    },
+    {
+      "source": "indonesia",
+      "target": "pertamina",
+      "weight": 43
+    },
+    {
+      "source": "pertamax",
+      "target": "pertamina",
+      "weight": 37
+    },
+    {
+      "source": "pertamina",
+      "target": "solar",
+      "weight": 32
+    },
+    {
+      "source": "migas",
+      "target": "pertamina",
+      "weight": 30
+    },
+    {
+      "source": "pemerintah",
+      "target": "pertamina",
+      "weight": 30
+    },
+    {
+      "source": "dua",
+      "target": "pertamina",
+      "weight": 28
+    },
+    {
+      "source": "pertamina",
+      "target": "republika. co. id",
+      "weight": 27
+    },
+    {
+      "source": "pertamina",
+      "target": "sp",
+      "weight": 27
+    },
+    {
+      "source": "jakarta",
+      "target": "pertamina",
+      "weight": 26
+    },
+    {
+      "source": "bbm nonsubsidi",
+      "target": "pertamina",
+      "weight": 25
+    },
+    {
+      "source": "pertamina",
+      "target": "pertamina dex",
+      "weight": 25
+    },
+    {
+      "source": "pertamax turbo",
+      "target": "pertamina",
+      "weight": 25
+    },
+    {
+      "source": "minyak mentah",
+      "target": "pertamina",
+      "weight": 22
+    },
+    {
+      "source": "minyak",
+      "target": "pertamina",
+      "weight": 22
+    },
+    {
+      "source": "dexlite",
+      "target": "pertamina",
+      "weight": 21
+    },
+    {
+      "source": "mou",
+      "target": "pertamina",
+      "weight": 20
+    },
+    {
+      "source": "12 kg",
+      "target": "lpg",
+      "weight": 20
+    },
+    {
+      "source": "bbm subsidi",
+      "target": "pertamina",
+      "weight": 19
+    },
+    {
+      "source": "bp",
+      "target": "pertamina",
+      "weight": 19
+    },
+    {
+      "source": "12 kg",
+      "target": "pertamina",
+      "weight": 19
+    },
+    {
+      "source": "pertamina",
+      "target": "pt pertamina",
+      "weight": 19
+    },
+    {
+      "source": "18 april 2026",
+      "target": "pertamina",
+      "weight": 18
+    },
+    {
+      "source": "eog resources",
+      "target": "pertamina",
+      "weight": 18
+    },
+    {
+      "source": "bbm",
+      "target": "lpg",
+      "weight": 18
+    },
+    {
+      "source": "118 ribu",
+      "target": "pertamina",
+      "weight": 18
+    },
+    {
+      "source": "lanzatech",
+      "target": "pertamina",
+      "weight": 17
+    },
+    {
+      "source": "dexlite",
+      "target": "pertamax turbo",
+      "weight": 17
+    },
+    {
+      "source": "bioetanol",
+      "target": "pertamina",
+      "weight": 17
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "entity_word": "ebt",
+  "mention_count": 2,
+  "co_occurring_entities": [
+    {
+      "word": "17 persen",
+      "entity_group": "PRC",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "bank dunia",
+      "entity_group": "ORG",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "energi baru terbarukan",
+      "entity_group": "PRD",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "energi nuklir",
+      "entity_group": "PRD",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "federasi rusia",
+      "entity_group": "GPE",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "kazan",
+      "entity_group": "GPE",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "lpg",
+      "entity_group": "PRD",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "pemerintah republik indonesia",
+      "entity_group": "NOR",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "republika. co. id",
+      "entity_group": "ORG",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "ri",
+      "entity_group": "GPE",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "rusia",
+      "entity_group": "GPE",
+      "co_occurrence_count": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "ebt",
+      "target": "ri",
+      "weight": 4
+    },
+    {
+      "source": "energi baru terbarukan",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "federasi rusia",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "pemerintah republik indonesia",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "republika. co. id",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "rusia",
+      "weight": 2
+    },
+    {
+      "source": "kazan",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "bank dunia",
+      "target": "ebt",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "energi baru terbarukan",
+      "weight": 2
+    },
+    {
+      "source": "energi nuklir",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "lpg",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "17 persen",
+      "target": "bank dunia",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "energi nuklir",
+      "weight": 2
+    },
+    {
+      "source": "pemerintah republik indonesia",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "federasi rusia",
+      "weight": 2
+    },
+    {
+      "source": "republika. co. id",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "kazan",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "lpg",
+      "weight": 2
+    },
+    {
+      "source": "ri",
+      "target": "rusia",
+      "weight": 2
+    },
+    {
+      "source": "federasi rusia",
+      "target": "rusia",
+      "weight": 1
+    },
+    {
+      "source": "kazan",
+      "target": "lpg",
+      "weight": 1
+    },
+    {
+      "source": "kazan",
+      "target": "pemerintah republik indonesia",
+      "weight": 1
+    },
+    {
+      "source": "kazan",
+      "target": "republika. co. id",
+      "weight": 1
+    },
+    {
+      "source": "kazan",
+      "target": "rusia",
+      "weight": 1
+    },
+    {
+      "source": "lpg",
+      "target": "pemerintah republik indonesia",
+      "weight": 1
+    },
+    {
+      "source": "lpg",
+      "target": "republika. co. id",
+      "weight": 1
+    },
+    {
+      "source": "pemerintah republik indonesia",
+      "target": "republika. co. id",
+      "weight": 1
+    },
+    {
+      "source": "pemerintah republik indonesia",
+      "target": "rusia",
+      "weight": 1
+    },
+    {
+      "source": "republika. co. id",
+      "target": "rusia",
+      "weight": 1
+    },
+    {
+      "source": "lpg",
+      "target": "rusia",
+      "weight": 1
+    }
+  ]
+}

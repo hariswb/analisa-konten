@@ -1,0 +1,21 @@
+{
+  "entity_word": "ebt",
+  "by_source": {
+    "kumparan": [
+      {
+        "framing_phrase": "logam naik tajam dipicu perang ledakan permintaan",
+        "article_count": 1
+      }
+    ],
+    "republika": [
+      {
+        "framing_phrase": "nuklir lng lpg hingga energi baru terbarukan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "rirusia perluas kerja sama nuklir lng",
+        "article_count": 1
+      }
+    ]
+  }
+}

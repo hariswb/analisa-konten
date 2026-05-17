@@ -1,0 +1,597 @@
+{
+  "entity_word": "nikel",
+  "by_source": {
+    "cnbc_market": [
+      {
+        "framing_phrase": "global naik ke level tertinggi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "rp2932 triliun didorong oleh segmen emas",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "susanto sebagai tersangka korupsi dalam pengelolaan pertambangan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "tembus rekor tertinggi 2 tahun target bahlil",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "total harta rp4 miliar",
+        "article_count": 1
+      }
+    ],
+    "cnbc_news": [
+      {
+        "framing_phrase": "alas kaki tambah pundipundi ke surplus",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "alasan pemerintah ubah tarif royalti emas tembaga",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "asosiasi penambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "berlaku pada juni 2026",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "buka jalan elektrifikasi di sektor tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "cs bakal diubah pengusaha buka suara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "cs ini alasannya",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "cs ri 2026 melejit tembus segini",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "filipina bahlil mau dorong kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "harga acuan ratarata emas tembaga",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "hasil kenaikan tarif royalti batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "impor sulfur dari arab cs terganggu industri",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia apni dan philippine nickel industry association",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia terancam krisis sulfur untuk hilirisasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "insentif ini mempertimbangkan kandungan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "insentif ppn dtp 40100 mulai juni",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "lihat buktinya harga ratarata",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "melejit di tahun ini lihat buktinya",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "mengalami kenaikan ini buktinya",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "pemain utama industri baterai kendaraan listrik berbasis",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "pembuka jalan elektrifikasi di sektor pertambangan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "pemerintah mau ubah royalti emas tembaga",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "pemerintah siap ubah tarif royalti emas tembaga",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "penerapan bea keluar batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "potensi pengembangan ev di industri tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "profit tax untuk sektor batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "ri dan filipina bersatu siap jadi poros",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "royalti emas tembaga",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "royalti untuk komoditas emas tembaga timah",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "seiring dengan bea keluar untuk kompensasi subsidi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "sulfur yang dapat berdampak pada program hilirisasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "tarif royalti untuk perusahaan tambang emas tembaga",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "terapkan pajak baru ke batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "terapkan windfall tax target awal industri",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "timah alami kenaikan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "timah bakal diubah",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "timah ini bocoran perubahannya",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "transformasi elektrifikasi di industri tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "video purbaya mimpi industri baterai",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "waspada krisis sulfur mengintai ri hilirisasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "yudhi sadewa berencana menghidupkan kendaraan listrik berbasis",
+        "article_count": 1
+      }
+    ],
+    "cnn_ekonomi": [
+      {
+        "framing_phrase": "bahlil buka suara soal peluang kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "lahadalia buka suara soal isu kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "membentuk koridor industri terintegrasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "memperkuat rantai pasok mineral kritis global",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "perkuat rantai pasok global",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "purbaya incar windfall tax",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "purbaya tengah mengkaji pengenaan windfall tax",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "rifilipina sepakat bangun koridor",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "rifilipina yang mencuat menjelang kunjungan presiden prabowo",
+        "article_count": 1
+      }
+    ],
+    "cnn_nasional": [
+      {
+        "framing_phrase": "ditetapkan tersangka korupsi terkait tata kelola tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "duduk perkara korupsi tata kelola tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "jerat ketua ombudsman",
+        "article_count": 1
+      }
+    ],
+    "detik_berita": [
+      {
+        "framing_phrase": "ketua ombudsman hery susanto di kasus korupsi",
+        "article_count": 1
+      }
+    ],
+    "detik_finance": [
+      {
+        "framing_phrase": "bahlil bukabukaan soal opsi kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "bertahan 11",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "energi dan sumber daya mineral esdm cadangan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "filipina menjalin kerja sama operasional industri",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia berpotensi melakukan kerja sama hilirisasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia dan filipina menjalin kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia dan filipina sepakat kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "kemandirian energi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "memperkuat rantai pasok global",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "pemerintah diminta geber lifting ekosistem industri baterai",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "pengusaha produk",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "ri filipina sepakat kerja sama hilirisasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "ri terancam habis dalam 11",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "rifilipina gandeng tangan jadi poros",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "t dkft bagi dividen rp70saham dari kinerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "targetnya dua negara bisa menjadi poros",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "tingkatkan produksi migas dan hilirisasi batubara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "tunda kenaikan tarif royalti tambang emas",
+        "article_count": 1
+      }
+    ],
+    "kompas": [
+      {
+        "framing_phrase": "antam mulai hitung dampaknya",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "bahlil menunda penerapan kenaikan royalti tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "biaya operasional perusahaan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "capai rp 415 triliun",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "ekspor ri kuartal i 2026 naik tipis",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "emas setelah menerima masukan dari pelaku",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "hery susanto yang jadi tersangka kasus pertambangan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "hery susanto yang terjerat kasus dugaan korupsi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "kenaikan royalti tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "menghitung dampak kenaikan tarif royalti emas",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "miliar didorong kuat oleh industri pengolahan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "pemerintah menunda bea keluar batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "permintaan batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "potensi penerimaan rp 200 triliun melayang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "primadona serap investasi rp 415",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "prospektif kebutuhan kontraktor tambang diproyeksi melonjak",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "purbaya tunda bea keluar batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "timah dan aluminium jadi penopang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "triliun di kuartal i 2026 investasi hilirisasi",
+        "article_count": 1
+      }
+    ],
+    "kumparan": [
+      {
+        "framing_phrase": "13 persen",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "14 persen",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "bara melesat 323 persen",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "batu bara tercatat mengalami kenaikan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "bersih tapi tak mau bayar harga hilirisasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "diproyeksi tetap kuat didukung permintaan batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "dorong hilirisasi subsidi mobil listrik prioritaskan baterai",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "filipina di ktt asean",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "harga komoditas",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "harga komoditas minyak mentah bervariasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "ilegal di konawe tak jadi diperiksa polisi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia buka peluang kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia diproyeksi tetap kuat didorong tingginya permintaan",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "insentif otomotif menunggu laporan ke presiden",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "khusus jenis wti sementara batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "komoditas lain seperti batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "komoditas minyak mentah cpo batu bara",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "kompak menguat",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "mobil listrik akan disesuaikan jenis baterai berbasis",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "optimasi sumber daya strategis",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "purbaya subsidi mobil listrik berbasis",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "sanksi perihal sim subsidi mobil listrik berbasis",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "sim subsidi ev berbasis",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "tahap pembahasan dengan esdm",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "tersangka tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "timah turun",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "timur kiprah perempuan kawal keselamatansosial di industri",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "turun 1 persen timah anjlok 2 persen",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "windfall tax untuk komoditas batu bara",
+        "article_count": 1
+      }
+    ],
+    "media_indonesia": [
+      {
+        "framing_phrase": "global meningkat pt vale buktikan operasi tambang",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "global terus meningkat seiring percepatan transisi energi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "meningkat indonesia kian kuasai pasar globa",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "selaras dengan kelestarian lingkungan",
+        "article_count": 1
+      }
+    ],
+    "republika": [
+      {
+        "framing_phrase": "berdampak pada denyut ekonomi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "ekosistem kendaraan listrik electric vehicleev hilirisasi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "republikacoid jakarta perlambatan aktivitas industri",
+        "article_count": 1
+      }
+    ],
+    "tempo_bisnis": [
+      {
+        "framing_phrase": "dinilai akan menjadi poros cadangan dan produksi",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesiafilipina sepakati kerja sama di industri",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "terpisahkan bagi dunia",
+        "article_count": 1
+      }
+    ],
+    "tirto": [
+      {
+        "framing_phrase": "asean 2026 rifilipina sepakati kerja sama industri",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "bahlil sebut kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "fokus mengembangkan bisnis hilirisasi terutama terkait komoditas",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "indonesia dan filipina tandatangani kerja",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "ktt asean 2026 integrasikan pasokan filipina",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "padat karya bkpm evaluasi insentif buat industri",
+        "article_count": 1
+      },
+      {
+        "framing_phrase": "rifilipina bentuknya b2b",
+        "article_count": 1
+      }
+    ]
+  }
+}

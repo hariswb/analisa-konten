@@ -1,0 +1,233 @@
+{
+  "entity_word": "nikel",
+  "mention_count": 49,
+  "co_occurring_entities": [
+    {
+      "word": "indonesia",
+      "entity_group": "GPE",
+      "co_occurrence_count": 14
+    },
+    {
+      "word": "batu bara",
+      "entity_group": "PRD",
+      "co_occurrence_count": 10
+    },
+    {
+      "word": "filipina",
+      "entity_group": "GPE",
+      "co_occurrence_count": 6
+    },
+    {
+      "word": "purba",
+      "entity_group": "PER",
+      "co_occurrence_count": 4
+    },
+    {
+      "word": "ri",
+      "entity_group": "NOR",
+      "co_occurrence_count": 4
+    },
+    {
+      "word": "cpo",
+      "entity_group": "PRD",
+      "co_occurrence_count": 4
+    },
+    {
+      "word": "pemerintah",
+      "entity_group": "NOR",
+      "co_occurrence_count": 4
+    },
+    {
+      "word": "minyak mentah",
+      "entity_group": "PRD",
+      "co_occurrence_count": 3
+    },
+    {
+      "word": "timah",
+      "entity_group": "PRD",
+      "co_occurrence_count": 3
+    },
+    {
+      "word": "hery susanto",
+      "entity_group": "PER",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "dua",
+      "entity_group": "CRD",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "1 persen",
+      "entity_group": "PRC",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "ev",
+      "entity_group": "PRD",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "emas",
+      "entity_group": "PRD",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "baterai nikel",
+      "entity_group": "PRD",
+      "co_occurrence_count": 2
+    }
+  ],
+  "links": [
+    {
+      "source": "indonesia",
+      "target": "nikel",
+      "weight": 25
+    },
+    {
+      "source": "filipina",
+      "target": "nikel",
+      "weight": 24
+    },
+    {
+      "source": "batu bara",
+      "target": "nikel",
+      "weight": 20
+    },
+    {
+      "source": "nikel",
+      "target": "ri",
+      "weight": 16
+    },
+    {
+      "source": "filipina",
+      "target": "indonesia",
+      "weight": 13
+    },
+    {
+      "source": "filipina",
+      "target": "ri",
+      "weight": 11
+    },
+    {
+      "source": "nikel",
+      "target": "tembaga",
+      "weight": 8
+    },
+    {
+      "source": "batu bara",
+      "target": "bisnis # text",
+      "weight": 7
+    },
+    {
+      "source": "nikel",
+      "target": "timah",
+      "weight": 7
+    },
+    {
+      "source": "nikel",
+      "target": "pemerintah",
+      "weight": 7
+    },
+    {
+      "source": "indonesia",
+      "target": "ri",
+      "weight": 7
+    },
+    {
+      "source": "202",
+      "target": "nikel",
+      "weight": 7
+    },
+    {
+      "source": "batu bara",
+      "target": "minyak mentah",
+      "weight": 6
+    },
+    {
+      "source": "batu bara",
+      "target": "cpo",
+      "weight": 6
+    },
+    {
+      "source": "bisnis # text",
+      "target": "minyak mentah",
+      "weight": 6
+    },
+    {
+      "source": "filipina",
+      "target": "ktt asean 2026",
+      "weight": 6
+    },
+    {
+      "source": "minyak mentah",
+      "target": "nikel",
+      "weight": 6
+    },
+    {
+      "source": "nikel",
+      "target": "purba",
+      "weight": 6
+    },
+    {
+      "source": "bisnis # text",
+      "target": "nikel",
+      "weight": 6
+    },
+    {
+      "source": "hery susanto",
+      "target": "nikel",
+      "weight": 6
+    },
+    {
+      "source": "bisnis # text",
+      "target": "cpo",
+      "weight": 5
+    },
+    {
+      "source": "cpo",
+      "target": "nikel",
+      "weight": 5
+    },
+    {
+      "source": "cpo",
+      "target": "timah",
+      "weight": 4
+    },
+    {
+      "source": "cpo",
+      "target": "minyak mentah",
+      "weight": 4
+    },
+    {
+      "source": "cs",
+      "target": "sulfur",
+      "weight": 4
+    },
+    {
+      "source": "##am",
+      "target": "nikel",
+      "weight": 4
+    },
+    {
+      "source": "dbs research",
+      "target": "ev",
+      "weight": 4
+    },
+    {
+      "source": "ant",
+      "target": "nikel",
+      "weight": 4
+    },
+    {
+      "source": "##am",
+      "target": "ant",
+      "weight": 4
+    },
+    {
+      "source": "arab",
+      "target": "cs",
+      "weight": 4
+    }
+  ]
+}
