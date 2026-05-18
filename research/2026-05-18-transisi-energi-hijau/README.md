@@ -52,7 +52,7 @@ Pertamina mendapat sentimen positif (+5.65, 20 artikel) karena diversifikasi hij
 | Tempo Nasional | 6 | 6P/0N/0Neu | Pertamina, EBT |
 | CNN Nasional | 5 | 0P/5N/0Neu | Bali, debt collector noise |
 
-> **Catatan noise:** Beberapa artikel non-energi ikut tertangkap karena keyword matching broad (misal artikel "debt collector" yang kebetulan mengandung kata "karbon" atau "motor").
+> **Catatan noise:** 70 artikel (12.9%) adalah noise debt-collector — keyword matching broad menangkapnya karena "karbon" muncul di artikel fidusia. Data entity-level dari bulk_sentiment (NLP-based) tidak terpengaruh: "karbon" di judul=82 artikel, tapi bulk_sentiment hanya 5 artikel benar-benar tentang karbon — selisih 77 adalah noise keyword.
 
 ### Tren Mingguan
 
@@ -223,7 +223,9 @@ Volume pemberitaan puncak pada minggu **20 April** (104 artikel) — bertepatan 
 ## 6. Keterbatasan
 
 - `articles/search` telah dipaginasi penuh — semua 542 artikel tersedia di `data/articles_list.json`
-- Keyword matching masih menghasilkan noise ("debt collector", "polisi", "motor")
+- Keyword matching masih menghasilkan noise ~70 artikel (12.9%) — mayoritas debt-collector yang mengandung kata "karbon" atau "motor". Data entity-level (bulk_sentiment, entities/*) menggunakan NLP sehingga terbebas dari noise ini.
+- **Validasi:** Source counts dari articles_list (542 artikel) cocok 100% dengan source_comparison.json — data agregat API sudah benar sejak awal.
+- Weekly trend dari topic_trend.json juga terverifikasi dari tanggal publikasi 542 artikel.
 - `framing/{word}/by-source` masih bermasalah untuk beberapa entitas — fallback ke `framing/{word}`
 - `relations/network` bersifat cross-channel — tidak 100% spesifik topik
 
@@ -238,7 +240,7 @@ Volume pemberitaan puncak pada minggu **20 April** (104 artikel) — bertepatan 
 - `data/framing_data.json` — framing phrases per entitas
 - `data/relations_actor_{name}.json` — data aktor untuk PLTS, PLN, Pertamina, Prabowo, Bahlil, ESDM
 - `data/relations_network.json` — network graph
-- `data/articles_list.json` — 50 artikel teratas (dari 542)
+- `data/articles_list.json` — full 542 artikel (dipaginasi penuh via offset)
 
 ---
 
