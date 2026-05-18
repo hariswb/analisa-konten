@@ -3,454 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transisi Energi Hijau di Indonesia — Analisa Konten</title>
+    <meta name="description" content="Analisis pemberitaan transisi energi hijau di media Indonesia — 542 artikel dari 14 media nasional (Mar-Mei 2026). PLTS dominan positif, PLTSA outlier negatif.">
+    <title>Transisi Energi Hijau — Analisa Konten</title>
     <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --heading: #f0f6fc;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --red: #f85149;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0d1117; color: #c9d1d9; line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-        .container { max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem; }
-        h1 { color: #58a6ff; font-size: 2rem; margin-bottom: 0.5rem; }
-        h2 { color: #58a6ff; font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 0.8rem; border-bottom: 1px solid #21262d; padding-bottom: 0.3rem; }
-        h3 { color: #c9d1d9; font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-        p { margin-bottom: 1rem; }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        strong { color: #f0f6fc; }
-        em { color: #8b949e; }
-        ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
-        li { margin-bottom: 0.4rem; }
-        hr { border: none; border-top: 1px solid #21262d; margin: 2rem 0; }
-        blockquote {
-            border-left: 3px solid #30363d; padding: 0.8rem 1rem;
-            background: #161b22; border-radius: 6px; margin-bottom: 1rem;
-            color: #8b949e; font-size: 0.9rem;
+        h1 { color: var(--heading); font-size: 2em; margin-bottom: 8px; }
+        h2 { color: var(--heading); font-size: 1.4em; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+        h3 { color: var(--heading); margin: 24px 0 12px; }
+        a { color: var(--accent); }
+        .meta { color: #8b949e; font-size: 0.9em; margin-bottom: 24px; }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin: 24px 0;
         }
-        .meta { color: #8b949e; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        .footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #21262d; font-size: 0.8rem; color: #484f58; }
-        .footer a { color: #58a6ff; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
-        th, td { padding: 0.5rem 0.8rem; text-align: left; border-bottom: 1px solid #21262d; }
-        th { background: #161b22; color: #8b949e; font-weight: 600; font-size: 0.85rem; }
-        td { font-size: 0.9rem; }
-        .header-bar { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.8rem 1.5rem; }
-        .header-bar a { color: #8b949e; font-size: 0.85rem; }
-        .header-bar a:hover { color: #58a6ff; }
-        .tag-pos { color: #3fb950; font-weight: 600; }
-        .tag-neg { color: #f85149; font-weight: 600; }
-        .tag-neu { color: #8b949e; }
-        .data-list { color: #8b949e; font-size: 0.9rem; }
-        .chart-full { margin-bottom: 1.5rem; }
-        .chart-full img { width: 100%; border: 1px solid #30363d; border-radius: 6px; background: #161b22; }
-        .chart-caption { font-size: 0.8rem; color: #8b949e; text-align: center; margin-top: 0.3rem; }
-        .pivot { color: #f0883e; font-weight: 600; }
-        code { background: #161b22; padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.85em; }
-        pre { background: #161b22; padding: 1rem; border-radius: 6px; border: 1px solid #30363d; overflow-x: auto; margin-bottom: 1rem; font-size: 0.8rem; line-height: 1.5; }
+        .card h3 { margin-top: 0; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th { background: #1c2128; color: var(--heading); }
+        tr:nth-child(even) { background: #0d1117; }
+        .highlight { color: var(--green); font-weight: bold; }
+        .negative { color: var(--red); font-weight: bold; }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+        .chart-grid img {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+        .findings {
+            list-style: none;
+            padding: 0;
+        }
+        .findings li {
+            padding: 12px 16px;
+            margin: 8px 0;
+            background: #1c2128;
+            border-left: 3px solid var(--accent);
+            border-radius: 0 6px 6px 0;
+        }
+        pre {
+            background: #161b22;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.85em;
+        }
+        .back { margin-bottom: 24px; display: inline-block; }
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 24px 0;
+        }
+        .kpi {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+        .kpi .num { font-size: 2em; font-weight: bold; color: var(--heading); }
+        .kpi .label { font-size: 0.8em; color: #8b949e; }
+        @media (max-width: 600px) {
+            .chart-grid { grid-template-columns: 1fr; }
+            .kpi-row { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
-    <div class="header-bar">
-        <a href="index.html">← Analisa Konten</a>
+    <a href="index.html" class="back">← Kembali ke Analisa Konten</a>
+    <h1>🔋 Transisi Energi Hijau di Indonesia</h1>
+    <div class="meta">
+        18 Maret – 18 Mei 2026 · Semantik API (12 keyword-filtered) · Data diperbarui: 18 Mei 2026
     </div>
-    <div class="container">
 
-        <h1>Transisi Energi Hijau di Indonesia</h1>
-        <p class="meta">
-            <strong>Periode:</strong> 18 Maret – 18 Mei 2026<br>
-            <strong>Sumber:</strong> Semantik API (12 keyword-filtered dengan <code>topic_keywords</code>)<br>
-            <strong>Kata kunci:</strong> transisi energi, energi hijau, EBT, energi baru terbarukan, energi surya, geothermal, PLTS, PLTA, biomassa, cofiring, CCS, karbon
-        </p>
-
-        <hr>
-
-        <h2>Ringkasan</h2>
-        <p>Dari <strong>541 artikel</strong> dari 14 media nasional (2 bulan), pemberitaan transisi energi hijau didominasi oleh <strong>PLTS</strong> (62 artikel, sentimen +2.57) — didorong oleh target ambisius Prabowo 100 GW PLTS, ekspansi PLN IP ke Bangladesh (495 MW), dan deregulasi atap PLTS.</p>
-        <p><strong>PLTSA menonjol sebagai outlier negatif</strong> <span class="tag-neg">(−8.95)</span>, 18 artikel — satu-satunya entitas dengan sentimen sangat negatif, terkait kontroversi PLTSA Jakarta, kekhawatiran sampah, dan kritik pengamat UI.</p>
-        <p>Pertamina mendapat sentimen positif <span class="tag-pos">(+5.65)</span> karena diversifikasi hijau (PGE panas bumi, Pertamina NRE ekspansi Bangladesh, LanzaTech). Prabowo diframing sangat positif <span class="tag-pos">(+5.79)</span> sebagai penggerak utama transisi energi.</p>
-
-        <h3>Entitas Utama</h3>
-        <table>
-            <tr>
-                <th>Entitas</th>
-                <th>Artikel<br><small>(keyword-filtered)</small></th>
-                <th>Sentimen</th>
-                <th>P/N/Neu</th>
-                <th>Tema Framing Utama</th>
-            </tr>
-            <tr>
-                <td><strong>PLTS</strong></td>
-                <td style="text-align:center">62</td>
-                <td style="text-align:center"><span class="tag-pos">+2.57</span></td>
-                <td style="text-align:center">54/31/4</td>
-                <td>Target 100 GW Prabowo, ekspor Bangladesh 495 MW, deregulasi atap</td>
-            </tr>
-            <tr>
-                <td><strong>Prabowo</strong></td>
-                <td style="text-align:center">43</td>
-                <td style="text-align:center"><span class="tag-pos">+5.79</span></td>
-                <td style="text-align:center">44/14/0</td>
-                <td>Target PLTS 100 GW, diplomasi energi Jepang-Rusia</td>
-            </tr>
-            <tr>
-                <td><strong>PLN</strong></td>
-                <td style="text-align:center">28</td>
-                <td style="text-align:center"><span class="tag-pos">+2.32</span></td>
-                <td style="text-align:center">24/16/1</td>
-                <td>Cofiring biomassa, SPKLU, PLTS Pulau Tunda</td>
-            </tr>
-            <tr>
-                <td><strong>Pertamina</strong></td>
-                <td style="text-align:center">20</td>
-                <td style="text-align:center"><span class="tag-pos">+5.65</span></td>
-                <td style="text-align:center">28/4/2</td>
-                <td>PGE geothermal, NRE Bangladesh, LanzaTech, PROPER emas</td>
-            </tr>
-            <tr>
-                <td><strong>PLTSA</strong></td>
-                <td style="text-align:center">18</td>
-                <td style="text-align:center"><span class="tag-neg">−8.95</span></td>
-                <td style="text-align:center">3/15/1</td>
-                <td>Sampah Jakarta, 3R terabaikan, kontroversi lingkungan</td>
-            </tr>
-            <tr>
-                <td><strong>EBT</strong></td>
-                <td style="text-align:center">9</td>
-                <td style="text-align:center"><span class="tag-pos">+11.7</span></td>
-                <td style="text-align:center">9/1/0</td>
-                <td>Akselerasi EBT, RI-Rusia, KEEN garap PLTA</td>
-            </tr>
-            <tr>
-                <td><strong>Karbon</strong></td>
-                <td style="text-align:center">5</td>
-                <td style="text-align:center"><span class="tag-pos">+2.80</span></td>
-                <td style="text-align:center">3/2/0</td>
-</tr>
-            <tr>
-                <td><strong>Geothermal</strong></td>
-                <td style="text-align:center">0</td>
-                <td style="text-align:center">—</td>
-                <td style="text-align:center">—</td>
-                <td>Tidak ada pemberitaan dalam konteks keyword</td>
-</tr>
-        </table>
-
-        <hr>
-
-        <h2>1. Volume & Sumber</h2>
-        <p>541 artikel dari 14 media nasional dalam 2 bulan.</p>
-
-        <h3>Media Breakdown</h3>
-        <table>
-            <tr>
-                <th>Media</th>
-                <th>Artikel</th>
-                <th>P/N/Neu</th>
-                <th>Fokus Pemberitaan</th>
-            </tr>
-            <tr><td>Kompas</td><td style="text-align:center">90</td><td style="text-align:center">46P/40N/4Neu</td><td>PLTSA, motor, pemerintah</td></tr>
-            <tr><td>CNBC News</td><td style="text-align:center">85</td><td style="text-align:center">53P/29N/3Neu</td><td>PLTS, Prabowo, RI</td></tr>
-            <tr><td>Media Indonesia</td><td style="text-align:center">84</td><td style="text-align:center">56P/25N/3Neu</td><td>PLTS, Prabowo, pemerintah daerah</td></tr>
-            <tr><td>Kumparan</td><td style="text-align:center">57</td><td style="text-align:center">29P/25N/3Neu</td><td>Pertamina, PLN, polisi</td></tr>
-            <tr><td>Detik Berita</td><td style="text-align:center">45</td><td style="text-align:center">22P/22N/1Neu</td><td>Eddy Soeparno, PLTS rusak</td></tr>
-            <tr><td>Republika</td><td style="text-align:center">44</td><td style="text-align:center">24P/18N/2Neu</td><td>PLTS, RI-Rusia, Indonesia-UNEP</td></tr>
-            <tr><td>CNN Ekonomi</td><td style="text-align:center">30</td><td style="text-align:center">21P/8N/1Neu</td><td>PLN, Pertamina, BAP</td></tr>
-            <tr><td>Detik Finance</td><td style="text-align:center">29</td><td style="text-align:center">16P/11N/2Neu</td><td>Prabowo, PLTS</td></tr>
-            <tr><td>CNBC Market</td><td style="text-align:center">20</td><td style="text-align:center">9P/9N/2Neu</td><td>OJK, PLTS atap</td></tr>
-            <tr><td>Tirto</td><td style="text-align:center">17</td><td style="text-align:center">7P/10N/0Neu</td><td>Pemerintah, OJK</td></tr>
-            <tr><td>Tempo Bisnis</td><td style="text-align:center">15</td><td style="text-align:center">11P/4N/0Neu</td><td>PLTS Bangladesh, PLN</td></tr>
-            <tr><td>Liputan6 News</td><td style="text-align:center">14</td><td style="text-align:center">4P/10N/0Neu</td><td>Polisi (noise)</td></tr>
-            <tr><td>Tempo Nasional</td><td style="text-align:center">6</td><td style="text-align:center">6P/0N/0Neu</td><td>Pertamina, EBT</td></tr>
-            <tr><td>CNN Nasional</td><td style="text-align:center">5</td><td style="text-align:center">0P/5N/0Neu</td><td>Bali, debt collector noise</td></tr>
-        </table>
-
-        <p><blockquote><strong>Catatan noise:</strong> Beberapa artikel non-energi ikut tertangkap karena keyword matching broad (misal artikel "debt collector" yang kebetulan mengandung kata "karbon" atau "mobil").</blockquote></p>
-
-        <h3>Tren Mingguan</h3>
-        <div class="chart-full">
-            <img src="transisi-energi-hijau/charts/03_weekly_trend.png" alt="Grafik tren mingguan volume pemberitaan">
-            <div class="chart-caption">Volume pemberitaan mingguan — puncak 104 artikel pada minggu 20 April</div>
+    <div class="kpi-row">
+        <div class="kpi">
+            <div class="num">542</div>
+            <div class="label">Total Artikel</div>
         </div>
-
-        <p>Volume pemberitaan puncak pada minggu <strong>20 April</strong> (104 artikel) — bertepatan dengan pengumuman target PLTS 100 GW Prabowo dan ekspansi PLN IP ke Bangladesh.</p>
-
-        <hr>
-
-        <h2>2. Tren Sentimen & Entitas</h2>
-
-        <div class="chart-full">
-            <img src="transisi-energi-hijau/charts/02_entity_sentiment.png" alt="Grafik sentimen per entitas">
-            <div class="chart-caption">Sentimen per entitas — PLTSA outlier negatif mencolok</div>
+        <div class="kpi">
+            <div class="num">14</div>
+            <div class="label">Media Nasional</div>
         </div>
-        <div class="chart-full">
-            <img src="transisi-energi-hijau/charts/01_sentimen_per_media.png" alt="Grafik sentimen per media">
-            <div class="chart-caption">Rasio sentimen per media</div>
+        <div class="kpi">
+            <div class="num">62</div>
+            <div class="label">Artikel PLTS</div>
         </div>
-
-        <h3>PLTS — Dominan Positif <span class="tag-pos">(+2.57)</span></h3>
-        <ul>
-            <li><strong>54 positif</strong>, 31 negatif, 4 netral</li>
-            <li>Framing utama: target 100 GW, ekspor Bangladesh, deregulasi pemasangan atap</li>
-            <li>PLN Indonesia Power teken kerja sama Bay Group untuk PLTS 495 MW di Bangladesh <a href="https://kumparan.com/kumparanbisnis/pln-indonesia-power-bakal-bangun-plts-495-mw-di-bangladesh-27P7VqGOnrn" target="_blank" rel="noopener noreferrer">[1]</a></li>
-            <li>Prabowo menargetkan PLTS 100 GW dengan investasi USD 100 miliar</li>
-        </ul>
-
-        <h3>PLTSA — Sangat Negatif <span class="tag-neg">(−8.95)</span></h3>
-        <ul>
-            <li><strong>Hanya 3 positif, 15 negatif</strong> — outlier negatif paling mencolok</li>
-            <li>Framing: "PLTSA tak cukup atasi sampah Jakarta", "3R terabaikan"</li>
-            <li>Pengamat UI mengkritik kebijakan PLTSA tanpa penguatan pemilahan sampah <a href="https://megapolitan.kompas.com/read/2026/05/15/11550521/pemprov-dki-diminta-tetap-prioritaskan-program-3r-meski-bakal-bangun" target="_blank" rel="noopener noreferrer">[2]</a></li>
-            <li>Malondong (Anies) dan Pemprov DKI jadi sorotan</li>
-        </ul>
-
-        <h3>Prabowo — Sangat Positif <span class="tag-pos">(+5.79)</span></h3>
-        <ul>
-            <li>44 positif, 14 negatif, 0 netral</li>
-            <li>Framing: pemimpin transisi energi, target PLTS 100 GW, kunjungan ke Jepang & Rusia</li>
-            <li>Prabowo disebut sebagai penggerak utama kebijakan energi hijau</li>
-            <li>Bahlil mendapat arahan dari Prabowo untuk akselerasi EBT</li>
-        </ul>
-
-        <h3>Pertamina — Positif <span class="tag-pos">(+5.65)</span></h3>
-        <ul>
-            <li>28 positif, 4 negatif, 2 netral</li>
-            <li>Pertamina Geothermal Energy (PGE) perkuat peran panas bumi <a href="https://mediaindonesia.com/ekonomi/890180/panas-bumi-terus-diperkuat-sebagai-penopang-transisi-energi-rendah-karbon" target="_blank" rel="noopener noreferrer">[4]</a></li>
-            <li>Pertamina NRE jajaki investasi hijau Bangladesh <a href="https://bisnis.tempo.co/read/2104007/pertamina-nre-jajaki-investasi-energi-hijau-bangladesh" target="_blank" rel="noopener noreferrer">[3]</a></li>
-            <li>LanzaTech jalin MoU untuk solusi energi rendah karbon</li>
-            <li>PROPER emas dan hijau untuk Pertamina</li>
-        </ul>
-
-        <h3>PLN — Positif Sedang <span class="tag-pos">(+2.32)</span></h3>
-        <ul>
-            <li>24 positif, 16 negatif, 1 netral</li>
-            <li>Framing: cofiring biomassa 25 PLTU, PLTS Pulau Tunda (rusak → dibangun baru 2027) <a href="https://news.detik.com/berita/d-8488033/pemprov-banten-ungkap-plts-rusak-di-pulau-tunda-bakal-dibangun-baru-pln-2027" target="_blank" rel="noopener noreferrer">[5]</a></li>
-            <li>SPKLU untuk mudik Lebaran</li>
-        </ul>
-
-        <h3>EBT — Sangat Positif <span class="tag-pos">(+11.7)</span> tapi Volume Rendah</h3>
-        <ul>
-            <li>Hanya 9 artikel — pemberitaan EBT masih minim</li>
-            <li>Kencana Energi (KEEN) garap PLTA Rp 2,03 Triliun di Sumut <a href="https://money.kompas.com/read/2026/05/15/060615226/emiten-ebt-kencana-energi-keen-garap-plta-rp-203-triliun-di-sumut" target="_blank" rel="noopener noreferrer">[6]</a></li>
-            <li>RI-Rusia perluas kerja sama nuklir, LNG, dan EBT <a href="https://ekonomi.republika.co.id/berita/tf0smh416/setelah-hulu-migas-rirusia-perluas-kerja-sama-nuklir-lng-dan-ebt" target="_blank" rel="noopener noreferrer">[7]</a></li>
-        </ul>
-
-        <h3>Karbon — Netral Positif <span class="tag-pos">(+2.80)</span></h3>
-        <ul>
-            <li>5 artikel — volume sangat rendah</li>
-            <li>Industri pulp dan kertas bidik pasar karbon global <a href="https://kumparan.com/kumparanbisnis/industri-pulp-dan-kertas-bidik-ri-jadi-pemain-utama-perdagangan-karbon-global-27OYYDNJtp6" target="_blank" rel="noopener noreferrer">[8]</a></li>
-            <li>Bank Mandiri mau rilis fitur kredit karbon</li>
-            <li>Indonesia-UNEP perkuat kerja sama pasar karbon kehutanan <a href="https://esgnow.republika.co.id/berita/tf09a8522/indonesia-dan-unep-perkuat-kerja-sama-pasar-karbon-kehutanan" target="_blank" rel="noopener noreferrer">[9]</a></li>
-        </ul>
-
-        <h3>Geothermal, Cofiring — Tidak Ada Pemberitaan</h3>
-        <p>Kedua entitas mencatat 0 artikel dalam konteks keyword yang difilter. Menunjukkan bahwa pemberitaan geothermal dan cofiring belum masuk arus utama.</p>
-
-            <div class="chart-full">
-            <img src="transisi-energi-hijau/charts/04_pos_neg_ratio.png" alt="Grafik rasio positif/negatif per entitas">
-            <div class="chart-caption">Rasio positif/negatif per entitas — PLTSA adalah satu-satunya dengan dominasi negatif</div>
+        <div class="kpi">
+            <div class="num">−8.95</div>
+            <div class="label">PLTSA Sentimen</div>
         </div>
-
-        <hr>
-
-        <h2>3. Bagaimana Media Membingkai Berita</h2>
-
-        <h3>Framing per Entitas</h3>
-        <table>
-            <tr>
-                <th>Entitas</th>
-                <th>Framing Dominan</th>
-            </tr>
-            <tr>
-                <td><strong>PLTS</strong></td>
-                <td>Positif-ekonomis: ekspansi Bangladesh, target 100 GW, investasi USD 100 miliar. <strong>Media</strong>: Tempo Bisnis, Kompas, CNBC — framing ekspansif dan prospektif.</td>
-            </tr>
-            <tr>
-                <td><strong>PLTSA</strong></td>
-                <td>Negatif-kritis: sampah Jakarta, 3R terabaikan, kritik pengamat. <strong>Media</strong>: Kompas — framing skeptis.</td>
-            </tr>
-            <tr>
-                <td><strong>PLN</strong></td>
-                <td>Campuran: cofiring biomassa sebagai solusi hijau (+) vs PLTS Pulau Tunda yang rusak (−). <strong>Media</strong>: CNN Ekonomi, Detik Berita.</td>
-            </tr>
-            <tr>
-                <td><strong>Pertamina</strong></td>
-                <td>Positif-institusional: diversifikasi hijau, PROPER, LanzaTech, ekspansi NRE. <strong>Media</strong>: Tempo Nasional, CNN Ekonomi, Kumparan.</td>
-            </tr>
-            <tr>
-                <td><strong>Prabowo</strong></td>
-                <td>Positif-kepemimpinan: visi 100 GW PLTS, diplomasi energi Jepang-Rusia. <strong>Media</strong>: CNBC News, Media Indonesia, Detik Finance.</td>
-            </tr>
-            <tr>
-                <td><strong>EBT</strong></td>
-                <td>Positif-peluang: kerja sama internasional, emiten publik (KEEN). <strong>Media</strong>: Kompas, Republika.</td>
-            </tr>
-            <tr>
-                <td><strong>Karbon</strong></td>
-                <td>Optik-peluang: pasar karbon global, Bank Mandiri, UNEP. <strong>Media</strong>: Kumparan, Republika.</td>
-            </tr>
-        </table>
-
-        <h3>Perbedaan Framing per Media</h3>
-        <ul>
-            <li><strong>Kompas</strong> (90 artikel): Paling berimbang — memberitakan PLTSA secara kritis, PLTS secara optimistis. Paling banyak meliput kebijakan (PLTSA Jakarta, WFH ASN hemat Rp 10 T).</li>
-            <li><strong>CNBC News</strong> (85): Paling pro-bisnis — fokus pada investasi, target PLTS Prabowo, dan peluang ekspor.</li>
-            <li><strong>Media Indonesia</strong> (84): Berimbang — menyoroti transformasi tambang hijau, panas bumi, dan teknologi penyimpanan energi.</li>
-            <li><strong>Kumparan</strong> (57): Paling beragam — dari PLTS Bangladesh hingga geopolitik lithium dan pasar karbon. Gaya naratif.</li>
-            <li><strong>Detik Berita</strong> (45): Fokus pada tokoh — Eddy Soeparno soal CCS, PLTS rusak Pulau Tunda.</li>
-            <li><strong>Republika</strong> (44): Fokus internasional — kerja sama RI-Rusia, Indonesia-UNEP.</li>
-        </ul>
-
-        <hr>
-
-        <h2>4. Pemain-Pemain Penting</h2>
-
-        <h3>Pemerintah & Politik</h3>
-        <table>
-            <tr>
-                <th>Pemain</th>
-                <th>Peran</th>
-                <th>Sentimen</th>
-                <th>Detail</th>
-            </tr>
-            <tr>
-                <td><strong>Prabowo</strong></td>
-                <td>Presiden RI</td>
-                <td><span class="tag-pos">+5.79</span></td>
-                <td>Penggerak utama target 100 GW PLTS, diplomasi energi ke Jepang dan Rusia</td>
-            </tr>
-            <tr>
-                <td><strong>Bahlil Lahadalia</strong></td>
-                <td>Menteri ESDM</td>
-                <td><span class="tag-neg">−2.00</span></td>
-                <td>Rombak 19 pejabat ESDM Ditjen EBTKE, buka peluang longgarkan kuota nikel, kritik Eropa balik ke batu bara</td>
-                </tr>
-            <tr>
-                <td><strong>Eddy Soeparno</strong></td>
-                <td>Wakil Ketua MPR</td>
-                <td>—</td>
-<td>Dorong RI jadi hub CCS Asia-Pasifik, bicara di Asia Carbon Capture 2026 <a href="https://news.detik.com/berita/d-8488138/eddy-soeparno-bicara-kesiapan-indonesia-jadi-hub-ccs-asia-pasifik" target="_blank" rel="noopener noreferrer">[10]</a></td>
-            </tr>
-            <tr>
-                <td><strong>Airlangga Hartarto</strong></td>
-                <td>Menko Perekonomian</td>
-                <td>—</td>
-                <td>Paparkan kerja sama Indonesia-Jepang di AZEC Summit, atasi krisis energi</td>
-            </tr>
-        </table>
-
-        <h3>BUMN & Perusahaan Energi</h3>
-        <table>
-            <tr>
-                <th>Pemain</th>
-                <th>Peran</th>
-                <th>Detail</th>
-            </tr>
-            <tr>
-                <td><strong>PLN</strong> (+ PLN IP)</td>
-                <td>BUMN listrik</td>
-                <td>Cofiring biomassa 25 PLTU, PLTS 495 MW Bangladesh, SPKLU mudik, PLTS baru Pulau Tunda 2027</td>
-            </tr>
-            <tr>
-                <td><strong>Pertamina</strong> (+ PGE, Pertamina NRE)</td>
-                <td>BUMN energi</td>
-                <td>PGE perkuat panas bumi, Pertamina NRE jajaki Bangladesh, LanzaTech MoU, PROPER emas</td>
-            </tr>
-            <tr>
-                <td><strong>Kencana Energi (KEEN)</strong></td>
-                <td>Emiten EBT publik</td>
-                <td>Garap PLTA Rp 2,03 Triliun di Sumut — proyek terbesar perseroan</td>
-            </tr>
-            <tr>
-                <td><strong>DOGO Power</strong></td>
-                <td>Perusahaan energi</td>
-                <td>Pamer di Indonesia International Coal & Energy Exhibition 2026 — solusi tambang rendah karbon</td>
-            </tr>
-            <tr>
-                <td><strong>Bay Group</strong></td>
-                <td>Mitra Bangladesh</td>
-                <td>Kerja sama dengan PLN IP untuk PLTS 495 MW</td>
-            </tr>
-            <tr>
-                <td><strong>LanzaTech</strong></td>
-                <td>Perusahaan teknologi karbon</td>
-                <td>MoU dengan Pertamina untuk solusi energi rendah karbon berbasis teknologi</td>
-            </tr>
-        </table>
-
-        <h3>Lembaga & Organisasi</h3>
-        <table>
-            <tr>
-                <th>Lembaga</th>
-                <th>Peran</th>
-                <th>Detail</th>
-            </tr>
-            <tr>
-                <td><strong>UNEP</strong></td><td>PBB</td><td>Perkuat kerja sama pasar karbon kehutanan dengan Indonesia</td></tr>
-            <tr><td><strong>OJK</strong></td><td>Regulator keuangan</td><td>Disebut dalam konteks PLTS atap dan pembiayaan hijau</td></tr>
-            <tr><td><strong>Bappenas</strong></td><td>Perencanaan pembangunan</td><td>Uji efektivitas WFH ASN untuk penghematan energi</td></tr>
-            <tr><td><strong>Pemprov DKI</strong></td><td>Pemerintah daerah</td><td>Diminta prioritaskan 3R atas PLTSA</td></tr>
-            <tr><td><strong>Pemprov Banten</strong></td><td>Pemerintah daerah</td><td>Ungkap PLTS Pulau Tunda rusak, desak PLN bangun baru</td></tr>
-            <tr><td><strong>UI (Universitas Indonesia)</strong></td><td>Akademisi</td><td>Pengamat UI kritik PLTSA tanpa penguatan 3R</td></tr>
-        </table>
-
-        <h3>Investor & Pasar</h3>
-        <table>
-  <tr><th>Pemain</th><th>Detail</th></tr>
-            <tr><td><strong>Bank Mandiri</strong></td><td>Mau rilis fitur kredit karbon — menjembatani pasar karbon ritel</td></tr>
-            <tr><td><strong>Investasi PLTS</strong></td><td>Target USD 100 miliar untuk 100 GW PLTS — potensi investor asing</td></tr>
-            <tr><td><strong>Kerja Sama RI-Rusia</strong></td><td>Perluasan ke nuklir (PLTN SMR), LNG, kilang migas, dan EBT</td></tr>
-        </table>
-
-        <h3>Isu Geopolitik & Pasar Global</h3>
-        <table>
-            <tr><th>Isu</th><th>Detail</th></tr>
-            <tr><td><strong>Lithium & Konflik Baru</strong></td><td>Kumparan mengangkat konflik geopolitik di balik transisi energi — perebutan lithium sebagai "minyak baru" <a href="https://kumparan.com/agnes-pryzynta-ujung/energi-hijau-konflik-baru-perebutan-lithium-di-balik-transisi-global-27Nb0TUVJxb" target="_blank" rel="noopener noreferrer">[11]</a></td></tr>
-                        <tr><td><strong>Eropa Kembali ke Batu Bara</strong></td><td>Bahlil kritik Eropa yang meminta Indonesia hijau tapi kembali ke batu bara</td></tr>
-            <tr><td><strong>Perdagangan Karbon</strong></td><td>Industri pulp & kertas dan UNEP dorong Indonesia sebagai pemain utama pasar karbon global</td></tr>
-        </table>
-
-        <hr>
-
-        <h2>5. Temuan Kunci</h2>
-        <ol>
-            <li><strong>PLTS mendominasi pemberitaan transisi energi</strong> — 62 artikel, sentimen +2.57, 32 hari berbeda. Didorong oleh target ambisius 100 GW (Prabowo) dan ekspor ke Bangladesh (PLN IP).</li>
-            <li><strong>PLTSA adalah outlier negatif (−8.95)</strong> — satu-satunya entitas yang mendapat sentimen sangat negatif. Kontroversi PLTSA Jakarta jadi sorotan karena dianggap mengabaikan program 3R dan pemilahan sampah.</li>
-            <li><strong>Prabowo sebagai motor utama</strong> — 43 artikel dalam konteks energi hijau, sentimen +5.79, diframing sebagai pemimpin yang mendorong target ambisius.</li>
-            <li><strong>Geothermal (0 artikel) dan cofiring (0 artikel) tidak masuk pemberitaan</strong> — meskipun jadi andalan Kementerian ESDM, pemberitaan kedua topik ini nyaris tidak ada dalam 2 bulan terakhir.</li>
-            <li><strong>Pertamina melakukan diversifikasi hijau</strong> — PGE (panas bumi), Pertamina NRE (ekspansi internasional), LanzaTech (energi rendah karbon).</li>
-            <li><strong>Pasar karbon masih niche</strong> — hanya 5 artikel tentang karbon dalam 2 bulan. Fokus: Bank Mandiri, industri pulp & kertas, dan UNEP.</li>
-            <li><strong>Kompas adalah media paling komprehensif</strong> — 90 artikel, memberitakan PLTS (positif) dan PLTSA (kritis) secara seimbang. CNBC News paling pro-investasi.</li>
-            <li><strong>Sentimen Bahlil negatif (−2.00)</strong> — framing seputar rombakan pejabat ESDM dan kritik terhadap Eropa, bukan tentang prestasi energi hijau.</li>
-        </ol>
-
-        <hr>
-
-        <h2>6. Keterbatasan</h2>
-        <ul>
-            <li><code>articles/search</code> dibatasi 50 hasil — tidak mencakup semua 541 artikel</li>
-            <li>Keyword matching masih menghasilkan noise ("debt collector", "polisi", drakor Korea)</li>
-            <li>Beberapa endpoint (<code>framing/{word}/by-source</code>) mengembalikan Internal Server Error untuk entitas tertentu</li>
-            <li><code>relations/network</code> dan <code>relations/top</code> bersifat cross-channel — tidak spesifik topik</li>
-        </ul>
-
-        <h2>Data & Sumber</h2>
-        <p class="data-list">
-            <code>data/source_comparison.json</code> — per-media breakdown (541 artikel, 14 sumber)<br>
-            <code>data/topic_trend.json</code> — volume mingguan (9 minggu)<br>
-            <code>data/entity_data.json</code> — sentimen, timeline, dan co-occurrence per entitas<br>
-            <code>data/framing_data.json</code> — framing phrases per entitas<br>
-            <code>data/players_data.json</code> — data spesifik pemain (Airlangga, Bahlil, LanzaTech, dll)<br>
-            <code>data/relations_data.json</code> — actor actions untuk PLTS, PLN, Pertamina, Prabowo, Bahlil, ESDM<br>
-            <code>data/article_details.json</code> — detail 15 artikel kunci<br>
-        </p>
-        <p>📁 <a href="https://github.com/hariswb/analisa-konten/tree/main/research/2026-05-18-transisi-energi-hijau" target="_blank" rel="noopener noreferrer"><strong>Lihat semua data dan notebook di GitHub</strong></a></p>
-
-        <hr>
-
-        <div class="footer">
-            <p>Data source: <a href="https://semantik.cc" target="_blank" rel="noopener noreferrer">Semantik</a> · 18 Mar – 18 Mei 2026 · Semua endpoint entity-level menggunakan <code>topic_keywords</code> untuk akurasi topik.</p>
-        </div>
-
     </div>
+
+    <div class="card">
+        <h3>Ringkasan</h3>
+        <p>Dari <strong>542 artikel</strong> dari 14 media nasional (2 bulan), pemberitaan transisi energi hijau didominasi oleh <strong>PLTS</strong> (62 artikel, sentimen +2.57) — didorong oleh target ambisius Prabowo 100 GW PLTS, ekspansi PLN IP ke Bangladesh (495 MW), dan deregulasi atap PLTS.</p>
+        <p><strong>PLTSA menonjol sebagai outlier negatif</strong> (−8.95, 18 artikel) — satu-satunya entitas dengan sentimen sangat negatif, terkait kontroversi PLTSA Jakarta dan kritik pengamat UI.</p>
+        <p>Pertamina mendapat sentimen positif (+5.65, 20 artikel) karena diversifikasi hijau (PGE panas bumi, Pertamina NRE, LanzaTech). Prabowo diframing sangat positif (+5.79) sebagai penggerak utama transisi energi.</p>
+    </div>
+
+    <h2>Sentimen per Entitas</h2>
+    <table>
+        <tr><th>Entitas</th><th>Artikel</th><th>Sentimen</th><th>P/N/Neu</th><th>Tema Framing</th></tr>
+        <tr><td><strong>PLTS</strong></td><td>62</td><td><span class="highlight">+2.57</span></td><td>54/31/4</td><td>Target 100 GW, ekspor Bangladesh, deregulasi</td></tr>
+        <tr><td><strong>Prabowo</strong></td><td>43</td><td><span class="highlight">+5.79</span></td><td>44/14/0</td><td>Pemimpin transisi, 100 GW PLTS, diplomasi</td></tr>
+        <tr><td><strong>PLN</strong></td><td>28</td><td><span class="highlight">+2.32</span></td><td>24/16/1</td><td>Cofiring biomassa, SPKLU, PLTS Pulau Tunda</td></tr>
+        <tr><td><strong>Pertamina</strong></td><td>20</td><td><span class="highlight">+5.65</span></td><td>28/4/2</td><td>PGE geothermal, NRE Bangladesh, LanzaTech</td></tr>
+        <tr><td><strong>PLTSA</strong></td><td>18</td><td><span class="negative">−8.95</span></td><td>3/15/1</td><td>Sampah Jakarta, 3R terabaikan</td></tr>
+        <tr><td><strong>EBT</strong></td><td>9</td><td><span class="highlight">+11.7</span></td><td>9/1/0</td><td>Akselerasi EBT, kerja sama RI-Rusia</td></tr>
+        <tr><td><strong>Karbon</strong></td><td>5</td><td><span class="highlight">+2.80</span></td><td>3/2/0</td><td>Pasar karbon, Bank Mandiri, UNEP</td></tr>
+    </table>
+
+    <h2>Chart</h2>
+    <div class="chart-grid">
+        <img src="../research/2026-05-18-transisi-energi-hijau/charts/01_sentimen_per_media.png" alt="Sentimen per Media">
+        <img src="../research/2026-05-18-transisi-energi-hijau/charts/02_entity_sentiment.png" alt="Sentimen per Entitas">
+        <img src="../research/2026-05-18-transisi-energi-hijau/charts/03_weekly_trend.png" alt="Tren Mingguan">
+        <img src="../research/2026-05-18-transisi-energi-hijau/charts/04_pos_neg_ratio.png" alt="Rasio Positif per Media">
+    </div>
+
+    <h2>8 Temuan Kunci</h2>
+    <ol class="findings">
+        <li><strong>PLTS mendominasi</strong> — 62 artikel, sentimen +2.57, didorong target 100 GW Prabowo & ekspor Bangladesh.</li>
+        <li><strong>PLTSA outlier negatif (−8.95)</strong> — kontroversi sampah Jakarta, dianggap abaikan 3R.</li>
+        <li><strong>Prabowo motor utama</strong> — 43 artikel, +5.79, diframing sebagai pemimpin transisi.</li>
+        <li><strong>Geothermal, cofiring, PLTA = 0 artikel</strong> — topik andalan ESDM tak masuk pemberitaan.</li>
+        <li><strong>Pertamina diversifikasi hijau</strong> — PGE, NRE Bangladesh, LanzaTech, PROPER emas.</li>
+        <li><strong>Pasar karbon masih niche</strong> — hanya 5 artikel, fokus Bank Mandiri & UNEP.</li>
+        <li><strong>Kompas paling komprehensif</strong> — 90 artikel, berimbang antara PLTS & PLTSA.</li>
+        <li><strong>Bahlil negatif (−2.00)</strong> — framing seputar rombakan pejabat, bukan prestasi energi.</li>
+    </ol>
+
+    <h2>Volume per Media</h2>
+    <table>
+        <tr><th>Media</th><th>Artikel</th><th>Rerata Sentimen</th></tr>
+        <tr><td>Kompas</td><td>90</td><td>+0.61</td></tr>
+        <tr><td>CNBC News</td><td>85</td><td>+3.46</td></tr>
+        <tr><td>Media Indonesia</td><td>85</td><td>+3.21</td></tr>
+        <tr><td>Kumparan</td><td>57</td><td>+1.75</td></tr>
+        <tr><td>Detik Berita</td><td>45</td><td>−1.07</td></tr>
+        <tr><td>Republika</td><td>44</td><td>+0.93</td></tr>
+        <tr><td>CNN Ekonomi</td><td>30</td><td>+5.10</td></tr>
+        <tr><td>Detik Finance</td><td>29</td><td>+2.24</td></tr>
+        <tr><td>CNBC Market</td><td>20</td><td>−2.15</td></tr>
+        <tr><td>Tirto</td><td>17</td><td>−1.06</td></tr>
+        <tr><td>Tempo Bisnis</td><td>15</td><td>+4.00</td></tr>
+        <tr><td>Liputan6 News</td><td>14</td><td>−4.21</td></tr>
+        <tr><td>Tempo Nasional</td><td>6</td><td>+7.00</td></tr>
+        <tr><td>CNN Nasional</td><td>5</td><td>−14.40</td></tr>
+    </table>
+
+    <h2>Tren Mingguan</h2>
+    <pre>16 Mar — 15 art
+23 Mar — 26 art
+30 Mar — 64 art  ⬆ lonjakan
+06 Apr — 58 art
+13 Apr — 84 art  ⬆ puncak kedua
+20 Apr — 104 art 🏆 TERTINGGI
+27 Apr — 68 art  ⬇
+04 Mei — 76 art
+11 Mei — 54 art
+18 Mei — 46 art</pre>
+
+    <p style="margin-top: 40px; color: #8b949e; font-size: 0.85em;">
+        Sumber data: <a href="https://semantik.cc">Semantik API</a> · 
+        Notebook: <a href="../research/2026-05-18-transisi-energi-hijau/README.md">README</a> ·
+        Data: <code>research/2026-05-18-transisi-energi-hijau/data/</code>
+    </p>
 </body>
 </html>
