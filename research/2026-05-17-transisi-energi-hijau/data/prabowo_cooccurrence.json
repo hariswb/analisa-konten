@@ -1,233 +1,158 @@
 {
   "entity_word": "prabowo",
-  "mention_count": 2109,
+  "mention_count": 12,
   "co_occurring_entities": [
     {
-      "word": "prabowo subianto",
-      "entity_group": "PER",
-      "co_occurrence_count": 829
-    },
-    {
-      "word": "indonesia",
-      "entity_group": "GPE",
-      "co_occurrence_count": 257
+      "word": "plts",
+      "entity_group": "PRD",
+      "co_occurrence_count": 6
     },
     {
       "word": "pemerintah",
       "entity_group": "NOR",
-      "co_occurrence_count": 116
+      "co_occurrence_count": 5
     },
     {
-      "word": "monas",
-      "entity_group": "LOC",
-      "co_occurrence_count": 89
+      "word": "pembangkit listrik tenaga surya",
+      "entity_group": "PRD",
+      "co_occurrence_count": 4
     },
     {
-      "word": "filipina",
+      "word": "indonesia",
       "entity_group": "GPE",
-      "co_occurrence_count": 81
+      "co_occurrence_count": 3
     },
     {
-      "word": "nganjuk",
-      "entity_group": "GPE",
-      "co_occurrence_count": 74
-    },
-    {
-      "word": "presiden ri",
+      "word": "ri",
       "entity_group": "NOR",
-      "co_occurrence_count": 67
-    },
-    {
-      "word": "may day",
-      "entity_group": "EVT",
-      "co_occurrence_count": 67
-    },
-    {
-      "word": "polri",
-      "entity_group": "NOR",
-      "co_occurrence_count": 66
+      "co_occurrence_count": 3
     },
     {
       "word": "ktt asean",
       "entity_group": "EVT",
-      "co_occurrence_count": 55
+      "co_occurrence_count": 3
     },
     {
-      "word": "jakarta",
-      "entity_group": "GPE",
-      "co_occurrence_count": 49
+      "word": "prabowo subianto",
+      "entity_group": "PER",
+      "co_occurrence_count": 3
     },
     {
-      "word": "kapolri",
-      "entity_group": "NOR",
-      "co_occurrence_count": 49
+      "word": "100 gw plts",
+      "entity_group": "QTY",
+      "co_occurrence_count": 2
     },
     {
-      "word": "may day 2026",
-      "entity_group": "EVT",
-      "co_occurrence_count": 48
+      "word": "3 tahun",
+      "entity_group": "QTY",
+      "co_occurrence_count": 2
     },
     {
-      "word": "kereta",
-      "entity_group": "PRD",
-      "co_occurrence_count": 47
-    },
-    {
-      "word": "13",
-      "entity_group": "CRD",
-      "co_occurrence_count": 40
+      "word": "100 gw",
+      "entity_group": "QTY",
+      "co_occurrence_count": 2
     }
   ],
   "links": [
     {
-      "source": "prabowo",
-      "target": "prabowo subianto",
-      "weight": 861
-    },
-    {
-      "source": "indonesia",
+      "source": "plts",
       "target": "prabowo",
-      "weight": 490
-    },
-    {
-      "source": "filipina",
-      "target": "prabowo",
-      "weight": 184
-    },
-    {
-      "source": "monas",
-      "target": "prabowo",
-      "weight": 181
-    },
-    {
-      "source": "prabowo",
-      "target": "ri",
-      "weight": 169
+      "weight": 11
     },
     {
       "source": "pemerintah",
       "target": "prabowo",
-      "weight": 159
+      "weight": 8
     },
     {
-      "source": "polri",
-      "target": "prabowo",
-      "weight": 158
+      "source": "pembangkit listrik tenaga surya",
+      "target": "plts",
+      "weight": 7
     },
     {
-      "source": "indonesia",
-      "target": "prabowo subianto",
-      "weight": 157
+      "source": "pemerintah",
+      "target": "plts",
+      "weight": 6
     },
     {
-      "source": "nganjuk",
-      "target": "prabowo",
-      "weight": 141
+      "source": "100 giga watt",
+      "target": "plts",
+      "weight": 6
     },
     {
-      "source": "prabowo",
-      "target": "presiden",
-      "weight": 138
-    },
-    {
-      "source": "may day",
-      "target": "prabowo",
-      "weight": 127
-    },
-    {
-      "source": "kapolri",
-      "target": "prabowo",
-      "weight": 113
-    },
-    {
-      "source": "asean",
-      "target": "prabowo",
-      "weight": 98
-    },
-    {
-      "source": "museum",
-      "target": "prabowo",
-      "weight": 97
+      "source": "ktt asean",
+      "target": "ri",
+      "weight": 6
     },
     {
       "source": "prabowo",
-      "target": "rupiah",
-      "weight": 95
-    },
-    {
-      "source": "may day 2026",
-      "target": "prabowo",
-      "weight": 93
+      "target": "ri",
+      "weight": 5
     },
     {
       "source": "ktt asean",
       "target": "prabowo",
-      "weight": 92
+      "weight": 5
     },
     {
-      "source": "13",
+      "source": "pembangkit listrik tenaga surya",
       "target": "prabowo",
-      "weight": 84
+      "weight": 4
     },
     {
-      "source": "kereta",
+      "source": "100 giga watt",
+      "target": "ktt asean",
+      "weight": 4
+    },
+    {
+      "source": "indonesia",
       "target": "prabowo",
-      "weight": 84
+      "weight": 4
     },
     {
-      "source": "jakarta",
+      "source": "100 gw",
+      "target": "plts",
+      "weight": 4
+    },
+    {
+      "source": "ktt asean",
+      "target": "plts",
+      "weight": 4
+    },
+    {
+      "source": "plts",
+      "target": "presiden ri",
+      "weight": 4
+    },
+    {
+      "source": "plts",
+      "target": "prabowo subianto",
+      "weight": 4
+    },
+    {
+      "source": "plts",
+      "target": "ri",
+      "weight": 4
+    },
+    {
+      "source": "100 giga watt",
+      "target": "ri",
+      "weight": 4
+    },
+    {
+      "source": "ktt asean",
+      "target": "prabowo subianto",
+      "weight": 3
+    },
+    {
+      "source": "pembangkit listrik tenaga surya",
+      "target": "pemerintah",
+      "weight": 3
+    },
+    {
+      "source": "3 tahun",
       "target": "prabowo",
-      "weight": 80
-    },
-    {
-      "source": "marsinah",
-      "target": "prabowo",
-      "weight": 78
-    },
-    {
-      "source": "museum",
-      "target": "nganjuk",
-      "weight": 75
-    },
-    {
-      "source": "prabowo",
-      "target": "teddy",
-      "weight": 75
-    },
-    {
-      "source": "#",
-      "target": "prabowo",
-      "weight": 73
-    },
-    {
-      "source": "mbg",
-      "target": "prabowo",
-      "weight": 73
-    },
-    {
-      "source": "marsinah",
-      "target": "museum",
-      "weight": 70
-    },
-    {
-      "source": "ojol",
-      "target": "prabowo",
-      "weight": 70
-    },
-    {
-      "source": "may day",
-      "target": "monas",
-      "weight": 69
-    },
-    {
-      "source": "newsupdate # update # news # text",
-      "target": "prabowo",
-      "weight": 68
-    },
-    {
-      "source": "mb",
-      "target": "prabowo",
-      "weight": 67
+      "weight": 3
     }
   ]
 }

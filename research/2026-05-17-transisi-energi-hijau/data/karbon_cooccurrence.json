@@ -153,36 +153,6 @@
       "source": "idx",
       "target": "spe - grk",
       "weight": 1
-    },
-    {
-      "source": "karbon",
-      "target": "kkp",
-      "weight": 1
-    },
-    {
-      "source": "karbon",
-      "target": "lanzatech",
-      "weight": 1
-    },
-    {
-      "source": "karbon",
-      "target": "lanzatech teken mou",
-      "weight": 1
-    },
-    {
-      "source": "karbon",
-      "target": "sertifikat pengurangan emisi gas rumah kaca",
-      "weight": 1
-    },
-    {
-      "source": "karbon",
-      "target": "spe - grk",
-      "weight": 1
-    },
-    {
-      "source": "lanzatech",
-      "target": "lanzatech teken mou",
-      "weight": 1
     }
   ]
 }

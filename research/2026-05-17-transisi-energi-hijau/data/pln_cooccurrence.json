@@ -1,51 +1,11 @@
 {
   "entity_word": "pln",
-  "mention_count": 113,
+  "mention_count": 19,
   "co_occurring_entities": [
-    {
-      "word": "jakarta",
-      "entity_group": "GPE",
-      "co_occurrence_count": 45
-    },
-    {
-      "word": "pt pln ( persero )",
-      "entity_group": "ORG",
-      "co_occurrence_count": 18
-    },
-    {
-      "word": "republika. co. id",
-      "entity_group": "ORG",
-      "co_occurrence_count": 10
-    },
-    {
-      "word": "100 persen",
-      "entity_group": "PRC",
-      "co_occurrence_count": 6
-    },
-    {
-      "word": "kamis ( 23 / 4 )",
-      "entity_group": "DAT",
-      "co_occurrence_count": 6
-    },
-    {
-      "word": "kamis ( 23 / 4 / 2026 )",
-      "entity_group": "DAT",
-      "co_occurrence_count": 6
-    },
     {
       "word": "plts",
       "entity_group": "PRD",
       "co_occurrence_count": 5
-    },
-    {
-      "word": "pt pln",
-      "entity_group": "ORG",
-      "co_occurrence_count": 4
-    },
-    {
-      "word": "esdm",
-      "entity_group": "ORG",
-      "co_occurrence_count": 4
     },
     {
       "word": "plts atap",
@@ -53,86 +13,51 @@
       "co_occurrence_count": 3
     },
     {
-      "word": "listrik",
+      "word": "smart and green building",
       "entity_group": "PRD",
-      "co_occurrence_count": 3
+      "co_occurrence_count": 2
     },
     {
-      "word": "indonesia",
-      "entity_group": "GPE",
-      "co_occurrence_count": 3
+      "word": "plta upper cisokan",
+      "entity_group": "LOC",
+      "co_occurrence_count": 2
     },
     {
-      "word": "kamis",
+      "word": "plts mentari nusantara i",
+      "entity_group": "PRD",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "pulau tunda",
+      "entity_group": "LOC",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "1, 225 gw",
+      "entity_group": "QTY",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "2025",
       "entity_group": "DAT",
-      "co_occurrence_count": 3
+      "co_occurrence_count": 2
     },
     {
-      "word": "13",
-      "entity_group": "CRD",
-      "co_occurrence_count": 3
+      "word": "pemerintah",
+      "entity_group": "NOR",
+      "co_occurrence_count": 2
     },
     {
-      "word": "10. 25 wib",
-      "entity_group": "TIM",
-      "co_occurrence_count": 3
+      "word": "smart dan green building",
+      "entity_group": "PRD",
+      "co_occurrence_count": 2
     }
   ],
   "links": [
     {
-      "source": "jakarta",
-      "target": "pln",
-      "weight": 120
-    },
-    {
-      "source": "100 persen",
-      "target": "jakarta",
-      "weight": 22
-    },
-    {
       "source": "pln",
       "target": "plts",
       "weight": 18
-    },
-    {
-      "source": "pln",
-      "target": "pt pln ( persero )",
-      "weight": 18
-    },
-    {
-      "source": "jakarta",
-      "target": "pt pln ( persero )",
-      "weight": 17
-    },
-    {
-      "source": "100 persen",
-      "target": "pln",
-      "weight": 14
-    },
-    {
-      "source": "jakarta",
-      "target": "kamis ( 23 / 4 / 2026 )",
-      "weight": 12
-    },
-    {
-      "source": "jakarta",
-      "target": "republika. co. id",
-      "weight": 11
-    },
-    {
-      "source": "pln",
-      "target": "republika. co. id",
-      "weight": 11
-    },
-    {
-      "source": "jakarta",
-      "target": "kamis ( 23 / 4 )",
-      "weight": 11
-    },
-    {
-      "source": "13",
-      "target": "pln",
-      "weight": 10
     },
     {
       "source": "plts",
@@ -140,73 +65,13 @@
       "weight": 10
     },
     {
-      "source": "100 persen",
-      "target": "pt pln ( persero )",
-      "weight": 8
-    },
-    {
-      "source": "pertamina",
-      "target": "pln",
-      "weight": 8
-    },
-    {
       "source": "pln",
       "target": "unops",
       "weight": 8
     },
     {
-      "source": "listrik",
-      "target": "pln",
-      "weight": 7
-    },
-    {
-      "source": "kamis ( 23 / 4 )",
-      "target": "pln",
-      "weight": 7
-    },
-    {
-      "source": "kamis ( 23 / 4 / 2026 )",
-      "target": "pln",
-      "weight": 7
-    },
-    {
-      "source": "pt pln ( persero )",
-      "target": "republika. co. id",
-      "weight": 7
-    },
-    {
-      "source": "esdm",
-      "target": "pln",
-      "weight": 7
-    },
-    {
       "source": "pln",
-      "target": "pltn",
-      "weight": 6
-    },
-    {
-      "source": "202",
-      "target": "plts",
-      "weight": 6
-    },
-    {
-      "source": "20 - 26 april 2026",
-      "target": "pln",
-      "weight": 6
-    },
-    {
-      "source": "pln",
-      "target": "pulau tunda",
-      "weight": 6
-    },
-    {
-      "source": "jakarta",
-      "target": "kamis",
-      "weight": 6
-    },
-    {
-      "source": "10. 25 wib",
-      "target": "jakarta",
+      "target": "plts mentari nusantara i",
       "weight": 6
     },
     {
@@ -215,19 +80,79 @@
       "weight": 6
     },
     {
-      "source": "4. 118",
-      "target": "pln",
-      "weight": 6
-    },
-    {
       "source": "pln",
       "target": "plta upper cisokan",
       "weight": 6
     },
     {
-      "source": "4",
+      "source": "202",
+      "target": "plts",
+      "weight": 6
+    },
+    {
+      "source": "pln",
+      "target": "pulau tunda",
+      "weight": 6
+    },
+    {
+      "source": "4. 118",
       "target": "pln",
       "weight": 6
+    },
+    {
+      "source": "##a one",
+      "target": "plts mentari nusantara i",
+      "weight": 4
+    },
+    {
+      "source": "co - firing biomassa",
+      "target": "pltu",
+      "weight": 4
+    },
+    {
+      "source": "1, 225 gw",
+      "target": "pln",
+      "weight": 4
+    },
+    {
+      "source": "25",
+      "target": "co - firing biomassa",
+      "weight": 4
+    },
+    {
+      "source": "206",
+      "target": "pln",
+      "weight": 4
+    },
+    {
+      "source": "25",
+      "target": "pltu",
+      "weight": 4
+    },
+    {
+      "source": "202",
+      "target": "pln",
+      "weight": 4
+    },
+    {
+      "source": "202",
+      "target": "pulau tunda",
+      "weight": 4
+    },
+    {
+      "source": "2018",
+      "target": "plts",
+      "weight": 4
+    },
+    {
+      "source": "##t",
+      "target": "pln",
+      "weight": 4
+    },
+    {
+      "source": "##a one",
+      "target": "1, 225 gw",
+      "weight": 4
     }
   ]
 }

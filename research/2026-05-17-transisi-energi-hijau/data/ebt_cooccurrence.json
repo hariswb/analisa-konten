@@ -51,11 +51,6 @@
       "word": "ri",
       "entity_group": "GPE",
       "co_occurrence_count": 1
-    },
-    {
-      "word": "rusia",
-      "entity_group": "GPE",
-      "co_occurrence_count": 1
     }
   ],
   "links": [
@@ -65,28 +60,13 @@
       "weight": 4
     },
     {
-      "source": "energi baru terbarukan",
-      "target": "ri",
-      "weight": 2
-    },
-    {
-      "source": "federasi rusia",
-      "target": "ri",
-      "weight": 2
-    },
-    {
-      "source": "ebt",
-      "target": "pemerintah republik indonesia",
-      "weight": 2
-    },
-    {
-      "source": "ebt",
-      "target": "republika. co. id",
-      "weight": 2
-    },
-    {
-      "source": "ebt",
+      "source": "ri",
       "target": "rusia",
+      "weight": 2
+    },
+    {
+      "source": "17 persen",
+      "target": "bank dunia",
       "weight": 2
     },
     {
@@ -100,8 +80,13 @@
       "weight": 2
     },
     {
-      "source": "ebt",
-      "target": "energi baru terbarukan",
+      "source": "republika. co. id",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "federasi rusia",
+      "target": "ri",
       "weight": 2
     },
     {
@@ -110,23 +95,18 @@
       "weight": 2
     },
     {
-      "source": "lpg",
-      "target": "ri",
-      "weight": 2
-    },
-    {
-      "source": "17 persen",
-      "target": "bank dunia",
-      "weight": 2
-    },
-    {
       "source": "ebt",
       "target": "energi nuklir",
       "weight": 2
     },
     {
-      "source": "pemerintah republik indonesia",
+      "source": "lpg",
       "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
+      "target": "rusia",
       "weight": 2
     },
     {
@@ -135,78 +115,43 @@
       "weight": 2
     },
     {
-      "source": "republika. co. id",
-      "target": "ri",
-      "weight": 2
-    },
-    {
       "source": "ebt",
       "target": "kazan",
       "weight": 2
     },
     {
+      "source": "pemerintah republik indonesia",
+      "target": "ri",
+      "weight": 2
+    },
+    {
       "source": "ebt",
       "target": "lpg",
       "weight": 2
     },
     {
-      "source": "ri",
-      "target": "rusia",
+      "source": "ebt",
+      "target": "energi baru terbarukan",
       "weight": 2
     },
     {
-      "source": "federasi rusia",
-      "target": "rusia",
-      "weight": 1
-    },
-    {
-      "source": "kazan",
-      "target": "lpg",
-      "weight": 1
-    },
-    {
-      "source": "kazan",
+      "source": "ebt",
       "target": "pemerintah republik indonesia",
-      "weight": 1
+      "weight": 2
     },
     {
-      "source": "kazan",
+      "source": "energi baru terbarukan",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "ebt",
       "target": "republika. co. id",
-      "weight": 1
+      "weight": 2
     },
     {
-      "source": "kazan",
-      "target": "rusia",
-      "weight": 1
-    },
-    {
-      "source": "lpg",
-      "target": "pemerintah republik indonesia",
-      "weight": 1
-    },
-    {
-      "source": "lpg",
-      "target": "republika. co. id",
-      "weight": 1
-    },
-    {
-      "source": "pemerintah republik indonesia",
-      "target": "republika. co. id",
-      "weight": 1
-    },
-    {
-      "source": "pemerintah republik indonesia",
-      "target": "rusia",
-      "weight": 1
-    },
-    {
-      "source": "republika. co. id",
-      "target": "rusia",
-      "weight": 1
-    },
-    {
-      "source": "lpg",
-      "target": "rusia",
+      "source": "energi baru terbarukan",
+      "target": "kazan",
       "weight": 1
     }
   ]
