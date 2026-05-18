@@ -1,0 +1,726 @@
+{
+  "1495375": {
+    "id": 1495375,
+    "title": "Pertamina NRE Jajaki Investasi Energi Hijau Bangladesh",
+    "summary": "Penjajakan oleh Pertamina NRE ini sejalan dengan upaya percepatan transisi energi dan penguatan kolaborasi regional di sektor energi berkelanjutan.",
+    "source": "tempo_bisnis",
+    "published_at": "2026-05-17T10:40:48+00:00",
+    "url": "https://bisnis.tempo.co/read/2104007/pertamina-nre-jajaki-investasi-energi-hijau-bangladesh",
+    "run_id": "2026-05-17_18-00-00",
+    "run_date": "2026-05-17",
+    "entities": [
+      {
+        "word": "pertamina nre",
+        "group": "ORG",
+        "score": 0.8994526267051697
+      },
+      {
+        "word": "bangladesh",
+        "group": "GPE",
+        "score": 0.7488780617713928
+      },
+      {
+        "word": "pertamina nre",
+        "group": "ORG",
+        "score": 0.9102986454963684
+      }
+    ]
+  },
+  "1486785": {
+    "id": 1486785,
+    "title": "Teknologi Penyimpanan Energi Bisa Percepat Transformasi Tambang Hijau",
+    "summary": "Transformasi hijau di industri pertambangan mulai menjadi perhatian di tengah meningkatnya tuntutan efisiensi energi dan penurunan emisi karbon global.",
+    "source": "media_indonesia",
+    "published_at": "2026-05-15T13:31:00+00:00",
+    "url": "https://mediaindonesia.com/ekonomi/890721/teknologi-penyimpanan-energi-bisa-percepat-transformasi-tambang-hijau",
+    "run_id": "2026-05-15_21-00-00",
+    "run_date": "2026-05-15",
+    "entities": []
+  },
+  "1486886": {
+    "id": 1486886,
+    "title": "Energi Hijau, Konflik Baru: Perebutan Lithium di Balik Transisi Global",
+    "summary": "Perebutan lithium di balik transisi energi hijau menunjukkan bahwa industri ramah lingkungan juga menyimpan konflik geopolitik baru. #userstory",
+    "source": "kumparan",
+    "published_at": "2026-05-15T13:00:03+00:00",
+    "url": "https://kumparan.com/agnes-pryzynta-ujung/energi-hijau-konflik-baru-perebutan-lithium-di-balik-transisi-global-27Nb0TUVJxb",
+    "run_id": "2026-05-15_21-00-00",
+    "run_date": "2026-05-15",
+    "entities": [
+      {
+        "word": "lith",
+        "group": "PRD",
+        "score": 0.4299919009208679
+      },
+      {
+        "word": "##ium",
+        "group": "LOC",
+        "score": 0.4405818581581116
+      },
+      {
+        "word": "lith",
+        "group": "PRD",
+        "score": 0.6048934459686279
+      }
+    ]
+  },
+  "1486386": {
+    "id": 1486386,
+    "title": "PLN Indonesia Power Bakal Bangun PLTS 495 MW di Bangladesh",
+    "summary": "Kerja sama ini menjadi langkah awal untuk mengembangkan PLTS di Bangladesh dengan total potensi kapasitas mencapai 495 megawatt (MW).#bisnisupdate #update #bisnis #text",
+    "source": "kumparan",
+    "published_at": "2026-05-15T12:03:05+00:00",
+    "url": "https://kumparan.com/kumparanbisnis/pln-indonesia-power-bakal-bangun-plts-495-mw-di-bangladesh-27P7VqGOnrn",
+    "run_id": "2026-05-15_20-00-00",
+    "run_date": "2026-05-15",
+    "entities": [
+      {
+        "word": "pln indonesia power",
+        "group": "ORG",
+        "score": 0.9334200024604797
+      },
+      {
+        "word": "plts",
+        "group": "PRD",
+        "score": 0.6699774265289307
+      },
+      {
+        "word": "495 mw",
+        "group": "QTY",
+        "score": 0.9479434490203857
+      },
+      {
+        "word": "bangladesh",
+        "group": "GPE",
+        "score": 0.9971908926963806
+      },
+      {
+        "word": "plts",
+        "group": "PRD",
+        "score": 0.8424199819564819
+      },
+      {
+        "word": "bangladesh",
+        "group": "GPE",
+        "score": 0.9974274039268494
+      },
+      {
+        "word": "495 megawatt ( mw )",
+        "group": "QTY",
+        "score": 0.9791794419288635
+      }
+    ]
+  },
+  "1483606": {
+    "id": 1483606,
+    "title": "Teknologi Penyimpanan Energi Baru Dorong Tambang Rendah Karbon di Indonesia",
+    "summary": "REPUBLIKA.CO.ID, JAKARTA -- Dalam ajang Indonesia International Coal & Energy Exhibition 2026, DOGO Power mengusung tema \u201cLighting Up the World with Economical, Reliable, and Stable Green Power\u201d. DOGO Power memperkenalkan...",
+    "source": "republika",
+    "published_at": "2026-05-15T07:14:00+00:00",
+    "url": "https://esgnow.republika.co.id/berita/tf2guu423/teknologi-penyimpanan-energi-baru-dorong-tambang-rendah-karbon-di-indonesia",
+    "run_id": "2026-05-15_15-00-00",
+    "run_date": "2026-05-15",
+    "entities": [
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.9781472086906433
+      },
+      {
+        "word": "republika. co. id",
+        "group": "ORG",
+        "score": 0.7719660401344299
+      },
+      {
+        "word": "jakarta",
+        "group": "GPE",
+        "score": 0.9817443490028381
+      },
+      {
+        "word": "indonesia international coal & energy exhibition 2026",
+        "group": "EVT",
+        "score": 0.9559217691421509
+      },
+      {
+        "word": "dog",
+        "group": "EVT",
+        "score": 0.260957807302475
+      },
+      {
+        "word": "##o power",
+        "group": "ORG",
+        "score": 0.40313228964805603
+      },
+      {
+        "word": "##ing up the world",
+        "group": "WOA",
+        "score": 0.4941979944705963
+      },
+      {
+        "word": "##le",
+        "group": "WOA",
+        "score": 0.43335962295532227
+      },
+      {
+        "word": "green power",
+        "group": "EVT",
+        "score": 0.5318073034286499
+      },
+      {
+        "word": "dog",
+        "group": "PRD",
+        "score": 0.22760120034217834
+      },
+      {
+        "word": "##o power",
+        "group": "ORG",
+        "score": 0.41812700033187866
+      }
+    ]
+  },
+  "1479592": {
+    "id": 1479592,
+    "title": "Setelah Hulu Migas, RI-Rusia Perluas Kerja Sama Nuklir, LNG, dan EBT",
+    "summary": "REPUBLIKA.CO.ID, KAZAN \u2013 Pemerintah Republik Indonesia (RI) dan Federasi Rusia memperluas kerja sama sektor energi yang kini mencakup pengembangan energi nuklir, LNG, LPG, hingga energi baru terbarukan (EBT). Penguatan kolaborasi...",
+    "source": "republika",
+    "published_at": "2026-05-14T09:22:12+00:00",
+    "url": "https://ekonomi.republika.co.id/berita/tf0smh416/setelah-hulu-migas-rirusia-perluas-kerja-sama-nuklir-lng-dan-ebt",
+    "run_id": "2026-05-14_17-00-00",
+    "run_date": "2026-05-14",
+    "entities": [
+      {
+        "word": "migas",
+        "group": "ORG",
+        "score": 0.4331778287887573
+      },
+      {
+        "word": "ri",
+        "group": "GPE",
+        "score": 0.556135356426239
+      },
+      {
+        "word": "rusia",
+        "group": "GPE",
+        "score": 0.8592533469200134
+      },
+      {
+        "word": "lng",
+        "group": "ORG",
+        "score": 0.33837008476257324
+      },
+      {
+        "word": "ebt",
+        "group": "ORG",
+        "score": 0.5388022661209106
+      },
+      {
+        "word": "republika. co. id",
+        "group": "ORG",
+        "score": 0.6692065000534058
+      },
+      {
+        "word": "kazan",
+        "group": "GPE",
+        "score": 0.8744677305221558
+      },
+      {
+        "word": "pemerintah republik indonesia",
+        "group": "NOR",
+        "score": 0.939694881439209
+      },
+      {
+        "word": "ri",
+        "group": "GPE",
+        "score": 0.8291335701942444
+      },
+      {
+        "word": "federasi rusia",
+        "group": "GPE",
+        "score": 0.5086273550987244
+      },
+      {
+        "word": "energi nuklir",
+        "group": "PRD",
+        "score": 0.6572922468185425
+      },
+      {
+        "word": "lng",
+        "group": "PRD",
+        "score": 0.44773387908935547
+      },
+      {
+        "word": "lpg",
+        "group": "PRD",
+        "score": 0.7801496386528015
+      },
+      {
+        "word": "energi baru terbarukan",
+        "group": "PRD",
+        "score": 0.7333515286445618
+      },
+      {
+        "word": "ebt",
+        "group": "PRD",
+        "score": 0.5546492338180542
+      }
+    ]
+  },
+  "1478797": {
+    "id": 1478797,
+    "title": "Panas Bumi terus Diperkuat sebagai Penopang Transisi Energi Rendah Karbon",
+    "summary": "PT Pertamina Geothermal Energy Tbk (PGE) sebagai perusahaan renewable energy berbasis panas bumi terus memperkuat perannya dalam mendukung target Net Zero Emission.",
+    "source": "media_indonesia",
+    "published_at": "2026-05-14T07:04:00+00:00",
+    "url": "https://mediaindonesia.com/ekonomi/890180/panas-bumi-terus-diperkuat-sebagai-penopang-transisi-energi-rendah-karbon",
+    "run_id": "2026-05-14_15-00-00",
+    "run_date": "2026-05-14",
+    "entities": [
+      {
+        "word": "pt pertamina geothermal energy tbk",
+        "group": "ORG",
+        "score": 0.9774698615074158
+      },
+      {
+        "word": "pge",
+        "group": "ORG",
+        "score": 0.7865325212478638
+      },
+      {
+        "word": "renewable energy",
+        "group": "ORG",
+        "score": 0.7487967610359192
+      }
+    ]
+  },
+  "1478943": {
+    "id": 1478943,
+    "title": "Indonesia-Rusia Perluas Kerja Sama Energi: Nuklir, Migas, Transisi Bersih",
+    "summary": "Indonesia dan Rusia perkuat kerja sama energi strategis, mulai dari kilang minyak, ladang migas, hingga penjajakan PLTN SMR, demi ketahanan dan transisi energi bersih nasional.",
+    "source": "kompas",
+    "published_at": "2026-05-14T07:02:41+00:00",
+    "url": "https://money.kompas.com/read/2026/05/14/140241726/indonesia-rusia-perluas-kerja-sama-energi-nuklir-migas-transisi-bersih?utm_source=ABC&utm_medium=rss",
+    "run_id": "2026-05-14_15-00-00",
+    "run_date": "2026-05-14",
+    "entities": [
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.9905096292495728
+      },
+      {
+        "word": "rusia",
+        "group": "GPE",
+        "score": 0.9889677166938782
+      },
+      {
+        "word": "nuklir",
+        "group": "PRD",
+        "score": 0.4679652154445648
+      },
+      {
+        "word": "migas",
+        "group": "PRD",
+        "score": 0.5054136514663696
+      },
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.9661371111869812
+      },
+      {
+        "word": "rusia",
+        "group": "GPE",
+        "score": 0.99468994140625
+      },
+      {
+        "word": "kilang",
+        "group": "ORG",
+        "score": 0.3228992521762848
+      },
+      {
+        "word": "minyak",
+        "group": "LOC",
+        "score": 0.24707897007465363
+      },
+      {
+        "word": "ladang",
+        "group": "ORG",
+        "score": 0.2792344093322754
+      },
+      {
+        "word": "migas",
+        "group": "LOC",
+        "score": 0.2760941982269287
+      },
+      {
+        "word": "pltn smr",
+        "group": "PRD",
+        "score": 0.7909829616546631
+      }
+    ]
+  },
+  "1477522": {
+    "id": 1477522,
+    "title": "Industri Pulp dan Kertas Bidik RI Jadi Pemain Utama Perdagangan Karbon Global",
+    "summary": "Industri pulp dan kertas optimistis Indonesia bisa menjadi pemain utama dalam perdagangan karbon global. #bisnisupdate #update #bisnis #text",
+    "source": "kumparan",
+    "published_at": "2026-05-14T03:48:03+00:00",
+    "url": "https://kumparan.com/kumparanbisnis/industri-pulp-dan-kertas-bidik-ri-jadi-pemain-utama-perdagangan-karbon-global-27OYYDNJtp6",
+    "run_id": "2026-05-14_11-00-00",
+    "run_date": "2026-05-14",
+    "entities": [
+      {
+        "word": "pulp",
+        "group": "PRD",
+        "score": 0.7143183946609497
+      },
+      {
+        "word": "kertas bidik",
+        "group": "PRD",
+        "score": 0.5443657040596008
+      },
+      {
+        "word": "ri",
+        "group": "ORG",
+        "score": 0.45726191997528076
+      },
+      {
+        "word": "pulp",
+        "group": "PRD",
+        "score": 0.6231947541236877
+      },
+      {
+        "word": "kertas",
+        "group": "PRD",
+        "score": 0.3301808536052704
+      },
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.9526610374450684
+      },
+      {
+        "word": "bisnis # text",
+        "group": "PRD",
+        "score": 0.4271905720233917
+      }
+    ]
+  },
+  "1477196": {
+    "id": 1477196,
+    "title": "Indonesia dan UNEP Perkuat Kerja Sama Pasar Karbon Kehutanan",
+    "summary": "REPUBLIKA.CO.ID, NEW YORK -- Indonesia memperkuat kerja sama internasional di bidang perubahan iklim dan pasar karbon kehutanan bersama United Nations Environment Programme (UNEP). Langkah tersebut menjadi bagian dari implementasi...",
+    "source": "republika",
+    "published_at": "2026-05-14T02:22:56+00:00",
+    "url": "https://esgnow.republika.co.id/berita/tf09a8522/indonesia-dan-unep-perkuat-kerja-sama-pasar-karbon-kehutanan",
+    "run_id": "2026-05-14_10-00-00",
+    "run_date": "2026-05-14",
+    "entities": [
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.97742760181427
+      },
+      {
+        "word": "unep",
+        "group": "ORG",
+        "score": 0.546657145023346
+      },
+      {
+        "word": "pasar karbon kehutanan",
+        "group": "ORG",
+        "score": 0.6143322587013245
+      },
+      {
+        "word": "republika. co. id",
+        "group": "ORG",
+        "score": 0.7818166017532349
+      },
+      {
+        "word": "new york",
+        "group": "GPE",
+        "score": 0.8688594102859497
+      },
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.9932507872581482
+      },
+      {
+        "word": "iklim dan",
+        "group": "EVT",
+        "score": 0.38668662309646606
+      },
+      {
+        "word": "karbon kehutanan",
+        "group": "EVT",
+        "score": 0.5136657953262329
+      },
+      {
+        "word": "united nations environment programme",
+        "group": "ORG",
+        "score": 0.9326492547988892
+      },
+      {
+        "word": "unep",
+        "group": "ORG",
+        "score": 0.7691614031791687
+      }
+    ]
+  },
+  "1474826": {
+    "id": 1474826,
+    "title": "Eddy Soeparno Bicara Kesiapan Indonesia Jadi Hub CCS Asia-Pasifik",
+    "summary": "Wakil Ketua MPR RI Eddy Soeparno menekankan pentingnya transisi energi sebagai strategi ekonomi dan ketahanan energi dalam forum Asia Carbon Capture 2026.",
+    "source": "detik_berita",
+    "published_at": "2026-05-13T12:20:33+00:00",
+    "url": "https://news.detik.com/berita/d-8488138/eddy-soeparno-bicara-kesiapan-indonesia-jadi-hub-ccs-asia-pasifik",
+    "run_id": "2026-05-13_20-00-00",
+    "run_date": "2026-05-13",
+    "entities": [
+      {
+        "word": "eddy soeparno",
+        "group": "PER",
+        "score": 0.9911659359931946
+      },
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.9746736884117126
+      },
+      {
+        "word": "ccs asia - pasifik",
+        "group": "ORG",
+        "score": 0.5070802569389343
+      },
+      {
+        "word": "wakil ketua mpr ri",
+        "group": "NOR",
+        "score": 0.9779800772666931
+      },
+      {
+        "word": "eddy soeparno",
+        "group": "PER",
+        "score": 0.9926717877388
+      },
+      {
+        "word": "forum asia carbon capture 2026",
+        "group": "EVT",
+        "score": 0.9370353817939758
+      }
+    ]
+  },
+  "1474084": {
+    "id": 1474084,
+    "title": "Pemprov Banten Ungkap PLTS Rusak di Pulau Tunda Bakal Dibangun Baru PLN 2027",
+    "summary": "Masyarakat Pulau Tunda keluhkan listrik tidak stabil akibat PLTS rusak. PLN berencana membangun PLTS baru pada 2027 untuk perbaikan akses listrik.",
+    "source": "detik_berita",
+    "published_at": "2026-05-13T11:16:49+00:00",
+    "url": "https://news.detik.com/berita/d-8488033/pemprov-banten-ungkap-plts-rusak-di-pulau-tunda-bakal-dibangun-baru-pln-2027",
+    "run_id": "2026-05-13_19-00-00",
+    "run_date": "2026-05-13",
+    "entities": [
+      {
+        "word": "pemprov banten",
+        "group": "NOR",
+        "score": 0.9800152778625488
+      },
+      {
+        "word": "plts",
+        "group": "PRD",
+        "score": 0.7790912389755249
+      },
+      {
+        "word": "pulau tunda",
+        "group": "LOC",
+        "score": 0.8521450161933899
+      },
+      {
+        "word": "pln",
+        "group": "PRD",
+        "score": 0.8386420607566833
+      },
+      {
+        "word": "202",
+        "group": "DAT",
+        "score": 0.400966614484787
+      },
+      {
+        "word": "##7",
+        "group": "CRD",
+        "score": 0.2833130657672882
+      },
+      {
+        "word": "pulau tunda",
+        "group": "GPE",
+        "score": 0.7336639761924744
+      },
+      {
+        "word": "plts",
+        "group": "PRD",
+        "score": 0.8732160329818726
+      },
+      {
+        "word": "pln",
+        "group": "ORG",
+        "score": 0.7903891801834106
+      },
+      {
+        "word": "plts",
+        "group": "PRD",
+        "score": 0.7232918739318848
+      },
+      {
+        "word": "202",
+        "group": "DAT",
+        "score": 0.9237393140792847
+      },
+      {
+        "word": "##7",
+        "group": "CRD",
+        "score": 0.3038972318172455
+      }
+    ]
+  },
+  "1473353": {
+    "id": 1473353,
+    "title": "Industri Pulp dan Kertas RI Target Jadi Pemain Besar Pasar Karbon Global",
+    "summary": "Industri pulp dan kertas mulai membidik peluang baru dari perdagangan karbon kehutanan global seiring perubahan arah pengelolaan hutan di Indonesia.",
+    "source": "kompas",
+    "published_at": "2026-05-13T09:11:41+00:00",
+    "url": "https://money.kompas.com/read/2026/05/13/161141526/industri-pulp-dan-kertas-ri-target-jadi-pemain-besar-pasar-karbon-global?utm_source=ABC&utm_medium=rss",
+    "run_id": "2026-05-13_17-00-00",
+    "run_date": "2026-05-13",
+    "entities": [
+      {
+        "word": "industri",
+        "group": "ORG",
+        "score": 0.5870769023895264
+      },
+      {
+        "word": "pulp",
+        "group": "PRD",
+        "score": 0.6330701112747192
+      },
+      {
+        "word": "dan",
+        "group": "ORG",
+        "score": 0.6169540286064148
+      },
+      {
+        "word": "kertas",
+        "group": "PRD",
+        "score": 0.4491606652736664
+      },
+      {
+        "word": "ri",
+        "group": "ORG",
+        "score": 0.6722320914268494
+      },
+      {
+        "word": "pulp",
+        "group": "PRD",
+        "score": 0.819180965423584
+      },
+      {
+        "word": "kertas",
+        "group": "PRD",
+        "score": 0.34133121371269226
+      },
+      {
+        "word": "indonesia",
+        "group": "GPE",
+        "score": 0.9795047640800476
+      }
+    ]
+  },
+  "1481814": {
+    "id": 1481814,
+    "title": "Emiten EBT Kencana Energi (KEEN) Garap PLTA Rp 2,03 Triliun di Sumut",
+    "summary": "KEEN mendapat proyek PLTA terbesar senilai Rp 2,03 triliun yang akan menambah kapasitas pembangkit hijau perseroan.",
+    "source": "kompas",
+    "published_at": "2026-05-14T23:06:15+00:00",
+    "url": "https://money.kompas.com/read/2026/05/15/060615226/emiten-ebt-kencana-energi-keen-garap-plta-rp-203-triliun-di-sumut?utm_source=ABC&utm_medium=rss",
+    "run_id": "2026-05-15_07-00-00",
+    "run_date": "2026-05-15",
+    "entities": [
+      {
+        "word": "emiten ebt kencana energi ( keen",
+        "group": "ORG",
+        "score": 0.8373578190803528
+      },
+      {
+        "word": "plta",
+        "group": "PRD",
+        "score": 0.46721959114074707
+      },
+      {
+        "word": "rp 2, 03 triliun",
+        "group": "MON",
+        "score": 0.9967366456985474
+      },
+      {
+        "word": "sumut",
+        "group": "GPE",
+        "score": 0.9791521430015564
+      },
+      {
+        "word": "ke",
+        "group": "PER",
+        "score": 0.7330694198608398
+      },
+      {
+        "word": "rp 2, 03 triliun",
+        "group": "MON",
+        "score": 0.9982738494873047
+      }
+    ]
+  },
+  "1482839": {
+    "id": 1482839,
+    "title": "Pemprov DKI Diminta Tetap Prioritaskan Program 3R meski Bakal Bangun PLTSa",
+    "summary": "Pengamat UI mengingatkan PLTSA tak cukup atasi sampah Jakarta tanpa penguatan program 3R dan pemilahan sampah dari sumbernya.",
+    "source": "kompas",
+    "published_at": "2026-05-15T04:55:05+00:00",
+    "url": "https://megapolitan.kompas.com/read/2026/05/15/11550521/pemprov-dki-diminta-tetap-prioritaskan-program-3r-meski-bakal-bangun?utm_source=ABC&utm_medium=rss",
+    "run_id": "2026-05-15_12-00-01",
+    "run_date": "2026-05-15",
+    "entities": [
+      {
+        "word": "pemprov dki",
+        "group": "NOR",
+        "score": 0.9810115694999695
+      },
+      {
+        "word": "program 3r",
+        "group": "PRD",
+        "score": 0.4498627185821533
+      },
+      {
+        "word": "pltsa",
+        "group": "PRD",
+        "score": 0.827750027179718
+      },
+      {
+        "word": "ui",
+        "group": "ORG",
+        "score": 0.4878106117248535
+      },
+      {
+        "word": "pltsa",
+        "group": "PRD",
+        "score": 0.49478426575660706
+      },
+      {
+        "word": "jakarta",
+        "group": "PRD",
+        "score": 0.4344620108604431
+      },
+      {
+        "word": "3r",
+        "group": "EVT",
+        "score": 0.45880985260009766
+      }
+    ]
+  }
+}
