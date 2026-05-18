@@ -41,8 +41,6 @@
         .tag-neg { color: #f85149; font-weight: 600; }
         .tag-neu { color: #8b949e; }
         .data-list { color: #8b949e; font-size: 0.9rem; }
-        .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
-        .chart-grid img { width: 100%; border: 1px solid #30363d; border-radius: 6px; background: #161b22; }
         .chart-full { margin-bottom: 1.5rem; }
         .chart-full img { width: 100%; border: 1px solid #30363d; border-radius: 6px; background: #161b22; }
         .chart-caption { font-size: 0.8rem; color: #8b949e; text-align: center; margin-top: 0.3rem; }
@@ -180,22 +178,20 @@
 
         <h2>2. Tren Sentimen & Entitas</h2>
 
-        <div class="chart-grid">
-            <div>
-                <img src="transisi-energi-hijau/charts/02_entity_sentiment.png" alt="Grafik sentimen per entitas">
-                <div class="chart-caption">Sentimen per entitas — PLTSA outlier negatif mencolok</div>
-            </div>
-            <div>
-                <img src="transisi-energi-hijau/charts/01_sentimen_per_media.png" alt="Grafik sentimen per media">
-                        <div class="chart-caption">Rasio sentimen per media</div>
-            </div>
+        <div class="chart-full">
+            <img src="transisi-energi-hijau/charts/02_entity_sentiment.png" alt="Grafik sentimen per entitas">
+            <div class="chart-caption">Sentimen per entitas — PLTSA outlier negatif mencolok</div>
+        </div>
+        <div class="chart-full">
+            <img src="transisi-energi-hijau/charts/01_sentimen_per_media.png" alt="Grafik sentimen per media">
+            <div class="chart-caption">Rasio sentimen per media</div>
         </div>
 
         <h3>PLTS — Dominan Positif <span class="tag-pos">(+2.57)</span></h3>
         <ul>
             <li><strong>54 positif</strong>, 31 negatif, 4 netral</li>
             <li>Framing utama: target 100 GW, ekspor Bangladesh, deregulasi pemasangan atap</li>
-            <li>PLN Indonesia Power teken kerja sama Bay Group untuk PLTS 495 MW di Bangladesh <a href="https://kumparan.com/kumparanbisnis/pln-indonesia-power-bakal-bangun-plts-495-mw-di-bangladesh-27P7VqGOnrn">[1]</a></li>
+            <li>PLN Indonesia Power teken kerja sama Bay Group untuk PLTS 495 MW di Bangladesh <a href="https://kumparan.com/kumparanbisnis/pln-indonesia-power-bakal-bangun-plts-495-mw-di-bangladesh-27P7VqGOnrn" target="_blank" rel="noopener noreferrer">[1]</a></li>
             <li>Prabowo menargetkan PLTS 100 GW dengan investasi USD 100 miliar</li>
         </ul>
 
@@ -203,7 +199,7 @@
         <ul>
             <li><strong>Hanya 3 positif, 15 negatif</strong> — outlier negatif paling mencolok</li>
             <li>Framing: "PLTSA tak cukup atasi sampah Jakarta", "3R terabaikan"</li>
-            <li>Pengamat UI mengkritik kebijakan PLTSA tanpa penguatan pemilahan sampah <a href="https://megapolitan.kompas.com/read/2026/05/15/11550521/pemprov-dki-diminta-tetap-prioritaskan-program-3r-meski-bakal-bangun">[2]</a></li>
+            <li>Pengamat UI mengkritik kebijakan PLTSA tanpa penguatan pemilahan sampah <a href="https://megapolitan.kompas.com/read/2026/05/15/11550521/pemprov-dki-diminta-tetap-prioritaskan-program-3r-meski-bakal-bangun" target="_blank" rel="noopener noreferrer">[2]</a></li>
             <li>Malondong (Anies) dan Pemprov DKI jadi sorotan</li>
         </ul>
 
@@ -218,8 +214,8 @@
         <h3>Pertamina — Positif <span class="tag-pos">(+5.65)</span></h3>
         <ul>
             <li>28 positif, 4 negatif, 2 netral</li>
-            <li>Pertamina Geothermal Energy (PGE) perkuat peran panas bumi <a href="https://mediaindonesia.com/ekonomi/890180/panas-bumi-terus-diperkuat-sebagai-penopang-transisi-energi-rendah-karbon">[4]</a></li>
-            <li>Pertamina NRE jajaki investasi hijau Bangladesh <a href="https://bisnis.tempo.co/read/2104007/pertamina-nre-jajaki-investasi-energi-hijau-bangladesh">[3]</a></li>
+            <li>Pertamina Geothermal Energy (PGE) perkuat peran panas bumi <a href="https://mediaindonesia.com/ekonomi/890180/panas-bumi-terus-diperkuat-sebagai-penopang-transisi-energi-rendah-karbon" target="_blank" rel="noopener noreferrer">[4]</a></li>
+            <li>Pertamina NRE jajaki investasi hijau Bangladesh <a href="https://bisnis.tempo.co/read/2104007/pertamina-nre-jajaki-investasi-energi-hijau-bangladesh" target="_blank" rel="noopener noreferrer">[3]</a></li>
             <li>LanzaTech jalin MoU untuk solusi energi rendah karbon</li>
             <li>PROPER emas dan hijau untuk Pertamina</li>
         </ul>
@@ -227,23 +223,23 @@
         <h3>PLN — Positif Sedang <span class="tag-pos">(+2.32)</span></h3>
         <ul>
             <li>24 positif, 16 negatif, 1 netral</li>
-            <li>Framing: cofiring biomassa 25 PLTU, PLTS Pulau Tunda (rusak → dibangun baru 2027) <a href="https://news.detik.com/berita/d-8488033/pemprov-banten-ungkap-plts-rusak-di-pulau-tunda-bakal-dibangun-baru-pln-2027">[5]</a></li>
+            <li>Framing: cofiring biomassa 25 PLTU, PLTS Pulau Tunda (rusak → dibangun baru 2027) <a href="https://news.detik.com/berita/d-8488033/pemprov-banten-ungkap-plts-rusak-di-pulau-tunda-bakal-dibangun-baru-pln-2027" target="_blank" rel="noopener noreferrer">[5]</a></li>
             <li>SPKLU untuk mudik Lebaran</li>
         </ul>
 
         <h3>EBT — Sangat Positif <span class="tag-pos">(+11.7)</span> tapi Volume Rendah</h3>
         <ul>
             <li>Hanya 9 artikel — pemberitaan EBT masih minim</li>
-            <li>Kencana Energi (KEEN) garap PLTA Rp 2,03 Triliun di Sumut <a href="https://money.kompas.com/read/2026/05/15/060615226/emiten-ebt-kencana-energi-keen-garap-plta-rp-203-triliun-di-sumut">[6]</a></li>
-            <li>RI-Rusia perluas kerja sama nuklir, LNG, dan EBT <a href="https://ekonomi.republika.co.id/berita/tf0smh416/setelah-hulu-migas-rirusia-perluas-kerja-sama-nuklir-lng-dan-ebt">[7]</a></li>
+            <li>Kencana Energi (KEEN) garap PLTA Rp 2,03 Triliun di Sumut <a href="https://money.kompas.com/read/2026/05/15/060615226/emiten-ebt-kencana-energi-keen-garap-plta-rp-203-triliun-di-sumut" target="_blank" rel="noopener noreferrer">[6]</a></li>
+            <li>RI-Rusia perluas kerja sama nuklir, LNG, dan EBT <a href="https://ekonomi.republika.co.id/berita/tf0smh416/setelah-hulu-migas-rirusia-perluas-kerja-sama-nuklir-lng-dan-ebt" target="_blank" rel="noopener noreferrer">[7]</a></li>
         </ul>
 
         <h3>Karbon — Netral Positif <span class="tag-pos">(+2.80)</span></h3>
         <ul>
             <li>5 artikel — volume sangat rendah</li>
-            <li>Industri pulp dan kertas bidik pasar karbon global <a href="https://kumparan.com/kumparanbisnis/industri-pulp-dan-kertas-bidik-ri-jadi-pemain-utama-perdagangan-karbon-global-27OYYDNJtp6">[8]</a></li>
+            <li>Industri pulp dan kertas bidik pasar karbon global <a href="https://kumparan.com/kumparanbisnis/industri-pulp-dan-kertas-bidik-ri-jadi-pemain-utama-perdagangan-karbon-global-27OYYDNJtp6" target="_blank" rel="noopener noreferrer">[8]</a></li>
             <li>Bank Mandiri mau rilis fitur kredit karbon</li>
-            <li>Indonesia-UNEP perkuat kerja sama pasar karbon kehutanan <a href="https://esgnow.republika.co.id/berita/tf09a8522/indonesia-dan-unep-perkuat-kerja-sama-pasar-karbon-kehutanan">[9]</a></li>
+            <li>Indonesia-UNEP perkuat kerja sama pasar karbon kehutanan <a href="https://esgnow.republika.co.id/berita/tf09a8522/indonesia-dan-unep-perkuat-kerja-sama-pasar-karbon-kehutanan" target="_blank" rel="noopener noreferrer">[9]</a></li>
         </ul>
 
         <h3>Geothermal, Cofiring — Tidak Ada Pemberitaan</h3>
@@ -332,7 +328,7 @@
                 <td><strong>Eddy Soeparno</strong></td>
                 <td>Wakil Ketua MPR</td>
                 <td>—</td>
-<td>Dorong RI jadi hub CCS Asia-Pasifik, bicara di Asia Carbon Capture 2026 <a href="https://news.detik.com/berita/d-8488138/eddy-soeparno-bicara-kesiapan-indonesia-jadi-hub-ccs-asia-pasifik">[10]</a></td>
+<td>Dorong RI jadi hub CCS Asia-Pasifik, bicara di Asia Carbon Capture 2026 <a href="https://news.detik.com/berita/d-8488138/eddy-soeparno-bicara-kesiapan-indonesia-jadi-hub-ccs-asia-pasifik" target="_blank" rel="noopener noreferrer">[10]</a></td>
             </tr>
             <tr>
                 <td><strong>Airlangga Hartarto</strong></td>
@@ -408,7 +404,7 @@
         <h3>Isu Geopolitik & Pasar Global</h3>
         <table>
             <tr><th>Isu</th><th>Detail</th></tr>
-            <tr><td><strong>Lithium & Konflik Baru</strong></td><td>Kumparan mengangkat konflik geopolitik di balik transisi energi — perebutan lithium sebagai "minyak baru" <a href="https://kumparan.com/agnes-pryzynta-ujung/energi-hijau-konflik-baru-perebutan-lithium-di-balik-transisi-global-27Nb0TUVJxb">[11]</a></td></tr>
+            <tr><td><strong>Lithium & Konflik Baru</strong></td><td>Kumparan mengangkat konflik geopolitik di balik transisi energi — perebutan lithium sebagai "minyak baru" <a href="https://kumparan.com/agnes-pryzynta-ujung/energi-hijau-konflik-baru-perebutan-lithium-di-balik-transisi-global-27Nb0TUVJxb" target="_blank" rel="noopener noreferrer">[11]</a></td></tr>
                         <tr><td><strong>Eropa Kembali ke Batu Bara</strong></td><td>Bahlil kritik Eropa yang meminta Indonesia hijau tapi kembali ke batu bara</td></tr>
             <tr><td><strong>Perdagangan Karbon</strong></td><td>Industri pulp & kertas dan UNEP dorong Indonesia sebagai pemain utama pasar karbon global</td></tr>
         </table>
@@ -447,12 +443,12 @@
             <code>data/relations_data.json</code> — actor actions untuk PLTS, PLN, Pertamina, Prabowo, Bahlil, ESDM<br>
             <code>data/article_details.json</code> — detail 15 artikel kunci<br>
         </p>
-        <p>📁 <a href="https://github.com/hariswb/analisa-konten/tree/main/research/2026-05-18-transisi-energi-hijau"><strong>Lihat semua data dan notebook di GitHub</strong></a></p>
+        <p>📁 <a href="https://github.com/hariswb/analisa-konten/tree/main/research/2026-05-18-transisi-energi-hijau" target="_blank" rel="noopener noreferrer"><strong>Lihat semua data dan notebook di GitHub</strong></a></p>
 
         <hr>
 
         <div class="footer">
-            <p>Data source: <a href="https://semantik.cc">Semantik</a> · 18 Mar – 18 Mei 2026 · Semua endpoint entity-level menggunakan <code>topic_keywords</code> untuk akurasi topik.</p>
+            <p>Data source: <a href="https://semantik.cc" target="_blank" rel="noopener noreferrer">Semantik</a> · 18 Mar – 18 Mei 2026 · Semua endpoint entity-level menggunakan <code>topic_keywords</code> untuk akurasi topik.</p>
         </div>
 
     </div>

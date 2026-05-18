@@ -75,13 +75,13 @@ Volume pemberitaan puncak pada minggu **20 April** (104 artikel) — bertepatan 
 ### PLTS — Dominan Positif (+2.57)
 - **54 positif**, 31 negatif, 4 netral
 - Framing utama: target 100 GW, ekspor Bangladesh, deregulasi pemasangan atap
-- PLN Indonesia Power teken kerja sama Bay Group untuk PLTS 495 MW di Bangladesh
+- PLN Indonesia Power teken kerja sama Bay Group untuk PLTS 495 MW di Bangladesh ([kumparan](https://kumparan.com/kumparanbisnis/pln-indonesia-power-bakal-bangun-plts-495-mw-di-bangladesh-27P7VqGOnrn))
 - Prabowo menargetkan PLTS 100 GW dengan investasi USD 100 miliar
 
 ### PLTSA — Sangat Negatif (−8.95)
 - **Hanya 3 positif, 15 negatif** — outlier negatif paling mencolok
 - Framing: "PLTSA tak cukup atasi sampah Jakarta", "3R terabaikan"
-- Pengamat UI mengkritik kebijakan PLTSA tanpa penguatan pemilahan sampah
+- Pengamat UI mengkritik kebijakan PLTSA tanpa penguatan pemilahan sampah ([Kompas](https://megapolitan.kompas.com/read/2026/05/15/11550521/pemprov-dki-diminta-tetap-prioritaskan-program-3r-meski-bakal-bangun))
 - Malondong (Anies) dan Pemprov DKI jadi sorotan
 
 ### Prabowo — Sangat Positif (+5.79)
@@ -92,14 +92,14 @@ Volume pemberitaan puncak pada minggu **20 April** (104 artikel) — bertepatan 
 
 ### Pertamina — Positif (+5.65)
 - 28 positif, 4 negatif, 2 netral
-- Framing: Pertamina Geothermal Energy (PGE) perkuat peran panas bumi
-- Pertamina NRE jajaki investasi hijau Bangladesh
+- Framing: Pertamina Geothermal Energy (PGE) perkuat peran panas bumi ([Media Indonesia](https://mediaindonesia.com/ekonomi/890180/panas-bumi-terus-diperkuat-sebagai-penopang-transisi-energi-rendah-karbon))
+- Pertamina NRE jajaki investasi hijau Bangladesh ([Tempo](https://bisnis.tempo.co/read/2104007/pertamina-nre-jajaki-investasi-energi-hijau-bangladesh))
 - LanzaTech jalin MoU untuk solusi energi rendah karbon
 - PROPER emas dan hijau untuk Pertamina
 
 ### PLN — Positif Sedang (+2.32)
 - 24 positif, 16 negatif, 1 netral
-- Framing: cofiring biomassa 25 PLTU, PLTS Pulau Tunda (rusak → dibangun baru 2027)
+- Framing: cofiring biomassa 25 PLTU, PLTS Pulau Tunda (rusak → dibangun baru 2027) ([Detik](https://news.detik.com/berita/d-8488033/pemprov-banten-ungkap-plts-rusak-di-pulau-tunda-bakal-dibangun-baru-pln-2027))
 - SPKLU untuk mudik Lebaran
 
 ### EBT — Sangat Positif (+11.7) tapi Volume Rendah
