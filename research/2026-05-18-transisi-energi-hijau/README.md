@@ -222,7 +222,7 @@ Volume pemberitaan puncak pada minggu **20 April** (104 artikel) — bertepatan 
 
 ## 6. Keterbatasan
 
-- `articles/search` dibatasi 50 hasil — tidak mencakup semua 542 artikel
+- `articles/search` telah dipaginasi penuh — semua 542 artikel tersedia di `data/articles_list.json`
 - Keyword matching masih menghasilkan noise ("debt collector", "polisi", "motor")
 - `framing/{word}/by-source` masih bermasalah untuk beberapa entitas — fallback ke `framing/{word}`
 - `relations/network` bersifat cross-channel — tidak 100% spesifik topik
