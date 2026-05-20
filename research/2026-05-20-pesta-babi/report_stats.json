@@ -1,0 +1,132 @@
+{
+  "total_articles": 88,
+  "neg_pct": 71.5909090909091,
+  "pos_pct": 27.27272727272727,
+  "sources_count": 9,
+  "top_source": "tempo_nasional",
+  "top_source_label": "Tempo",
+  "peak_week": "2026-05-11",
+  "peak_count": 66,
+  "top_entities": [
+    {
+      "word": "pesta babi",
+      "entity_group": "EVT",
+      "mention_count": 49,
+      "top_sources": [
+        "tempo_nasional",
+        "cnn_nasional",
+        "kompas",
+        "tirto",
+        "detik_berita"
+      ]
+    },
+    {
+      "word": "tni",
+      "entity_group": "NOR",
+      "mention_count": 17,
+      "top_sources": [
+        "cnn_nasional",
+        "kompas",
+        "tempo_nasional",
+        "detik_berita",
+        "media_indonesia"
+      ]
+    },
+    {
+      "word": "film pesta babi",
+      "entity_group": "EVT",
+      "mention_count": 17,
+      "top_sources": [
+        "tempo_nasional",
+        "kompas",
+        "media_indonesia",
+        "tirto",
+        "kumparan"
+      ]
+    },
+    {
+      "word": "pemerintah",
+      "entity_group": "NOR",
+      "mention_count": 17,
+      "top_sources": [
+        "cnn_nasional",
+        "detik_berita",
+        "kompas",
+        "tirto",
+        "media_indonesia"
+      ]
+    },
+    {
+      "word": "nobar film pesta babi",
+      "entity_group": "EVT",
+      "mention_count": 16,
+      "top_sources": [
+        "tempo_nasional",
+        "cnn_nasional",
+        "kompas",
+        "detik_berita",
+        "media_indonesia"
+      ]
+    },
+    {
+      "word": "yusril",
+      "entity_group": "PER",
+      "mention_count": 15,
+      "top_sources": [
+        "cnn_nasional",
+        "detik_berita",
+        "media_indonesia",
+        "kompas",
+        "liputan6_news"
+      ]
+    },
+    {
+      "word": "papua",
+      "entity_group": "GPE",
+      "mention_count": 15,
+      "top_sources": [
+        "kompas",
+        "media_indonesia",
+        "tirto",
+        "cnn_nasional",
+        "republika"
+      ]
+    },
+    {
+      "word": "ksad",
+      "entity_group": "NOR",
+      "mention_count": 9,
+      "top_sources": [
+        "cnn_nasional",
+        "detik_berita",
+        "kompas",
+        "liputan6_news",
+        "media_indonesia"
+      ]
+    },
+    {
+      "word": "babi",
+      "entity_group": "EVT",
+      "mention_count": 7,
+      "top_sources": [
+        "kompas",
+        "tirto",
+        "cnn_nasional",
+        "detik_berita",
+        "media_indonesia"
+      ]
+    },
+    {
+      "word": "ternate",
+      "entity_group": "GPE",
+      "mention_count": 6,
+      "top_sources": [
+        "cnn_nasional",
+        "detik_berita",
+        "tempo_nasional"
+      ]
+    }
+  ],
+  "node_count": 30,
+  "edge_count": 53
+}
