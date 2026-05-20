@@ -1,0 +1,238 @@
+============================================================
+  ANALISIS FRAMING: PESTA BABI
+  Data dari Semantik Research API — framing + relations
+============================================================
+
+[1] FRAMING: 'Pesta Babi' per Media
+--------------------------------------------------
+  [cnn_nasional] — 32 total framing phrases
+    • "mahendra menegaskan pemerintah tidak melarang nobar film" (×2)
+    • "yusril film" (×2)
+    • "bubarkan nobar" (×1)
+    • "hasanuddin kritik langkah tni bubarkan nobar film" (×1)
+  [tempo_nasional] — 30 total framing phrases
+    • "andreas menilai alasan militer yang menganggap film" (×1)
+    • "budaya indonesia bandung menolak mengizinkan pemutaran film" (×1)
+    • "cerita ketua gmni jakarta sempat dilarang nobar" (×1)
+    • "dandhy laksono pembubaran nobar film" (×1)
+  [kompas] — 19 total framing phrases
+    • "anggota dpr azis subekti menyoroti pelarangan film" (×1)
+    • "anggota dpr kritik sah tetapi perlu tanggung" (×1)
+    • "bakar ubi" (×1)
+    • "dilarang nobar di berbagai daerah" (×1)
+  [detik_berita] — 17 total framing phrases
+    • "ternate karena masalah perizinan dan isu" (×1)
+    • "aparat tni membubarkan nobar film dokumenter berjudul" (×1)
+    • "dibubarkan di ternate ini penjelasan dandim" (×1)
+    • "instruksi pembubaran nobar film" (×1)
+  [tirto] — 17 total framing phrases
+    • "4 alasan kenapa nobar" (×1)
+    • "bahasa indonesia dan inggris" (×1)
+    • "film dokumenter karya dandy laksono jadi polemik" (×1)
+    • "isi film dokumenter" (×1)
+  [media_indonesia] — 13 total framing phrases
+    • "coffee shop piltik kecamatan siborongborong" (×1)
+    • "berpotensi ganggu stabilitas papua benarkah dilarang" (×1)
+    • "cerminkan realitas sosial dan perjuangan tanah adat" (×1)
+    • "karya dandhy laksono perlu mendapat perhatian serius" (×1)
+  [republika] — 7 total framing phrases
+    • "17cendrawasih letkol tri purwanto yang menyebut film" (×1)
+    • "dinilai bukan film yang harus lulus sensor" (×1)
+    • "jajaran mengenai pembubaran nonton bareng nobar film" (×1)
+    • "kolonialisme di zaman kita sesungguhnya" (×1)
+  [liputan6_news] — 1 total framing phrases
+    • "tegaskan pemerintah tak pernah keluarkan larangan nobar" (×1)
+
+[1] FRAMING: 'TNI' per Media
+--------------------------------------------------
+  [cnn_nasional] — 13 total framing phrases
+    • "bubarkan nobar film pesta babi" (×1)
+    • "keputusan pemerintah daerah demi keamanan bukan instruksi" (×1)
+    • "keputusan pemerintah daerah dengan pertimbangan keamanan" (×1)
+    • "kritik pembubaran nobar film pesta babi" (×1)
+  [kompas] — 9 total framing phrases
+    • "ajak masyarakat bijak sikapi film dokumenter pesta" (×1)
+    • "film pesta babi keputusan pemda bukan instruksi" (×1)
+    • "film pesta babi pemerintah tegaskan tak larang" (×1)
+    • "imbau warga bijak sikapi pemutaran film pesta" (×1)
+  [tempo_nasional] — 5 total framing phrases
+    • "bubarkan nobar film pesta babi" (×1)
+    • "bubarkan nobar film pesta babi di ternate" (×1)
+    • "dandhy pertanyakan alasan" (×1)
+    • "film pesta babi di universitas udayana didatangi" (×1)
+  [detik_berita] — 4 total framing phrases
+    • "jenderal maruli simanjutak menegaskan tidak ada instruksi" (×1)
+    • "membubarkan nobar film dokumenter berjudul pesta babi" (×1)
+    • "membubarkan nobar film pesta babi keputusan" (×1)
+    • "menilai film itu mendapat banyak penolakan" (×1)
+  [media_indonesia] — 2 total framing phrases
+    • "menilai film pesta babi termasuk konten" (×1)
+    • "narasi film pesta babi berpotensi ganggu" (×1)
+  [tirto] — 2 total framing phrases
+    • "klaim bubarkan nobar pesta babi imbas" (×1)
+    • "maruli simanjuntak menilai cuma orang beruang" (×1)
+  [republika] — 1 total framing phrases
+    • "lulus sensor lsf" (×1)
+
+[1] FRAMING: 'Pemerintah' per Media
+--------------------------------------------------
+  [cnn_nasional] — 10 total framing phrases
+    • "menteri yusril ihza mahendra" (×2)
+    • "melarang nobar film pesta babi" (×2)
+    • "daerah demi keamanan bukan instruksi tni" (×1)
+    • "pembubaran pemutaran film pesta babi adalah keputusan" (×1)
+  [kompas] — 10 total framing phrases
+    • "kontroversi nobar film pesta babi" (×1)
+    • "babi di papua picu beda sikap" (×1)
+    • "dpr tegaskan tak ada larangan" (×1)
+    • "kontroversi film pesta babi" (×1)
+  [detik_berita] — 9 total framing phrases
+    • "larang pemutaran film pesta babi" (×2)
+    • "yusril tegaskan" (×1)
+    • "catatan yusril usai tegaskan" (×1)
+    • "melarang nobar film" (×1)
+  [media_indonesia] — 5 total framing phrases
+    • "campuri nobar film pesta babi" (×1)
+    • "melarang nobar film pesta babi" (×1)
+    • "menghormati kebebasan berkreasi dan berekspresi" (×1)
+    • "menko yusril ihza mahendra" (×1)
+  [tirto] — 3 total framing phrases
+    • "larang nobar film pesta babi" (×1)
+    • "mengeklaim tidak melarang film pesta babi" (×1)
+    • "yusril tegaskan" (×1)
+  [liputan6_news] — 2 total framing phrases
+    • "keluarkan larangan nobar pesta babi" (×1)
+    • "yusril tegaskan" (×1)
+  [tempo_nasional] — 2 total framing phrases
+    • "babi karena tak ada pernyataan resmi" (×1)
+    • "menyebut film ini terlarang" (×1)
+
+[1] FRAMING: 'Yusril' per Media
+--------------------------------------------------
+  [cnn_nasional] — 12 total framing phrases
+    • "ihza mahendra menegaskan pemerintah tidak melarang nobar" (×2)
+    • "film pesta babi masih wajar biarkan publik" (×2)
+    • "ihza mahendra menegaskan pemerintah tak melarang kegiatan" (×1)
+    • "kampus melarang pemutaran film" (×1)
+  [detik_berita] — 7 total framing phrases
+    • "tegaskan pemerintah tak larang pemutaran film" (×1)
+    • "buka suara soal pembubaran nobar film pesta" (×1)
+    • "larangan nobar film pesta" (×1)
+    • "menko kumham imipas" (×1)
+  [kompas] — 4 total framing phrases
+    • "dpr menyatakan tidak ada pelarangan resmi" (×1)
+    • "ihza mahendra sebut pemerintah tidak pernah mengeluarkan" (×1)
+    • "menko kumham imipas" (×1)
+    • "tegaskan pemerintah tak pernah larang nobar film" (×1)
+  [media_indonesia] — 4 total framing phrases
+    • "bantah larangan nobar film pesta babi" (×1)
+    • "ihza mahendra menegaskan pemerintah tidak melarang nobar" (×1)
+    • "pastikan pemerintah tak campuri nobar film pesta" (×1)
+    • "pemerintah tetap menghormati kebebasan berkreasi" (×1)
+  [liputan6_news] — 2 total framing phrases
+    • "tegaskan pemerintah tak pernah keluarkan larangan nobar" (×1)
+    • "universitas mataram dan uin mataram" (×1)
+  [tempo_nasional] — 2 total framing phrases
+    • "ihza mahendra judul film dokumenter pesta babi" (×1)
+    • "pembuat film pesta babi jelaskan makna" (×1)
+  [tirto] — 2 total framing phrases
+    • "nilai pembatasan nonton bareng film pesta babi" (×1)
+    • "tegaskan pemerintah tak larang nobar film pesta" (×1)
+
+[2] PERBANDINGAN FRAMING ANTAR ENTITAS
+--------------------------------------------------
+  pesta babi (22 total):
+    • "yusril film" (×2)
+    • "mahendra menegaskan pemerintah tidak melarang nobar film" (×2)
+    • "aksi nonton bareng nobar film dokumenter berjudul" (×1)
+    • "anggota dpr azis subekti menyoroti pelarangan film" (×1)
+    • "anggota dpr kritik sah tetapi perlu tanggung" (×1)
+  tni (23 total):
+    • "pembubaran nobar film pesta babi bukan instruksi" (×2)
+    • "narasi film pesta babi berpotensi ganggu" (×2)
+    • "bubarkan nobar film pesta babi" (×2)
+    • "film pesta babi di universitas udayana didatangi" (×1)
+    • "film pesta babi keputusan pemda bukan instruksi" (×1)
+  pemerintah (28 total):
+    • "yusril tegaskan" (×4)
+    • "melarang nobar film pesta babi" (×3)
+    • "menteri yusril ihza mahendra" (×2)
+    • "larang nobar film pesta babi" (×2)
+    • "larang pemutaran film pesta babi" (×2)
+  yusril (24 total):
+    • "ihza mahendra menegaskan pemerintah tidak melarang nobar" (×3)
+    • "film pesta babi masih wajar biarkan publik" (×2)
+    • "menko kumham imipas" (×2)
+    • "dpr menyatakan tidak ada pelarangan resmi" (×1)
+    • "ihza mahendra judul film dokumenter pesta babi" (×1)
+  papua (20 total):
+    • "babi mengangkat konflik lahan dan masyarakat adat" (×1)
+    • "beruang banyak yang mampu terbang langsung" (×1)
+    • "bijak sikapi film dokumenter pesta babi" (×1)
+    • "bijak sikapi pemutaran film pesta babi" (×1)
+    • "budaya adat memicu kritik ham" (×1)
+
+[3] RELASI SVO (SUBJECT-VERB-OBJECT)
+--------------------------------------------------
+  TNI — 25 actions:
+  Top relations:
+    tni (×11)
+    pesta babi (×2)
+    dandhy (×2)
+    ksad (×2)
+    —[membubarkan]→ (×9)
+    —[dibubarkan di]→ (×3)
+    —[menjelaskan aksi pembubaran]→ (×2)
+    —[mengklaim proses pembubaran]→ (×1)
+    → pesta babi (×6)
+    → nobar pesta babi (×4)
+    → nobar film pesta babi (×2)
+    → aksi nobar (×2)
+
+  Pemerintah — 10 actions:
+  Top relations:
+    pemerintah (×2)
+    tni (×2)
+    ksad (×2)
+    menteri koordinator bidang hukum, ham, imigrasi (×1)
+    —[menjelaskan aksi pembubaran]→ (×2)
+    —[menegaskan]→ (×1)
+    —[tidak melarang]→ (×1)
+    —[menegaskan tidak melarang]→ (×1)
+    → pesta babi (×3)
+    → nobar pesta babi (×3)
+    → pemerintah (×2)
+    → maruli (×1)
+
+  Pesta Babi — 22 actions:
+  Top relations:
+    tni (×7)
+    pesta babi (×2)
+    pemerintah (×2)
+    ksad (×2)
+    —[membubarkan]→ (×4)
+    —[dibubarkan di]→ (×3)
+    —[menjelaskan aksi pembubaran]→ (×2)
+    —[berjudul]→ (×1)
+    → pesta babi (×8)
+    → nobar pesta babi (×3)
+    → ternate (×2)
+    → pemerintah (×2)
+
+  Papua — 6 actions:
+  Top relations:
+    tni (×3)
+    pesta babi (×2)
+    universitas (×1)
+    —[membubarkan]→ (×2)
+    —[dibubarkan di]→ (×2)
+    —[menilai memiliki risiko tinggi mengganggu stabilitas]→ (×1)
+    —[menjaga stabilitas dan keharmonisan sosial]→ (×1)
+    → pesta babi (×3)
+    → mataram (×1)
+    → ternate (×1)
+    → papua (×1)
+
+============================================================
+  SELESAI. Visualisasi ada di direktori ini.
+============================================================

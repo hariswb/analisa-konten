@@ -1,0 +1,601 @@
+{
+  "source_entity": "andrie yunus",
+  "topic_scoped": false,
+  "total_actions": 64,
+  "actions": [
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus dilimpahkan ke",
+      "target_entity": "puspom tni",
+      "count": 14
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "adalah",
+      "target_entity": "wakil koordinator kontras",
+      "count": 6
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "aktivis",
+      "target_entity": "kontras",
+      "count": 4
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus melibatkan oknum",
+      "target_entity": "bais tni",
+      "count": 2
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus dilimpahkan ke",
+      "target_entity": "tni",
+      "count": 2
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "adalah aktivis",
+      "target_entity": "kontras",
+      "count": 2
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "membahas",
+      "target_entity": "uu tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "dari",
+      "target_entity": "kontras",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "disiram di",
+      "target_entity": "jakarta pusat",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "disiram air keras di",
+      "target_entity": "jakarta",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "mendobrak pembahasan RUU",
+      "target_entity": "tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "serangan menjadi perhatian",
+      "target_entity": "prabowo",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "dalam perlindungan darurat",
+      "target_entity": "lembaga perlindungan saksi dan korban",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "merupakan aksi",
+      "target_entity": "terorisme",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "terkejut dengan langkah",
+      "target_entity": "tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "membutuhkan waktu pemulihan hingga",
+      "target_entity": "2 tahun",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus penyiraman air keras ditangani oleh",
+      "target_entity": "polisi",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus dilimpahkan dari",
+      "target_entity": "kepolisian",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "pihaknya kecewa dengan",
+      "target_entity": "polisi",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus ditangani oleh",
+      "target_entity": "puspom tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus dilimpahkan dari",
+      "target_entity": "polda metro jaya",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "dirawat di",
+      "target_entity": "rs",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "disiram air keras oleh prajurit",
+      "target_entity": "bais tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "disiram air keras oleh",
+      "target_entity": "tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus ditangani",
+      "target_entity": "puspom tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus diserahkan kepada",
+      "target_entity": "puspom tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "meminta perlindungan ke",
+      "target_entity": "komnas ham",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "meminta perlindungan ke",
+      "target_entity": "lpsk",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "ajukan perlindungan ke",
+      "target_entity": "komnas ham",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "ajukan perlindungan ke",
+      "target_entity": "lpsk",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "berada di",
+      "target_entity": "jakarta",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "berada di",
+      "target_entity": "sumut",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus penyiraman air kerasnya masuk ke",
+      "target_entity": "oditurat militer",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasusnya dilimpahkan ke",
+      "target_entity": "puspom tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "ajukan permohonan di",
+      "target_entity": "mk",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menggugat",
+      "target_entity": "uu peradilan militer",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menjalani perawatan intensif di",
+      "target_entity": "rscm",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "berkas kasusnya dilimpahkan ke",
+      "target_entity": "pengadilan militer ii - 08 jakarta",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "sidangnya digelar pada",
+      "target_entity": "29 april",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "berkas perkaranya dilimpahkan ke",
+      "target_entity": "pengadilan",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus dialihkan ke",
+      "target_entity": "polda metro",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus dilimpahkan ke",
+      "target_entity": "polda metro",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "mengalami luka bakar",
+      "target_entity": "20 %",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "mengalami kerusakan mata",
+      "target_entity": "40 persen",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "dipanggil untuk",
+      "target_entity": "sidang",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "diperintahkan hadir di",
+      "target_entity": "sidang air keras",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menjalani operasi",
+      "target_entity": "penca",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "dihadirkan pada",
+      "target_entity": "13 mei",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "sebagai saksi di",
+      "target_entity": "sidang kasus air keras",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus terjadi di",
+      "target_entity": "salemba",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "kasus terjadi di",
+      "target_entity": "jakpus",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "tidak menghadiri",
+      "target_entity": "sidang",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menjalani",
+      "target_entity": "operasi cangkok kulit",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menginterupsi",
+      "target_entity": "rapat ruu",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menggeruduk",
+      "target_entity": "rapat ruu",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "dirawat di",
+      "target_entity": "rscm",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menolak dibesuk oleh",
+      "target_entity": "tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "tidak dapat hadir di",
+      "target_entity": "persidangan",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "korban oknum",
+      "target_entity": "tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "tak hadir di",
+      "target_entity": "pengadilan militer ii - 08 jakarta",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "disiram air keras oleh",
+      "target_entity": "empat",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menginterupsi",
+      "target_entity": "rapat pembahasan ruu tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menginterupsi",
+      "target_entity": "ruu tni",
+      "count": 1
+    },
+    {
+      "source_entity": "andrie yunus",
+      "relation": "menginterupsi",
+      "target_entity": "rapat ruu tni",
+      "count": 1
+    }
+  ],
+  "key_entities": {
+    "DAT": [
+      {
+        "name": "13 mei",
+        "count": 4
+      },
+      {
+        "name": "29 april",
+        "count": 1
+      }
+    ],
+    "QTY": [
+      {
+        "name": "2 tahun",
+        "count": 1
+      }
+    ],
+    "PRC": [
+      {
+        "name": "20 %",
+        "count": 1
+      },
+      {
+        "name": "40 persen",
+        "count": 1
+      }
+    ],
+    "PER": [
+      {
+        "name": "andrie yunus",
+        "count": 131
+      },
+      {
+        "name": "prabowo",
+        "count": 4
+      },
+      {
+        "name": "kontras",
+        "count": 1
+      }
+    ],
+    "NOR": [
+      {
+        "name": "tni",
+        "count": 32
+      },
+      {
+        "name": "puspom tni",
+        "count": 30
+      },
+      {
+        "name": "polda metro jaya",
+        "count": 11
+      },
+      {
+        "name": "kontras",
+        "count": 9
+      },
+      {
+        "name": "komnas ham",
+        "count": 7
+      },
+      {
+        "name": "polisi",
+        "count": 7
+      },
+      {
+        "name": "wakil koordinator kontras",
+        "count": 7
+      },
+      {
+        "name": "bais tni",
+        "count": 3
+      },
+      {
+        "name": "kepolisian",
+        "count": 3
+      },
+      {
+        "name": "lpsk",
+        "count": 2
+      },
+      {
+        "name": "polda metro",
+        "count": 2
+      },
+      {
+        "name": "mk",
+        "count": 1
+      },
+      {
+        "name": "oditurat militer",
+        "count": 1
+      },
+      {
+        "name": "pengadilan",
+        "count": 1
+      }
+    ],
+    "CRD": [
+      {
+        "name": "empat",
+        "count": 7
+      }
+    ],
+    "GPE": [
+      {
+        "name": "jakarta",
+        "count": 6
+      },
+      {
+        "name": "jakarta pusat",
+        "count": 1
+      },
+      {
+        "name": "jakpus",
+        "count": 1
+      },
+      {
+        "name": "sumut",
+        "count": 1
+      }
+    ],
+    "ORG": [
+      {
+        "name": "lembaga perlindungan saksi dan korban",
+        "count": 2
+      },
+      {
+        "name": "kontras",
+        "count": 1
+      }
+    ],
+    "EVT": [
+      {
+        "name": "sidang",
+        "count": 4
+      },
+      {
+        "name": "rapat ruu",
+        "count": 2
+      },
+      {
+        "name": "sidang air keras",
+        "count": 2
+      },
+      {
+        "name": "operasi cangkok kulit",
+        "count": 1
+      },
+      {
+        "name": "penca",
+        "count": 1
+      },
+      {
+        "name": "persidangan",
+        "count": 1
+      },
+      {
+        "name": "rapat pembahasan ruu tni",
+        "count": 1
+      },
+      {
+        "name": "rapat ruu tni",
+        "count": 1
+      },
+      {
+        "name": "sidang kasus air keras",
+        "count": 1
+      },
+      {
+        "name": "terorisme",
+        "count": 1
+      }
+    ],
+    "FAC": [
+      {
+        "name": "rscm",
+        "count": 3
+      },
+      {
+        "name": "pengadilan militer ii - 08 jakarta",
+        "count": 2
+      },
+      {
+        "name": "rs",
+        "count": 2
+      }
+    ],
+    "LAW": [
+      {
+        "name": "uu peradilan militer",
+        "count": 2
+      },
+      {
+        "name": "ruu tni",
+        "count": 1
+      },
+      {
+        "name": "uu tni",
+        "count": 1
+      }
+    ],
+    "LOC": [
+      {
+        "name": "salemba",
+        "count": 1
+      }
+    ]
+  }
+}

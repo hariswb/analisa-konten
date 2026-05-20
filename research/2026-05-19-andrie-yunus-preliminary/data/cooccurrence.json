@@ -1,0 +1,43 @@
+{
+    "entity_word": "andrie yunus",
+    "topic_scoped": false,
+    "mention_count": 1630,
+    "co_occurring_entities": [
+        {"word": "tni", "entity_group": "NOR", "co_occurrence_count": 324},
+        {"word": "polisi", "entity_group": "NOR", "co_occurrence_count": 182},
+        {"word": "empat", "entity_group": "CRD", "co_occurrence_count": 158},
+        {"word": "4", "entity_group": "CRD", "co_occurrence_count": 155},
+        {"word": "wakil koordinator kontras", "entity_group": "NOR", "co_occurrence_count": 127},
+        {"word": "komnas ham", "entity_group": "NOR", "co_occurrence_count": 123},
+        {"word": "kontras", "entity_group": "NOR", "co_occurrence_count": 86},
+        {"word": "jakarta", "entity_group": "GPE", "co_occurrence_count": 86},
+        {"word": "polri", "entity_group": "NOR", "co_occurrence_count": 85},
+        {"word": "andrie", "entity_group": "PER", "co_occurrence_count": 82},
+        {"word": "puspom tni", "entity_group": "NOR", "co_occurrence_count": 71},
+        {"word": "polda metro jaya", "entity_group": "NOR", "co_occurrence_count": 67},
+        {"word": "dpr", "entity_group": "NOR", "co_occurrence_count": 58},
+        {"word": "prabowo", "entity_group": "PER", "co_occurrence_count": 57}
+    ],
+    "links": [
+        {"source": "andrie yunus", "target": "tni", "weight": 802},
+        {"source": "andrie yunus", "target": "kontras", "weight": 746},
+        {"source": "andrie yunus", "target": "polisi", "weight": 402},
+        {"source": "andrie yunus", "target": "komnas ham", "weight": 370},
+        {"source": "4", "target": "andrie yunus", "weight": 321},
+        {"source": "andrie yunus", "target": "wakil koordinator kontras", "weight": 221},
+        {"source": "andrie yunus", "target": "polri", "weight": 190},
+        {"source": "andrie yunus", "target": "jakarta", "weight": 173},
+        {"source": "andrie yunus", "target": "taud", "weight": 163},
+        {"source": "andrie yunus", "target": "puspom tni", "weight": 159},
+        {"source": "andrie yunus", "target": "polda metro jaya", "weight": 136},
+        {"source": "andrie yunus", "target": "rscm", "weight": 132},
+        {"source": "andrie yunus", "target": "prabowo", "weight": 128},
+        {"source": "andrie yunus", "target": "cctv", "weight": 115},
+        {"source": "andrie yunus", "target": "dpr", "weight": 110},
+        {"source": "andrie yunus", "target": "bais tni", "weight": 108},
+        {"source": "andrie yunus", "target": "pemerintah", "weight": 101},
+        {"source": "kontras", "target": "tni", "weight": 101},
+        {"source": "andrie yunus", "target": "tgpf", "weight": 86},
+        {"source": "komnas ham", "target": "tni", "weight": 85}
+    ]
+}

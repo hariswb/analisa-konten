@@ -18,10 +18,15 @@ Automated Indonesian news content analysis — sentiment, entities, relations, a
 
 ```
 research/
+├── 2026-05-20-pesta-babi/  # Co-occurrence network & sentiment analysis
 └── YYYY-MM-DD-topic-slug/
-    ├── README.md       # Analysis report
-    ├── charts/         # Generated charts
-    └── data/           # Source data
+    ├── analysis.py          # Reproducible Python analysis script
+    ├── report.txt           # Structured text report
+    ├── network_cooccurence.png
+    ├── sentiment_trend.png
+    ├── source_comparison.png
+    ├── all_articles.json    # Full article metadata (89 articles)
+    └── data/                # Source data from API
 ```
 
 ## Data source
