@@ -1,0 +1,41 @@
+{
+  "verdict": "H2_amplified_organic",
+  "rejected": "H1_pure_astroturf",
+  "mechanism": "cross_platform_cascade_TikTok_to_Instagram",
+  "catalyst": "Sania Leonardo reaction video (3.1M TikTok followers)",
+  "secondary_amplifier": "Bahlil acknowledgement + Golkar narrative capture",
+  "timeline": {
+    "2026-04-29": "@vokaliz_netizen uploads song 'Kanda My Little Bolu Ketan' on TikTok → https://www.tiktok.com/@vokaliz_netizen/video/7634163983158758664 (createTime=1777467317, confirmed)",
+    "2026-05-06": "@versevoxmusic posts reel on Instagram → https://www.instagram.com/reel/DX_V_32ip-9 (13M views, 36K comments — our dataset)",
+    "2026-05-07": "@inversi.media posts version on TikTok → https://www.tiktok.com/@inversi.media/video/7637035308005051655",
+    "2026-05-06_09": "WAVE 1: 12,393 comments (organic viral on Instagram Reels)",
+    "2026-05-10_21": "BASELINE: 224-388 comments/day (14-day plateau)",
+    "2026-05-18": "Song circulating on TikTok, used in multiple creator videos",
+    "2026-05-20": "Bahlil Lahadalia reportedly addresses/acknowledges the song",
+    "2026-05-22_23": "Sania Leonardo (3.1M TikTok followers) posts reaction → Gets 2.4M+ likes",
+    "2026-05-22_26": "WAVE 2: 19,644 comments (cross-platform cascade TikTok→Instagram)",
+    "2026-05-24": "News media picks up story. Satriaprabhawa, jogjastudent repost.",
+    "2026-05-25": "Golkar official statement: calls it 'apresiasi netizen atas kerja keras Pak Bahlil'"
+  },
+  "for_astroturf": [
+    "Wave 2 is 58% larger than Wave 1 on fewer days — unusual for pure organic decay",
+    "😭 emoji share spiked +11pp (29%→40%) — compositional shift",
+    "Lyric references dropped 20%→14% — Wave 2 audience less song-attuned",
+    "99% new users in Wave 2 — but EXPLCABLE by cross-platform cascade"
+  ],
+  "against_astroturf": [
+    "FALSE: Bot/template spam — zero copy-paste text beyond emoji strings",
+    "FALSE: Burst accounts — only 11 across 36K comments, all plausibly human (tag chains)",
+    "FALSE: Low lexical diversity — 24,253 unique terms from 35K text comments",
+    "FALSE: Coordinated account creation — 94.8% of Wave 2 new users posted exactly once",
+    "FALSE: No authentic cross-wave narrative — 180 returners with personal arcs"
+  ],
+  "confirmed_mechanism": [
+    "Wave 2 catalyst identified: Sania Leonardo's TikTok reaction video (3.1M followers)",
+    "Cross-platform cascade mechanism: TikTok → Instagram Reels → original post",
+    "Bahlil's own acknowledgement on May 20 seeded renewed interest",
+    "Golkar's official framing on May 25 may have spurred party-affiliated accounts",
+    "Wave 2 behavior consistent with TikTok audience: higher 😭 usage, less lyric quoting",
+    "Inter-wave gap (16 days) matches typical content-discovery lag between platforms"
+  ]
+}

@@ -199,7 +199,7 @@ Pola:  **😭** semakin dominan di Wave 2 secara proporsional.
 
 ## Analisis Pengguna Kembali
 
-**2,049 pengguna (6.1% dari 33,666)** mengomentari lebih dari sekali, menyumbang **4,572 komentar tambahan**.
+**2,050 pengguna (6.1% dari 33,666)** mengomentari lebih dari sekali, menyumbang **4,572 komentar tambahan**.
 
 ### Jarak Komentar 1 → 2
 
@@ -225,11 +225,11 @@ Pola:  **😭** semakin dominan di Wave 2 secara proporsional.
 
 2. **Same-minute dual comment (gap 0–2 menit):** Pengguna memposting 2 komentar berturut-turut — biasanya tag ke akun berbeda di komentar terpisah, atau balas diri sendiri.
 
-3. **Cross-wave returning (gap 12–19 hari):** 179 pengguna yang berkomentar di Wave 1 (6–9 Mei) kembali di Wave 2 (22–26 Mei). Median gap: 16 hari.
+3. **Cross-wave returning (gap 12–19 hari):** 180 pengguna yang berkomentar di Wave 1 (6–9 Mei) kembali di Wave 2 (22–26 Mei). Median gap: 16 hari.
 
 ### Cross-Wave Returning — Analisis Mendalam
 
-**179 pengguna** kembali setelah jeda 12–19 hari (median 16). Temuan kualitatif:
+**180 pengguna** kembali setelah jeda 12–19 hari (median 16). Temuan kualitatif:
 
 #### Self-Updating Narrative
 Tema paling menarik: pengguna berkomentar tentang kekhawatiran/ramalan di Wave 1, lalu kembali di Wave 2 untuk mengonfirmasi bahwa ramalan itu terjadi. Ini seperti *arc cerita mini* yang terentang antar gelombang.
@@ -261,13 +261,12 @@ Beberapa pengguna kembali bukan untuk menambah komentar baru, tapi untuk mereaks
 
 #### Insight
 
-Keberadaan 179 cross-wave returners (0.5% dari total pengguna) mengonfirmasi bahwa konten ini memiliki **retensi organik yang langka** — tidak seperti kebanyakan viral satu-gelombang yang mati dalam 2–3 hari. Fakta bahwa orang-orang kembali berminggu-minggu kemudian untuk *update* atau *re-tag* menunjukkan bahwa lagu ini menjadi semacam **meme yang hidup di ekosistem pertemanan**, bukan sekadar tontonan sekali lewat.
+Keberadaan 180 cross-wave returners (0.5% dari total pengguna) mengonfirmasi bahwa konten ini memiliki **retensi organik yang langka** — tidak seperti kebanyakan viral satu-gelombang yang mati dalam 2–3 hari. Fakta bahwa orang-orang kembali berminggu-minggu kemudian untuk *update* atau *re-tag* menunjukkan bahwa lagu ini menjadi semacam **meme yang hidup di ekosistem pertemanan**, bukan sekadar tontonan sekali lewat.
 
 ## Catatan Data
 
-- File CSV asli: 22.4 MB, 36,437 baris (header + 36,436 komentar). Angka sedikit beda dengan 36k yang tertera di Instagram — kemungkinan karena komentar terhapus atau filter API.
-- 15 baris memiliki timestamp tidak valid (sebelum posting atau tahun 4401).
-- 1 baris timestamp tahun 4401 M — kemungkinan bug scraping dibuang.
+- File CSV asli: 22.4 MB, 36,437 baris (header + 36,216 komentar — terdapat ~220 baris tambahan dari *newline* di field URL profil)
+- 14 baris memiliki timestamp null, 1 baris outlier tahun 4401 M, dan 1 baris outlier tahun 2011 — total 16 baris timestamp tidak valid
 - Delimiter CSV: `;`, encoding: UTF-8 BOM.
 - `created_at` adalah Unix timestamp (detik sejak epoch).
 
