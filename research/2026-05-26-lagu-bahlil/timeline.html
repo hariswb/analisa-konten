@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lagu Bahlil — Timeline</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,38 +16,11 @@
     justify-content: center;
     padding: 48px 24px;
   }
-  .container {
-    max-width: 960px;
-    width: 100%;
-  }
-  h1 {
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    margin-bottom: 4px;
-  }
-  .subtitle {
-    color: #a1a1aa;
-    font-size: 14px;
-    margin-bottom: 40px;
-  }
-  .subtitle span {
-    color: #e4e4e7;
-    font-weight: 600;
-  }
-
-  /* Chart area */
-  .chart-wrap {
-    position: relative;
-    margin-bottom: 32px;
-  }
-  svg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Stats grid */
+  .container { max-width: 960px; width: 100%; }
+  h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 4px; }
+  .subtitle { color: #a1a1aa; font-size: 14px; margin-bottom: 40px; }
+  .subtitle span { color: #e4e4e7; font-weight: 600; }
+  .chart-wrap { position: relative; margin-bottom: 32px; }
   .stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -59,119 +33,35 @@
     padding: 16px 20px;
     border: 1px solid #27272a;
   }
-  .stat-card .label {
-    font-size: 12px;
-    color: #a1a1aa;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    margin-bottom: 6px;
-  }
-  .stat-card .value {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-  }
+  .stat-card .label { font-size: 12px; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; margin-bottom: 6px; }
+  .stat-card .value { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; }
   .stat-card .value.wave1 { color: #a78bfa; }
   .stat-card .value.wave2 { color: #f472b6; }
   .stat-card .value.gap { color: #34d399; }
   .stat-card .value.total { color: #fbbf24; }
-  .stat-card .subval {
-    font-size: 12px;
-    color: #71717a;
-    margin-top: 2px;
-  }
-
-  /* Phase labels */
+  .stat-card .subval { font-size: 12px; color: #71717a; margin-top: 2px; }
   .phases {
-    display: flex;
-    gap: 0;
-    margin-bottom: 32px;
-    background: #18181b;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #27272a;
+    display: flex; gap: 0; margin-bottom: 32px;
+    background: #18181b; border-radius: 12px; overflow: hidden; border: 1px solid #27272a;
   }
-  .phase {
-    flex: 1;
-    padding: 16px 20px;
-    text-align: center;
-  }
+  .phase { flex: 1; padding: 16px 20px; text-align: center; }
   .phase.w1 { border-bottom: 3px solid #a78bfa; }
   .phase.gap { border-bottom: 3px solid #34d399; }
   .phase.w2 { border-bottom: 3px solid #f472b6; }
-  .phase .title {
-    font-weight: 600;
-    font-size: 13px;
-    margin-bottom: 2px;
-  }
-  .phase .date {
-    font-size: 12px;
-    color: #71717a;
-  }
-  .phase .pct {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 4px;
-  }
+  .phase .title { font-weight: 600; font-size: 13px; margin-bottom: 2px; }
+  .phase .date { font-size: 12px; color: #71717a; }
+  .phase .pct { font-size: 20px; font-weight: 700; margin-top: 4px; }
   .phase.w1 .pct { color: #a78bfa; }
   .phase.gap .pct { color: #34d399; }
   .phase.w2 .pct { color: #f472b6; }
-
-  /* Wave comparison table */
-  .compare {
-    background: #18181b;
-    border-radius: 12px;
-    border: 1px solid #27272a;
-    overflow: hidden;
-  }
-  .compare-header {
-    display: grid;
-    grid-template-columns: 140px 1fr 1fr;
-    padding: 14px 20px;
-    background: #1f1f23;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #71717a;
-    border-bottom: 1px solid #27272a;
-  }
-  .compare-row {
-    display: grid;
-    grid-template-columns: 140px 1fr 1fr;
-    padding: 12px 20px;
-    font-size: 14px;
-    border-bottom: 1px solid #1f1f23;
-  }
-  .compare-row:last-child { border-bottom: none; }
-  .compare-row .metric { color: #a1a1aa; }
-  .compare-row .v1 { color: #a78bfa; }
-  .compare-row .v2 { color: #f472b6; }
-
-  /* Footer */
-  .footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 12px;
-    color: #52525b;
-  }
-
-  @media (max-width: 640px) {
-    .stats { grid-template-columns: repeat(2, 1fr); }
-    body { padding: 24px 16px; }
-    .phase { padding: 12px 10px; }
-    .phase .pct { font-size: 16px; }
-  }
+  @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); } body { padding: 24px 16px; } .phase { padding: 12px 10px; } .phase .pct { font-size: 16px; } }
 </style>
 </head>
 <body>
 <div class="container">
-
   <h1>🎵 Lagu Bahlil — Timeline Komentar</h1>
   <div class="subtitle">Instagram Reel · 6–26 Mei 2026 · <span>36,200 komentar</span></div>
 
-  <!-- Stats -->
   <div class="stats">
     <div class="stat-card">
       <div class="label">Wave 1</div>
@@ -180,8 +70,8 @@
     </div>
     <div class="stat-card">
       <div class="label">Redaman</div>
-      <div class="value gap">3,689</div>
-      <div class="subval">10–21 Mei · ~335/hari</div>
+      <div class="value gap">4,163</div>
+      <div class="subval">10–21 Mei · ~346/hari</div>
     </div>
     <div class="stat-card">
       <div class="label">Wave 2</div>
@@ -195,148 +85,101 @@
     </div>
   </div>
 
-  <!-- SVG Chart -->
   <div class="chart-wrap">
-    <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="w1g" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.02"/>
-        </linearGradient>
-        <linearGradient id="w2g" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#f472b6" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#f472b6" stop-opacity="0.02"/>
-        </linearGradient>
-        <linearGradient id="gapg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#34d399" stop-opacity="0.15"/>
-          <stop offset="100%" stop-color="#34d399" stop-opacity="0.02"/>
-        </linearGradient>
-      </defs>
-
-      <!-- Grid lines -->
-      <line x1="60" y1="50" x2="880" y2="50" stroke="#27272a" stroke-width="1"/>
-      <line x1="60" y1="122" x2="880" y2="122" stroke="#27272a" stroke-width="1"/>
-      <line x1="60" y1="194" x2="880" y2="194" stroke="#27272a" stroke-width="1"/>
-      <line x1="60" y1="266" x2="880" y2="266" stroke="#27272a" stroke-width="1" stroke-dasharray="4,4"/>
-
-      <!-- Y axis labels -->
-      <text x="54" y="54" fill="#52525b" font-size="11" text-anchor="end">7k</text>
-      <text x="54" y="126" fill="#52525b" font-size="11" text-anchor="end">5k</text>
-      <text x="54" y="198" fill="#52525b" font-size="11" text-anchor="end">2.5k</text>
-      <text x="54" y="270" fill="#52525b" font-size="11" text-anchor="end">0</text>
-
-      <!-- Phase background bands -->
-      <rect x="60" y="50" width="138" height="215" fill="#a78bfa" opacity="0.04" rx="4"/>
-      <rect x="306" y="50" width="344" height="215" fill="#34d399" opacity="0.03" rx="4"/>
-      <rect x="658" y="50" width="222" height="215" fill="#f472b6" opacity="0.04" rx="4"/>
-
-      <!-- Phase labels on chart -->
-      <text x="129" y="310" fill="#a78bfa" font-size="11" font-weight="600" text-anchor="middle">Wave 1</text>
-      <text x="478" y="310" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">Redaman</text>
-      <text x="769" y="310" fill="#f472b6" font-size="11" font-weight="600" text-anchor="middle">Wave 2</text>
-
-      <!-- Data points: each bar = 1 day, width=36px, gap=6px -->
-      <!-- Day 1: May 6 -- 1668 -->
-      <rect x="66" y="216" width="36" height="48" rx="3" fill="#a78bfa" opacity="0.7"/>
-      <!-- May 7 -- 7427 -->
-      <rect x="108" y="55" width="36" height="210" rx="3" fill="#a78bfa"/>
-      <!-- May 8 -- 2302 -->
-      <rect x="150" y="198" width="36" height="67" rx="3" fill="#a78bfa"/>
-      <!-- May 9 -- 996 -->
-      <rect x="192" y="236" width="36" height="28" rx="3" fill="#a78bfa" opacity="0.6"/>
-
-      <!-- Gap phase: May 10-21 -->
-      <rect x="252" y="249" width="24" height="16" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="280" y="256" width="24" height="9" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="308" y="256" width="24" height="9" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="336" y="259" width="24" height="6" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="364" y="258" width="24" height="7" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="392" y="261" width="24" height="5" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="420" y="256" width="24" height="9" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="448" y="256" width="24" height="9" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="476" y="254" width="24" height="10" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="504" y="254" width="24" height="10" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="532" y="254" width="24" height="10" rx="2" fill="#34d399" opacity="0.4"/>
-      <rect x="560" y="256" width="24" height="9" rx="2" fill="#34d399" opacity="0.4"/>
-
-      <!-- Wave 2: May 22 -- 2564 -->
-      <rect x="604" y="193" width="36" height="72" rx="3" fill="#f472b6" opacity="0.7"/>
-      <!-- May 23 -- 7762 -->
-      <rect x="646" y="51" width="36" height="214" rx="3" fill="#f472b6"/>
-      <!-- May 24 -- 4819 -->
-      <rect x="688" y="126" width="36" height="139" rx="3" fill="#f472b6"/>
-      <!-- May 25 -- 3711 -->
-      <rect x="730" y="155" width="36" height="109" rx="3" fill="#f472b6"/>
-      <!-- May 26 -- 788 -->
-      <rect x="772" y="243" width="36" height="22" rx="3" fill="#f472b6" opacity="0.5"/>
-
-      <!-- Max value label -->
-      <text x="664" y="45" fill="#f472b6" font-size="11" font-weight="600" text-anchor="middle">7,762</text>
-      <text x="126" y="49" fill="#a78bfa" font-size="11" font-weight="600" text-anchor="middle">7,427</text>
-
-      <!-- Gap annotation -->
-      <text x="478" y="242" fill="#52525b" font-size="10" text-anchor="middle">~335 komentar/hari</text>
-      <text x="478" y="230" fill="#52525b" font-size="10" text-anchor="middle">2 minggu redaman</text>
-
-      <!-- Day labels -->
-      <text x="84" y="328" fill="#52525b" font-size="9" text-anchor="middle">6</text>
-      <text x="126" y="328" fill="#52525b" font-size="9" text-anchor="middle">7</text>
-      <text x="168" y="328" fill="#52525b" font-size="9" text-anchor="middle">8</text>
-      <text x="210" y="328" fill="#52525b" font-size="9" text-anchor="middle">9</text>
-      <text x="260" y="328" fill="#52525b" font-size="9" text-anchor="middle">10</text>
-      <text x="480" y="328" fill="#52525b" font-size="9" text-anchor="middle">...</text>
-      <text x="622" y="328" fill="#52525b" font-size="9" text-anchor="middle">22</text>
-      <text x="664" y="328" fill="#52525b" font-size="9" text-anchor="middle">23</text>
-      <text x="706" y="328" fill="#52525b" font-size="9" text-anchor="middle">24</text>
-      <text x="748" y="328" fill="#52525b" font-size="9" text-anchor="middle">25</text>
-      <text x="790" y="328" fill="#52525b" font-size="9" text-anchor="middle">26</text>
-
-      <!-- Y axis -->
-      <line x1="60" y1="50" x2="60" y2="290" stroke="#27272a" stroke-width="1"/>
-    </svg>
+    <canvas id="timelineChart"></canvas>
   </div>
 
-  <!-- Wave comparison -->
-  <div class="compare">
-    <div class="compare-header">
-      <div>Metrik</div>
-      <div>Wave 1 (6–9 Mei)</div>
-      <div>Wave 2 (22–26 Mei)</div>
+  <div class="phases">
+    <div class="phase w1">
+      <div class="title">Wave 1</div>
+      <div class="date">6–9 Mei</div>
+      <div class="pct">12393 <span style="font-size:12px;color:#71717a">komentar</span></div>
     </div>
-    <div class="compare-row">
-      <div class="metric">Total komentar</div>
-      <div class="v1">12,393</div>
-      <div class="v2">19,644</div>
+    <div class="phase gap">
+      <div class="title">Redaman</div>
+      <div class="date">10–21 Mei</div>
+      <div class="pct">4163</div>
     </div>
-    <div class="compare-row">
-      <div class="metric">Puncak harian</div>
-      <div class="v1">7,427 (7 Mei)</div>
-      <div class="v2">7,762 (23 Mei)</div>
-    </div>
-    <div class="compare-row">
-      <div class="metric">Durasi puncak</div>
-      <div class="v1">4 hari</div>
-      <div class="v2">5 hari (masih berjalan)</div>
-    </div>
-    <div class="compare-row">
-      <div class="metric">Jam puncak (WIB)</div>
-      <div class="v1">08:00 (1,032 komentar)</div>
-      <div class="v2">10:00 (1,303 komentar)</div>
-    </div>
-    <div class="compare-row">
-      <div class="metric">Aktivitas malam (18–23 WIB)</div>
-      <div class="v1">2,889</div>
-      <div class="v2">5,354</div>
-    </div>
-    <div class="compare-row">
-      <div class="metric">Rerata per jam (puncak 6–12 WIB)</div>
-      <div class="v1">816</div>
-      <div class="v2">1,132</div>
+    <div class="phase w2">
+      <div class="title">Wave 2</div>
+      <div class="date">22–26 Mei</div>
+      <div class="pct">19644</div>
     </div>
   </div>
 
-  <div class="footer">Data dari Instagram API · 36,216 komentar mentah · 14 null timestamps · visualisasi Stateless</div>
-
+  <div class="footer" style="text-align:center;font-size:12px;color:#52525b;margin-top:40px;">
+    Data dari Instagram API · 36,216 komentar mentah · 14 null timestamps · generated by compute_timeline.py
+  </div>
 </div>
+
+<script>
+const ctx = document.getElementById('timelineChart').getContext('2d');
+const w1Color = (ctx) => {
+  const g = ctx.createLinearGradient(0, 0, 0, 300);
+  g.addColorStop(0, 'rgba(167,139,250,0.35)');
+  g.addColorStop(1, 'rgba(167,139,250,0.02)');
+  return g;
+};
+const w2Color = (ctx) => {
+  const g = ctx.createLinearGradient(0, 0, 0, 300);
+  g.addColorStop(0, 'rgba(244,114,182,0.35)');
+  g.addColorStop(1, 'rgba(244,114,182,0.02)');
+  return g;
+};
+
+const barColors = ["2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-26"].map(d => {
+  if (d >= '2026-05-22') return '#f472b6';
+  if (d >= '2026-05-06' && d <= '2026-05-09') return '#a78bfa';
+  return '#34d399';
+});
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-26"],
+    datasets: [{
+      label: 'Komentar',
+      data: [1668, 7427, 2302, 996, 574, 342, 350, 283, 305, 224, 339, 313, 340, 364, 388, 341, 2564, 7762, 4819, 3711, 788],
+      backgroundColor: barColors,
+      borderRadius: 3,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#18181b',
+        borderColor: '#27272a',
+        borderWidth: 1,
+        titleColor: '#e4e4e7',
+        bodyColor: '#a1a1aa',
+        callbacks: {
+          title: function(items) {
+            const d = items[0].label;
+            const w = d >= '2026-05-22' ? 'Wave 2' : (d >= '2026-05-06' && d <= '2026-05-09' ? 'Wave 1' : 'Redaman');
+            return d + ' — ' + w;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        grid: { color: '#27272a' },
+        ticks: { color: '#52525b' },
+        beginAtZero: true
+      },
+      x: {
+        grid: { display: false },
+        ticks: {
+          color: '#52525b',
+          maxTicksLimit: 21
+        }
+      }
+    }
+  }
+});
+</script>
 </body>
 </html>

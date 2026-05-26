@@ -270,6 +270,36 @@ Keberadaan 180 cross-wave returners (0.5% dari total pengguna) mengonfirmasi bah
 - Delimiter CSV: `;`, encoding: UTF-8 BOM.
 - `created_at` adalah Unix timestamp (detik sejak epoch).
 
+## Reproduksi
+
+Semua output diperoleh dari skrip Python di `scripts/`. Jalankan dari direktori ini:
+
+```bash
+# 1. Install dependensi
+pip install --user git+https://github.com/hariswb/tantular.git
+
+# 2. Reproduksi semua output
+bash run_all.sh
+```
+
+### Pipeline (7 skrip → 8 output files)
+
+| Skrip | Output | Fungsi |
+|-------|--------|--------|
+| `scripts/compute_basic_stats.py` | `data/basic_stats.json` | Statistik dasar (total, pengguna unik, panjang rata-rata, emoji, top user/mention) |
+| `scripts/compute_hourly_counts.py` | `data/hourly_counts.json` | Komentar per hari, per jam WIB, per wave |
+| `scripts/compute_nlp_analysis.py` | `data/nlp_analysis.json` | Frekuensi kata (unigram/bigram/trigram), vocabulary size, sentimen (InSet) |
+| `scripts/engineered_hypothesis.py` | `data/hypothesis_test_results.json` | Deteksi engineered engagement (bursts, duplikat, user overlap) |
+| `scripts/hypothesis_part2.py` | `data/hypothesis_framework.json` | Analisis konten W1 vs W2, diurnal shift, emoji composition shift |
+| `scripts/verdict.py` | `data/verdict_hypothesis_v2.json` | Verdict final (H2: amplified organic) dengan timeline cross-platform |
+| `scripts/compute_timeline.py` | `timeline.html`, `timeline_emoji.html` | Visualisasi Chart.js berbasis data dari JSON |
+
+Semua skrip bersifat deterministik — menghasilkan output yang identik setiap kali dijalankan.
+
+### Catatan tokenizer
+
+Skrip NLP (`compute_nlp_analysis.py`) menggunakan Tantular `BagOfWords` untuk analisis frekuensi. Perbedaan kecil pada tokenizer (mis. penanganan tanda baca, angka, URL) dapat menyebabkan selisih ±30 kata pada vocabulary size (24.286 vs 24.253 dari kode inline asli). Sentimen menggunakan `InsetSentiment` dengan sampel acak 10% (3.512 komentar, seed=42).
+
 ## Tools
 
 Analisis menggunakan [Tantular](https://github.com/hariswb/tantular) — NLP toolkit for Indonesian text:

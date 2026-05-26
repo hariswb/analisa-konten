@@ -220,7 +220,7 @@
     ],
     [
       "l a g u   n y a",
-      427
+      424
     ],
     [
       "m a s   b a h l i l",
@@ -244,7 +244,7 @@
     ],
     [
       "c i l o k   p e n t o l",
-      255
+      254
     ],
     [
       "m b g   m a s",
@@ -256,11 +256,11 @@
     ],
     [
       "l a g u n y a   e n a k",
-      221
+      205
     ],
     [
       "e n a k   l a g u n y a",
-      201
+      199
     ],
     [
       "t a k u t   b g t",
@@ -279,16 +279,16 @@
       175
     ],
     [
-      "h a f a l   l a g u n y a",
-      170
-    ],
-    [
       "n i h   l a g u",
       168
     ],
     [
+      "h a f a l   l a g u n y a",
+      164
+    ],
+    [
       "n i   l a g u",
-      156
+      155
     ],
     [
       "t a k u t   h a p a l",
@@ -297,10 +297,6 @@
     [
       "z a y n   m a l i k",
       125
-    ],
-    [
-      "h a f a l   l a g u",
-      123
     ],
     [
       "b u a h   y g",
@@ -319,8 +315,12 @@
       118
     ],
     [
-      "b a n g e t   h a f a l",
-      114
+      "h a f a l   l a g u",
+      113
+    ],
+    [
+      "h a r t a   t a h t a",
+      113
     ]
   ],
   "top_trigrams": [
@@ -342,7 +342,7 @@
     ],
     [
       "c i l o k   p e n t o l   k e c a p",
-      174
+      173
     ],
     [
       "m y   l i t t l e   c i l o k",
@@ -350,7 +350,7 @@
     ],
     [
       "l i t t l e   c i l o k   p e n t o l",
-      147
+      146
     ],
     [
       "t a k u t   b a n g e t   h a f a l",
@@ -363,10 +363,6 @@
     [
       "h a r t a   t a h t a   k a k a n d a",
       73
-    ],
-    [
-      "b o l u   k e t a n   m y",
-      64
     ],
     [
       "t a k u t   b g t   h a f a l",
@@ -389,85 +385,89 @@
       51
     ],
     [
-      "b o l u   k e t a n   t a k u t",
-      51
-    ],
-    [
-      "k e t a n   m y   l i t t l e",
-      51
-    ],
-    [
       "t a k u t   b a n g e t   h a p a l",
       48
     ],
     [
-      "l a g u n y a   m y   l i t t l e",
-      47
+      "y g   b i k i n   l a g u",
+      44
+    ],
+    [
+      "k e t a n   b o t a k   l u c u",
+      43
+    ],
+    [
+      "b o l u   k e t a n   h i t a m",
+      43
+    ],
+    [
+      "e n a k   l a g u   n y a",
+      41
     ]
   ],
-  "vocabulary_size": 24253,
+  "vocabulary_size": 24286,
   "sentiment": {
     "sample_size": 3512,
     "label_distribution": {
-      "neutral": 1900,
-      "negative": 818,
-      "positive": 794
+      "neutral": 1981,
+      "negative": 792,
+      "positive": 739
     },
-    "polarity_pos_pct": 22.6,
-    "polarity_neg_pct": 23.3,
-    "polarity_neu_pct": 54.1,
-    "avg_polarity": -0.007,
+    "polarity_pos_pct": 21.0,
+    "polarity_neg_pct": 22.6,
+    "polarity_neu_pct": 56.4,
+    "avg_polarity": -0.015,
     "most_negative_examples": [
       {
-        "text": "Bahaya ini gx mau hapal gak mauu..dengerin nya geli tp kesel itu Gimaaaaaanaaa.. tau kezeeeel kan tau kann",
-        "score": -20.0,
+        "text": "Gamau denger gamau denger gamau denger 😭😭😭",
+        "score": -21.0,
         "label": "negative"
       },
       {
-        "text": "🤣🤣🤣🤣 fitnah itu lbh kejam dri pembunuhan loh... 🔥🔥",
-        "score": -14.0,
+        "text": "Sering lewat di timeline, takut jadi hapal 😭😭😭 pait pait pait pait 🤣🤣🤣",
+        "score": -19.0,
         "label": "negative"
       },
       {
-        "text": "Gawat... Telat dikit bisa viral ini 🤣🤣",
-        "score": -14.0,
+        "text": "Kalo jelek kamu jelas gak boleh marah marah \"\"",
+        "score": -15.0,
         "label": "negative"
       },
       {
-        "text": "Aku kira dia my little cilok pentol kecap. Ternyata aku salah malah kucurin Oli bekas, bukan kecap 😭😭😭 @ega_eegaa",
-        "score": -14.0,
+        "text": "Kasi tau anak gua ah biar mereka afalin trus disebar ke temen SD nya 🤗",
+        "score": -15.0,
         "label": "negative"
       },
       {
-        "text": "Kenapa sih dia jd olokan org indo bapak ini serius nanya 🙄🙄\"",
-        "score": -13.0,
+        "text": "Negara semrawut gini, masih ketolong netizen indo yang random gini😂",
+        "score": -12.0,
         "label": "negative"
       }
     ],
     "most_positive_examples": [
       {
-        "text": "enak di denger ni lagu nya.. pinter kreatif emank yg buat ni lagu 😍 asikkk nada nya ituu 🔥",
-        "score": 12.0,
+        "text": "Ahli Renovasi atap rumah pasang baja ringan renovasi rumah bangun rumah plafon pratisi dll \nhttps://kontraktoratapbaja.com",
+        "score": 22.0,
         "label": "positive"
       },
       {
-        "text": "@fitrimiratinnisa7 @gina_albasita28 meni lucu ya allah",
-        "score": 12.0,
+        "text": "Ya allah ya allah, takut banget terngiang-ngiang sama liriknya ✌🏻😭",
+        "score": 16.0,
         "label": "positive"
       },
       {
-        "text": "@👏dn,,nn 🤣👏,👏🔥👏😢 😢  u🤣  ii , ZICNJ, /🤣Vhttps://www.facebook.comhttps://www.facebook.com/share/r/1Ntc5jGwZ2//share/r/1Ntc5jGwZ2Hal : Undangan\nYth. \nKep",
+        "text": "Eh ini anaknya kalo liat bpanya dibikin lagu bgni gmn ya bakalan happy ga ya anaknya😂🤣",
+        "score": 16.0,
+        "label": "positive"
+      },
+      {
+        "text": "Pake tws dengarnya enak bjir, ga terasa pulang kerja sampai kost dengar lagunya sambil senyum senyum wkwkw sehat sehat trus kanda Bahlil",
         "score": 13.0,
         "label": "positive"
       },
       {
-        "text": "Paduka Yang Mulia, Raja Diraja Maharaja, Sultan Maha Sultan Camerad, Panglima Tertinggi sehat selalu Kanda MBG .... Selama pertalite belum naik.",
-        "score": 15.0,
-        "label": "positive"
-      },
-      {
-        "text": "Ya Allah Gusti Nu Aguuung...terngiang ngiang ya Allah....Rakyat selucu ini bertarung dengan Buahlil😭😭😂😂😂",
-        "score": 15.0,
+        "text": "Ya Allah kreatif bgt ini😂",
+        "score": 13.0,
         "label": "positive"
       }
     ]
