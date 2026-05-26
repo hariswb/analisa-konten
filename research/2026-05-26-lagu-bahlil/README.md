@@ -23,7 +23,7 @@
 | Komentar kosong/emoji-only | 1,102 (3%) |
 | Rata-rata panjang teks | 29.1 karakter |
 | Komentar mengandung emoji | 26,988 (74.5%) |
-| Total kemunculan emoji | 64,980 |
+| Total kemunculan emoji | 65,757 |
 
 ### Distribusi Panjang Komentar
 
@@ -137,7 +137,7 @@ Tag ke akun Bahlil sendiri (426) menunjukkan sebagian komentar menandai figur pu
 | takut banget | 334 |
 | bahlil ganteng | 311 |
 | takut hafal | 303 |
-| cilok pentol | 255 |
+| cilok pentol | 254 |
 | pentol kecap | 234 |
 
 ### Top Trigrams
@@ -148,7 +148,7 @@ Tag ke akun Bahlil sendiri (426) menunjukkan sebagian komentar menandai figur pu
 | my little bolu | 1,407 |
 | mas bahlil ganteng | 257 |
 | mbg mas bahlil | 215 |
-| cilok pentol kecap | 174 |
+| cilok pentol kecap | 173 |
 | my little cilok | 165 |
 
 **Interpretasi lirik:** Lagu ini adalah parodi dari "My Little Bolu Ketan" — sebuah lagu populer Indonesia. Lirik yang dikomentari paling sering: "my little bolu ketan", "mas bahlil ganteng", "cilok pentol kecap", "terngiang-ngiang", "takut hafal", "harta tahta kakanda", "buah yang manis". Ini adalah lirik absurd/komedi yang melekat di kepala orang.
@@ -157,11 +157,11 @@ Tag ke akun Bahlil sendiri (426) menunjukkan sebagian komentar menandai figur pu
 
 | Label | % |
 |-------|---|
-| Neutral | 54.1% |
-| Negative | 23.3% |
-| Positive | 22.6% |
+| Neutral | 56.4% |
+| Negative | 22.6% |
+| Positive | 21.0% |
 
-**Rata-rata polaritas:** -0.007 (netral)
+**Rata-rata polaritas:** -0.015 (netral)
 
 Polaritas hampir sempurna netral — sedikit lebih ke negatif tapi sangat tipis. Ini masuk akal untuk komentar komedi: kebanyakan orang bereaksi dengan emoji/lucu (neutral), sebagian kecil mengkritik (negative — "fitnah", "bahaya", "dijadikan olokan"), dan sebagian kecil memuji kreativitas (positive).
 
@@ -177,7 +177,7 @@ Polaritas hampir sempurna netral — sedikit lebih ke negatif tapi sangat tipis.
 
 ### Vocabulary
 
-**24,253** istilah unik dari 35,114 komentar berteks — kosakata sangat beragam untuk komentar media sosial.
+**24,286** istilah unik dari 35,114 komentar berteks — kosakata sangat beragam untuk komentar media sosial.
 
 ### Emoji per Hari (Timeline)
 
@@ -298,7 +298,7 @@ Semua skrip bersifat deterministik — menghasilkan output yang identik setiap k
 
 ### Catatan tokenizer
 
-Skrip NLP (`compute_nlp_analysis.py`) menggunakan Tantular `BagOfWords` untuk analisis frekuensi. Perbedaan kecil pada tokenizer (mis. penanganan tanda baca, angka, URL) dapat menyebabkan selisih ±30 kata pada vocabulary size (24.286 vs 24.253 dari kode inline asli). Sentimen menggunakan `InsetSentiment` dengan sampel acak 10% (3.512 komentar, seed=42).
+Skrip NLP (`compute_nlp_analysis.py`) menggunakan Tantular `BagOfWords` untuk analisis frekuensi. Hasil dari script adalah 24.286 istilah unik. Sentimen menggunakan `InsetSentiment` dengan sampel acak ~9.7% (3.512 komentar, seed=42).
 
 ## Tools
 

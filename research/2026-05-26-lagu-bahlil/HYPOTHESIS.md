@@ -57,10 +57,10 @@ Spark viral organik itu nyata, tetapi besarnya Wave 2 diperbesar oleh promotor s
 |-----------|------|------------------|
 | **0 copy-paste spam teks** | Semua duplikat eksak adalah emoji strings (😭🤣😂) | Bot farms meninggalkan signature template teks |
 | **Hanya 11 burst-users** | 4+ komentar dalam 60 detik — dari 36K total | Dalam dataset bot sungguhan, jumlahnya ratusan+ |
-| **24.253 istilah unik** | Dari 35.114 komentar berteks | Bot farms memiliki diversitas leksikal rendah |
+| **24.286 istilah unik** | Dari 35.114 komentar berteks | Bot farms memiliki diversitas leksikal rendah |
 | **94,8% pengguna Wave 2 baru** post sekali | 17.330 dari 18.281 | Bots biasanya post banyak atau pola terjadwal |
 | **180 cross-wave returners** | Dengan narasi pribadi otentik ("takut hafal" → "udah hafal") | Tidak bisa dipalsukan di scale |
-| **Sentimen netral** | Polaritas rata-rata -0,007 | Bot brigades cenderung uniform positive/negative |
+| **Sentimen netral** | Polaritas rata-rata -0,015 | Bot brigades cenderung uniform positive/negative |
 
 ---
 
