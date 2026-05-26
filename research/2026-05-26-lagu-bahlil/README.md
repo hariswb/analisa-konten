@@ -179,6 +179,90 @@ Polaritas hampir sempurna netral — sedikit lebih ke negatif tapi sangat tipis.
 
 **24,253** istilah unik dari 35,114 komentar berteks — kosakata sangat beragam untuk komentar media sosial.
 
+### Emoji per Hari (Timeline)
+
+Data lengkap di `data/hourly_counts.json`. Visualisasi: `timeline_emoji.html`
+
+| Tanggal | Total | 😭 | 🤣 | 😂 |
+|---------|------:|------:|------:|------:|
+| 6 Mei | 1,591 | 458 | 420 | 1,274 |
+| 7 Mei | 7,192 | 4,199 | 4,937 | 2,901 |
+| 8 Mei | 2,242 | 1,371 | 1,509 | 829 |
+| 9 Mei | 960 | 631 | 538 | 369 |
+| 10–21 Mei | 274–560 | 166–319 | 147–346 | 61–161 |
+| 22 Mei | 2,474 | 2,072 | 1,189 | 862 |
+| 23 Mei | 7,512 | 5,705 | 4,530 | 2,432 |
+| 24 Mei | 4,688 | 3,478 | 2,352 | 1,250 |
+| 25 Mei | 3,631 | 2,716 | 1,834 | 777 |
+
+Pola:  **😭** semakin dominan di Wave 2 secara proporsional.
+
+## Analisis Pengguna Kembali
+
+**2,049 pengguna (6.1% dari 33,666)** mengomentari lebih dari sekali, menyumbang **4,572 komentar tambahan**.
+
+### Jarak Komentar 1 → 2
+
+| Metrik | Nilai |
+|--------|-------|
+| Median | 79 menit |
+| Mean | ~52 jam (terdistorsi outlier antar-gelombang) |
+| P25 | 1.2 menit |
+| P75 | 22.9 jam |
+
+**Distribusi jarak:**
+| Rentang | Jumlah | % |
+|---------|--------|---|
+| ≤1 jam | 1,000 | 48.8% |
+| ≤6 jam | 1,237 | 60.4% |
+| ≤24 jam | 1,545 | 75.4% |
+| ≤1 minggu | 1,800 | 87.8% |
+| >1 minggu | 249 | 12.2% |
+
+### Pola Gap Dominan
+
+1. **Tag → reply chain (gap 1–5 menit):** Pola terbanyak — User A men-tag teman, teman membalas dalam hitungan menit. Ini mendorong 48.8% ke ≤1 jam.
+
+2. **Same-minute dual comment (gap 0–2 menit):** Pengguna memposting 2 komentar berturut-turut — biasanya tag ke akun berbeda di komentar terpisah, atau balas diri sendiri.
+
+3. **Cross-wave returning (gap 12–19 hari):** 179 pengguna yang berkomentar di Wave 1 (6–9 Mei) kembali di Wave 2 (22–26 Mei). Median gap: 16 hari.
+
+### Cross-Wave Returning — Analisis Mendalam
+
+**179 pengguna** kembali setelah jeda 12–19 hari (median 16). Temuan kualitatif:
+
+#### Self-Updating Narrative
+Tema paling menarik: pengguna berkomentar tentang kekhawatiran/ramalan di Wave 1, lalu kembali di Wave 2 untuk mengonfirmasi bahwa ramalan itu terjadi. Ini seperti *arc cerita mini* yang terentang antar gelombang.
+
+| Pengguna | Wave 1 (6–9 Mei) | Wave 2 (22–26 Mei) |
+|----------|-----------------|-------------------|
+| @lina_putrie | "Curiga bentar lagi anakku apal 😭" | "dan anakku sudah hafal 😭" |
+| @yourembernight | "TAKUT HAPALLLLL😭😭😭😭😭" | "dannn skrg aku udah hapal😭😭😭😭" |
+| @otak_random12 | "TAKUT BANGET APAL😭😭😭😭" | "wes apal aku😭😭😭" |
+| @nrulishaaaahr_ | "gamau balik ah takut hafal liriknya 😭" | "asem anjr jadi hafal lagunya" |
+| @amaliaa_fp | "Gak usah viral viral dong takut anakku 5th apalll" | "waah gawat kan !! aku aja iyaa diem diem nyanyiin ini 😭" |
+| @citrus_nobillis | "Bahaya nnti terngiang²" | "kak skrg tambah viral😭" |
+
+#### Persistent Tag Chains
+Pasangan pengguna yang saling tag di Wave 1 dan Wave 2, dengan jeda persis 18 hari. Ini menunjukkan konten ini dibagikan dalam jaringan pertemanan yang sama dan tetap relevan berminggu-minggu kemudian.
+
+> @elsasilvyanaaaa__ (8 Mei): "@dndutt.be dinda dicari kakanda buahlil nih wkwkwk"  
+> @dndutt.be (8 Mei 7 menit kemudian): "@elsasilvyanaaaa__ takutttt 😫"  
+> *(18 hari kemudian — 26 Mei)*  
+> @elsasilvyanaaaa__: "@dndutt.be cilok pentol kecap dindaa, emng kau ngenjok dio kecap kebanyakan ndaa"  
+> @dndutt.be: "@elsasilvyanaaaa__ jadi hapal lirik depan😭"
+
+#### Wave 2 sebagai "Ini Masih Viral!" Moment
+Beberapa pengguna kembali bukan untuk menambah komentar baru, tapi untuk mereaksi bahwa konten ini masih bertahan:
+
+- **@citrus_nobillis**: "Bahaya nnti terngiang²" → "kak skrg tambah viral😭"
+- **@hm.almubarok**: "Pak😭 @bahlillahadalia" → "tapi enak lho lagunya"
+- **@fahira_nafa**: Kekhawatiran anak hafal → tag teman bagaimana ini masih viral
+
+#### Insight
+
+Keberadaan 179 cross-wave returners (0.5% dari total pengguna) mengonfirmasi bahwa konten ini memiliki **retensi organik yang langka** — tidak seperti kebanyakan viral satu-gelombang yang mati dalam 2–3 hari. Fakta bahwa orang-orang kembali berminggu-minggu kemudian untuk *update* atau *re-tag* menunjukkan bahwa lagu ini menjadi semacam **meme yang hidup di ekosistem pertemanan**, bukan sekadar tontonan sekali lewat.
+
 ## Catatan Data
 
 - File CSV asli: 22.4 MB, 36,437 baris (header + 36,436 komentar). Angka sedikit beda dengan 36k yang tertera di Instagram — kemungkinan karena komentar terhapus atau filter API.
