@@ -28,6 +28,9 @@ python3 scripts/hypothesis_part2.py
 echo "=== Generating verdict ==="
 python3 scripts/verdict.py
 
+echo "=== Computing daily emoji counts ==="
+python3 scripts/compute_daily_emoji.py
+
 echo "=== Generating timeline visualizations ==="
 python3 scripts/compute_timeline.py
 
