@@ -93,34 +93,33 @@ for c in comments:
     for em in c['emojis']:
         daily_emoji_counts[c['date']][em] += 1
 
-# Sort by date
-sorted_dates = sorted(daily_comment_counts.keys())
-
-# Build structured output
-daily = {}
-for date in sorted_dates:
-    emoji_counter = daily_emoji_counts[date]
-    total_emoji = sum(emoji_counter.values())
-    daily[date] = {
-        'comments': daily_comment_counts[date],
-        'total_emoji': total_emoji,
-        'emoji_breakdown': {
-            ch: cnt
-            for ch, cnt in emoji_counter.most_common()
-        }
-    }
-
 # --- Emoji running totals (all days) ---
 all_emoji_counter = Counter()
 for c in comments:
     for em in c['emojis']:
         all_emoji_counter[em] += 1
 
-# Top 10 emoji overall
+# Top 10 emoji overall — use this set to filter daily breakdowns
+top10_chars = {ch for ch, _ in all_emoji_counter.most_common(10)}
 top_emoji_overall = [
     {'emoji': ch, 'emoji_code': f'U+{ord(ch):04X}', 'count': cnt, 'pct': round(cnt / sum(all_emoji_counter.values()) * 100, 1)}
     for ch, cnt in all_emoji_counter.most_common(10)
 ]
+
+# Sort by date
+sorted_dates = sorted(daily_comment_counts.keys())
+
+# Build structured output — daily breakdown limited to top 10 overall emoji
+daily = {}
+for date in sorted_dates:
+    emoji_counter = daily_emoji_counts[date]
+    total_emoji = sum(emoji_counter.values())
+    top10_for_date = {ch: cnt for ch, cnt in emoji_counter.items() if ch in top10_chars}
+    daily[date] = {
+        'comments': daily_comment_counts[date],
+        'total_emoji': total_emoji,
+        'emoji_breakdown': top10_for_date
+    }
 
 # --- Wave summaries ---
 wave1_dates = [f'2026-05-{d:02d}' for d in range(6, 10)]
