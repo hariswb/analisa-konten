@@ -4,16 +4,16 @@
   "h2": "amplified_organic_via_promotion",
   "evidence": {
     "w1_emoji_only_pct": 9.2,
-    "w2_emoji_only_pct": 8.8,
-    "w1_lyric_ref_pct": 20.3,
+    "w2_emoji_only_pct": 8.6,
+    "w1_lyric_ref_pct": 20.2,
     "w2_lyric_ref_pct": 14.4,
     "w1_tag_bahlil_pct": 2.0,
     "w2_tag_bahlil_pct": 0.7,
     "w1_peak_hour_wib": 8,
     "w2_peak_hour_wib": 10,
-    "w2_only_users": 18281,
-    "w2_only_single_posters": 17330,
-    "w2_only_multi_posters": 951
+    "w2_only_users": 19443,
+    "w2_only_single_posters": 18410,
+    "w2_only_multi_posters": 1033
   },
   "tests_needed": [
     "Account creation dates (Instagram profile API)",

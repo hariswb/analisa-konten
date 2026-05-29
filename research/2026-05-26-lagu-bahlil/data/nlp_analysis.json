@@ -2,382 +2,390 @@
   "top_unigrams": [
     [
       "lagu",
-      2794
+      3297
     ],
     [
       "bolu",
-      2555
+      2736
     ],
     [
       "ketan",
-      2441
+      2612
     ],
     [
       "lagunya",
-      2095
-    ],
-    [
-      "my",
-      2081
+      2329
     ],
     [
       "hafal",
-      2024
+      2306
+    ],
+    [
+      "my",
+      2192
     ],
     [
       "little",
-      1884
-    ],
-    [
-      "takut",
-      1450
+      1981
     ],
     [
       "nya",
-      1442
+      1648
+    ],
+    [
+      "takut",
+      1532
     ],
     [
       "enak",
-      1262
+      1359
     ],
     [
       "bahlil",
-      1203
-    ],
-    [
-      "banget",
-      1144
+      1355
     ],
     [
       "hapal",
-      1127
+      1304
+    ],
+    [
+      "banget",
+      1242
     ],
     [
       "ya",
-      1080
+      1219
     ],
     [
       "yg",
-      1012
+      1191
     ],
     [
       "terngiang",
-      967
-    ],
-    [
-      "bgt",
-      831
+      1126
     ],
     [
       "gw",
-      793
+      932
     ],
     [
       "udah",
-      781
+      917
     ],
     [
-      "kanda",
-      764
+      "bgt",
+      910
     ],
     [
       "sampe",
-      754
+      829
     ],
     [
       "nih",
-      751
+      827
+    ],
+    [
+      "kanda",
+      826
     ],
     [
       "ga",
-      709
-    ],
-    [
-      "ganteng",
-      613
-    ],
-    [
-      "apal",
-      609
-    ],
-    [
-      "mbg",
-      591
+      792
     ],
     [
       "anak",
-      560
+      702
+    ],
+    [
+      "ganteng",
+      702
+    ],
+    [
+      "mbg",
+      696
+    ],
+    [
+      "apal",
+      681
     ],
     [
       "ngiang",
-      540
+      635
     ],
     [
       "gak",
-      538
+      607
     ],
     [
       "mas",
-      509
+      571
     ],
     [
       "aja",
-      484
-    ],
-    [
-      "dinda",
-      464
+      552
     ],
     [
       "gue",
-      455
-    ],
-    [
-      "buah",
-      444
-    ],
-    [
-      "bikin",
-      441
-    ],
-    [
-      "gua",
-      432
-    ],
-    [
-      "bahlillahadalia",
-      424
-    ],
-    [
-      "ngakak",
-      421
-    ],
-    [
-      "denger",
-      401
+      532
     ],
     [
       "nyanyi",
-      394
+      531
     ],
     [
-      "kakanda",
-      385
+      "dinda",
+      516
+    ],
+    [
+      "gua",
+      506
+    ],
+    [
+      "buah",
+      499
+    ],
+    [
+      "bikin",
+      488
+    ],
+    [
+      "ngakak",
+      467
+    ],
+    [
+      "bahlillahadalia",
+      454
+    ],
+    [
+      "denger",
+      452
+    ],
+    [
+      "eghgmlr",
+      445
     ],
     [
       "sih",
-      381
-    ],
-    [
-      "pentol",
-      380
+      434
     ],
     [
       "buahlil",
-      379
+      420
     ],
     [
-      "cilok",
-      376
+      "kakanda",
+      419
     ],
     [
       "lucu",
-      370
+      418
     ],
     [
       "ni",
-      361
+      405
+    ],
+    [
+      "full",
+      405
     ],
     [
       "suka",
-      354
+      400
     ],
     [
-      "dengerin",
-      342
+      "pentol",
+      397
     ],
     [
-      "kecap",
-      340
+      "cilok",
+      393
     ]
   ],
   "top_bigrams": [
     [
       "b o l u   k e t a n",
-      2322
+      2489
     ],
     [
       "m y   l i t t l e",
-      1703
+      1787
     ],
     [
       "l i t t l e   b o l u",
-      1554
+      1632
     ],
     [
       "t e r n g i a n g   n g i a n g",
-      510
+      591
     ],
     [
       "l a g u   n y a",
-      424
+      478
     ],
     [
       "m a s   b a h l i l",
-      354
+      398
     ],
     [
       "t a k u t   b a n g e t",
-      334
+      351
     ],
     [
       "b a h l i l   g a n t e n g",
-      311
-    ],
-    [
-      "t a k u t   h a f a l",
-      303
+      348
     ],
     [
       "y a   a l l a h",
-      285
+      321
     ],
     [
-      "c i l o k   p e n t o l",
-      254
+      "t a k u t   h a f a l",
+      320
     ],
     [
       "m b g   m a s",
-      237
+      274
+    ],
+    [
+      "c i l o k   p e n t o l",
+      265
     ],
     [
       "p e n t o l   k e c a p",
-      234
+      245
     ],
     [
       "l a g u n y a   e n a k",
-      205
-    ],
-    [
-      "e n a k   l a g u n y a",
-      199
-    ],
-    [
-      "t a k u t   b g t",
-      199
-    ],
-    [
-      "e a s y   l i s t e n i n g",
-      193
+      222
     ],
     [
       "u d a h   h a f a l",
-      189
+      220
     ],
     [
-      "l i t t l e   c i l o k",
-      175
+      "t a k u t   b g t",
+      215
+    ],
+    [
+      "e n a k   l a g u n y a",
+      208
+    ],
+    [
+      "e a s y   l i s t e n i n g",
+      201
     ],
     [
       "n i h   l a g u",
-      168
+      187
+    ],
+    [
+      "l i t t l e   c i l o k",
+      183
     ],
     [
       "h a f a l   l a g u n y a",
-      164
+      179
     ],
     [
       "n i   l a g u",
-      155
+      177
     ],
     [
       "t a k u t   h a p a l",
-      152
+      162
     ],
     [
       "z a y n   m a l i k",
-      125
+      135
     ],
     [
       "b u a h   y g",
-      122
-    ],
-    [
-      "b u a h   m a n i s",
-      122
+      134
     ],
     [
       "y g   b i k i n",
-      120
+      134
     ],
     [
-      "e n a k   b a n g e t",
-      118
+      "b u a h   m a n i s",
+      131
     ],
     [
       "h a f a l   l a g u",
-      113
+      129
+    ],
+    [
+      "e n a k   b a n g e t",
+      124
     ],
     [
       "h a r t a   t a h t a",
-      113
+      120
     ]
   ],
   "top_trigrams": [
     [
       "l i t t l e   b o l u   k e t a n",
-      1449
+      1523
     ],
     [
       "m y   l i t t l e   b o l u",
-      1407
+      1474
     ],
     [
       "m a s   b a h l i l   g a n t e n g",
-      257
+      285
     ],
     [
       "m b g   m a s   b a h l i l",
-      215
+      245
     ],
     [
       "c i l o k   p e n t o l   k e c a p",
-      173
+      180
     ],
     [
       "m y   l i t t l e   c i l o k",
-      165
+      173
     ],
     [
       "l i t t l e   c i l o k   p e n t o l",
-      146
+      153
     ],
     [
       "t a k u t   b a n g e t   h a f a l",
-      103
+      109
     ],
     [
       "b u a h   y g   m a n i s",
-      98
+      103
     ],
     [
       "h a r t a   t a h t a   k a k a n d a",
+      77
+    ],
+    [
+      "b o l u   k e t a n   b o t a k",
       73
     ],
     [
       "t a k u t   b g t   h a f a l",
-      62
+      66
     ],
     [
-      "b o l u   k e t a n   b o t a k",
-      54
+      "k e t a n   b o t a k   l u c u",
+      59
     ],
     [
       "m y   l i t l e   b o l u",
-      52
+      54
     ],
     [
       "l i t l e   b o l u   k e t a n",
+      54
+    ],
+    [
+      "t a k u t   b a n g e t   h a p a l",
       51
     ],
     [
@@ -385,88 +393,80 @@
       51
     ],
     [
-      "t a k u t   b a n g e t   h a p a l",
-      48
+      "b o l u   k e t a n   h i t a m",
+      50
     ],
     [
       "y g   b i k i n   l a g u",
-      44
+      49
     ],
     [
-      "k e t a n   b o t a k   l u c u",
-      43
-    ],
-    [
-      "b o l u   k e t a n   h i t a m",
-      43
-    ],
-    [
-      "e n a k   l a g u   n y a",
-      41
+      "g a n t e n g   a j a   m y",
+      45
     ]
   ],
-  "vocabulary_size": 24286,
+  "vocabulary_size": 26894,
   "sentiment": {
     "sample_size": 3512,
     "label_distribution": {
-      "neutral": 1981,
-      "negative": 792,
-      "positive": 739
+      "neutral": 1995,
+      "negative": 855,
+      "positive": 662
     },
-    "polarity_pos_pct": 21.0,
-    "polarity_neg_pct": 22.6,
-    "polarity_neu_pct": 56.4,
-    "avg_polarity": -0.015,
+    "polarity_pos_pct": 18.8,
+    "polarity_neg_pct": 24.3,
+    "polarity_neu_pct": 56.8,
+    "avg_polarity": -0.055,
     "most_negative_examples": [
       {
-        "text": "Gamau denger gamau denger gamau denger 😭😭😭",
-        "score": -21.0,
+        "text": "intinya kritik bahlil gak bakal baper kayak kritik opung satu itu anti kritik 😂🤣",
+        "score": -23.0,
         "label": "negative"
       },
       {
-        "text": "Sering lewat di timeline, takut jadi hapal 😭😭😭 pait pait pait pait 🤣🤣🤣",
-        "score": -19.0,
+        "text": "Cilok pentol kecap. Heyyy.. jadi gak doyan deh gw ma cilok pentol kecap.😢",
+        "score": -14.0,
         "label": "negative"
       },
       {
-        "text": "Kalo jelek kamu jelas gak boleh marah marah \"\"",
-        "score": -15.0,
+        "text": "Dinda kena terus, kemaren lagu Dinda jgn marah marah, skrg kayak gini😭😭",
+        "score": -14.0,
         "label": "negative"
       },
       {
-        "text": "Kasi tau anak gua ah biar mereka afalin trus disebar ke temen SD nya 🤗",
-        "score": -15.0,
+        "text": "Padahal kesalahan dia banyak loh yany fatal, tapi cuman krna gara dia ga naikin pertalite bisa banyak banget pujian, gatau sarkas juga sih.\"",
+        "score": -14.0,
         "label": "negative"
       },
       {
-        "text": "Negara semrawut gini, masih ketolong netizen indo yang random gini😂",
-        "score": -12.0,
+        "text": "Bahaya bahaya bahaya😭😭😭 otak gue udh muter ini dri siang grgr mereka @rkamilaaa @audrlys , liat ig lewat mulu ni lagu. burid dah",
+        "score": -14.0,
         "label": "negative"
       }
     ],
     "most_positive_examples": [
       {
-        "text": "Ahli Renovasi atap rumah pasang baja ringan renovasi rumah bangun rumah plafon pratisi dll \nhttps://kontraktoratapbaja.com",
-        "score": 22.0,
+        "text": "Gusti Allah.. \nKok ya ide nyiptain makhluk seindah ini...",
+        "score": 19.0,
         "label": "positive"
       },
       {
-        "text": "Ya allah ya allah, takut banget terngiang-ngiang sama liriknya ✌🏻😭",
+        "text": "Ya Allah lindungi hamba dari lirik lirik ini. Ya Allah lindungi hamba😭",
+        "score": 18.0,
+        "label": "positive"
+      },
+      {
+        "text": "Ya Allah anak2 TK dan SD udah pada hafal lagi ini gimana dong ya Allah😭",
+        "score": 18.0,
+        "label": "positive"
+      },
+      {
+        "text": "Sumpaaaahhhh aku jadi happy….. lagu kicau mania kalah sama ni lagu… MBG ayo dung bisa hafalin … sampe teringat dan ingin hafal sama nih lagu. Keren sih yg buat ni lagu….❤️❤️❤️",
         "score": 16.0,
         "label": "positive"
       },
       {
-        "text": "Eh ini anaknya kalo liat bpanya dibikin lagu bgni gmn ya bakalan happy ga ya anaknya😂🤣",
-        "score": 16.0,
-        "label": "positive"
-      },
-      {
-        "text": "Pake tws dengarnya enak bjir, ga terasa pulang kerja sampai kost dengar lagunya sambil senyum senyum wkwkw sehat sehat trus kanda Bahlil",
-        "score": 13.0,
-        "label": "positive"
-      },
-      {
-        "text": "Ya Allah kreatif bgt ini😂",
+        "text": "@anggun28yuliani Kalo gia dengerin bisa langsung hafal lagunya ya wkwkwk",
         "score": 13.0,
         "label": "positive"
       }

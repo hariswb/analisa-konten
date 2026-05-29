@@ -1,0 +1,179 @@
+#!/usr/bin/env python3
+"""Build influencer post engagement JSON from verified data."""
+import json
+
+FOLLOWER_CLASSIFICATION = {
+    'nano': [0, 9999],
+    'micro': [10000, 49999],
+    'middle': [50000, 499999],
+    'macro': [500000, 999999],
+    'top': [1000000, float('inf')]
+}
+
+def classify(followers):
+    if followers is None:
+        return 'unknown'
+    for tier, (lo, hi) in FOLLOWER_CLASSIFICATION.items():
+        if lo <= followers <= hi:
+            return tier
+    return 'unknown'
+
+data = {
+    'metadata': {
+        'research_topic': 'Lagu Bahlil - Influencer Post Engagements Across Two Comment Waves',
+        'keywords_searched': ['mas bahlil ganteng', 'buahlil'],
+        'platforms': ['instagram', 'tiktok'],
+        'source': 'Web scraping (TikTok API, Instagram OG meta, news articles) + lagu-bahlil comment dataset',
+        'wave1': {'start': '2026-05-06', 'end': '2026-05-09', 'total_comments': 12393},
+        'wave2': {'start': '2026-05-22', 'end': '2026-05-26', 'total_comments': 19644},
+        'classification': {
+            'nano': '0-9,999 followers',
+            'micro': '10,000-49,999',
+            'middle': '50,000-499,999',
+            'macro': '500,000-999,999',
+            'top': '1,000,000+'
+        },
+        'data_collected_at': '2026-05-28',
+        'notes': [
+            'Follower counts verified via TikTok API (curl scrape) or Instagram OG meta on 2026-05-28',
+            'versevoxmusic Instagram: 13K followers (OG meta: "13K Followers, 12 Following, 25 Posts")',
+            'Sania Leonardo TikTok username is @panggilakubambang (not @saanexclusiv3)',
+            'Bahlil official TikTok is @bahlil.lahadalia (105K); @bahlillahadalia (18 followers) is NOT official',
+            'Some post metrics unavailable without platform API access'
+        ]
+    },
+    'wave1_posts': [
+        {
+            'post_url': 'https://www.instagram.com/reel/DX_V_32ip-9',
+            'post_date': '2026-05-06',
+            'username': 'versevoxmusic',
+            'platform': 'instagram',
+            'display_name': 'VerseVox Music',
+            'follower_count': 13000,
+            'influencer_class': 'micro',
+            'likes': None,
+            'views': 13000000,
+            'comments': 36216,
+            'keywords_found': ['mas bahlil ganteng', 'buahlil'],
+            'description': 'Main viral Instagram Reel — 13M views, 36K comments. Dataset covers this post.',
+            'data_source': 'Instagram OG meta + comment dataset (36,216 comments)'
+        },
+        {
+            'post_url': 'https://www.tiktok.com/@inversi.media/video/7637035308005051655',
+            'post_date': '2026-05-07',
+            'username': 'inversi.media',
+            'platform': 'tiktok',
+            'display_name': 'Inversi Media',
+            'follower_count': 28300,
+            'influencer_class': 'micro',
+            'likes': None,
+            'views': None,
+            'comments': None,
+            'keywords_found': ['mas bahlil'],
+            'description': 'TikTok version posted by Inversi Media on May 7',
+            'data_source': 'TikTok API (followerCount:28300)'
+        }
+    ],
+    'wave2_posts': [
+        {
+            'post_url': 'https://www.tiktok.com/@panggilakubambang',
+            'post_date': '2026-05-22',
+            'username': 'panggilakubambang',
+            'platform': 'tiktok',
+            'display_name': 'Sania Leonardo',
+            'follower_count': 3100000,
+            'influencer_class': 'top',
+            'likes': 2400000,
+            'views': 52000000,
+            'comments': None,
+            'keywords_found': ['buahlil', 'mas bahlil'],
+            'description': 'Sania Leonardo reaction video — catalyst for Wave 2. 3.1M followers, 2.4M+ likes.',
+            'data_source': 'TikTok API + verdict_hypothesis_v2.json (2.4M+ likes) + TikTok search (~52M views)'
+        },
+        {
+            'post_url': 'https://www.tiktok.com/@satriaprabhawa',
+            'post_date': '2026-05-24',
+            'username': 'satriaprabhawa',
+            'platform': 'tiktok',
+            'display_name': 'Satria Prabhawa',
+            'follower_count': 27000,
+            'influencer_class': 'micro',
+            'likes': None,
+            'views': None,
+            'comments': None,
+            'keywords_found': ['mas bahlil'],
+            'description': 'Repost/reaction to the Bahlil song. Followers from Instagram profile (27K).',
+            'data_source': 'Instagram profile (27K followers) + verdict timeline'
+        },
+        {
+            'post_url': 'https://www.instagram.com/reel/DYuiIgayZbG/',
+            'post_date': '2026-05-22',
+            'username': 'jogjastudent',
+            'platform': 'instagram',
+            'display_name': 'Jogja Student',
+            'follower_count': 142000,
+            'influencer_class': 'middle',
+            'likes': 67479,
+            'views': None,
+            'comments': None,
+            'keywords_found': ['mas bahlil'],
+            'description': 'Jogja Student Instagram Reel about Lagu MBG Mas Bahlil Ganteng',
+            'data_source': 'Instagram profile (142K followers) + Instagram post (67,479 likes)'
+        },
+        {
+            'post_url': 'https://www.tiktok.com/@bahlil.lahadalia',
+            'post_date': '2026-05-20',
+            'username': 'bahlil.lahadalia',
+            'platform': 'tiktok',
+            'display_name': 'Bahlil Lahadalia',
+            'follower_count': 105000,
+            'influencer_class': 'middle',
+            'likes': None,
+            'views': None,
+            'comments': None,
+            'keywords_found': ['buahlil'],
+            'description': 'Bahlil official TikTok account acknowledgment. He reportedly addressed the song on May 20.',
+            'data_source': 'TikTok API (followerCount:105000) + verdict timeline'
+        }
+    ],
+    'excluded_posts': [
+        {
+            'post_url': 'https://www.tiktok.com/@vokaliz_netizen/video/7634163983158758664',
+            'username': 'vokaliz_netizen',
+            'platform': 'tiktok',
+            'followers': 134700,
+            'post_date': '2026-04-29',
+            'reason': 'pre-wave1 — original creator, post outside wave date ranges'
+        }
+    ],
+    'summary': {
+        'total_posts_in_waves': 6,
+        'by_wave': {
+            'wave1': 2,
+            'wave2': 4
+        },
+        'by_classification': {
+            'micro': 3,
+            'middle': 2,
+            'top': 1
+        },
+        'by_platform': {
+            'instagram': 3,
+            'tiktok': 3
+        }
+    }
+}
+
+output_path = '/opt/data/analisa-konten/research/2026-05-26-lagu-bahlil/data/influencer_posts.json'
+with open(output_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, indent=2, ensure_ascii=False)
+
+print(f'Saved to {output_path}')
+print(f'Total posts in waves: {len(data["wave1_posts"]) + len(data["wave2_posts"])}')
+print(f'  Wave 1: {len(data["wave1_posts"])} posts')
+print(f'  Wave 2: {len(data["wave2_posts"])} posts')
+print()
+for p in data['wave1_posts'] + data['wave2_posts']:
+    cls = p['influencer_class']
+    f_count = f'{p["follower_count"]:,}' if p['follower_count'] else '?'
+    print(f'  {p["platform"]:>10} | {p["username"]:>22} | {cls:>6} | {p["post_date"]} | {f_count:>10} followers')
