@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lagu Bahlil — Data Explorer</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root {
+  --bg:#0f0f11; --bg2:#18181b; --bd:#27272a;
+  --text:#e4e4e7; --sub:#a1a1aa; --muted:#71717a;
+  --w1:#a78bfa; --gap:#34d399; --w2:#f472b6;
+  --cry:#60a5fa; --joy:#34d399; --fire:#f97316;
+  --acc:#fbbf24; --grid:#27272a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text)}
+
+nav{position:sticky;top:0;background:rgba(15,15,17,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd);z-index:100;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+.nav-inner{display:flex;max-width:1100px;margin:0 auto;padding:0 16px}
+nav a{padding:13px 14px;font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+nav a:hover{color:var(--text);border-bottom-color:var(--acc)}
+
+.page{max-width:1100px;margin:0 auto;padding:0 16px 80px}
+.header{padding:40px 0 36px}
+.header h1{font-size:clamp(20px,4vw,32px);font-weight:800;letter-spacing:-.5px}
+.header .meta{color:var(--sub);font-size:13px;margin-top:6px;line-height:1.6}
+.header .meta strong{color:var(--text)}
+
+section{padding:36px 0;border-top:1px solid var(--bd)}
+section>h2{font-size:16px;font-weight:700;margin-bottom:20px}
+
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:20px}
+.stat{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:14px 16px}
+.stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:7px}
+.stat-value{font-size:26px;font-weight:700;letter-spacing:-.4px}
+.stat-sub{font-size:11px;color:var(--muted);margin-top:3px}
+
+.chart-wrap{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:16px 20px;margin-bottom:16px}
+.chart-label{font-size:12px;font-weight:500;color:var(--sub);margin-bottom:14px}
+
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.ld{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--sub)}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.data-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:16px}
+.data-card h3{font-size:11px;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+.dr{display:flex;align-items:center;padding:5px 0;border-bottom:1px solid var(--bd);font-size:13px}
+.dr:last-child{border-bottom:none}
+.dr-rank{color:var(--muted);font-size:11px;width:18px;flex-shrink:0}
+.dr-name{flex:1;padding:0 8px}
+.dr-count{font-weight:600;color:var(--acc)}
+
+.sent-grid{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start}
+.ex{padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.03);font-size:13px;line-height:1.55;margin-bottom:8px}
+.ex.neg{border-left:3px solid var(--w2)}
+.ex.pos{border-left:3px solid var(--gap)}
+.ex-score{font-size:11px;color:var(--muted);margin-top:4px}
+
+.verdict-hdr{background:var(--bg2);border:1px solid rgba(52,211,153,.3);border-radius:10px;padding:20px 22px;margin-bottom:16px}
+.vbadge{display:inline-block;background:rgba(52,211,153,.12);color:var(--gap);border:1px solid rgba(52,211,153,.25);padding:4px 12px;border-radius:100px;font-size:12px;font-weight:600;margin-bottom:12px}
+.vtitle{font-size:18px;font-weight:700;margin-bottom:8px}
+.vbody{font-size:13px;color:var(--sub);line-height:1.7}
+.vbody strong{color:var(--text)}
+
+.ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.ev-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:16px}
+.ev-card h4{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.ev-card.for h4{color:#fb923c}
+.ev-card.against h4{color:var(--gap)}
+.ev-list{list-style:none}
+.ev-list li{font-size:12px;color:var(--sub);padding:4px 0 4px 16px;position:relative;line-height:1.5}
+.ev-card.for .ev-list li::before{content:'→';position:absolute;left:0;color:#fb923c}
+.ev-card.against .ev-list li::before{content:'✗';position:absolute;left:0;color:var(--gap);font-size:10px;top:5px}
+
+.wc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:16px}
+.wc-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:12px 14px}
+.wc-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.wc-vals{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.wc-val{font-size:20px;font-weight:700}
+.wc-val.w1{color:var(--w1)}
+.wc-val.w2{color:var(--w2)}
+.wc-sep{font-size:11px;color:var(--muted)}
+
+.lower-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.evt-card{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:16px;overflow:auto;max-height:420px}
+.evt-card h3{font-size:11px;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;position:sticky;top:0;background:var(--bg2);padding-bottom:8px}
+.evt-list{list-style:none}
+.evt-row{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--bd)}
+.evt-row:last-child{border-bottom:none}
+.evt-date{font-size:11px;color:var(--acc);font-weight:600;min-width:74px;line-height:1.5;flex-shrink:0}
+.evt-text{font-size:12px;color:var(--sub);line-height:1.55}
+.evt-text a{color:var(--acc);text-decoration:none}
+
+#loading{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;z-index:999;font-size:14px;color:var(--sub)}
+.spinner{width:28px;height:28px;border:3px solid var(--bd);border-top-color:var(--acc);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#main{display:none}
+.footer{text-align:center;font-size:12px;color:var(--muted);padding:28px 0 0;border-top:1px solid var(--bd)}
+
+@media(max-width:700px){
+  .two-col,.sent-grid,.ev-grid,.lower-grid{grid-template-columns:1fr}
+  nav a{padding:12px 10px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<div id="loading"><div class="spinner"></div><span>Memuat data…</span></div>
+
+<div id="main">
+<nav><div class="nav-inner">
+  <a href="#overview">Overview</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#emoji">Emoji</a>
+  <a href="#hourly">Hourly</a>
+  <a href="#words">Kata</a>
+  <a href="#sentiment">Sentimen</a>
+  <a href="#verdict">Verdict</a>
+</div></nav>
+
+<div class="page">
+  <div class="header">
+    <h1>🎵 Lagu Bahlil — Data Explorer</h1>
+    <div class="meta">
+      Instagram Reel <strong>@versevoxmusic · DX_V_32ip-9</strong> ·
+      6–26 Mei 2026 · <strong>36,216 komentar mentah</strong>
+    </div>
+  </div>
+
+  <section id="overview">
+    <h2>📊 Overview</h2>
+    <div class="stats-grid" id="statsGrid"></div>
+    <div class="two-col">
+      <div class="data-card"><h3>Top Pengguna Aktif</h3><div id="topUsers"></div></div>
+      <div class="data-card"><h3>Top Mention</h3><div id="topMentions"></div></div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>📈 Timeline Komentar Harian</h2>
+    <div class="legend">
+      <div class="ld"><div class="dot" style="background:var(--w1)"></div>Wave 1 · 6–9 Mei</div>
+      <div class="ld"><div class="dot" style="background:var(--gap)"></div>Redaman · 10–21 Mei</div>
+      <div class="ld"><div class="dot" style="background:var(--w2)"></div>Wave 2 · 22–26 Mei</div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-label">Komentar per hari · titik berwarna per fase</div>
+      <canvas id="timelineChart"></canvas>
+    </div>
+  </section>
+
+  <section id="emoji">
+    <h2>😭 Tren Emoji Harian</h2>
+    <div class="legend">
+      <div class="ld"><div class="dot" style="background:var(--cry)"></div>😭 Crying</div>
+      <div class="ld"><div class="dot" style="background:var(--w2)"></div>🤣 ROFL</div>
+      <div class="ld"><div class="dot" style="background:var(--joy)"></div>😂 Tears of Joy</div>
+      <div class="ld"><div class="dot" style="background:var(--fire)"></div>🔥 Fire</div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-label">Jumlah emoji per hari — line chart perbandingan</div>
+      <canvas id="emojiLineChart"></canvas>
+    </div>
+    <div class="chart-wrap" style="max-width:560px">
+      <div class="chart-label">Distribusi emoji keseluruhan — top 10</div>
+      <canvas id="emojiDonut"></canvas>
+    </div>
+  </section>
+
+  <section id="hourly">
+    <h2>🕐 Pola Komentar per Jam (WIB)</h2>
+    <div class="legend">
+      <div class="ld"><div class="dot" style="background:var(--w1)"></div>Wave 1</div>
+      <div class="ld"><div class="dot" style="background:var(--w2)"></div>Wave 2</div>
+      <div class="ld"><div class="dot" style="background:var(--acc)"></div>Total</div>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="hourlyChart"></canvas>
+    </div>
+  </section>
+
+  <section id="words">
+    <h2>💬 Kata &amp; Frasa Populer</h2>
+    <div class="chart-wrap">
+      <div class="chart-label" id="vocabLabel">Top 20 kata tunggal (unigram) · vocab: 24,286 unik</div>
+      <div style="height:420px"><canvas id="unigramChart"></canvas></div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-label">Top 15 pasangan kata (bigram) · keseluruhan</div>
+      <div style="height:360px"><canvas id="bigramChart"></canvas></div>
+    </div>
+    <div style="margin-top:20px">
+      <div style="font-size:12px;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px">Perbandingan per Wave — Top 10 Unigram</div>
+      <div class="two-col">
+        <div class="data-card">
+          <h3 style="color:var(--w1)">Wave 1 · 6–9 Mei</h3>
+          <div id="w1VocabSub" style="font-size:11px;color:var(--muted);margin-bottom:10px;margin-top:-8px"></div>
+          <div id="w1Unigrams"></div>
+        </div>
+        <div class="data-card">
+          <h3 style="color:var(--w2)">Wave 2 · 22–26 Mei</h3>
+          <div id="w2VocabSub" style="font-size:11px;color:var(--muted);margin-bottom:10px;margin-top:-8px"></div>
+          <div id="w2Unigrams"></div>
+        </div>
+      </div>
+      <div style="font-size:12px;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:.6px;margin:20px 0 14px">Perbandingan per Wave — Top 10 Bigram</div>
+      <div class="two-col">
+        <div class="data-card">
+          <h3 style="color:var(--w1)">Wave 1 · 6–9 Mei</h3>
+          <div id="w1Bigrams"></div>
+        </div>
+        <div class="data-card">
+          <h3 style="color:var(--w2)">Wave 2 · 22–26 Mei</h3>
+          <div id="w2Bigrams"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sentiment">
+    <h2>🧠 Analisis Sentimen</h2>
+    <div class="sent-grid">
+      <div class="chart-wrap" style="margin-bottom:0">
+        <div class="chart-label">Distribusi label sentimen (sample 3,512)</div>
+        <canvas id="sentChart"></canvas>
+      </div>
+      <div>
+        <div class="data-card" style="margin-bottom:12px">
+          <h3>Contoh Komentar Negatif</h3>
+          <div id="negExamples"></div>
+        </div>
+        <div class="data-card">
+          <h3>Contoh Komentar Positif</h3>
+          <div id="posExamples"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="verdict">
+    <h2>🔍 Hipotesis &amp; Temuan</h2>
+    <div class="verdict-hdr">
+      <div class="vbadge">✓ VERDICT: H2 — Amplified Organic</div>
+      <div class="vtitle">Cross-platform cascade: TikTok → Instagram</div>
+      <div class="vbody" id="verdictBody"></div>
+    </div>
+    <div class="wc-grid" id="waveCompare"></div>
+    <div class="ev-grid">
+      <div class="ev-card for"><h4 class="for">Indikasi yang perlu diselidiki</h4><ul class="ev-list" id="forList"></ul></div>
+      <div class="ev-card against"><h4 class="against">Bantahan koordinasi palsu</h4><ul class="ev-list" id="againstList"></ul></div>
+    </div>
+    <div class="lower-grid">
+      <div class="chart-wrap" style="margin-bottom:0">
+        <div class="chart-label">Wave 1 vs Wave 2 — metrik perilaku komentar (%)</div>
+        <canvas id="waveMetricChart"></canvas>
+      </div>
+      <div class="evt-card">
+        <h3>Timeline Kejadian</h3>
+        <ul class="evt-list" id="evtList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer" id="footer"></div>
+</div><!-- .page -->
+</div><!-- #main -->
+
+<script>
+const DP = './data/';
+
+// decode space-separated n-gram: "b o l u   k e t a n" → "bolu ketan"
+function N(s) { return s.split('   ').map(w => w.replace(/ /g,'')).join(' '); }
+function F(n) { return Number(n).toLocaleString('id-ID'); }
+
+const W1 = d => d >= '2026-05-06' && d <= '2026-05-09';
+const W2 = d => d >= '2026-05-22';
+
+const K = {
+  w1:'#a78bfa', gap:'#34d399', w2:'#f472b6',
+  cry:'#60a5fa', joy:'#34d399', fire:'#f97316',
+  acc:'#fbbf24', grid:'#27272a', text:'#71717a',
+  tt:{backgroundColor:'#18181b',borderColor:'#27272a',borderWidth:1,titleColor:'#e4e4e7',bodyColor:'#71717a'},
+};
+
+const SC = () => ({
+  y:{grid:{color:K.grid},ticks:{color:K.text}},
+  x:{grid:{display:false},ticks:{color:K.text}},
+});
+
+async function fetchAll() {
+  const names = ['basic_stats','daily_emoji','hourly_counts','nlp_analysis',
+                 'hypothesis_test_results','verdict_hypothesis_v2','hypothesis_framework','wave_bow'];
+  const jsons = await Promise.all(names.map(n => fetch(DP+n+'.json').then(r=>r.json())));
+  return Object.fromEntries(names.map((n,i) => [n, jsons[i]]));
+}
+
+function doStats(d) {
+  const bs = d.basic_stats;
+  const items = [
+    ['Total Komentar', F(bs.total_comments), '14 null timestamps', K.acc],
+    ['Pengguna Unik',  F(bs.unique_users),   (bs.unique_users/bs.total_comments*100).toFixed(1)+'% unik', K.w1],
+    ['Avg Panjang',    bs.avg_comment_length+' kar', 'per komentar', K.gap],
+    ['Komentar+Emoji', bs.emoji_comment_pct+'%', 'dari total', K.w2],
+    ['Total Emoji',    F(bs.total_emoji_count), (bs.total_emoji_count/bs.total_comments).toFixed(1)+'/komentar', K.fire],
+  ];
+  document.getElementById('statsGrid').innerHTML = items.map(([l,v,s,c])=>`
+    <div class="stat">
+      <div class="stat-label">${l}</div>
+      <div class="stat-value" style="color:${c}">${v}</div>
+      <div class="stat-sub">${s}</div>
+    </div>`).join('');
+
+  ['topUsers','topMentions'].forEach((id,i) => {
+    const arr = i===0 ? bs.top_users : bs.top_mentions;
+    document.getElementById(id).innerHTML = arr.slice(0,10).map((u,j)=>`
+      <div class="dr">
+        <span class="dr-rank">${j+1}</span>
+        <span class="dr-name">@${u[0]}</span>
+        <span class="dr-count">${F(u[1])}</span>
+      </div>`).join('');
+  });
+}
+
+function doTimeline(d) {
+  const dt = d.hourly_counts.daily_totals;
+  const dates = Object.keys(dt).sort();
+  const bgColors = dates.map(x => W1(x)?K.w1+'cc' : W2(x)?K.w2+'cc' : K.gap+'cc');
+  const bdColors = dates.map(x => W1(x)?K.w1     : W2(x)?K.w2      : K.gap);
+  new Chart(document.getElementById('timelineChart'), {
+    type:'bar',
+    data:{
+      labels: dates.map(x=>x.slice(5)),
+      datasets:[{
+        label:'Komentar', data:dates.map(x=>dt[x]),
+        backgroundColor:bgColors, borderColor:bdColors,
+        borderWidth:1, borderRadius:3, borderSkipped:false,
+      }],
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{display:false},
+        tooltip:{...K.tt, callbacks:{
+          title: items => { const x=dates[items[0].dataIndex]; return `${x} — ${W1(x)?'Wave 1':W2(x)?'Wave 2':'Redaman'}`; },
+          label: items => ` ${F(items.raw)} komentar`,
+        }},
+      },
+      scales:{...SC(), y:{grid:{color:K.grid},ticks:{color:K.text,callback:v=>F(v)}}},
+    },
+  });
+}
+
+function doEmoji(d) {
+  const de = d.daily_emoji;
+  const dates = Object.keys(de.daily).sort();
+  const labels = dates.map(x=>x.slice(5));
+  const emojis = [
+    {key:'😭', label:'😭 Crying', color:K.cry},
+    {key:'🤣', label:'🤣 ROFL',   color:K.w2},
+    {key:'😂', label:'😂 Tears',  color:K.joy},
+    {key:'🔥', label:'🔥 Fire',   color:K.fire},
+  ];
+  new Chart(document.getElementById('emojiLineChart'), {
+    type:'line',
+    data:{
+      labels,
+      datasets: emojis.map(e=>({
+        label:e.label,
+        data:dates.map(dt=>de.daily[dt].emoji_breakdown[e.key]||0),
+        borderColor:e.color, backgroundColor:e.color+'18',
+        fill:false, tension:.3, pointRadius:3, pointHoverRadius:5,
+      })),
+    },
+    options:{
+      responsive:true,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{display:true,labels:{color:'#a1a1aa',boxWidth:10,font:{size:11}}},
+        tooltip:K.tt,
+      },
+      scales:{...SC(), y:{grid:{color:K.grid},ticks:{color:K.text,callback:v=>F(v)}}},
+    },
+  });
+
+  const top = de.top_emoji_overall.filter(e=>e.emoji!=='️').slice(0,10);
+  const dc = ['#60a5fa','#f472b6','#34d399','#f97316','#a78bfa','#fbbf24','#e879f9','#22d3ee','#84cc16','#fb7185'];
+  new Chart(document.getElementById('emojiDonut'), {
+    type:'doughnut',
+    data:{
+      labels:top.map(e=>`${e.emoji} ${e.pct}%`),
+      datasets:[{data:top.map(e=>e.count),backgroundColor:dc,borderColor:'#18181b',borderWidth:2}],
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{display:true,position:'right',labels:{color:'#a1a1aa',boxWidth:12,font:{size:12},padding:10}},
+        tooltip:{...K.tt, callbacks:{label:ctx=>` ${F(ctx.raw)} komentar`}},
+      },
+    },
+  });
+}
+
+function doHourly(d) {
+  const h = d.hourly_counts;
+  const hours = Array.from({length:24},(_,i)=>String(i).padStart(2,'0'));
+  new Chart(document.getElementById('hourlyChart'), {
+    type:'line',
+    data:{
+      labels:hours.map(x=>x+':00'),
+      datasets:[
+        {label:'Wave 1', data:hours.map(x=>h.hourly_by_wave_wib.wave_1[x]||0), borderColor:K.w1, backgroundColor:K.w1+'20', fill:true, tension:.4, pointRadius:3},
+        {label:'Wave 2', data:hours.map(x=>h.hourly_by_wave_wib.wave_2[x]||0), borderColor:K.w2, backgroundColor:K.w2+'20', fill:true, tension:.4, pointRadius:3},
+        {label:'Total',  data:hours.map(x=>h.hourly_all_wib[x]||0),            borderColor:K.acc, backgroundColor:'transparent', fill:false, tension:.4, pointRadius:0, borderDash:[5,3]},
+      ],
+    },
+    options:{
+      responsive:true,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{display:true,labels:{color:'#a1a1aa',boxWidth:10,font:{size:11}}},
+        tooltip:K.tt,
+      },
+      scales:{...SC(), y:{grid:{color:K.grid},ticks:{color:K.text,callback:v=>F(v)}}},
+    },
+  });
+}
+
+function doWords(d) {
+  const nlp = d.nlp_analysis;
+  const wb  = d.wave_bow;
+
+  document.getElementById('vocabLabel').textContent =
+    `Top 20 kata tunggal (unigram) · vocab keseluruhan: ${F(nlp.vocabulary_size)} unik`;
+
+  const uni = nlp.top_unigrams.slice(0,20);
+  new Chart(document.getElementById('unigramChart'), {
+    type:'bar',
+    data:{
+      labels:uni.map(u=>u[0]),
+      datasets:[{data:uni.map(u=>u[1]),backgroundColor:K.w1+'99',borderColor:K.w1,borderWidth:1,borderRadius:2}],
+    },
+    options:{
+      indexAxis:'y',
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:K.tt},
+      scales:{
+        y:{grid:{display:false},ticks:{color:K.text,font:{size:11}}},
+        x:{grid:{color:K.grid},ticks:{color:K.text,callback:v=>F(v)}},
+      },
+    },
+  });
+
+  const bi = nlp.top_bigrams.slice(0,15);
+  new Chart(document.getElementById('bigramChart'), {
+    type:'bar',
+    data:{
+      labels:bi.map(b=>N(b[0])),
+      datasets:[{data:bi.map(b=>b[1]),backgroundColor:K.w2+'99',borderColor:K.w2,borderWidth:1,borderRadius:2}],
+    },
+    options:{
+      indexAxis:'y',
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:K.tt},
+      scales:{
+        y:{grid:{display:false},ticks:{color:K.text,font:{size:11}}},
+        x:{grid:{color:K.grid},ticks:{color:K.text,callback:v=>F(v)}},
+      },
+    },
+  });
+
+  // wave vocab subtitles
+  document.getElementById('w1VocabSub').textContent = `${F(wb.wave_1.total_comments)} komentar · ${F(wb.wave_1.vocab_size)} vocab unik`;
+  document.getElementById('w2VocabSub').textContent = `${F(wb.wave_2.total_comments)} komentar · ${F(wb.wave_2.vocab_size)} vocab unik`;
+
+  // wave word rows
+  function waveRows(containerId, items, color) {
+    document.getElementById(containerId).innerHTML = items.slice(0,10).map((item,j)=>`
+      <div class="dr">
+        <span class="dr-rank">${j+1}</span>
+        <span class="dr-name">${item[0]}</span>
+        <span class="dr-count" style="color:${color}">${F(item[1])}</span>
+      </div>`).join('');
+  }
+  waveRows('w1Unigrams', wb.wave_1.top_unigrams, K.w1);
+  waveRows('w2Unigrams', wb.wave_2.top_unigrams, K.w2);
+  waveRows('w1Bigrams',  wb.wave_1.top_bigrams,  K.w1);
+  waveRows('w2Bigrams',  wb.wave_2.top_bigrams,  K.w2);
+}
+
+function doSentiment(d) {
+  const s = d.nlp_analysis.sentiment;
+  const dist = s.label_distribution;
+  new Chart(document.getElementById('sentChart'), {
+    type:'doughnut',
+    data:{
+      labels:['Netral','Negatif','Positif'],
+      datasets:[{
+        data:[dist.neutral,dist.negative,dist.positive],
+        backgroundColor:[K.gap+'cc',K.w2+'cc',K.w1+'cc'],
+        borderColor:'#18181b', borderWidth:2,
+      }],
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{display:true,position:'bottom',labels:{color:'#a1a1aa',boxWidth:12,font:{size:12}}},
+        tooltip:{...K.tt, callbacks:{label:ctx=>{
+          const pcts=[s.polarity_neu_pct,s.polarity_neg_pct,s.polarity_pos_pct];
+          return ` ${F(ctx.raw)} (${pcts[ctx.dataIndex]}%)`;
+        }}},
+      },
+    },
+  });
+  document.getElementById('negExamples').innerHTML = s.most_negative_examples.slice(0,3).map(e=>`
+    <div class="ex neg">${e.text}<div class="ex-score">score: ${e.score}</div></div>`).join('');
+  document.getElementById('posExamples').innerHTML = s.most_positive_examples.slice(0,3).map(e=>`
+    <div class="ex pos">${e.text}<div class="ex-score">score: ${e.score}</div></div>`).join('');
+}
+
+function doVerdict(d) {
+  const v = d.verdict_hypothesis_v2;
+  const ht = d.hypothesis_test_results;
+  const hf = d.hypothesis_framework.evidence;
+
+  document.getElementById('verdictBody').innerHTML = `
+    <strong>Katalis:</strong> ${v.catalyst}<br>
+    <strong>Amplifier:</strong> ${v.secondary_amplifier}<br>
+    <strong>Mekanisme:</strong> ${v.mechanism.replace(/_/g,' ')}`;
+
+  const wc = [
+    ['Komentar',       F(ht.wave1_comments),     F(ht.wave2_comments)],
+    ['User Baru W2',   '—',                       F(ht.wave2_new_users)],
+    ['Emoji-only %',   ht.w1_emoji_only_pct+'%',  ht.w2_emoji_only_pct+'%'],
+    ['Lirik Ref %',    ht.w1_lyric_ref_pct+'%',   ht.w2_lyric_ref_pct+'%'],
+    ['@bahlil tag %',  hf.w1_tag_bahlil_pct+'%',  hf.w2_tag_bahlil_pct+'%'],
+    ['User Keduanya',  F(ht.users_both_waves),     ''],
+  ];
+  document.getElementById('waveCompare').innerHTML = wc.map(([lbl,v1,v2])=>`
+    <div class="wc-card">
+      <div class="wc-label">${lbl}</div>
+      <div class="wc-vals">
+        ${v1?`<span class="wc-val w1">${v1}</span>`:''}
+        ${v1&&v2?`<span class="wc-sep">vs</span>`:''}
+        ${v2?`<span class="wc-val w2">${v2}</span>`:''}
+      </div>
+    </div>`).join('');
+
+  document.getElementById('forList').innerHTML     = v.for_astroturf.map(s=>`<li>${s}</li>`).join('');
+  document.getElementById('againstList').innerHTML = v.against_astroturf.map(s=>`<li>${s}</li>`).join('');
+
+  const metrics = [
+    {label:'Emoji-only %', w1:ht.w1_emoji_only_pct, w2:ht.w2_emoji_only_pct},
+    {label:'Lirik Ref %',  w1:ht.w1_lyric_ref_pct,  w2:ht.w2_lyric_ref_pct},
+    {label:'@bahlil tag %',w1:hf.w1_tag_bahlil_pct, w2:hf.w2_tag_bahlil_pct},
+  ];
+  new Chart(document.getElementById('waveMetricChart'), {
+    type:'bar',
+    data:{
+      labels:metrics.map(m=>m.label),
+      datasets:[
+        {label:'Wave 1', data:metrics.map(m=>m.w1), backgroundColor:K.w1+'cc', borderRadius:3},
+        {label:'Wave 2', data:metrics.map(m=>m.w2), backgroundColor:K.w2+'cc', borderRadius:3},
+      ],
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{display:true,labels:{color:'#a1a1aa',boxWidth:10,font:{size:11}}},
+        tooltip:K.tt,
+      },
+      scales:{
+        y:{grid:{color:K.grid},ticks:{color:K.text,callback:v=>v+'%'},beginAtZero:true},
+        x:{grid:{display:false},ticks:{color:K.text}},
+      },
+    },
+  });
+
+  document.getElementById('evtList').innerHTML = Object.entries(v.timeline).map(([k,val])=>`
+    <li class="evt-row">
+      <span class="evt-date">${k.replace(/_/g,' ')}</span>
+      <span class="evt-text">${val.replace(/https:\/\/\S+/g, url=>`<a href="${url}" target="_blank" rel="noopener">[↗]</a>`)}</span>
+    </li>`).join('');
+}
+
+async function init() {
+  try {
+    const data = await fetchAll();
+    doStats(data);
+    doTimeline(data);
+    doEmoji(data);
+    doHourly(data);
+    doWords(data);
+    doSentiment(data);
+    doVerdict(data);
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('main').style.display   = 'block';
+    document.getElementById('footer').textContent =
+      'Data: DX_V_32ip-9_Comments.csv · 36,216 komentar mentah · analisis Python';
+  } catch(err) {
+    document.getElementById('loading').innerHTML = `
+      <div style="text-align:center;max-width:380px;padding:24px">
+        <div style="font-size:28px;margin-bottom:12px">⚠️</div>
+        <div style="font-size:15px;color:#e4e4e7;font-weight:600;margin-bottom:8px">Gagal memuat data JSON</div>
+        <div style="font-size:13px;color:#a1a1aa;line-height:1.7;margin-bottom:16px">
+          Browser memblokir <code>fetch()</code> via <code>file://</code>.<br>
+          Jalankan HTTP server dari folder penelitian:
+        </div>
+        <code style="display:block;background:#27272a;padding:10px 14px;border-radius:8px;font-size:12px;color:#fbbf24;text-align:left">
+          python3 -m http.server 8080
+        </code>
+        <div style="font-size:12px;color:#71717a;margin-top:12px">
+          lalu buka <strong style="color:#e4e4e7">http://localhost:8080/explore.html</strong>
+        </div>
+        <details style="margin-top:16px;font-size:11px;color:#52525b;text-align:left">
+          <summary style="cursor:pointer">detail error</summary>
+          <pre style="margin-top:8px;white-space:pre-wrap">${err}</pre>
+        </details>
+      </div>`;
+  }
+}
+
+init();
+</script>
+</body>
+</html>

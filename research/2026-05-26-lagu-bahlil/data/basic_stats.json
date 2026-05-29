@@ -1,14 +1,22 @@
 {
-  "total_comments": 36216,
-  "unique_users": 33666,
-  "avg_comment_length": 29.1,
-  "comments_with_text": 35114,
-  "emoji_comment_pct": 74.5,
-  "total_emoji_count": 65757,
+  "total_comments": 41022,
+  "unique_users": 37927,
+  "avg_comment_length": 29.2,
+  "comments_with_text": 39804,
+  "emoji_comment_pct": 74.1,
+  "total_emoji_count": 73735,
   "top_users": [
+    [
+      "funixtwo",
+      132
+    ],
     [
       "afifazizah",
       16
+    ],
+    [
+      "___hakimzz___",
+      12
     ],
     [
       "rahmaaa_b",
@@ -27,6 +35,10 @@
       8
     ],
     [
+      "khoirul_mahbubiy",
+      8
+    ],
+    [
       "jsminsslana",
       8
     ],
@@ -35,15 +47,23 @@
       7
     ],
     [
+      "eldiana_trinarulita",
+      7
+    ],
+    [
       "ems06.6",
       7
     ],
     [
-      "mamiemarissa",
+      "echaimutenan",
       6
     ],
     [
-      "eldiana_trinarulita",
+      "suharti648",
+      6
+    ],
+    [
+      "mamiemarissa",
       6
     ],
     [
@@ -55,8 +75,8 @@
       6
     ],
     [
-      "khoirul_mahbubiy",
-      6
+      "herlinafebriani8",
+      5
     ],
     [
       "adellafadly",
@@ -65,64 +85,44 @@
     [
       "indbrizha",
       5
-    ],
-    [
-      "tehzaneta",
-      5
-    ],
-    [
-      "mur_yani_ningsih",
-      5
-    ],
-    [
-      "de_lanny86",
-      5
-    ],
-    [
-      "aretaalfarezqy",
-      5
-    ],
-    [
-      "adindachaedir",
-      5
     ]
   ],
   "top_mentions": [
     [
       "bahlillahadalia",
-      426
-    ],
-    [
-      "_mfr_18",
-      221
+      457
     ],
     [
       "eghgmlr222",
-      166
+      447
     ],
     [
-      "mom.stefi",
-      60
-    ],
-    [
-      "sanialeonardo",
-      54
+      "_mfr_18",
+      254
     ],
     [
       "ngga.jo",
+      101
+    ],
+    [
+      "mom.stefi",
+      61
+    ],
+    [
+      "sanialeonardo",
       53
     ],
     [
-      "kartikasari_lubis",
+      "melangkahdaritimur.id",
       51
     ],
     [
-      "melangkahdaritimur.id",
+      "kartikasari_lubis",
       50
     ],
     [
       "ariusav",
-      45
+      46
     ],
     [
       "afifazizah",
@@ -130,7 +130,7 @@
     ],
     [
       "marsahid__",
-      41
+      43
     ],
     [
       "nda.nuraa",
@@ -138,35 +138,35 @@
     ],
     [
       "jandatawareal",
-      36
+      37
     ],
     [
       "adhityamaulana_",
       34
     ],
     [
+      "panjipetualang_real",
+      31
+    ],
+    [
       "hey.itsakla_",
       31
+    ],
+    [
+      "julian_emre",
+      27
     ],
     [
       "pranotobayu_",
       26
     ],
     [
-      "panjipetualang_real",
-      25
-    ],
-    [
       "salim_dower",
       24
     ],
     [
-      "rizkywijj",
-      21
-    ],
-    [
       "kanda.bahlil",
-      18
+      20
     ]
   ]
 }

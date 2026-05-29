@@ -1,0 +1,662 @@
+{
+  "meta": {
+    "wave_1_period": "2026-05-06 to 2026-05-09",
+    "wave_2_period": "2026-05-22 to 2026-05-26"
+  },
+  "wave_1": {
+    "total_comments": 11916,
+    "top_unigrams": [
+      [
+        "bolu",
+        1141
+      ],
+      [
+        "ketan",
+        1107
+      ],
+      [
+        "my",
+        970
+      ],
+      [
+        "little",
+        922
+      ],
+      [
+        "lagu",
+        876
+      ],
+      [
+        "lagunya",
+        847
+      ],
+      [
+        "enak",
+        597
+      ],
+      [
+        "takut",
+        573
+      ],
+      [
+        "bahlil",
+        502
+      ],
+      [
+        "nya",
+        501
+      ],
+      [
+        "banget",
+        475
+      ],
+      [
+        "hafal",
+        437
+      ],
+      [
+        "ya",
+        390
+      ],
+      [
+        "kanda",
+        380
+      ],
+      [
+        "yg",
+        360
+      ],
+      [
+        "sampe",
+        286
+      ],
+      [
+        "gw",
+        276
+      ],
+      [
+        "bgt",
+        273
+      ],
+      [
+        "nih",
+        260
+      ],
+      [
+        "hapal",
+        258
+      ],
+      [
+        "ganteng",
+        253
+      ],
+      [
+        "anak",
+        248
+      ],
+      [
+        "bahlillahadalia",
+        246
+      ],
+      [
+        "ga",
+        236
+      ],
+      [
+        "terngiang",
+        229
+      ],
+      [
+        "pentol",
+        206
+      ],
+      [
+        "cilok",
+        206
+      ],
+      [
+        "mbg",
+        200
+      ],
+      [
+        "gak",
+        199
+      ],
+      [
+        "kecap",
+        187
+      ],
+      [
+        "aja",
+        185
+      ],
+      [
+        "kakanda",
+        176
+      ],
+      [
+        "apal",
+        174
+      ],
+      [
+        "mas",
+        169
+      ],
+      [
+        "ngakak",
+        167
+      ],
+      [
+        "dinda",
+        161
+      ],
+      [
+        "udah",
+        161
+      ],
+      [
+        "bikin",
+        150
+      ],
+      [
+        "denger",
+        136
+      ],
+      [
+        "suka",
+        135
+      ],
+      [
+        "buah",
+        134
+      ],
+      [
+        "pertalite",
+        133
+      ],
+      [
+        "dengerin",
+        132
+      ],
+      [
+        "ngiang",
+        131
+      ],
+      [
+        "manis",
+        124
+      ],
+      [
+        "gua",
+        122
+      ],
+      [
+        "_mfr_",
+        119
+      ],
+      [
+        "ku",
+        118
+      ],
+      [
+        "gue",
+        114
+      ],
+      [
+        "sih",
+        112
+      ]
+    ],
+    "top_bigrams": [
+      [
+        "bolu ketan",
+        1037
+      ],
+      [
+        "my little",
+        812
+      ],
+      [
+        "little bolu",
+        753
+      ],
+      [
+        "lagu nya",
+        176
+      ],
+      [
+        "takut banget",
+        144
+      ],
+      [
+        "cilok pentol",
+        131
+      ],
+      [
+        "terngiang ngiang",
+        130
+      ],
+      [
+        "pentol kecap",
+        125
+      ],
+      [
+        "mas bahlil",
+        124
+      ],
+      [
+        "bahlil ganteng",
+        119
+      ],
+      [
+        "enak lagunya",
+        106
+      ],
+      [
+        "takut hafal",
+        102
+      ],
+      [
+        "ya allah",
+        92
+      ],
+      [
+        "lagunya enak",
+        89
+      ],
+      [
+        "little cilok",
+        89
+      ],
+      [
+        "mbg mas",
+        83
+      ],
+      [
+        "takut bgt",
+        77
+      ],
+      [
+        "kanda bahlil",
+        70
+      ],
+      [
+        "takut hapal",
+        60
+      ],
+      [
+        "nih lagu",
+        57
+      ],
+      [
+        "enak banget",
+        57
+      ],
+      [
+        "buah yg",
+        57
+      ],
+      [
+        "hafal lagunya",
+        55
+      ],
+      [
+        "harta tahta",
+        51
+      ],
+      [
+        "yg manis",
+        48
+      ],
+      [
+        "anak gw",
+        45
+      ],
+      [
+        "cilok kecap",
+        44
+      ],
+      [
+        "dengerin sampe",
+        42
+      ],
+      [
+        "buah manis",
+        41
+      ],
+      [
+        "easy listening",
+        40
+      ]
+    ],
+    "vocab_size": 10285
+  },
+  "wave_2": {
+    "total_comments": 19105,
+    "top_unigrams": [
+      [
+        "lagu",
+        1613
+      ],
+      [
+        "hafal",
+        1373
+      ],
+      [
+        "bolu",
+        1083
+      ],
+      [
+        "ketan",
+        1002
+      ],
+      [
+        "lagunya",
+        947
+      ],
+      [
+        "my",
+        821
+      ],
+      [
+        "nya",
+        774
+      ],
+      [
+        "hapal",
+        761
+      ],
+      [
+        "little",
+        703
+      ],
+      [
+        "takut",
+        680
+      ],
+      [
+        "terngiang",
+        634
+      ],
+      [
+        "bahlil",
+        561
+      ],
+      [
+        "ya",
+        551
+      ],
+      [
+        "udah",
+        544
+      ],
+      [
+        "banget",
+        544
+      ],
+      [
+        "yg",
+        538
+      ],
+      [
+        "enak",
+        492
+      ],
+      [
+        "bgt",
+        429
+      ],
+      [
+        "gw",
+        424
+      ],
+      [
+        "nih",
+        410
+      ],
+      [
+        "ga",
+        392
+      ],
+      [
+        "apal",
+        382
+      ],
+      [
+        "sampe",
+        372
+      ],
+      [
+        "ngiang",
+        358
+      ],
+      [
+        "full",
+        328
+      ],
+      [
+        "mbg",
+        319
+      ],
+      [
+        "versi",
+        300
+      ],
+      [
+        "gue",
+        292
+      ],
+      [
+        "ganteng",
+        284
+      ],
+      [
+        "mas",
+        280
+      ],
+      [
+        "gak",
+        275
+      ],
+      [
+        "anak",
+        270
+      ],
+      [
+        "kanda",
+        269
+      ],
+      [
+        "gua",
+        257
+      ],
+      [
+        "buah",
+        254
+      ],
+      [
+        "buahlil",
+        248
+      ],
+      [
+        "aja",
+        245
+      ],
+      [
+        "bikin",
+        236
+      ],
+      [
+        "nyanyi",
+        234
+      ],
+      [
+        "denger",
+        229
+      ],
+      [
+        "dinda",
+        228
+      ],
+      [
+        "lucu",
+        222
+      ],
+      [
+        "sih",
+        213
+      ],
+      [
+        "ni",
+        209
+      ],
+      [
+        "ngakak",
+        204
+      ],
+      [
+        "udh",
+        195
+      ],
+      [
+        "liriknya",
+        195
+      ],
+      [
+        "kak",
+        189
+      ],
+      [
+        "tolong",
+        174
+      ],
+      [
+        "allah",
+        173
+      ]
+    ],
+    "top_bigrams": [
+      [
+        "bolu ketan",
+        972
+      ],
+      [
+        "my little",
+        648
+      ],
+      [
+        "little bolu",
+        585
+      ],
+      [
+        "terngiang ngiang",
+        331
+      ],
+      [
+        "lagu nya",
+        194
+      ],
+      [
+        "mas bahlil",
+        184
+      ],
+      [
+        "ya allah",
+        157
+      ],
+      [
+        "udah hafal",
+        155
+      ],
+      [
+        "takut hafal",
+        155
+      ],
+      [
+        "bahlil ganteng",
+        148
+      ],
+      [
+        "takut banget",
+        144
+      ],
+      [
+        "easy listening",
+        129
+      ],
+      [
+        "mbg mas",
+        120
+      ],
+      [
+        "nih lagu",
+        98
+      ],
+      [
+        "ni lagu",
+        96
+      ],
+      [
+        "takut bgt",
+        95
+      ],
+      [
+        "full version",
+        94
+      ],
+      [
+        "cilok pentol",
+        90
+      ],
+      [
+        "versi full",
+        85
+      ],
+      [
+        "hafal lagunya",
+        82
+      ],
+      [
+        "lagunya enak",
+        81
+      ],
+      [
+        "zayn malik",
+        79
+      ],
+      [
+        "udah hapal",
+        78
+      ],
+      [
+        "full nya",
+        78
+      ],
+      [
+        "pentol kecap",
+        77
+      ],
+      [
+        "yg bikin",
+        72
+      ],
+      [
+        "enak lagunya",
+        71
+      ],
+      [
+        "takut hapal",
+        71
+      ],
+      [
+        "buah lil",
+        66
+      ],
+      [
+        "botak lucu",
+        62
+      ]
+    ],
+    "vocab_size": 15513
+  }
+}
