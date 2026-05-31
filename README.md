@@ -5,44 +5,58 @@ Automated Indonesian news & social media content analysis — sentiment, entitie
 ## Repo structure
 
 ```
-research/                    # Each project is a dated, self-contained directory
-└── YYYY-MM-DD-topic-slug/
-    ├── README.md            # Temuan & interpretasi (Bahasa Indonesia)
-    ├── HYPOTHESIS.md        # [opsional] Framework hipotesis untuk analisis forensik
-    ├── requirements.txt     # Dependencies pin
-    ├── run_all.sh           # Orchestrator — reproduce semua output dari scratch
-    ├── scripts/             # Script Python — dipisah per fungsi, dinomori urut pipeline
-    ├── data/                # Output JSON/CSV — generated oleh scripts/
-    └── charts/              # [opsional] Static chart images untuk README
-
-docs/                        # GitHub Pages — HTML explorer & data dashboard
-└── *.html                   # Output HTML untuk publikasi
+research/
+└── YYYY-MM-DD-slug/
+    ├── README.md                        # Project overview
+    ├── data/
+    │   ├── bronze/                      # Raw data as-is from source
+    │   │   └── scripts/                 # Fetch/ingestion scripts
+    │   ├── silver/                      # Cleaned, parsed, validated data
+    │   │   └── scripts/                 # Transform/clean scripts
+    │   └── gold/                        # Aggregated, analysis-ready datasets
+    │       └── scripts/                 # Aggregate / feature engineering
+    ├── eda/                             # Exploratory phase — understand raw data
+    │   ├── scripts/                     # EDA scripts (stats, profiling, charts)
+    │   └── *.html                       # Visualizations (served via gateway :8642)
+    └── analysis/                        # Answer specific research questions
+        ├── RESEARCH_REPORT.md           # Final report (findings, tables, insight)
+        ├── HYPOTHESIS.md                # [optional] Hypothesis framework for forensic analysis
+        ├── scripts/                     # Focused analysis scripts
+        └── *.html                       # Analysis visualizations (served via gateway :8642)
 ```
 
-### Standar project baru
+### Medallion data architecture
 
-| Aturan | Keterangan |
-|--------|------------|
-| **Reproducible** | Setiap project wajib punya `run_all.sh` + `requirements.txt` |
-| **Scripts only** | Semua kode di `scripts/`, tidak ada script di root project |
-| **No .venv** | Gunakan `requirements.txt`, jangan commit virtual environment |
-| **HTML → docs/** | Output visual untuk GitHub Pages simpan langsung di `docs/` root repo |
-| **Deterministik** | Script harus seeded (random seed tetap) — output identik tiap run |
-| **Bahasa** | README di project → Indonesia. Docstring di script → English |
-| **Pipeline numerik** | Script dinomori urut (01_, 02_, dst) sesuai alur pipeline |
-| **Forensik** | Analisis hipotesis-driven tambahkan `HYPOTHESIS.md` |
+| Layer | What goes in | Scripts in |
+|-------|-------------|------------|
+| **bronze/** | Raw data from Semantik API, Instagram CSV dump, scraped HTML — never modified | `bronze/scripts/` |
+| **silver/** | Parsed, validated, deduplicated — date fields converted, nulls handled, schema enforced | `silver/scripts/` |
+| **gold/** | Aggregated metrics, entity-level joins, feature tables ready for analysis/visualization | `gold/scripts/` |
+
+### Standards for new projects
+
+| Rule | Detail |
+|------|--------|
+| **Self-contained** | Scripts live inside the medal/eda/analysis directory they serve — no top-level `scripts/` |
+| **Reproducible** | Each medal stage has its own scripts/ to regenerate that layer from the previous one |
+| **No venv** | Single `requirements.txt` at project root |
+| **Deterministic** | Seeded random — identical output on re-run |
+| **English** | Everything (README, reports, docstrings) |
+| **No GitHub Pages** | Visualizations served via gateway API on port 8642 |
 
 ## Research projects
 
-| Project | Fokus | Data source |
-|---------|-------|-------------|
-| [Transisi Energi Hijau](research/2026-05-18-transisi-energi-hijau/) | Pemberitaan green energy (542 artikel, 14 media) | Semantik API |
-| [Andrie Yunus Preliminary](research/2026-05-19-andrie-yunus-preliminary/) | Eksplorasi awal framing Andrie Yunus | Semantik API |
-| [Pesta Babi](research/2026-05-20-pesta-babi/) | Liputan dokumenter kontroversial (88 artikel) | Semantik API |
-| [Lagu Bahlil](research/2026-05-26-lagu-bahlil/) | Viral Instagram Reel — 36K komentar, 2 gelombang | Instagram API + Tantular NLP |
+| Project | Focus | Source |
+|---------|-------|--------|
+| [Transisi Energi Hijau](research/2026-05-18-transisi-energi-hijau/) | Green energy news coverage (542 articles, 14 outlets) | Semantik API |
+| [Andrie Yunus Preliminary](research/2026-05-19-andrie-yunus-preliminary/) | Early framing exploration of Andrie Yunus | Semantik API |
+| [Pesta Babi](research/2026-05-20-pesta-babi/) | Controversial documentary coverage (88 articles) | Semantik API |
+| [Lagu Bahlil](research/2026-05-26-lagu-bahlil/) | Viral Instagram Reel — 36K comments, 2 waves | Instagram API + Tantular NLP |
+
+> **Note:** Previous projects used an older directory layout. New projects starting from June 2026 follow the medallion architecture above.
 
 ## Data source
 
-- [Semantik](https://semantik.cc) — Indonesian news monitoring platform (sentiment, entities, framing, relations)
-- [Tantular](https://github.com/hariswb/tantular) — Offline NLP toolkit for Indonesian text (BagOfWords, InSetSentiment, NER, emotion, framing)
+- [Semantik](https://semantik.cc) — Indonesian news monitoring (sentiment, entities, framing, relations)
+- [Tantular](https://github.com/hariswb/tantular) — Offline NLP for Indonesian text (BagOfWords, InSetSentiment, NER, emotion, framing)
 - Instagram / TikTok API — Engagement forensics (comment CSV, timestamps, user graphs)
