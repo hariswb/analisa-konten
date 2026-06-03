@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDA Dashboard — Klarifikasi Seskab Teddy</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0f1923; color: #e0e6ed; padding: 20px; }
+  .container { max-width: 1400px; margin: 0 auto; }
+  h1 { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .subtitle { color: #8899aa; font-size: 14px; margin-bottom: 30px; }
+  .subtitle a { color: #66b0ff; }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px; }
+  .card { background: #1a2836; border-radius: 12px; padding: 20px; border: 1px solid #2a3a4a; }
+  .card .num { font-size: 32px; font-weight: 700; color: #fff; }
+  .card .label { font-size: 12px; color: #8899aa; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .chart-grid.one-col { grid-template-columns: 1fr; }
+  .chart-card { background: #1a2836; border-radius: 12px; padding: 16px; border: 1px solid #2a3a4a; }
+  .chart-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: #c0d0e0; }
+  .chart-card canvas { width: 100% !important; height: auto !important; max-height: 400px; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 10px 12px; background: #1f3040; color: #99aabb; font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; }
+  td { padding: 10px 12px; border-bottom: 1px solid #223344; }
+  tr:hover td { background: #1e3040; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .text-muted { color: #8899aa; font-size: 13px; }
+  .mt-20 { margin-top: 20px; }
+  .mb-20 { margin-bottom: 20px; }
+  @media (max-width: 900px) { .chart-grid { grid-template-columns: 1fr; } }
+  .chart-card.full { grid-column: 1 / -1; }
+  .cluster-tag { display: inline-block; padding: 4px 14px; border-radius: 12px; font-size: 13px; font-weight: 600; margin-right: 6px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>&#x1F575; EDA Dashboard — Klarifikasi Seskab Teddy</h1>
+<div class="subtitle">
+  Analisis komentar Instagram dari 11 sumber berita terkait klarifikasi Sekretaris Kabinet Teddy Indra Wijaya
+  atas kritik Dino Patti Djalal tentang kunjungan luar negeri Presiden Prabowo (1-4 Juni 2026) &middot;
+  Charts rendered client-side via Chart.js
+</div>
+
+<div class="summary-grid">
+  <div class="card"><div class="num">15,424</div><div class="label">Total Comments</div></div>
+  <div class="card"><div class="num">11</div><div class="label">News Sources</div></div>
+  <div class="card"><div class="num">13,743</div><div class="label">Unique Commenters</div></div>
+  <div class="card"><div class="num">60</div><div class="label">Avg Comment Length (chars)</div></div>
+</div>
+
+<div id="charts">
+  <!-- Charts populated by JS below -->
+</div>
+
+<!-- Source Table -->
+<div class="chart-card mt-20 mb-20">
+  <h3>&#x1F4CB; Source Details</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>Account</th><th>Comments</th><th>Unique</th><th>Followers</th><th>Likes</th><th>Eng. Rate</th><th>URL</th>
+      </tr></thead>
+      <tbody id="source-table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Stance Detail Table -->
+<div class="chart-card mb-20">
+  <h3>&#x1F3F7; Stance Distribution Details</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Category</th><th>Count</th><th>%</th><th>Keywords</th></tr></thead>
+      <tbody id="stance-table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Cluster Summary -->
+<div class="chart-card mb-20" id="cluster-section">
+  <h3>&#x1F52C; TF-IDF + KMeans Clusters</h3>
+  <p class="text-muted" id="cluster-meta"></p>
+  <div id="cluster-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;"></div>
+</div>
+
+<!-- InSet Sentiment Table -->
+<div class="chart-card mb-20">
+  <h3>&#x1F4CA; Sentiment Analysis (InSetSentiment)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Label</th><th>Count</th><th>Percentage</th></tr></thead>
+      <tbody id="inset-table-body"></tbody>
+    </table>
+  </div>
+  <p class="text-muted" style="margin-top:10px;" id="inset-meta"></p>
+</div>
+
+<!-- EmoSense Emotions Table -->
+<div class="chart-card mb-20" id="emosense-section">
+  <h3>&#x1F621; EmoSense Dominant Emotions</h3>
+  <p class="text-muted" id="emosense-meta"></p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Emotion</th><th>Dominant Count</th><th>%</th><th>Avg Probability</th></tr></thead>
+      <tbody id="emosense-table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Top Terms Table -->
+<div class="chart-card mb-20">
+  <h3>&#x1F3C6; Top 30 Bigrams (Tantular BagOfWords)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Bigram</th><th>Frequency</th></tr></thead>
+      <tbody id="topterms-table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card" style="text-align:center;margin-top:20px;">
+  <p class="text-muted">
+    Dibuat dengan Tantular NLP + scikit-learn &middot;
+    EDA pipeline: 01_process (BoW/stance) &middot; 02_classify (InSet) &middot; 02b_classify_tfidf (KMeans) &middot; 03_emosense_sample (EmoSense) &middot;
+    Charts: Chart.js (client-side)
+  </p>
+</div>
+
+</div>
+
+<script>
+// ── Data embedded as JSON ──────────────────────────────────────────
+const META = {"title": "Klarifikasi Seskab Teddy \u2014 Instagram Comments EDA", "source_count": 11, "total_comments": 15424, "unique_commenters": 13743, "avg_comment_length": 60.5, "empty_comments": 688, "peak_hour_utc": 9, "peak_hour_count": 1144, "generated_at": "2026-06-04T00:00:00Z"};
+const SOURCE_STATS = {"totalpolitikcom": {"file": "DZDL11PN09E_Comments.csv", "url": "https://www.instagram.com/p/DZDL11PN09E", "followers": 507000, "likes": 7000, "total_comments": 1590, "unique_commenters": 1397}, "tribunnews": {"file": "DZE1otyl-vW_Comments.csv", "url": "https://www.instagram.com/p/DZE1otyl-vW", "followers": 1200000, "likes": 87, "total_comments": 32, "unique_commenters": 30}, "tempodotco": {"file": "DZE6yvJTUva_Comments.csv", "url": "https://www.instagram.com/p/DZE6yvJTUva", "followers": 1900000, "likes": 28700, "total_comments": 6256, "unique_commenters": 5904}, "republikaonline": {"file": "DZEDPaOy6gd_Comments.csv", "url": "https://www.instagram.com/p/DZEDPaOy6gd", "followers": 553000, "likes": 1300, "total_comments": 713, "unique_commenters": 662}, "20detik": {"file": "DZEDu0BRtCT_Comments.csv", "url": "https://www.instagram.com/p/DZEDu0BRtCT", "followers": 206000, "likes": 1000, "total_comments": 126, "unique_commenters": 116}, "suarasurabayamedia": {"file": "DZEdVa8jY4O_Comments.csv", "url": "https://www.instagram.com/p/DZEdVa8jY4O", "followers": 925000, "likes": 2300, "total_comments": 725, "unique_commenters": 646}, "infipop": {"file": "DZEe0UpmXRb_Comments.csv", "url": "https://www.instagram.com/p/DZEe0UpmXRb", "followers": 3300000, "likes": 17000, "total_comments": 3139, "unique_commenters": 2848}, "cnbcindonesia": {"file": "DZEIAviE3rN_Comments.csv", "url": "https://www.instagram.com/p/DZEIAviE3rN", "followers": 1200000, "likes": 2500, "total_comments": 522, "unique_commenters": 467}, "suaradotcom": {"file": "DZFAXLNDIFU_Comments.csv", "url": "https://www.instagram.com/p/DZFAXLNDIFU", "followers": 919000, "likes": 1000, "total_comments": 417, "unique_commenters": 377}, "winnews_": {"file": "DZFgoMcvLoT_Comments.csv", "url": "https://www.instagram.com/p/DZFgoMcvLoT", "followers": 239000, "likes": 591, "total_comments": 23, "unique_commenters": 21}, "officialinews": {"file": "DZDBATXjwF7_Comments.csv", "url": "https://www.instagram.com/p/DZDBATXjwF7", "followers": 1400000, "likes": 4000, "total_comments": 1881, "unique_commenters": 1696}};
+const HOURLY = [{"hour": 0, "count": 778}, {"hour": 1, "count": 932}, {"hour": 2, "count": 654}, {"hour": 3, "count": 346}, {"hour": 4, "count": 924}, {"hour": 5, "count": 947}, {"hour": 6, "count": 557}, {"hour": 7, "count": 387}, {"hour": 8, "count": 936}, {"hour": 9, "count": 1144}, {"hour": 10, "count": 877}, {"hour": 11, "count": 838}, {"hour": 12, "count": 791}, {"hour": 13, "count": 754}, {"hour": 14, "count": 673}, {"hour": 15, "count": 952}, {"hour": 16, "count": 623}, {"hour": 17, "count": 374}, {"hour": 18, "count": 186}, {"hour": 19, "count": 156}, {"hour": 20, "count": 125}, {"hour": 21, "count": 238}, {"hour": 22, "count": 502}, {"hour": 23, "count": 656}];
+const STANCE_DIST = [{"category": "mendukung", "count": 51}, {"category": "mengkritik", "count": 241}, {"category": "sarkasme", "count": 12050}, {"category": "faktual", "count": 119}, {"category": "lainnya", "count": 2963}];
+const STANCE_BY_SRC = {"totalpolitikcom": {"sarkasme": 1322, "lainnya": 233, "faktual": 4, "mengkritik": 27, "mendukung": 4}, "tribunnews": {"sarkasme": 22, "lainnya": 9, "faktual": 1}, "tempodotco": {"sarkasme": 4660, "lainnya": 1437, "mendukung": 20, "faktual": 59, "mengkritik": 80}, "republikaonline": {"sarkasme": 566, "lainnya": 123, "faktual": 8, "mengkritik": 15, "mendukung": 1}, "20detik": {"sarkasme": 111, "lainnya": 14, "mengkritik": 1}, "suarasurabayamedia": {"sarkasme": 577, "lainnya": 136, "faktual": 6, "mengkritik": 6}, "infipop": {"sarkasme": 2531, "lainnya": 523, "mengkritik": 56, "mendukung": 16, "faktual": 13}, "cnbcindonesia": {"mengkritik": 9, "sarkasme": 439, "lainnya": 70, "mendukung": 2, "faktual": 2}, "suaradotcom": {"faktual": 1, "sarkasme": 325, "lainnya": 85, "mengkritik": 6}, "winnews_": {"mendukung": 1, "sarkasme": 20, "lainnya": 2}, "officialinews": {"sarkasme": 1477, "faktual": 25, "lainnya": 331, "mendukung": 7, "mengkritik": 41}};
+const TOP_TERMS = [{"term": "yg", "freq": 1709}, {"term": "aja", "freq": 1554}, {"term": "pribadi", "freq": 1454}, {"term": "pake", "freq": 1293}, {"term": "negara", "freq": 1144}, {"term": "ya", "freq": 1078}, {"term": "apbn", "freq": 1017}, {"term": "nya", "freq": 974}, {"term": "ga", "freq": 843}, {"term": "percaya", "freq": 814}, {"term": "gak", "freq": 762}, {"term": "uang", "freq": 751}, {"term": "presiden", "freq": 733}, {"term": "rakyat", "freq": 634}, {"term": "pakai", "freq": 569}, {"term": "orang", "freq": 526}, {"term": "dino", "freq": 525}, {"term": "lu", "freq": 502}, {"term": "dana", "freq": 499}, {"term": "kalo", "freq": 478}, {"term": "sih", "freq": 457}, {"term": "prabowo", "freq": 456}, {"term": "kurban", "freq": 454}, {"term": "biaya", "freq": 445}, {"term": "ted", "freq": 426}, {"term": "negeri", "freq": 420}, {"term": "qurban", "freq": 418}, {"term": "klarifikasi", "freq": 400}, {"term": "duit", "freq": 386}, {"term": "seskab", "freq": 357}];
+const EMOJI_TOP = [{"emoji": "yg", "count": 1601}, {"emoji": "aja", "count": 1479}, {"emoji": "di", "count": 1283}, {"emoji": "pake", "count": 1207}, {"emoji": "pribadi", "count": 1174}, {"emoji": "ada", "count": 1040}, {"emoji": "\ud83d\ude02", "count": 1034}, {"emoji": "dan", "count": 1019}, {"emoji": "ini", "count": 984}, {"emoji": "negara", "count": 948}, {"emoji": "nya", "count": 922}, {"emoji": "yang", "count": 899}, {"emoji": "itu", "count": 877}, {"emoji": "ya", "count": 824}, {"emoji": "ga", "count": 713}, {"emoji": "uang", "count": 694}, {"emoji": "ke", "count": 687}, {"emoji": "pak", "count": 670}, {"emoji": "apa", "count": 657}, {"emoji": "APBN", "count": 638}, {"emoji": "gak", "count": 629}, {"emoji": "percaya", "count": 578}, {"emoji": "bisa", "count": 572}, {"emoji": "presiden", "count": 561}, {"emoji": "dia", "count": 538}];
+const TOP_COMMENTERS = [{"username": "budi.halimmm", "count": 38}, {"username": "estiyunho_", "count": 24}, {"username": "meietti", "count": 19}, {"username": "dariusrusli", "count": 18}, {"username": "pejuangdanpengembara", "count": 13}, {"username": "thor_bar_bar", "count": 10}, {"username": "melasarikarima", "count": 9}, {"username": "khayr_2708", "count": 9}, {"username": "zulsofyan_", "count": 8}, {"username": "rika.1170", "count": 8}, {"username": "_idrhoo", "count": 7}, {"username": "apri200254", "count": 7}, {"username": "ogto.af", "count": 7}, {"username": "rachelsinulingga", "count": 7}, {"username": "d_ren88", "count": 7}, {"username": "dewopakde", "count": 6}, {"username": "ahmadsrobbani", "count": 6}, {"username": "fanny___aaa", "count": 6}, {"username": "agamkupie", "count": 6}, {"username": "aditya.aditya89", "count": 6}, {"username": "_by.dewi_", "count": 6}, {"username": "asildo_0", "count": 6}, {"username": "kopi_ampas", "count": 6}, {"username": "haji.brahm", "count": 5}, {"username": "alllddy_gherald", "count": 5}];
+const SOURCE_TERMS = {"tempodotco": [{"term": "pribadi", "freq": 39}, {"term": "yg", "freq": 36}, {"term": "aja", "freq": 34}, {"term": "pake", "freq": 26}, {"term": "ga", "freq": 26}, {"term": "apbn", "freq": 24}, {"term": "nya", "freq": 22}, {"term": "uang", "freq": 20}, {"term": "orang", "freq": 18}, {"term": "lu", "freq": 18}, {"term": "kurban", "freq": 17}, {"term": "negara", "freq": 17}, {"term": "ya", "freq": 17}, {"term": "percaya", "freq": 15}, {"term": "dinas", "freq": 14}, {"term": "gak", "freq": 14}, {"term": "rakyat", "freq": 14}, {"term": "presiden", "freq": 14}, {"term": "udah", "freq": 13}, {"term": "biaya", "freq": 13}], "infipop": [{"term": "yg", "freq": 29}, {"term": "negara", "freq": 28}, {"term": "pribadi", "freq": 28}, {"term": "aja", "freq": 21}, {"term": "pake", "freq": 21}, {"term": "ya", "freq": 21}, {"term": "ga", "freq": 19}, {"term": "iamwk", "freq": 19}, {"term": "nya", "freq": 18}, {"term": "uang", "freq": 17}, {"term": "rakyat", "freq": 13}, {"term": "gak", "freq": 13}, {"term": "percaya", "freq": 12}, {"term": "apbn", "freq": 11}, {"term": "bgt", "freq": 10}, {"term": "dino", "freq": 10}, {"term": "iya", "freq": 10}, {"term": "buna", "freq": 9}, {"term": "pakai", "freq": 9}, {"term": "klarifikasi", "freq": 9}], "officialinews": [{"term": "yg", "freq": 46}, {"term": "aja", "freq": 39}, {"term": "percaya", "freq": 29}, {"term": "pake", "freq": 29}, {"term": "nya", "freq": 27}, {"term": "pribadi", "freq": 26}, {"term": "negara", "freq": 24}, {"term": "apbn", "freq": 24}, {"term": "rakyat", "freq": 22}, {"term": "ya", "freq": 22}, {"term": "presiden", "freq": 21}, {"term": "dana", "freq": 19}, {"term": "ted", "freq": 17}, {"term": "ga", "freq": 16}, {"term": "pakai", "freq": 16}, {"term": "orang", "freq": 15}, {"term": "seskab", "freq": 14}, {"term": "ngomong", "freq": 14}, {"term": "gak", "freq": 13}, {"term": "jubir", "freq": 13}], "totalpolitikcom": [{"term": "yg", "freq": 66}, {"term": "aja", "freq": 29}, {"term": "ya", "freq": 27}, {"term": "dino", "freq": 25}, {"term": "pribadi", "freq": 19}, {"term": "orang", "freq": 19}, {"term": "teddy", "freq": 17}, {"term": "si", "freq": 17}, {"term": "uang", "freq": 17}, {"term": "negara", "freq": 17}, {"term": "gak", "freq": 16}, {"term": "seskab", "freq": 15}, {"term": "kalo", "freq": 15}, {"term": "ga", "freq": 15}, {"term": "presiden", "freq": 13}, {"term": "pake", "freq": 13}, {"term": "nya", "freq": 13}, {"term": "rakyat", "freq": 13}, {"term": "percaya", "freq": 11}, {"term": "bgt", "freq": 10}], "suarasurabayamedia": [{"term": "gak", "freq": 36}, {"term": "yg", "freq": 30}, {"term": "ya", "freq": 24}, {"term": "pribadi", "freq": 23}, {"term": "aja", "freq": 21}, {"term": "negara", "freq": 21}, {"term": "orang", "freq": 16}, {"term": "presiden", "freq": 16}, {"term": "tau", "freq": 15}, {"term": "pake", "freq": 15}, {"term": "uang", "freq": 15}, {"term": "ga", "freq": 15}, {"term": "negeri", "freq": 14}, {"term": "rakyat", "freq": 14}, {"term": "apbn", "freq": 13}, {"term": "percaya", "freq": 13}, {"term": "nya", "freq": 13}, {"term": "pakai", "freq": 12}, {"term": "klarifikasi", "freq": 12}, {"term": "wes", "freq": 12}]};
+const TEXT_LENGTHS = {"bins": [{"bin_label": "0-20", "count": 4135}, {"bin_label": "20-40", "count": 3695}, {"bin_label": "40-60", "count": 2339}, {"bin_label": "60-80", "count": 1417}, {"bin_label": "80-100", "count": 891}, {"bin_label": "100-120", "count": 588}, {"bin_label": "120-140", "count": 397}, {"bin_label": "140-160", "count": 287}, {"bin_label": "160-180", "count": 218}, {"bin_label": "180-200", "count": 152}, {"bin_label": "200-220", "count": 109}, {"bin_label": "220-240", "count": 79}, {"bin_label": "240-260", "count": 52}, {"bin_label": "260-280", "count": 59}, {"bin_label": "280-300", "count": 43}, {"bin_label": "300-320", "count": 31}, {"bin_label": "320-340", "count": 25}, {"bin_label": "340-360", "count": 23}, {"bin_label": "360-380", "count": 18}, {"bin_label": "380-400", "count": 24}, {"bin_label": "400-420", "count": 18}, {"bin_label": "420-440", "count": 8}, {"bin_label": "440-460", "count": 12}, {"bin_label": "460-480", "count": 13}, {"bin_label": "480-500", "count": 13}, {"bin_label": "500+", "count": 90}], "categories": {"short_1_19": 4135, "medium_20_200": 9991, "long_200_plus": 610}, "avg_length": 60.5, "median_length": 37};
+const INSET_SUMMARY = {"model": "InSetSentiment (Tantular)", "total_comments": 15424, "total_classified": 15424, "sentiment_distribution": {"positive": 3832, "negative": 5176, "neutral": 6416}, "sentiment_percentages": {"positive_pct": 24.8, "negative_pct": 33.6, "neutral_pct": 41.6}, "avg_polarity": -0.0871, "positive_negative_ratio": 0.74, "avg_abs_raw_score": 2.4};
+const INSET_BY_SRC = {"20detik": {"positive": 25, "negative": 53, "neutral": 44}, "cnbcindonesia": {"negative": 191, "positive": 160, "neutral": 159}, "infipop": {"negative": 1096, "neutral": 1141, "positive": 823}, "officialinews": {"negative": 620, "neutral": 680, "positive": 523}, "republikaonline": {"negative": 240, "neutral": 255, "positive": 191}, "suaradotcom": {"negative": 170, "positive": 85, "neutral": 137}, "suarasurabayamedia": {"positive": 207, "neutral": 263, "negative": 218}, "tempodotco": {"neutral": 2490, "positive": 1427, "negative": 1943}, "totalpolitikcom": {"neutral": 538, "positive": 380, "negative": 623}, "tribunnews": {"neutral": 14, "negative": 13, "positive": 5}, "winnews_": {"positive": 6, "negative": 9, "neutral": 7}};
+const EMOSENSE = {"model": "Aardiiiiy/EmoSense-ID-Indonesian-Emotion-Classifier", "sample_size": 298, "method": "stratified_sample", "emotion_labels": ["anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", "trust"], "average_probabilities": {"anger": 0.2133, "joy": 0.1647, "disgust": 0.1251, "trust": 0.1147, "sadness": 0.1103, "surprise": 0.1002, "anticipation": 0.0974, "fear": 0.0743}, "dominant_emotion_distribution": {"anger": 74, "joy": 51, "disgust": 35, "trust": 34, "sadness": 29, "surprise": 29, "anticipation": 27, "fear": 19}};
+const CLUSTER = {"method": "TF-IDF + SVD(50) + KMeans", "n_clusters": 5, "total_clustered": 14736, "cluster_labels": {"0": "skeptis", "1": "mengkritik", "2": "umum", "3": "sarkasme", "4": "mendukung"}, "cluster_sizes": {"0": 488, "1": 803, "2": 12161, "3": 46, "4": 1238}, "cluster_terms": {"0": [["percaya", 0.3671], ["lebih percaya", 0.049], ["lebih", 0.0482], ["gak percaya", 0.0354], ["gak", 0.0302], ["kalian", 0.0265], ["ada", 0.0257], ["kalian percaya", 0.0249], ["yg", 0.0203], ["yg percaya", 0.0194], ["ga percaya", 0.0172], ["ga", 0.0172], ["saya", 0.0169], ["tidak", 0.0157], ["sih", 0.0155]], "1": [["apbn", 0.1472], ["pake", 0.1404], ["pake apbn", 0.1125], ["aja", 0.1098], ["aja pake", 0.0991], ["aja pake apbn", 0.0909], ["kurban", 0.08], ["qurban", 0.0792], ["pribadi", 0.0637], ["kurban aja", 0.0582], ["qurban aja", 0.057], ["sapi", 0.0488], ["kurban aja pake", 0.0478], ["pakai", 0.0476], ["qurban aja pake", 0.0456]], "2": [["ada", 0.0151], ["ya", 0.0137], ["yg", 0.0128], ["ini", 0.0125], ["nya", 0.0125], ["negara", 0.0114], ["di", 0.0113], ["aja", 0.0107], ["pokoknya", 0.0102], ["itu", 0.01], ["pribadi", 0.0098], ["ga", 0.0098], ["apa", 0.0096], ["yang", 0.0096], ["pokoknya ada", 0.0092]], "3": [["ardianryz_", 0.8299], ["kok", 0.0398], ["banget", 0.0315], ["bgt", 0.0284], ["bener", 0.0275], ["sepakat", 0.0273], ["sih", 0.0259], ["omon", 0.0256], ["yg", 0.0249], ["hahahaha", 0.0249], ["hahaha", 0.0234], ["halah", 0.0207], ["iya", 0.0201], ["itu", 0.0187], ["pasti", 0.0183]], "4": [["pak", 0.0968], ["gak", 0.0852], ["dino", 0.0648], ["pak dino", 0.0585], ["di", 0.0269], ["yg", 0.0242], ["ada", 0.0222], ["gak percaya", 0.0211], ["dan", 0.0206], ["itu", 0.019], ["ini", 0.0174], ["aja", 0.0172], ["prabowo", 0.0169], ["ya", 0.0164], ["seskab", 0.0161]]}, "cluster_samples": {"0": [{"index": 23, "text": "Seribu lebih koment gk ada yang percaya \ud83e\udd23"}, {"index": 1896, "text": "Saya lebih percaya gufron bisa bahasa semut"}, {"index": 3119, "text": "Duhh, saya lebih percaya ada UFO muter-muter di kota tadi malem"}, {"index": 4201, "text": "lebih percaya arsenal juara UCL tahun depan \ud83e\udd23"}, {"index": 5222, "text": "LU PERCAYA TEDDY ?"}, {"index": 6151, "text": "tombol percaya ------>"}], "1": [{"index": 173, "text": "orang dibales pakai sapi qurban 1.1 ton\ud83d\ude02"}, {"index": 2015, "text": "Ah masa qurban aja pke apbn"}, {"index": 3088, "text": "@yadie_sirat beli sapi aja pake apbn, MASAK IYA perjalanan dinas dari kantong sendiri"}, {"index": 3864, "text": "\ud83e\udd23\ud83e\udd23\ud83e\udd23\ud83e\udd23qurban aja pakai APBN apalagi ini\ud83e\udd23\ud83e\udd23\ud83e\udd23"}, {"index": 4920, "text": "Maaf ada yg percaya tidak presiden ikut nanggung biaya,lawong kurban aja pake APBN"}, {"index": 5719, "text": "Logika nya aje nii,,Kurban sapi aja menggunakan APBN \ud83d\uddff"}], "2": [{"index": 0, "text": "Mince"}, {"index": 1262, "text": "Top mas seskab\ud83d\udd25\ud83d\udd25\ud83d\udd25\ud83d\udd25\ud83d\udd25\ud83d\udd25"}, {"index": 2474, "text": "@teddy_hq kuma sia we lah"}, {"index": 3673, "text": "Bunted lgi mens \ud83d\ude02"}, {"index": 4886, "text": "@yadimafata ngakak \ud83e\udd23"}, {"index": 6122, "text": "Si tembem ngambekan"}], "3": [{"index": 9014, "text": "@ardianryz_ wakakakakaakakakaa"}, {"index": 9219, "text": "@ardianryz_ @pamsqy @mraiss_ komenan nya\ud83d\ude02"}, {"index": 9546, "text": "@ardianryz_ \ud83e\udd23\ud83e\udd23\ud83e\udd23"}, {"index": 9641, "text": "@ardianryz_ \ud83d\ude02\ud83d\ude02\ud83d\ude02"}, {"index": 9821, "text": "@ardianryz_ \ud83d\ude02\ud83d\ude02\ud83d\ude02\ud83e\udd23\ud83e\udd23\ud83e\udd23"}, {"index": 9982, "text": "@ardianryz_ \ud83d\ude02\ud83d\ude02"}], "4": [{"index": 6, "text": "Cerdasss ttp lah bermanfaat bt negera kita pak teddy\ud83d\ude0d\ud83d\udd25\ud83d\udd25\ud83d\udd25"}, {"index": 660, "text": "3 bulan itu di 2014 waktu zaman pak SBY. Namun riwayat tugas diplomatik beliau udah dari tahun 1987 di kemenlu \ud83d\ude04"}, {"index": 1312, "text": "Di balik kata\u00b2 walau hanya diberikan kesempatan 3 bulan\" dia ingin bilang jam terbang Dino Patti Djalal di birokrasi gak sehebat dia. Dia gak sadar kalo dia  jadi seperti sekarang karena dikarbit\""}, {"index": 2853, "text": "Ditanggung oleh pribadi pak prabowo\""}, {"index": 4614, "text": "Yakin ditanggung pak browo...qurban saja pakai APBN\ud83d\ude02"}, {"index": 6380, "text": "Kaya gak profesional duit pribadi dicampur \ud83d\ude02"}]}, "tfidf_params": {"ngram_range": "(1,3)", "max_df": 0.85, "min_df": 3, "max_features": 5000}};
+const STANCE_ORDER = ["mendukung", "mengkritik", "sarkasme", "faktual", "lainnya"];
+const STANCE_COLORS = {"mendukung": "#2ecc71", "mengkritik": "#e74c3c", "sarkasme": "#f39c12", "faktual": "#3498db", "lainnya": "#95a5a6"};
+
+// ── Derived constants ──────────────────────────────────────────────
+const total = META.total_comments || 0;
+const srcCount = META.source_count || 0;
+const uniqueCommenters = META.unique_commenters || 0;
+
+// ── Helpers ────────────────────────────────────────────────────────
+Chart.register(ChartDataLabels);
+
+function fmtNum(n) { return n.toLocaleString(); }
+
+function makeCanvas(parent, id, aspect=2) {
+  const div = document.createElement('div');
+  div.style.cssText = `position:relative;width:100%;aspect-ratio:${aspect}`;
+  const c = document.createElement('canvas');
+  c.id = id;
+  div.appendChild(c);
+  parent.appendChild(div);
+}
+
+const chartGrid = document.getElementById('charts');
+
+// ── CHART 1: Volume by Source ──────────────────────────────────────
+const srcNames = Object.keys(SOURCE_STATS).sort((a,b) => SOURCE_STATS[b].total_comments - SOURCE_STATS[a].total_comments);
+const srcVols = srcNames.map(n => SOURCE_STATS[n].total_comments);
+
+function addChart(title, canvasId, configFn, width=1) {
+  const row = document.createElement('div');
+  row.className = width === 2 ? 'chart-grid one-col' : 'chart-grid';
+  const card = document.createElement('div');
+  card.className = 'chart-card' + (width === 2 ? ' full' : '');
+  const h3 = document.createElement('h3');
+  h3.textContent = title;
+  card.appendChild(h3);
+  makeCanvas(card, canvasId, width === 2 ? 2.5 : 2);
+  row.appendChild(card);
+  chartGrid.appendChild(row);
+  const ctx = document.getElementById(canvasId).getContext('2d');
+  configFn(ctx);
+}
+
+addChart('Volume by Source', 'chart1', (ctx) => {
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: srcNames,
+      datasets: [{
+        data: srcVols,
+        backgroundColor: srcNames.map((_,i) => `hsl(${(i*30)%360},70%,50%)`),
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, datalabels: { anchor: 'end', align: 'end', color: '#c0d0e0', font: { size: 10 } } },
+      scales: { x: { ticks: { color: '#8899aa' } }, y: { ticks: { color: '#c0d0e0' } } }
+    }
+  });
+});
+
+addChart('Engagement: Followers vs Comments', 'chart2', (ctx) => {
+  new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        data: srcNames.map(n => ({
+          x: SOURCE_STATS[n].followers / 1e6,
+          y: SOURCE_STATS[n].total_comments,
+          r: Math.sqrt(SOURCE_STATS[n].unique_commenters) * 0.8,
+        })),
+        backgroundColor: srcNames.map((_,i) => `hsla(${(i*30)%360},70%,50%,0.7)`),
+        borderColor: '#000',
+        borderWidth: 0.5,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (c) => `${srcNames[c.dataIndex]}: ${c.parsed.y.toLocaleString()} comments, ${c.parsed.x.toFixed(2)}M followers` } }
+      },
+      scales: {
+        x: { title: { display: true, text: 'Followers (millions)', color: '#8899aa' }, ticks: { color: '#8899aa' } },
+        y: { title: { display: true, text: 'Total Comments', color: '#8899aa' }, ticks: { color: '#8899aa' } }
+      }
+    }
+  });
+});
+
+addChart('Activity by Hour (UTC)', 'chart3', (ctx) => {
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: HOURLY.map(h => h.hour.toString()),
+      datasets: [{
+        data: HOURLY.map(h => h.count),
+        backgroundColor: HOURLY.map(h => h.count === Math.max(...HOURLY.map(x=>x.count)) ? '#e74c3c' : '#2e86ab'),
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#8899aa' } }, y: { ticks: { color: '#8899aa' } } }
+    }
+  });
+});
+
+addChart('Comment Length Distribution', 'chart4', (ctx) => {
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: TEXT_LENGTHS.bins.map(b => b.bin_label),
+      datasets: [{
+        data: TEXT_LENGTHS.bins.map(b => b.count),
+        backgroundColor: '#2e86ab',
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#8899aa', maxTicksLimit: 12 } }, y: { ticks: { color: '#8899aa' } } }
+    }
+  });
+});
+
+addChart('Stance Classification (Keyword-Based)', 'chart5', (ctx) => {
+  const labels = STANCE_DIST.map(d => d.category);
+  const vals = STANCE_DIST.map(d => d.count);
+  const colors = labels.map(l => STANCE_COLORS[l] || '#95a5a6');
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data: vals, backgroundColor: colors, borderWidth: 1, borderColor: '#1a2836' }] },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { color: '#c0d0e0', font: { size: 11 }, generateLabels: (c) => c.data.labels.map((l,i) => ({ text: `${l} (${fmtNum(vals[i])})` , fillStyle: colors[i], index: i })) } },
+        datalabels: { color: '#fff', font: { size: 11, weight: 'bold' }, formatter: (v) => `${(v/vals.reduce((a,b)=>a+b)*100).toFixed(0)}%` }
+      }
+    }
+  });
+});
+
+addChart('Top 30 Bigrams (Tantular BagOfWords)', 'chart6', (ctx) => {
+  const terms = TOP_TERMS.slice().reverse();
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: terms.map(t => t.term),
+      datasets: [{
+        data: terms.map(t => t.freq),
+        backgroundColor: terms.map((_,i) => `hsl(${(i*4)%360},60%,50%)`),
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#8899aa' } }, y: { ticks: { color: '#c0d0e0', font: { size: 9 } } } }
+    }
+  });
+});
+
+addChart('Top 25 Emojis', 'chart7', (ctx) => {
+  const items = EMOJI_TOP.slice().reverse();
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: items.map(e => e.emoji + ' (' + fmtNum(e.count) + ')'),
+      datasets: [{
+        data: items.map(e => e.count),
+        backgroundColor: items.map((_,i) => `hsl(${(i*7)%360},70%,50%)`),
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#8899aa' } }, y: { ticks: { color: '#c0d0e0', font: { size: 10 } } } }
+    }
+  });
+});
+
+addChart('Top 25 Most Active Commenters', 'chart8', (ctx) => {
+  const items = TOP_COMMENTERS.slice().reverse();
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: items.map(u => u.username),
+      datasets: [{
+        data: items.map(u => u.count),
+        backgroundColor: items.map((_,i) => `hsl(${(i*7)%360},50%,55%)`),
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#8899aa' } }, y: { ticks: { color: '#c0d0e0', font: { size: 8 } } } }
+    }
+  });
+});
+
+// Source Terms (5 mini charts)
+(function() {
+  const row = document.createElement('div');
+  row.className = 'chart-grid';
+  const accts = Object.keys(SOURCE_TERMS).slice(0,5);
+  accts.forEach((acct, ai) => {
+    const card = document.createElement('div');
+    card.className = 'chart-card';
+    const h3 = document.createElement('h3');
+    h3.textContent = `Top Terms: ${acct.slice(0,20)}`;
+    h3.style.fontSize = '13px';
+    card.appendChild(h3);
+    const div = document.createElement('div');
+    div.style.cssText = 'position:relative;width:100%;aspect-ratio:1.5';
+    const c = document.createElement('canvas');
+    c.id = 'chart9-' + ai;
+    div.appendChild(c);
+    card.appendChild(div);
+    row.appendChild(card);
+    setTimeout(() => {
+      const ctx = document.getElementById('chart9-'+ai);
+      if (!ctx) return;
+      const items = (SOURCE_TERMS[acct] || []).slice(0,15).reverse();
+      new Chart(ctx.getContext('2d'), {
+        type: 'bar',
+        data: { labels: items.map(t=>t.term), datasets: [{ data: items.map(t=>t.freq), backgroundColor: `hsl(${(ai*72)%360},60%,50%)`, borderWidth: 0 }] },
+        options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { ticks: { color: '#c0d0e0', font: { size: 8 } } } } }
+      });
+    }, ai * 100);
+  });
+  chartGrid.appendChild(row);
+})();
+
+addChart('Total Comments vs Unique Commenters', 'chart10', (ctx) => {
+  const labels = Object.keys(SOURCE_STATS);
+  const totals = labels.map(l => SOURCE_STATS[l].total_comments);
+  const uniques = labels.map(l => SOURCE_STATS[l].unique_commenters);
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Total Comments', data: totals, backgroundColor: '#2e86ab' },
+        { label: 'Unique Commenters', data: uniques, backgroundColor: '#e67e22' }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { labels: { color: '#c0d0e0' } } },
+      scales: { x: { ticks: { color: '#8899aa' } }, y: { ticks: { color: '#8899aa' } } }
+    }
+  });
+});
+
+addChart('Sentiment Polarity (InSetSentiment)', 'chart11', (ctx) => {
+  const sd = INSET_SUMMARY.sentiment_distribution || {};
+  const labels = ['Positive', 'Negative', 'Neutral'];
+  const vals = [sd.positive||0, sd.negative||0, sd.neutral||0];
+  const colors = ['#2ecc71','#e74c3c','#95a5a6'];
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data: vals, backgroundColor: colors, borderWidth: 1, borderColor: '#1a2836' }] },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { color: '#c0d0e0', font: { size: 11 }, generateLabels: (c) => labels.map((l,i) => ({ text: `${l} (${fmtNum(vals[i])})`, fillStyle: colors[i], index: i })) } },
+        datalabels: { color: '#fff', font: { size: 12, weight: 'bold' }, formatter: (v) => `${(v/vals.reduce((a,b)=>a+b)*100).toFixed(0)}%` }
+      }
+    }
+  });
+});
+
+addChart('EmoSense Dominant Emotions', 'chart12', (ctx) => {
+  if (!EMOSENSE || !EMOSENSE.dominant_emotion_distribution) return;
+  const entries = Object.entries(EMOSENSE.dominant_emotion_distribution).sort((a,b) => b[1] - a[1]);
+  const labels = entries.map(e => e[0]);
+  const vals = entries.map(e => e[1]);
+  const colors = labels.map((_,i) => `hsl(${(i*40)%360},65%,55%)`);
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: vals,
+        backgroundColor: colors,
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          anchor: 'end', align: 'end', color: '#c0d0e0', font: { size: 10 },
+          formatter: (v) => `${v} (${(v/Object.values(EMOSENSE.dominant_emotion_distribution).reduce((a,b)=>a+b)*100).toFixed(0)}%)`,
+        }
+      },
+      scales: { x: { ticks: { color: '#8899aa' } }, y: { ticks: { color: '#c0d0e0' } } }
+    }
+  });
+});
+
+// ── Populate Tables ───────────────────────────────────────────────
+
+// Source table
+const srcBody = document.getElementById('source-table-body');
+srcNames.forEach(n => {
+  const s = SOURCE_STATS[n];
+  const er = s.followers > 0 ? (s.total_comments / s.followers * 100).toFixed(2) : 0;
+  srcBody.innerHTML += `<tr><td><strong>${n}</strong></td><td>${fmtNum(s.total_comments)}</td><td>${fmtNum(s.unique_commenters)}</td><td>${fmtNum(s.followers)}</td><td>${fmtNum(s.likes)}</td><td>${er}%</td><td><a href="${s.url}" target="_blank" style="color:#66b0ff;font-size:12px;">link</a></td></tr>`;
+});
+
+// Stance table
+const stanceBody = document.getElementById('stance-table-body');
+const stanceKws = { mendukung: 'setuju, mantap, salut, presiden hebat, kerja nyata, diplomasi, investasi, triliun', mengkritik: 'kritik, bohong, ngawur, gagal, buang uang, pajak, uang rakyat, cari alasan', sarkasme: '😂🤣 wkwk, hahaha, 🤡, gas, puh sepuh, lucu, ngakak', faktual: 'berapa, data, bukti, sumber, fakta, kenapa, pertanyaan', lainnya: 'Tidak terklasifikasi' };
+STANCE_DIST.forEach(d => {
+  const pct = (d.count / total * 100).toFixed(1);
+  const c = STANCE_COLORS[d.category] || '#888';
+  stanceBody.innerHTML += `<tr><td><span class="badge" style="background:${c}22;color:${c};border:1px solid ${c}40">${d.category}</span></td><td><strong>${fmtNum(d.count)}</strong></td><td>${pct}%</td><td class="text-muted">${stanceKws[d.category]||'—'}</td></tr>`;
+});
+
+// Cluster section
+const clusterSection = document.getElementById('cluster-section');
+if (CLUSTER && CLUSTER.cluster_labels) {
+  document.getElementById('cluster-meta').textContent = `Method: ${CLUSTER.method} / Total clustered: ${fmtNum(CLUSTER.total_clustered||0)} comments`;
+  const cardsDiv = document.getElementById('cluster-cards');
+  Object.entries(CLUSTER.cluster_labels).forEach(([k, label]) => {
+    const size = (CLUSTER.cluster_sizes||{})[k] || 0;
+    const terms = ((CLUSTER.cluster_terms||{})[k] || []).slice(0,8).map(t => t[0]).join(', ');
+    const pct = (size / (CLUSTER.total_clustered||1) * 100).toFixed(1);
+    const hue = (parseInt(k)*72) % 360;
+    cardsDiv.innerHTML += `<div class="card" style="border-left:4px solid hsl(${hue},60%,50%)"><div style="font-size:20px;font-weight:700;color:#fff;">${label}</div><div class="text-muted">${fmtNum(size)} comments (${pct}%)</div><div style="font-size:11px;color:#8899aa;margin-top:4px;">${terms}</div></div>`;
+  });
+} else {
+  clusterSection.style.display = 'none';
+}
+
+// InSet table
+const insetBody = document.getElementById('inset-table-body');
+if (INSET_SUMMARY && INSET_SUMMARY.sentiment_distribution) {
+  const sd = INSET_SUMMARY.sentiment_distribution;
+  const sp = INSET_SUMMARY.sentiment_percentages || {};
+  const labels = ['positive','negative','neutral'];
+  const labelNames = ['Positive','Negative','Neutral'];
+  const colors = ['#2ecc71','#e74c3c','#95a5a6'];
+  labels.forEach((l,i) => {
+    insetBody.innerHTML += `<tr><td><span class="badge" style="background:${colors[i]}22;color:${colors[i]};border:1px solid ${colors[i]}40">${labelNames[i]}</span></td><td><strong>${fmtNum(sd[l]||0)}</strong></td><td>${sp[l+'_pct']||'0'}%</td></tr>`;
+  });
+  document.getElementById('inset-meta').innerHTML = `Avg polarity: ${INSET_SUMMARY.avg_polarity} / Pos/Neg ratio: ${INSET_SUMMARY.positive_negative_ratio}:1 / Model: InSetSentiment (Tantular NLP)`;
+} else {
+  document.getElementById('inset-table-body').innerHTML = '<tr><td colspan="3" class="text-muted">No InSet data available</td></tr>';
+}
+
+// EmoSense table
+const emoBody = document.getElementById('emosense-table-body');
+if (EMOSENSE && EMOSENSE.dominant_emotion_distribution) {
+  document.getElementById('emosense-meta').textContent = `Sampled ${EMOSENSE.sample_size||0} comments stratified by stance / Model: Aardiiiiy/EmoSense-ID-Indonesian-Emotion-Classifier`;
+  const entries = Object.entries(EMOSENSE.dominant_emotion_distribution).sort((a,b) => b[1] - a[1]);
+  const totalEmo = entries.reduce((a, e) => a + e[1], 0);
+  const avgProbs = EMOSENSE.average_probabilities || {};
+  entries.forEach(([emo, cnt]) => {
+    const pct = (cnt / totalEmo * 100).toFixed(1);
+    const avg = (avgProbs[emo] || 0).toFixed(4);
+    emoBody.innerHTML += `<tr><td><strong>${emo}</strong></td><td>${fmtNum(cnt)}</td><td>${pct}%</td><td>${avg}</td></tr>`;
+  });
+} else {
+  document.getElementById('emosense-section').style.display = 'none';
+}
+
+// Top Terms table
+const ttBody = document.getElementById('topterms-table-body');
+(TOP_TERMS || []).forEach((t, i) => {
+  ttBody.innerHTML += `<tr><td>${i+1}</td><td>${t.term}</td><td>${fmtNum(t.freq)}</td></tr>`;
+});
+
+</script>
+</body>
+</html>

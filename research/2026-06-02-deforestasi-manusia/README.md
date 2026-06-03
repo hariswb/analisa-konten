@@ -114,7 +114,7 @@ Two approaches were applied to categorize articles by thematic content:
 - **Kumparan** — mostly other (3) and ecological_impact (2), essay-style
 - **Liputan6** — evenly distributed across policy, ecological, illegal logging
 
-**Note:** Classification uses keyword-derived labels (silver standard). Best-performing categories (illegal_logging, ecological_impact) have clear keyword signals; commodity_economy needs more distinctive features or human-labeled data.
+**Note:** Classification uses keyword-derived labels. Best-performing categories (illegal_logging, ecological_impact) have clear keyword signals; commodity_economy needs more distinctive features or human-labeled data.
 
 ## Framing Analysis
 

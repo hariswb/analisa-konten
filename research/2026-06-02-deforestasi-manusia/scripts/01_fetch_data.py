@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch deforestation news data from Semantik API → bronze layer.
+"""Fetch deforestation news data from Semantik API → raw data.
 
 Usage: python 01_fetch_data.py
 Output: ../data/*.json

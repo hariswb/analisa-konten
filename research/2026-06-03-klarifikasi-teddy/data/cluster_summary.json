@@ -1,0 +1,469 @@
+{
+  "method": "TF-IDF + SVD(50) + KMeans",
+  "n_clusters": 5,
+  "total_clustered": 14736,
+  "cluster_labels": {
+    "0": "skeptis",
+    "1": "mengkritik",
+    "2": "umum",
+    "3": "sarkasme",
+    "4": "mendukung"
+  },
+  "cluster_sizes": {
+    "0": 488,
+    "1": 803,
+    "2": 12161,
+    "3": 46,
+    "4": 1238
+  },
+  "cluster_terms": {
+    "0": [
+      [
+        "percaya",
+        0.3671
+      ],
+      [
+        "lebih percaya",
+        0.049
+      ],
+      [
+        "lebih",
+        0.0482
+      ],
+      [
+        "gak percaya",
+        0.0354
+      ],
+      [
+        "gak",
+        0.0302
+      ],
+      [
+        "kalian",
+        0.0265
+      ],
+      [
+        "ada",
+        0.0257
+      ],
+      [
+        "kalian percaya",
+        0.0249
+      ],
+      [
+        "yg",
+        0.0203
+      ],
+      [
+        "yg percaya",
+        0.0194
+      ],
+      [
+        "ga percaya",
+        0.0172
+      ],
+      [
+        "ga",
+        0.0172
+      ],
+      [
+        "saya",
+        0.0169
+      ],
+      [
+        "tidak",
+        0.0157
+      ],
+      [
+        "sih",
+        0.0155
+      ]
+    ],
+    "1": [
+      [
+        "apbn",
+        0.1472
+      ],
+      [
+        "pake",
+        0.1404
+      ],
+      [
+        "pake apbn",
+        0.1125
+      ],
+      [
+        "aja",
+        0.1098
+      ],
+      [
+        "aja pake",
+        0.0991
+      ],
+      [
+        "aja pake apbn",
+        0.0909
+      ],
+      [
+        "kurban",
+        0.08
+      ],
+      [
+        "qurban",
+        0.0792
+      ],
+      [
+        "pribadi",
+        0.0637
+      ],
+      [
+        "kurban aja",
+        0.0582
+      ],
+      [
+        "qurban aja",
+        0.057
+      ],
+      [
+        "sapi",
+        0.0488
+      ],
+      [
+        "kurban aja pake",
+        0.0478
+      ],
+      [
+        "pakai",
+        0.0476
+      ],
+      [
+        "qurban aja pake",
+        0.0456
+      ]
+    ],
+    "2": [
+      [
+        "ada",
+        0.0151
+      ],
+      [
+        "ya",
+        0.0137
+      ],
+      [
+        "yg",
+        0.0128
+      ],
+      [
+        "ini",
+        0.0125
+      ],
+      [
+        "nya",
+        0.0125
+      ],
+      [
+        "negara",
+        0.0114
+      ],
+      [
+        "di",
+        0.0113
+      ],
+      [
+        "aja",
+        0.0107
+      ],
+      [
+        "pokoknya",
+        0.0102
+      ],
+      [
+        "itu",
+        0.01
+      ],
+      [
+        "pribadi",
+        0.0098
+      ],
+      [
+        "ga",
+        0.0098
+      ],
+      [
+        "apa",
+        0.0096
+      ],
+      [
+        "yang",
+        0.0096
+      ],
+      [
+        "pokoknya ada",
+        0.0092
+      ]
+    ],
+    "3": [
+      [
+        "ardianryz_",
+        0.8299
+      ],
+      [
+        "kok",
+        0.0398
+      ],
+      [
+        "banget",
+        0.0315
+      ],
+      [
+        "bgt",
+        0.0284
+      ],
+      [
+        "bener",
+        0.0275
+      ],
+      [
+        "sepakat",
+        0.0273
+      ],
+      [
+        "sih",
+        0.0259
+      ],
+      [
+        "omon",
+        0.0256
+      ],
+      [
+        "yg",
+        0.0249
+      ],
+      [
+        "hahahaha",
+        0.0249
+      ],
+      [
+        "hahaha",
+        0.0234
+      ],
+      [
+        "halah",
+        0.0207
+      ],
+      [
+        "iya",
+        0.0201
+      ],
+      [
+        "itu",
+        0.0187
+      ],
+      [
+        "pasti",
+        0.0183
+      ]
+    ],
+    "4": [
+      [
+        "pak",
+        0.0968
+      ],
+      [
+        "gak",
+        0.0852
+      ],
+      [
+        "dino",
+        0.0648
+      ],
+      [
+        "pak dino",
+        0.0585
+      ],
+      [
+        "di",
+        0.0269
+      ],
+      [
+        "yg",
+        0.0242
+      ],
+      [
+        "ada",
+        0.0222
+      ],
+      [
+        "gak percaya",
+        0.0211
+      ],
+      [
+        "dan",
+        0.0206
+      ],
+      [
+        "itu",
+        0.019
+      ],
+      [
+        "ini",
+        0.0174
+      ],
+      [
+        "aja",
+        0.0172
+      ],
+      [
+        "prabowo",
+        0.0169
+      ],
+      [
+        "ya",
+        0.0164
+      ],
+      [
+        "seskab",
+        0.0161
+      ]
+    ]
+  },
+  "cluster_samples": {
+    "0": [
+      {
+        "index": 23,
+        "text": "Seribu lebih koment gk ada yang percaya 🤣"
+      },
+      {
+        "index": 1896,
+        "text": "Saya lebih percaya gufron bisa bahasa semut"
+      },
+      {
+        "index": 3119,
+        "text": "Duhh, saya lebih percaya ada UFO muter-muter di kota tadi malem"
+      },
+      {
+        "index": 4201,
+        "text": "lebih percaya arsenal juara UCL tahun depan 🤣"
+      },
+      {
+        "index": 5222,
+        "text": "LU PERCAYA TEDDY ?"
+      },
+      {
+        "index": 6151,
+        "text": "tombol percaya ------>"
+      }
+    ],
+    "1": [
+      {
+        "index": 173,
+        "text": "orang dibales pakai sapi qurban 1.1 ton😂"
+      },
+      {
+        "index": 2015,
+        "text": "Ah masa qurban aja pke apbn"
+      },
+      {
+        "index": 3088,
+        "text": "@yadie_sirat beli sapi aja pake apbn, MASAK IYA perjalanan dinas dari kantong sendiri"
+      },
+      {
+        "index": 3864,
+        "text": "🤣🤣🤣🤣qurban aja pakai APBN apalagi ini🤣🤣🤣"
+      },
+      {
+        "index": 4920,
+        "text": "Maaf ada yg percaya tidak presiden ikut nanggung biaya,lawong kurban aja pake APBN"
+      },
+      {
+        "index": 5719,
+        "text": "Logika nya aje nii,,Kurban sapi aja menggunakan APBN 🗿"
+      }
+    ],
+    "2": [
+      {
+        "index": 0,
+        "text": "Mince"
+      },
+      {
+        "index": 1262,
+        "text": "Top mas seskab🔥🔥🔥🔥🔥🔥"
+      },
+      {
+        "index": 2474,
+        "text": "@teddy_hq kuma sia we lah"
+      },
+      {
+        "index": 3673,
+        "text": "Bunted lgi mens 😂"
+      },
+      {
+        "index": 4886,
+        "text": "@yadimafata ngakak 🤣"
+      },
+      {
+        "index": 6122,
+        "text": "Si tembem ngambekan"
+      }
+    ],
+    "3": [
+      {
+        "index": 9014,
+        "text": "@ardianryz_ wakakakakaakakakaa"
+      },
+      {
+        "index": 9219,
+        "text": "@ardianryz_ @pamsqy @mraiss_ komenan nya😂"
+      },
+      {
+        "index": 9546,
+        "text": "@ardianryz_ 🤣🤣🤣"
+      },
+      {
+        "index": 9641,
+        "text": "@ardianryz_ 😂😂😂"
+      },
+      {
+        "index": 9821,
+        "text": "@ardianryz_ 😂😂😂🤣🤣🤣"
+      },
+      {
+        "index": 9982,
+        "text": "@ardianryz_ 😂😂"
+      }
+    ],
+    "4": [
+      {
+        "index": 6,
+        "text": "Cerdasss ttp lah bermanfaat bt negera kita pak teddy😍🔥🔥🔥"
+      },
+      {
+        "index": 660,
+        "text": "3 bulan itu di 2014 waktu zaman pak SBY. Namun riwayat tugas diplomatik beliau udah dari tahun 1987 di kemenlu 😄"
+      },
+      {
+        "index": 1312,
+        "text": "Di balik kata² walau hanya diberikan kesempatan 3 bulan\" dia ingin bilang jam terbang Dino Patti Djalal di birokrasi gak sehebat dia. Dia gak sadar kalo dia  jadi seperti sekarang karena dikarbit\""
+      },
+      {
+        "index": 2853,
+        "text": "Ditanggung oleh pribadi pak prabowo\""
+      },
+      {
+        "index": 4614,
+        "text": "Yakin ditanggung pak browo...qurban saja pakai APBN😂"
+      },
+      {
+        "index": 6380,
+        "text": "Kaya gak profesional duit pribadi dicampur 😂"
+      }
+    ]
+  },
+  "tfidf_params": {
+    "ngram_range": "(1,3)",
+    "max_df": 0.85,
+    "min_df": 3,
+    "max_features": 5000
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "model": "Aardiiiiy/EmoSense-ID-Indonesian-Emotion-Classifier",
+  "sample_size": 298,
+  "method": "stratified_sample",
+  "emotion_labels": [
+    "anger",
+    "anticipation",
+    "disgust",
+    "fear",
+    "joy",
+    "sadness",
+    "surprise",
+    "trust"
+  ],
+  "average_probabilities": {
+    "anger": 0.2133,
+    "joy": 0.1647,
+    "disgust": 0.1251,
+    "trust": 0.1147,
+    "sadness": 0.1103,
+    "surprise": 0.1002,
+    "anticipation": 0.0974,
+    "fear": 0.0743
+  },
+  "dominant_emotion_distribution": {
+    "anger": 74,
+    "joy": 51,
+    "disgust": 35,
+    "trust": 34,
+    "sadness": 29,
+    "surprise": 29,
+    "anticipation": 27,
+    "fear": 19
+  }
+}

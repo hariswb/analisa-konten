@@ -1,0 +1,66 @@
+{
+  "20detik": {
+    "umum": 98,
+    "mendukung": 19,
+    "mengkritik": 4,
+    "skeptis": 1
+  },
+  "cnbcindonesia": {
+    "umum": 427,
+    "mendukung": 42,
+    "mengkritik": 33,
+    "skeptis": 8
+  },
+  "infipop": {
+    "umum": 2553,
+    "mengkritik": 167,
+    "mendukung": 228,
+    "skeptis": 66,
+    "sarkasme": 46
+  },
+  "officialinews": {
+    "umum": 1502,
+    "mengkritik": 80,
+    "mendukung": 143,
+    "skeptis": 98
+  },
+  "republikaonline": {
+    "umum": 543,
+    "mendukung": 69,
+    "mengkritik": 43,
+    "skeptis": 31
+  },
+  "suaradotcom": {
+    "umum": 337,
+    "mendukung": 53,
+    "skeptis": 1,
+    "mengkritik": 1
+  },
+  "suarasurabayamedia": {
+    "umum": 561,
+    "mengkritik": 21,
+    "mendukung": 88,
+    "skeptis": 18
+  },
+  "tempodotco": {
+    "umum": 4856,
+    "mengkritik": 423,
+    "mendukung": 346,
+    "skeptis": 235
+  },
+  "totalpolitikcom": {
+    "umum": 1241,
+    "mendukung": 240,
+    "skeptis": 29,
+    "mengkritik": 31
+  },
+  "tribunnews": {
+    "umum": 26,
+    "mendukung": 6
+  },
+  "winnews_": {
+    "mendukung": 4,
+    "umum": 17,
+    "skeptis": 1
+  }
+}

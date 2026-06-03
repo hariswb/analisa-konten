@@ -1,0 +1,18 @@
+{
+  "model": "InSetSentiment (Tantular)",
+  "total_comments": 15424,
+  "total_classified": 15424,
+  "sentiment_distribution": {
+    "positive": 3832,
+    "negative": 5176,
+    "neutral": 6416
+  },
+  "sentiment_percentages": {
+    "positive_pct": 24.8,
+    "negative_pct": 33.6,
+    "neutral_pct": 41.6
+  },
+  "avg_polarity": -0.0871,
+  "positive_negative_ratio": 0.74,
+  "avg_abs_raw_score": 2.4
+}

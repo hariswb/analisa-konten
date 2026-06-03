@@ -1,0 +1,57 @@
+{
+  "20detik": {
+    "positive": 25,
+    "negative": 53,
+    "neutral": 44
+  },
+  "cnbcindonesia": {
+    "negative": 191,
+    "positive": 160,
+    "neutral": 159
+  },
+  "infipop": {
+    "negative": 1096,
+    "neutral": 1141,
+    "positive": 823
+  },
+  "officialinews": {
+    "negative": 620,
+    "neutral": 680,
+    "positive": 523
+  },
+  "republikaonline": {
+    "negative": 240,
+    "neutral": 255,
+    "positive": 191
+  },
+  "suaradotcom": {
+    "negative": 170,
+    "positive": 85,
+    "neutral": 137
+  },
+  "suarasurabayamedia": {
+    "positive": 207,
+    "neutral": 263,
+    "negative": 218
+  },
+  "tempodotco": {
+    "neutral": 2490,
+    "positive": 1427,
+    "negative": 1943
+  },
+  "totalpolitikcom": {
+    "neutral": 538,
+    "positive": 380,
+    "negative": 623
+  },
+  "tribunnews": {
+    "neutral": 14,
+    "negative": 13,
+    "positive": 5
+  },
+  "winnews_": {
+    "positive": 6,
+    "negative": 9,
+    "neutral": 7
+  }
+}

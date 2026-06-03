@@ -1,0 +1,429 @@
+{
+  "meta": {
+    "title": "Klarifikasi Seskab Teddy \u2014 Instagram Comments EDA",
+    "total_comments": 15424,
+    "total_sources": 11,
+    "unique_commenters": 13743,
+    "avg_comment_length": 60.5,
+    "empty_comments": 688,
+    "date_range": "1976-04-10 06:36 UTC to 4450-02-14 17:13 UTC",
+    "peak_hour_utc": 9,
+    "peak_hour_count": 1144
+  },
+  "source_stats": {
+    "totalpolitikcom": {
+      "file": "DZDL11PN09E_Comments.csv",
+      "url": "https://www.instagram.com/p/DZDL11PN09E",
+      "likes": 7000,
+      "followers": 507000,
+      "total_comments": 1590,
+      "unique_commenters": 1397
+    },
+    "tribunnews": {
+      "file": "DZE1otyl-vW_Comments.csv",
+      "url": "https://www.instagram.com/p/DZE1otyl-vW",
+      "likes": 87,
+      "followers": 1200000,
+      "total_comments": 32,
+      "unique_commenters": 30
+    },
+    "tempodotco": {
+      "file": "DZE6yvJTUva_Comments.csv",
+      "url": "https://www.instagram.com/p/DZE6yvJTUva",
+      "likes": 28700,
+      "followers": 1900000,
+      "total_comments": 6256,
+      "unique_commenters": 5904
+    },
+    "republikaonline": {
+      "file": "DZEDPaOy6gd_Comments.csv",
+      "url": "https://www.instagram.com/p/DZEDPaOy6gd",
+      "likes": 1300,
+      "followers": 553000,
+      "total_comments": 713,
+      "unique_commenters": 662
+    },
+    "20detik": {
+      "file": "DZEDu0BRtCT_Comments.csv",
+      "url": "https://www.instagram.com/p/DZEDu0BRtCT",
+      "likes": 1000,
+      "followers": 206000,
+      "total_comments": 126,
+      "unique_commenters": 116
+    },
+    "suarasurabayamedia": {
+      "file": "DZEdVa8jY4O_Comments.csv",
+      "url": "https://www.instagram.com/p/DZEdVa8jY4O",
+      "likes": 2300,
+      "followers": 925000,
+      "total_comments": 725,
+      "unique_commenters": 646
+    },
+    "infipop": {
+      "file": "DZEe0UpmXRb_Comments.csv",
+      "url": "https://www.instagram.com/p/DZEe0UpmXRb",
+      "likes": 17000,
+      "followers": 3300000,
+      "total_comments": 3139,
+      "unique_commenters": 2848
+    },
+    "cnbcindonesia": {
+      "file": "DZEIAviE3rN_Comments.csv",
+      "url": "https://www.instagram.com/p/DZEIAviE3rN",
+      "likes": 2500,
+      "followers": 1200000,
+      "total_comments": 522,
+      "unique_commenters": 467
+    },
+    "suaradotcom": {
+      "file": "DZFAXLNDIFU_Comments.csv",
+      "url": "https://www.instagram.com/p/DZFAXLNDIFU",
+      "likes": 1000,
+      "followers": 919000,
+      "total_comments": 417,
+      "unique_commenters": 377
+    },
+    "winnews_": {
+      "file": "DZFgoMcvLoT_Comments.csv",
+      "url": "https://www.instagram.com/p/DZFgoMcvLoT",
+      "likes": 591,
+      "followers": 239000,
+      "total_comments": 23,
+      "unique_commenters": 21
+    },
+    "officialinews": {
+      "file": "DZDBATXjwF7_Comments.csv",
+      "url": "https://www.instagram.com/p/DZDBATXjwF7",
+      "likes": 4000,
+      "followers": 1400000,
+      "total_comments": 1881,
+      "unique_commenters": 1696
+    }
+  },
+  "stance_distribution": {
+    "mendukung": 50,
+    "mengkritik": 234,
+    "sarkasme": 12095,
+    "faktual": 116,
+    "lainnya": 2929
+  },
+  "top_terms": [
+    {
+      "term": "yg",
+      "freq": 1709
+    },
+    {
+      "term": "aja",
+      "freq": 1554
+    },
+    {
+      "term": "pribadi",
+      "freq": 1454
+    },
+    {
+      "term": "pake",
+      "freq": 1293
+    },
+    {
+      "term": "negara",
+      "freq": 1144
+    },
+    {
+      "term": "ya",
+      "freq": 1078
+    },
+    {
+      "term": "apbn",
+      "freq": 1017
+    },
+    {
+      "term": "nya",
+      "freq": 974
+    },
+    {
+      "term": "ga",
+      "freq": 843
+    },
+    {
+      "term": "percaya",
+      "freq": 814
+    },
+    {
+      "term": "gak",
+      "freq": 762
+    },
+    {
+      "term": "uang",
+      "freq": 751
+    },
+    {
+      "term": "presiden",
+      "freq": 733
+    },
+    {
+      "term": "rakyat",
+      "freq": 634
+    },
+    {
+      "term": "pakai",
+      "freq": 569
+    },
+    {
+      "term": "orang",
+      "freq": 526
+    },
+    {
+      "term": "dino",
+      "freq": 525
+    },
+    {
+      "term": "lu",
+      "freq": 502
+    },
+    {
+      "term": "dana",
+      "freq": 499
+    },
+    {
+      "term": "kalo",
+      "freq": 478
+    },
+    {
+      "term": "sih",
+      "freq": 457
+    },
+    {
+      "term": "prabowo",
+      "freq": 456
+    },
+    {
+      "term": "kurban",
+      "freq": 454
+    },
+    {
+      "term": "biaya",
+      "freq": 445
+    },
+    {
+      "term": "ted",
+      "freq": 426
+    },
+    {
+      "term": "negeri",
+      "freq": 420
+    },
+    {
+      "term": "qurban",
+      "freq": 418
+    },
+    {
+      "term": "klarifikasi",
+      "freq": 400
+    },
+    {
+      "term": "duit",
+      "freq": 386
+    },
+    {
+      "term": "seskab",
+      "freq": 357
+    }
+  ],
+  "top_emoji": [
+    {
+      "emoji": "yg",
+      "count": 1601
+    },
+    {
+      "emoji": "aja",
+      "count": 1479
+    },
+    {
+      "emoji": "di",
+      "count": 1283
+    },
+    {
+      "emoji": "pake",
+      "count": 1207
+    },
+    {
+      "emoji": "pribadi",
+      "count": 1174
+    },
+    {
+      "emoji": "ada",
+      "count": 1040
+    },
+    {
+      "emoji": "\ud83d\ude02",
+      "count": 1034
+    },
+    {
+      "emoji": "dan",
+      "count": 1019
+    },
+    {
+      "emoji": "ini",
+      "count": 984
+    },
+    {
+      "emoji": "negara",
+      "count": 948
+    },
+    {
+      "emoji": "nya",
+      "count": 922
+    },
+    {
+      "emoji": "yang",
+      "count": 899
+    },
+    {
+      "emoji": "itu",
+      "count": 877
+    },
+    {
+      "emoji": "ya",
+      "count": 824
+    },
+    {
+      "emoji": "ga",
+      "count": 713
+    },
+    {
+      "emoji": "uang",
+      "count": 694
+    },
+    {
+      "emoji": "ke",
+      "count": 687
+    },
+    {
+      "emoji": "pak",
+      "count": 670
+    },
+    {
+      "emoji": "apa",
+      "count": 657
+    },
+    {
+      "emoji": "APBN",
+      "count": 638
+    }
+  ],
+  "top_commenters": [
+    {
+      "username": "budi.halimmm",
+      "count": 38
+    },
+    {
+      "username": "estiyunho_",
+      "count": 24
+    },
+    {
+      "username": "meietti",
+      "count": 19
+    },
+    {
+      "username": "dariusrusli",
+      "count": 18
+    },
+    {
+      "username": "pejuangdanpengembara",
+      "count": 13
+    },
+    {
+      "username": "thor_bar_bar",
+      "count": 10
+    },
+    {
+      "username": "melasarikarima",
+      "count": 9
+    },
+    {
+      "username": "khayr_2708",
+      "count": 9
+    },
+    {
+      "username": "zulsofyan_",
+      "count": 8
+    },
+    {
+      "username": "rika.1170",
+      "count": 8
+    },
+    {
+      "username": "_idrhoo",
+      "count": 7
+    },
+    {
+      "username": "apri200254",
+      "count": 7
+    },
+    {
+      "username": "ogto.af",
+      "count": 7
+    },
+    {
+      "username": "rachelsinulingga",
+      "count": 7
+    },
+    {
+      "username": "d_ren88",
+      "count": 7
+    },
+    {
+      "username": "dewopakde",
+      "count": 6
+    },
+    {
+      "username": "ahmadsrobbani",
+      "count": 6
+    },
+    {
+      "username": "fanny___aaa",
+      "count": 6
+    },
+    {
+      "username": "agamkupie",
+      "count": 6
+    },
+    {
+      "username": "aditya.aditya89",
+      "count": 6
+    }
+  ],
+  "hourly_distribution": {
+    "0": 778,
+    "1": 932,
+    "2": 654,
+    "3": 346,
+    "4": 924,
+    "5": 947,
+    "6": 557,
+    "7": 387,
+    "8": 936,
+    "9": 1144,
+    "10": 877,
+    "11": 838,
+    "12": 791,
+    "13": 754,
+    "14": 673,
+    "15": 952,
+    "16": 623,
+    "17": 374,
+    "18": 186,
+    "19": 156,
+    "20": 125,
+    "21": 238,
+    "22": 502,
+    "23": 656
+  },
+  "sentiment_distribution": {
+    "positive": 3832,
+    "negative": 5176,
+    "neutral": 6416,
+    "avg_polarity": -0.0912,
+    "pos_neg_ratio": 0.74
+  }
+}

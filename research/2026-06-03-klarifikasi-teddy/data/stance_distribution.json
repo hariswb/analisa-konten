@@ -1,0 +1,22 @@
+[
+  {
+    "category": "mendukung",
+    "count": 51
+  },
+  {
+    "category": "mengkritik",
+    "count": 241
+  },
+  {
+    "category": "sarkasme",
+    "count": 12050
+  },
+  {
+    "category": "faktual",
+    "count": 119
+  },
+  {
+    "category": "lainnya",
+    "count": 2963
+  }
+]

@@ -1,7 +1,7 @@
 """Silver → Gold: Aggregated analysis-ready data.
 
 Usage: python 03_aggregate.py
-Output: ../../gold/data/*.json
+Output: ../../data/aggregated/*.json
 """
 
 import json, os

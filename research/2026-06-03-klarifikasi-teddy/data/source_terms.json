@@ -1,0 +1,412 @@
+{
+  "tempodotco": [
+    {
+      "term": "pribadi",
+      "freq": 39
+    },
+    {
+      "term": "yg",
+      "freq": 36
+    },
+    {
+      "term": "aja",
+      "freq": 34
+    },
+    {
+      "term": "pake",
+      "freq": 26
+    },
+    {
+      "term": "ga",
+      "freq": 26
+    },
+    {
+      "term": "apbn",
+      "freq": 24
+    },
+    {
+      "term": "nya",
+      "freq": 22
+    },
+    {
+      "term": "uang",
+      "freq": 20
+    },
+    {
+      "term": "orang",
+      "freq": 18
+    },
+    {
+      "term": "lu",
+      "freq": 18
+    },
+    {
+      "term": "kurban",
+      "freq": 17
+    },
+    {
+      "term": "negara",
+      "freq": 17
+    },
+    {
+      "term": "ya",
+      "freq": 17
+    },
+    {
+      "term": "percaya",
+      "freq": 15
+    },
+    {
+      "term": "dinas",
+      "freq": 14
+    },
+    {
+      "term": "gak",
+      "freq": 14
+    },
+    {
+      "term": "rakyat",
+      "freq": 14
+    },
+    {
+      "term": "presiden",
+      "freq": 14
+    },
+    {
+      "term": "udah",
+      "freq": 13
+    },
+    {
+      "term": "biaya",
+      "freq": 13
+    }
+  ],
+  "infipop": [
+    {
+      "term": "yg",
+      "freq": 29
+    },
+    {
+      "term": "negara",
+      "freq": 28
+    },
+    {
+      "term": "pribadi",
+      "freq": 28
+    },
+    {
+      "term": "aja",
+      "freq": 21
+    },
+    {
+      "term": "pake",
+      "freq": 21
+    },
+    {
+      "term": "ya",
+      "freq": 21
+    },
+    {
+      "term": "ga",
+      "freq": 19
+    },
+    {
+      "term": "iamwk",
+      "freq": 19
+    },
+    {
+      "term": "nya",
+      "freq": 18
+    },
+    {
+      "term": "uang",
+      "freq": 17
+    },
+    {
+      "term": "rakyat",
+      "freq": 13
+    },
+    {
+      "term": "gak",
+      "freq": 13
+    },
+    {
+      "term": "percaya",
+      "freq": 12
+    },
+    {
+      "term": "apbn",
+      "freq": 11
+    },
+    {
+      "term": "bgt",
+      "freq": 10
+    },
+    {
+      "term": "dino",
+      "freq": 10
+    },
+    {
+      "term": "iya",
+      "freq": 10
+    },
+    {
+      "term": "buna",
+      "freq": 9
+    },
+    {
+      "term": "pakai",
+      "freq": 9
+    },
+    {
+      "term": "klarifikasi",
+      "freq": 9
+    }
+  ],
+  "officialinews": [
+    {
+      "term": "yg",
+      "freq": 46
+    },
+    {
+      "term": "aja",
+      "freq": 39
+    },
+    {
+      "term": "percaya",
+      "freq": 29
+    },
+    {
+      "term": "pake",
+      "freq": 29
+    },
+    {
+      "term": "nya",
+      "freq": 27
+    },
+    {
+      "term": "pribadi",
+      "freq": 26
+    },
+    {
+      "term": "negara",
+      "freq": 24
+    },
+    {
+      "term": "apbn",
+      "freq": 24
+    },
+    {
+      "term": "rakyat",
+      "freq": 22
+    },
+    {
+      "term": "ya",
+      "freq": 22
+    },
+    {
+      "term": "presiden",
+      "freq": 21
+    },
+    {
+      "term": "dana",
+      "freq": 19
+    },
+    {
+      "term": "ted",
+      "freq": 17
+    },
+    {
+      "term": "ga",
+      "freq": 16
+    },
+    {
+      "term": "pakai",
+      "freq": 16
+    },
+    {
+      "term": "orang",
+      "freq": 15
+    },
+    {
+      "term": "seskab",
+      "freq": 14
+    },
+    {
+      "term": "ngomong",
+      "freq": 14
+    },
+    {
+      "term": "gak",
+      "freq": 13
+    },
+    {
+      "term": "jubir",
+      "freq": 13
+    }
+  ],
+  "totalpolitikcom": [
+    {
+      "term": "yg",
+      "freq": 66
+    },
+    {
+      "term": "aja",
+      "freq": 29
+    },
+    {
+      "term": "ya",
+      "freq": 27
+    },
+    {
+      "term": "dino",
+      "freq": 25
+    },
+    {
+      "term": "pribadi",
+      "freq": 19
+    },
+    {
+      "term": "orang",
+      "freq": 19
+    },
+    {
+      "term": "teddy",
+      "freq": 17
+    },
+    {
+      "term": "si",
+      "freq": 17
+    },
+    {
+      "term": "uang",
+      "freq": 17
+    },
+    {
+      "term": "negara",
+      "freq": 17
+    },
+    {
+      "term": "gak",
+      "freq": 16
+    },
+    {
+      "term": "seskab",
+      "freq": 15
+    },
+    {
+      "term": "kalo",
+      "freq": 15
+    },
+    {
+      "term": "ga",
+      "freq": 15
+    },
+    {
+      "term": "presiden",
+      "freq": 13
+    },
+    {
+      "term": "pake",
+      "freq": 13
+    },
+    {
+      "term": "nya",
+      "freq": 13
+    },
+    {
+      "term": "rakyat",
+      "freq": 13
+    },
+    {
+      "term": "percaya",
+      "freq": 11
+    },
+    {
+      "term": "bgt",
+      "freq": 10
+    }
+  ],
+  "suarasurabayamedia": [
+    {
+      "term": "gak",
+      "freq": 36
+    },
+    {
+      "term": "yg",
+      "freq": 30
+    },
+    {
+      "term": "ya",
+      "freq": 24
+    },
+    {
+      "term": "pribadi",
+      "freq": 23
+    },
+    {
+      "term": "aja",
+      "freq": 21
+    },
+    {
+      "term": "negara",
+      "freq": 21
+    },
+    {
+      "term": "orang",
+      "freq": 16
+    },
+    {
+      "term": "presiden",
+      "freq": 16
+    },
+    {
+      "term": "tau",
+      "freq": 15
+    },
+    {
+      "term": "pake",
+      "freq": 15
+    },
+    {
+      "term": "uang",
+      "freq": 15
+    },
+    {
+      "term": "ga",
+      "freq": 15
+    },
+    {
+      "term": "negeri",
+      "freq": 14
+    },
+    {
+      "term": "rakyat",
+      "freq": 14
+    },
+    {
+      "term": "apbn",
+      "freq": 13
+    },
+    {
+      "term": "percaya",
+      "freq": 13
+    },
+    {
+      "term": "nya",
+      "freq": 13
+    },
+    {
+      "term": "pakai",
+      "freq": 12
+    },
+    {
+      "term": "klarifikasi",
+      "freq": 12
+    },
+    {
+      "term": "wes",
+      "freq": 12
+    }
+  ]
+}

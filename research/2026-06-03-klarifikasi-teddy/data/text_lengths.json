@@ -1,0 +1,115 @@
+{
+  "bins": [
+    {
+      "bin_label": "0-20",
+      "count": 4135
+    },
+    {
+      "bin_label": "20-40",
+      "count": 3695
+    },
+    {
+      "bin_label": "40-60",
+      "count": 2339
+    },
+    {
+      "bin_label": "60-80",
+      "count": 1417
+    },
+    {
+      "bin_label": "80-100",
+      "count": 891
+    },
+    {
+      "bin_label": "100-120",
+      "count": 588
+    },
+    {
+      "bin_label": "120-140",
+      "count": 397
+    },
+    {
+      "bin_label": "140-160",
+      "count": 287
+    },
+    {
+      "bin_label": "160-180",
+      "count": 218
+    },
+    {
+      "bin_label": "180-200",
+      "count": 152
+    },
+    {
+      "bin_label": "200-220",
+      "count": 109
+    },
+    {
+      "bin_label": "220-240",
+      "count": 79
+    },
+    {
+      "bin_label": "240-260",
+      "count": 52
+    },
+    {
+      "bin_label": "260-280",
+      "count": 59
+    },
+    {
+      "bin_label": "280-300",
+      "count": 43
+    },
+    {
+      "bin_label": "300-320",
+      "count": 31
+    },
+    {
+      "bin_label": "320-340",
+      "count": 25
+    },
+    {
+      "bin_label": "340-360",
+      "count": 23
+    },
+    {
+      "bin_label": "360-380",
+      "count": 18
+    },
+    {
+      "bin_label": "380-400",
+      "count": 24
+    },
+    {
+      "bin_label": "400-420",
+      "count": 18
+    },
+    {
+      "bin_label": "420-440",
+      "count": 8
+    },
+    {
+      "bin_label": "440-460",
+      "count": 12
+    },
+    {
+      "bin_label": "460-480",
+      "count": 13
+    },
+    {
+      "bin_label": "480-500",
+      "count": 13
+    },
+    {
+      "bin_label": "500+",
+      "count": 90
+    }
+  ],
+  "categories": {
+    "short_1_19": 4135,
+    "medium_20_200": 9991,
+    "long_200_plus": 610
+  },
+  "avg_length": 60.5,
+  "median_length": 37
+}

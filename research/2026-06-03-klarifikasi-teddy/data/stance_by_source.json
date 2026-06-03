@@ -1,0 +1,71 @@
+{
+  "totalpolitikcom": {
+    "sarkasme": 1322,
+    "lainnya": 233,
+    "faktual": 4,
+    "mengkritik": 27,
+    "mendukung": 4
+  },
+  "tribunnews": {
+    "sarkasme": 22,
+    "lainnya": 9,
+    "faktual": 1
+  },
+  "tempodotco": {
+    "sarkasme": 4660,
+    "lainnya": 1437,
+    "mendukung": 20,
+    "faktual": 59,
+    "mengkritik": 80
+  },
+  "republikaonline": {
+    "sarkasme": 566,
+    "lainnya": 123,
+    "faktual": 8,
+    "mengkritik": 15,
+    "mendukung": 1
+  },
+  "20detik": {
+    "sarkasme": 111,
+    "lainnya": 14,
+    "mengkritik": 1
+  },
+  "suarasurabayamedia": {
+    "sarkasme": 577,
+    "lainnya": 136,
+    "faktual": 6,
+    "mengkritik": 6
+  },
+  "infipop": {
+    "sarkasme": 2531,
+    "lainnya": 523,
+    "mengkritik": 56,
+    "mendukung": 16,
+    "faktual": 13
+  },
+  "cnbcindonesia": {
+    "mengkritik": 9,
+    "sarkasme": 439,
+    "lainnya": 70,
+    "mendukung": 2,
+    "faktual": 2
+  },
+  "suaradotcom": {
+    "faktual": 1,
+    "sarkasme": 325,
+    "lainnya": 85,
+    "mengkritik": 6
+  },
+  "winnews_": {
+    "mendukung": 1,
+    "sarkasme": 20,
+    "lainnya": 2
+  },
+  "officialinews": {
+    "sarkasme": 1477,
+    "faktual": 25,
+    "lainnya": 331,
+    "mendukung": 7,
+    "mengkritik": 41
+  }
+}
