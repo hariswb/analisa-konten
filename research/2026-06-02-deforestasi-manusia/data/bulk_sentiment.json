@@ -1,0 +1,119 @@
+{
+  "deforestasi": {
+    "entity_word": "deforestasi",
+    "average_score": 0.0,
+    "article_count": 0,
+    "positive": 0,
+    "negative": 0,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "illegal logging": {
+    "entity_word": "illegal logging",
+    "average_score": 0.0,
+    "article_count": 0,
+    "positive": 0,
+    "negative": 0,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "kemenhut": {
+    "entity_word": "kemenhut",
+    "average_score": -5.33,
+    "article_count": 8,
+    "positive": 1,
+    "negative": 11,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "konsesi": {
+    "entity_word": "konsesi",
+    "average_score": 0.0,
+    "article_count": 0,
+    "positive": 0,
+    "negative": 0,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "hutan": {
+    "entity_word": "hutan",
+    "average_score": -2.0,
+    "article_count": 1,
+    "positive": 0,
+    "negative": 1,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "aceh": {
+    "entity_word": "aceh",
+    "average_score": -2.69,
+    "article_count": 8,
+    "positive": 4,
+    "negative": 9,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "sumatra": {
+    "entity_word": "sumatra",
+    "average_score": -9.0,
+    "article_count": 6,
+    "positive": 2,
+    "negative": 5,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "papua": {
+    "entity_word": "papua",
+    "average_score": -5.0,
+    "article_count": 2,
+    "positive": 0,
+    "negative": 2,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "jakarta": {
+    "entity_word": "jakarta",
+    "average_score": -18.33,
+    "article_count": 6,
+    "positive": 0,
+    "negative": 6,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "kuningan": {
+    "entity_word": "kuningan",
+    "average_score": 4.33,
+    "article_count": 3,
+    "positive": 2,
+    "negative": 1,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "megawati": {
+    "entity_word": "megawati",
+    "average_score": -1.5,
+    "article_count": 2,
+    "positive": 1,
+    "negative": 1,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "anies": {
+    "entity_word": "anies",
+    "average_score": -1.0,
+    "article_count": 2,
+    "positive": 1,
+    "negative": 1,
+    "neutral": 0,
+    "topic_scoped": true
+  },
+  "prabowo": {
+    "entity_word": "prabowo",
+    "average_score": -24.0,
+    "article_count": 1,
+    "positive": 0,
+    "negative": 1,
+    "neutral": 0,
+    "topic_scoped": true
+  }
+}

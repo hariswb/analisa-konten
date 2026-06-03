@@ -1,0 +1,199 @@
+{
+  "entity_word": "hutan",
+  "topic_scoped": true,
+  "mention_count": 1,
+  "co_occurring_entities": [
+    {
+      "word": "2025",
+      "entity_group": "DAT",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "2026",
+      "entity_group": "DAT",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "dpr",
+      "entity_group": "NOR",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "dpr ri",
+      "entity_group": "NOR",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "ketua dpr ri",
+      "entity_group": "NOR",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "persidangan iii",
+      "entity_group": "EVT",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "puan",
+      "entity_group": "PER",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "puan maharani",
+      "entity_group": "PER",
+      "co_occurrence_count": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "2026",
+      "target": "puan maharani",
+      "weight": 2
+    },
+    {
+      "source": "2026",
+      "target": "dpr",
+      "weight": 2
+    },
+    {
+      "source": "2026",
+      "target": "dpr ri",
+      "weight": 2
+    },
+    {
+      "source": "2026",
+      "target": "hutan",
+      "weight": 2
+    },
+    {
+      "source": "2026",
+      "target": "ketua dpr ri",
+      "weight": 2
+    },
+    {
+      "source": "2026",
+      "target": "persidangan iii",
+      "weight": 2
+    },
+    {
+      "source": "2026",
+      "target": "puan",
+      "weight": 2
+    },
+    {
+      "source": "2025",
+      "target": "2026",
+      "weight": 2
+    },
+    {
+      "source": "dpr",
+      "target": "dpr ri",
+      "weight": 1
+    },
+    {
+      "source": "dpr",
+      "target": "hutan",
+      "weight": 1
+    },
+    {
+      "source": "dpr",
+      "target": "ketua dpr ri",
+      "weight": 1
+    },
+    {
+      "source": "dpr",
+      "target": "persidangan iii",
+      "weight": 1
+    },
+    {
+      "source": "dpr",
+      "target": "puan",
+      "weight": 1
+    },
+    {
+      "source": "dpr",
+      "target": "puan maharani",
+      "weight": 1
+    },
+    {
+      "source": "dpr ri",
+      "target": "hutan",
+      "weight": 1
+    },
+    {
+      "source": "dpr ri",
+      "target": "ketua dpr ri",
+      "weight": 1
+    },
+    {
+      "source": "dpr ri",
+      "target": "persidangan iii",
+      "weight": 1
+    },
+    {
+      "source": "dpr ri",
+      "target": "puan",
+      "weight": 1
+    },
+    {
+      "source": "dpr ri",
+      "target": "puan maharani",
+      "weight": 1
+    },
+    {
+      "source": "hutan",
+      "target": "ketua dpr ri",
+      "weight": 1
+    },
+    {
+      "source": "hutan",
+      "target": "persidangan iii",
+      "weight": 1
+    },
+    {
+      "source": "hutan",
+      "target": "puan",
+      "weight": 1
+    },
+    {
+      "source": "hutan",
+      "target": "puan maharani",
+      "weight": 1
+    },
+    {
+      "source": "ketua dpr ri",
+      "target": "persidangan iii",
+      "weight": 1
+    },
+    {
+      "source": "ketua dpr ri",
+      "target": "puan",
+      "weight": 1
+    },
+    {
+      "source": "ketua dpr ri",
+      "target": "puan maharani",
+      "weight": 1
+    },
+    {
+      "source": "persidangan iii",
+      "target": "puan",
+      "weight": 1
+    },
+    {
+      "source": "persidangan iii",
+      "target": "puan maharani",
+      "weight": 1
+    },
+    {
+      "source": "puan",
+      "target": "puan maharani",
+      "weight": 1
+    },
+    {
+      "source": "2025",
+      "target": "dpr",
+      "weight": 1
+    }
+  ]
+}

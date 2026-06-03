@@ -1,0 +1,257 @@
+[
+  {
+    "word": "indonesia",
+    "entity_group": "GPE",
+    "mention_count": 11,
+    "top_sources": [
+      "republika",
+      "media_indonesia",
+      "kompas",
+      "tirto",
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "aceh",
+    "entity_group": "GPE",
+    "mention_count": 8,
+    "top_sources": [
+      "tirto",
+      "liputan6_news",
+      "cnbc_news",
+      "detik_berita",
+      "republika"
+    ]
+  },
+  {
+    "word": "jakarta",
+    "entity_group": "GPE",
+    "mention_count": 6,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "sumatra",
+    "entity_group": "GPE",
+    "mention_count": 6,
+    "top_sources": [
+      "tirto",
+      "cnbc_news",
+      "cnn_nasional",
+      "kumparan",
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "kuningan",
+    "entity_group": "GPE",
+    "mention_count": 3,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "sumatra barat",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "papua",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "cnn_nasional",
+      "republika"
+    ]
+  },
+  {
+    "word": "jepang",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "kompas",
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "uni eropa",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "cnbc_news",
+      "republika"
+    ]
+  },
+  {
+    "word": "ri",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "sumatra utara",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "eropa",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "kumparan"
+    ]
+  },
+  {
+    "word": "garuga",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "gorontalo",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "jateng",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "jawa",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "jawa barat",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "jawa tengah",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "kabupaten kuningan",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "kabupaten lampung selatan",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "kabupaten pemalang",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "kabupaten tapanuli selatan",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "kabupaten wajo",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "kalimantan selatan",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "kalsel",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "kecamatan batang toru",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "kecamatan katibung",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "kecamatan ukui",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "mataram",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "cnn_nasional"
+    ]
+  },
+  {
+    "word": "negeri serambi mekkah",
+    "entity_group": "GPE",
+    "mention_count": 1,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  }
+]

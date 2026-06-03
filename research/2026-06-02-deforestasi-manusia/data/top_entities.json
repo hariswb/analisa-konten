@@ -1,0 +1,274 @@
+[
+  {
+    "word": "republika. co. id",
+    "entity_group": "ORG",
+    "mention_count": 12,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "indonesia",
+    "entity_group": "GPE",
+    "mention_count": 11,
+    "top_sources": [
+      "republika",
+      "media_indonesia",
+      "kompas",
+      "tirto",
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "aceh",
+    "entity_group": "GPE",
+    "mention_count": 8,
+    "top_sources": [
+      "tirto",
+      "liputan6_news",
+      "cnbc_news",
+      "detik_berita",
+      "republika"
+    ]
+  },
+  {
+    "word": "kemenhut",
+    "entity_group": "NOR",
+    "mention_count": 8,
+    "top_sources": [
+      "kompas",
+      "tirto",
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "jakarta",
+    "entity_group": "GPE",
+    "mention_count": 6,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "sumatra",
+    "entity_group": "GPE",
+    "mention_count": 6,
+    "top_sources": [
+      "tirto",
+      "cnbc_news",
+      "cnn_nasional",
+      "kumparan",
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "pemerintah",
+    "entity_group": "NOR",
+    "mention_count": 6,
+    "top_sources": [
+      "media_indonesia",
+      "cnbc_news",
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "gakkum kehutanan",
+    "entity_group": "NOR",
+    "mention_count": 4,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "satu",
+    "entity_group": "CRD",
+    "mention_count": 4,
+    "top_sources": [
+      "media_indonesia",
+      "republika",
+      "tirto"
+    ]
+  },
+  {
+    "word": "kawasan",
+    "entity_group": "LOC",
+    "mention_count": 4,
+    "top_sources": [
+      "republika",
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "kuningan",
+    "entity_group": "GPE",
+    "mention_count": 3,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "gunung ciremai",
+    "entity_group": "LOC",
+    "mention_count": 3,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "polres kuningan",
+    "entity_group": "NOR",
+    "mention_count": 3,
+    "top_sources": [
+      "media_indonesia",
+      "republika",
+      "tirto"
+    ]
+  },
+  {
+    "word": "28",
+    "entity_group": "CRD",
+    "mention_count": 3,
+    "top_sources": [
+      "cnbc_news"
+    ]
+  },
+  {
+    "word": "polri",
+    "entity_group": "NOR",
+    "mention_count": 2,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "papua",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "cnn_nasional",
+      "republika"
+    ]
+  },
+  {
+    "word": "menhut",
+    "entity_group": "NOR",
+    "mention_count": 2,
+    "top_sources": [
+      "liputan6_news",
+      "tirto"
+    ]
+  },
+  {
+    "word": "megawati",
+    "entity_group": "PER",
+    "mention_count": 2,
+    "top_sources": [
+      "detik_berita",
+      "tempo_nasional"
+    ]
+  },
+  {
+    "word": "kementerian kehutanan",
+    "entity_group": "NOR",
+    "mention_count": 2,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "megawati soekarnoputri",
+    "entity_group": "PER",
+    "mention_count": 2,
+    "top_sources": [
+      "detik_berita",
+      "tempo_nasional"
+    ]
+  },
+  {
+    "word": "ri",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "gunung slamet",
+    "entity_group": "LOC",
+    "mention_count": 2,
+    "top_sources": [
+      "cnn_nasional",
+      "republika"
+    ]
+  },
+  {
+    "word": "2025",
+    "entity_group": "DAT",
+    "mention_count": 2,
+    "top_sources": [
+      "liputan6_news",
+      "tirto"
+    ]
+  },
+  {
+    "word": "empat",
+    "entity_group": "CRD",
+    "mention_count": 2,
+    "top_sources": [
+      "republika",
+      "tirto"
+    ]
+  },
+  {
+    "word": "jepang",
+    "entity_group": "GPE",
+    "mention_count": 2,
+    "top_sources": [
+      "kompas",
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "lima",
+    "entity_group": "CRD",
+    "mention_count": 2,
+    "top_sources": [
+      "media_indonesia",
+      "republika"
+    ]
+  },
+  {
+    "word": "cagar alam napabalano",
+    "entity_group": "LOC",
+    "mention_count": 2,
+    "top_sources": [
+      "liputan6_news",
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "anies",
+    "entity_group": "PER",
+    "mention_count": 2,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "dpr",
+    "entity_group": "NOR",
+    "mention_count": 2,
+    "top_sources": [
+      "liputan6_news",
+      "tirto"
+    ]
+  },
+  {
+    "word": "97 persen",
+    "entity_group": "PRC",
+    "mention_count": 2,
+    "top_sources": [
+      "kompas"
+    ]
+  }
+]

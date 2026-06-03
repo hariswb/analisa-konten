@@ -1,0 +1,164 @@
+[
+  {
+    "word": "megawati soekarnoputri",
+    "entity_group": "PER",
+    "mention_count": 2,
+    "top_sources": [
+      "detik_berita",
+      "tempo_nasional"
+    ]
+  },
+  {
+    "word": "megawati",
+    "entity_group": "PER",
+    "mention_count": 2,
+    "top_sources": [
+      "detik_berita",
+      "tempo_nasional"
+    ]
+  },
+  {
+    "word": "anies",
+    "entity_group": "PER",
+    "mention_count": 2,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "dedi mulyadi",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "dm",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "el nino",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "firdaus cahyadi",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "m",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "nusron wahid",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "prabowo",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "cnbc_news"
+    ]
+  },
+  {
+    "word": "prabowo subianto",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "cnbc_news"
+    ]
+  },
+  {
+    "word": "puan",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "puan maharani",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "r",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "raja juli",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "s",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "sto",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "kumparan"
+    ]
+  },
+  {
+    "word": "walhi",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "anies baswedan",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "d",
+    "entity_group": "PER",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  }
+]

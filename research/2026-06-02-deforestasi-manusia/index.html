@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deforestasi Manusia — EDA Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 32px 40px;
+  border-bottom: 1px solid #2a2a4e;
+}
+.header h1 { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.header .subtitle { color: #8899bb; font-size: 14px; }
+.stats-bar {
+  display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap;
+}
+.stat-card {
+  background: #1e1e36; border: 1px solid #2a2a4e; border-radius: 10px;
+  padding: 12px 20px; min-width: 120px;
+}
+.stat-card .label { font-size: 11px; text-transform: uppercase; color: #667799; letter-spacing: 0.5px; }
+.stat-card .value { font-size: 24px; font-weight: 700; color: #fff; margin-top: 2px; }
+.stat-card .value.neg { color: #ef5350; }
+.stat-card .value.pos { color: #66bb6a; }
+
+.container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-full { grid-column: 1 / -1; }
+.card {
+  background: #16162b; border: 1px solid #2a2a4e; border-radius: 12px;
+  padding: 20px; position: relative;
+}
+.card h2 { font-size: 16px; font-weight: 600; color: #c0ccee; margin-bottom: 16px; }
+.card h2 small { font-weight: 400; font-size: 12px; color: #667799; }
+.chart-wrap { position: relative; height: 280px; }
+.chart-wrap.tall { height: 360px; }
+
+/* Entity sentiment table */
+.entity-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.entity-table th {
+  text-align: left; padding: 8px 10px; border-bottom: 1px solid #2a2a4e;
+  color: #667799; font-weight: 500; font-size: 11px; text-transform: uppercase;
+}
+.entity-table td { padding: 8px 10px; border-bottom: 1px solid #1e1e36; }
+.entity-table tr:hover td { background: #1a1a30; }
+.sent-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.sent-neg { background: #4a1a1a; color: #ef5350; }
+.sent-pos { background: #1a3a1a; color: #66bb6a; }
+.sent-neu { background: #3a3a1a; color: #ffee58; }
+
+.article-list { max-height: 400px; overflow-y: auto; }
+.article-item {
+  padding: 10px 0; border-bottom: 1px solid #1e1e36;
+}
+.article-item .source { font-size: 11px; color: #667799; }
+.article-item .title { font-size: 13px; color: #c0ccee; margin: 2px 0; }
+.article-item .date { font-size: 11px; color: #556677; }
+.article-item a { color: #4fc3f7; text-decoration: none; }
+.article-item a:hover { text-decoration: underline; }
+
+.footer { text-align: center; padding: 32px; color: #445566; font-size: 12px; }
+.bad { color: #ef5350; }
+.good { color: #66bb6a; }
+
+/* Category accordion */
+.cat-group { margin-bottom: 6px; border: 1px solid #2a2a4e; border-radius: 8px; overflow: hidden; }
+.cat-header {
+  display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+  cursor: pointer; background: #1a1a30; user-select: none;
+  transition: background 0.15s;
+}
+.cat-header:hover { background: #22224a; }
+.cat-header .cat-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 11px; font-weight: 600; min-width: 14px; text-align: center;
+}
+.cat-header .cat-name { font-size: 13px; font-weight: 600; color: #c0ccee; }
+.cat-header .cat-count { font-size: 12px; color: #667799; margin-left: auto; }
+.cat-header .cat-arrow { color: #556677; font-size: 12px; transition: transform 0.2s; }
+.cat-header.open .cat-arrow { transform: rotate(90deg); }
+.cat-body { display: none; padding: 0; }
+.cat-body.open { display: block; }
+.cat-article {
+  padding: 8px 14px; border-top: 1px solid #1e1e36; font-size: 13px;
+}
+.cat-article:hover { background: #1a1a30; }
+.cat-article .cat-marker { font-size: 11px; margin-right: 6px; }
+.cat-article .cat-src { font-size: 11px; color: #667799; }
+.cat-article .cat-date { font-size: 11px; color: #556677; }
+.cat-article .cat-title { color: #c0ccee; margin-top: 2px; }
+.cat-article .cat-title a { color: #4fc3f7; text-decoration: none; }
+.cat-article .cat-title a:hover { text-decoration: underline; }
+.cat-match { color: #66bb6a; font-size: 11px; }
+.cat-mismatch { color: #ef5350; font-size: 11px; }
+
+/* Framing */
+.frame-list { list-style: none; }
+.frame-list li {
+  padding: 6px 0; border-bottom: 1px solid #1e1e36; font-size: 13px;
+}
+.frame-list .frame-count {
+  display: inline-block; background: #1e1e36; color: #8899bb;
+  padding: 0 6px; border-radius: 3px; font-size: 11px; margin-left: 6px;
+}
+
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🌲 Deforestasi Manusia — EDA Dashboard</h1>
+  <div class="subtitle">Human-caused deforestation in Indonesian news · Dec 2025 – May 2026</div>
+  <div class="stats-bar" id="statsBar"></div>
+</div>
+
+<div class="container">
+  <div class="grid">
+    <!-- Sentiment Donut -->
+    <div class="card">
+      <h2>Sentiment Overall</h2>
+      <div class="chart-wrap"><canvas id="sentimentDonut"></canvas></div>
+    </div>
+    <!-- Monthly Trend -->
+    <div class="card">
+      <h2>Monthly Volume</h2>
+      <div class="chart-wrap tall"><canvas id="monthlyTrend"></canvas></div>
+    </div>
+    <!-- Source Distribution -->
+    <div class="card grid-full">
+      <h2>Articles by Source</h2>
+      <div class="chart-wrap tall"><canvas id="sourceDist"></canvas></div>
+    </div>
+    <!-- Sentiment by Source -->
+    <div class="card grid-full">
+      <h2>Sentiment by Source</h2>
+      <div class="chart-wrap tall"><canvas id="sentimentBySource"></canvas></div>
+    </div>
+    <!-- Top Entities -->
+    <div class="card">
+      <h2>Top Named Entities</h2>
+      <div class="chart-wrap"><canvas id="topEntities"></canvas></div>
+    </div>
+    <!-- Entity Sentiment Table -->
+    <div class="card">
+      <h2>Entity Sentiment</h2>
+      <table class="entity-table" id="entitySentTable">
+        <thead><tr><th>Entity</th><th>Score</th><th>Pos</th><th>Neg</th><th>Articles</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- Framing -->
+    <div class="card grid-full">
+      <h2>Framing Analysis</h2>
+      <div id="framingContainer" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;"></div>
+    </div>
+    <!-- Recent Articles -->
+    <div class="card grid-full">
+      <h2>Recent Articles</h2>
+      <div class="article-list" id="articleList"></div>
+    </div>
+    <!-- Weekly Sentiment Trend -->
+    <div class="card grid-full">
+      <h2>Weekly Sentiment Trend</h2>
+      <div class="chart-wrap tall"><canvas id="weeklyTrend"></canvas></div>
+    </div>
+    <!-- Category Distribution -->
+    <div class="card">
+      <h2>Text Classification — Category Distribution</h2>
+      <div class="chart-wrap"><canvas id="catDist"></canvas></div>
+    </div>
+    <!-- Category Statistics -->
+    <div class="card">
+      <h2>Category Metrics</h2>
+      <div id="catStats" style="font-size:13px;line-height:1.8"></div>
+    </div>
+    <!-- Category by Source -->
+    <div class="card grid-full">
+      <h2>Category Composition by Source</h2>
+      <div class="chart-wrap tall"><canvas id="catBySource"></canvas></div>
+    </div>
+    <!-- Articles by Category -->
+    <div class="card grid-full">
+      <h2>Articles by Classification Category</h2>
+      <div id="catArticleBrowser"></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">Data: Semantik Research API · Keywords: deforestasi, illegal logging, pembalakan liar, alih fungsi hutan, EUDR, konsesi hutan, izin hutan, pembukaan lahan</div>
+
+<script>
+// ── Chart.js Defaults ─────────────────────────────────────
+Chart.defaults.color = '#8899bb';
+Chart.defaults.borderColor = '#2a2a4e';
+Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+
+// ── Load JSONs ─────────────────────────────────────────────
+async function loadJSON(path) {
+  const r = await fetch(path);
+  return r.json();
+}
+
+// ── Color helpers ──────────────────────────────────────────
+function sentColor(score, min=-12, max=6) {
+  const t = Math.max(0, Math.min(1, (score - min) / (max - min)));
+  const r = Math.round(239 * (1 - t) + 102 * t);
+  const g = Math.round(83 * (1 - t) + 187 * t);
+  const b = Math.round(80 * (1 - t) + 106 * t);
+  return `rgb(${r},${g},${b})`;
+}
+const ENT_COLORS = { GPE: '#4fc3f7', PER: '#81c784', ORG: '#ffb74d', NOR: '#ce93d8', LOC: '#a1887f', CRD: '#aaa', PRD: '#90a4ae' };
+
+(async () => {
+  const sc = await loadJSON('data/source_comparison.json');
+  const sd = await loadJSON('data/sentiment_distribution.json');
+  const st = await loadJSON('data/sentiment_trend.json');
+  const te = await loadJSON('data/top_entities.json');
+  const bs = await loadJSON('data/bulk_sentiment.json');
+  const arts = (await loadJSON('data/articles_list.json')).items;
+  const fc = await loadJSON('data/framing_compare.json');
+
+  const totalArt = sc.reduce((s, x) => s + x.article_count, 0);
+  const totalSrc = sc.length;
+  const negPct = (sd.negative / sd.total * 100).toFixed(0);
+  const posPct = (sd.positive / sd.total * 100).toFixed(0);
+
+  // Stats bar
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat-card"><div class="label">Articles</div><div class="value">${totalArt}</div></div>
+    <div class="stat-card"><div class="label">Sources</div><div class="value">${totalSrc}</div></div>
+    <div class="stat-card"><div class="label">Negative</div><div class="value neg">${sd.negative} (${negPct}%)</div></div>
+    <div class="stat-card"><div class="label">Positive</div><div class="value pos">${sd.positive} (${posPct}%)</div></div>
+    <div class="stat-card"><div class="label">Neutral</div><div class="value">${sd.neutral}</div></div>
+    <div class="stat-card"><div class="label">Date Range</div><div class="value" style="font-size:14px">Dec 2025 – May 2026</div></div>
+  `;
+
+  // ── Sentiment Donut ──────────────────────────────────────
+  new Chart(document.getElementById('sentimentDonut'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Positive', 'Neutral', 'Negative'],
+      datasets: [{
+        data: [sd.positive, sd.neutral, sd.negative],
+        backgroundColor: ['#66bb6a', '#ffee58', '#ef5350'],
+        borderColor: ['#0f0f1a'],
+        borderWidth: 3,
+      }]
+    },
+    options: {
+      cutout: '60%',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true } },
+        tooltip: { callbacks: { label: ctx => `${ctx.label}: ${ctx.parsed} (${(ctx.parsed/sd.total*100).toFixed(0)}%)` } }
+      }
+    }
+  });
+
+  // ── Monthly Trend ────────────────────────────────────────
+  const monthly = {};
+  arts.forEach(a => { const m = a.published_at.slice(0,7); monthly[m] = (monthly[m]||0)+1; });
+  const mKeys = Object.keys(monthly).sort();
+  const mData = mKeys.map(k => monthly[k]);
+  new Chart(document.getElementById('monthlyTrend'), {
+    type: 'line',
+    data: {
+      labels: mKeys.map(k => k.replace('2026-','').replace('2025-','')),
+      datasets: [{
+        label: 'Articles',
+        data: mData,
+        borderColor: '#4fc3f7',
+        backgroundColor: 'rgba(79,195,247,0.12)',
+        fill: true,
+        tension: 0.3,
+        pointBackgroundColor: '#81d4fa',
+        pointBorderColor: '#0288d1',
+        pointRadius: 5,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, ticks: { stepSize: 10 } } },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `${ctx.parsed.y} articles` } }
+      }
+    }
+  });
+
+  // ── Source Distribution ──────────────────────────────────
+  const srcSorted = sc.slice().sort((a,b) => a.article_count - b.article_count);
+  new Chart(document.getElementById('sourceDist'), {
+    type: 'bar',
+    data: {
+      labels: srcSorted.map(s => s.source.replace(/_/g,' ').replace(/\b\w/g, c=>c.toUpperCase())),
+      datasets: [{
+        label: 'Articles',
+        data: srcSorted.map(s => s.article_count),
+        backgroundColor: srcSorted.map(s => sentColor(s.avg_sentiment_score)),
+        borderColor: '#2a2a4e', borderWidth: 1,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            afterLabel: ctx => {
+              const s = srcSorted[ctx.dataIndex];
+              return `Avg Sentiment: ${s.avg_sentiment_score.toFixed(1)}\nPos: ${s.sentiment_distribution?.positive||0}  Neg: ${s.sentiment_distribution?.negative||0}`;
+            }
+          }
+        }
+      },
+      scales: { x: { beginAtZero: true, ticks: { stepSize: 5 } } }
+    }
+  });
+
+  // ── Sentiment by Source ──────────────────────────────────
+  const srcByVol = sc.slice().sort((a,b) => b.article_count - a.article_count);
+  new Chart(document.getElementById('sentimentBySource'), {
+    type: 'bar',
+    data: {
+      labels: srcByVol.map(s => s.source.replace(/_/g,' ').replace(/\b\w/g, c=>c.toUpperCase())),
+      datasets: [
+        { label: 'Positive', data: srcByVol.map(s => s.sentiment_distribution?.positive || 0), backgroundColor: '#66bb6a', borderRadius: 2 },
+        { label: 'Negative', data: srcByVol.map(s => s.sentiment_distribution?.negative || 0), backgroundColor: '#ef5350', borderRadius: 2 },
+        { label: 'Neutral', data: srcByVol.map(s => s.sentiment_distribution?.neutral || 0), backgroundColor: '#ffee58', borderRadius: 2 },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { x: { stacked: false }, y: { beginAtZero: true, stacked: false } },
+      plugins: { legend: { position: 'top', labels: { usePointStyle: true } } }
+    }
+  });
+
+  // ── Top Entities ─────────────────────────────────────────
+  const topEnts = te.slice(0, 15);
+  new Chart(document.getElementById('topEntities'), {
+    type: 'bar',
+    data: {
+      labels: topEnts.map(e => e.word),
+      datasets: [{
+        label: 'Mentions',
+        data: topEnts.map(e => e.mention_count),
+        backgroundColor: topEnts.map(e => ENT_COLORS[e.entity_group] || '#aaa'),
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { afterLabel: ctx => `Group: ${topEnts[ctx.dataIndex].entity_group}` } }
+      },
+      scales: { x: { beginAtZero: true, ticks: { stepSize: 2 } } }
+    }
+  });
+
+  // ── Entity Sentiment Table ───────────────────────────────
+  const tableBody = document.querySelector('#entitySentTable tbody');
+  const ents = Object.entries(bs).filter(([_,d]) => d.article_count > 0);
+  ents.sort((a,b) => b[1].article_count - a[1].article_count);
+  ents.forEach(([name, d]) => {
+    const cls = d.average_score > 2 ? 'sent-pos' : d.average_score < -2 ? 'sent-neg' : 'sent-neu';
+    tableBody.innerHTML += `<tr>
+      <td>${name}</td>
+      <td><span class="sent-badge ${cls}">${d.average_score.toFixed(1)}</span></td>
+      <td>${d.positive}</td>
+      <td>${d.negative}</td>
+      <td>${d.article_count}</td>
+    </tr>`;
+  });
+
+  // ── Framing Analysis ─────────────────────────────────────
+  const fcContainer = document.getElementById('framingContainer');
+  Object.entries(fc).forEach(([entity, frames]) => {
+    if (!Array.isArray(frames) || frames.length === 0) return;
+    const div = document.createElement('div');
+    div.innerHTML = `<h3 style="font-size:14px;color:#c0ccee;margin-bottom:6px">${entity}</h3>
+      <ul class="frame-list">
+        ${frames.slice(0,6).map(f => `<li>${f.framing_phrase} <span class="frame-count">${f.article_count}</span></li>`).join('')}
+      </ul>`;
+    fcContainer.appendChild(div);
+  });
+
+  // ── Recent Articles ──────────────────────────────────────
+  const artList = document.getElementById('articleList');
+  arts.sort((a,b) => b.published_at.localeCompare(a.published_at));
+  arts.slice(0, 20).forEach(a => {
+    artList.innerHTML += `<div class="article-item">
+      <span class="source">${a.source.replace(/_/g,' ')}</span>
+      <span class="date"> · ${a.published_at.slice(0,10)}</span>
+      <div class="title"><a href="${a.url}" target="_blank">${a.title}</a></div>
+    </div>`;
+  });
+
+  // ── Weekly Sentiment Trend ───────────────────────────────
+  new Chart(document.getElementById('weeklyTrend'), {
+    type: 'line',
+    data: {
+      labels: st.map(w => w.date),
+      datasets: [
+        { label: 'Positive', data: st.map(w => w.positive), borderColor: '#66bb6a', backgroundColor: 'rgba(102,187,106,0.1)', fill: true, tension: 0.3, pointRadius: 2 },
+        { label: 'Negative', data: st.map(w => w.negative), borderColor: '#ef5350', backgroundColor: 'rgba(239,83,80,0.1)', fill: true, tension: 0.3, pointRadius: 2 },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top', labels: { usePointStyle: true } } },
+      scales: {
+        x: { ticks: { maxTicksLimit: 12, maxRotation: 45 } },
+        y: { beginAtZero: true }
+      }
+    }
+  });
+
+  // ── Load Classification Data ────────────────────────────
+  const CLASS_COLORS = {
+    illegal_logging: '#ef5350',
+    ecological_impact: '#66bb6a',
+    policy_politics: '#ffb74d',
+    commodity_economy: '#4fc3f7',
+    health_disease: '#ce93d8',
+    other: '#8899bb',
+  };
+  const CLASS_LABELS = {
+    illegal_logging: 'Illegal Logging',
+    ecological_impact: 'Ecological Impact',
+    policy_politics: 'Policy & Politics',
+    commodity_economy: 'Commodity & Economy',
+    health_disease: 'Health & Disease',
+    other: 'Other',
+  };
+
+  let classified;
+  try { classified = await loadJSON('data/classified_articles.json'); } catch(e) { classified = []; }
+
+  if (classified.length > 0) {
+    // Aggregate categories
+    const catCounts = {};
+    const catBySource = {};
+    classified.forEach(a => {
+      const c = a.classifier_label;
+      catCounts[c] = (catCounts[c] || 0) + 1;
+      if (!catBySource[c]) catBySource[c] = {};
+      const src = a.source.replace(/_/g,' ').replace(/\b\w/g, x=>x.toUpperCase());
+      catBySource[c][src] = (catBySource[c][src] || 0) + 1;
+    });
+
+    const catOrder = ['illegal_logging','ecological_impact','policy_politics','commodity_economy','health_disease','other'];
+    const catLabels = catOrder.map(c => CLASS_LABELS[c] || c);
+    const catData = catOrder.map(c => catCounts[c] || 0);
+
+    // ── Category Distribution Donut ─────────────────────────
+    new Chart(document.getElementById('catDist'), {
+      type: 'doughnut',
+      data: {
+        labels: catLabels,
+        datasets: [{
+          data: catData,
+          backgroundColor: catOrder.map(c => CLASS_COLORS[c] || '#8899bb'),
+          borderColor: ['#0f0f1a'],
+          borderWidth: 3,
+        }]
+      },
+      options: {
+        cutout: '55%',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { padding: 12, usePointStyle: true, font: { size: 11 } } },
+          tooltip: { callbacks: { label: ctx => `${ctx.label}: ${ctx.parsed} (${(ctx.parsed/classified.length*100).toFixed(0)}%)` } }
+        }
+      }
+    });
+
+    // ── Category Metrics ───────────────────────────────────
+    const perfNote = '5-fold CV: 62% ± 14% | Test: 64%';
+    let html = `<div style="margin-bottom:12px;padding:8px 12px;background:#1a1a30;border-radius:6px;font-size:12px;color:#667799">${perfNote}</div>`;
+    catOrder.forEach(c => {
+      const n = catCounts[c] || 0;
+      const pct = (n / classified.length * 100).toFixed(0);
+      html += `<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${CLASS_COLORS[c]}"></span>
+        <span style="font-size:13px;color:#c0ccee">${CLASS_LABELS[c]}</span>
+        <span style="margin-left:auto;font-size:13px;color:#fff">${n}</span>
+        <span style="font-size:11px;color:#667799">${pct}%</span>
+      </div>`;
+    });
+    document.getElementById('catStats').innerHTML = html;
+
+    // ── Category by Source (stacked) ───────────────────────
+    const allSources = [...new Set(classified.map(a => a.source))];
+    const srcLabel = s => s.replace(/_/g,' ').replace(/\b\w/g, x=>x.toUpperCase());
+    const srcSorted = allSources.sort((a,b) => {
+      const totalA = classified.filter(x => x.source === a).length;
+      const totalB = classified.filter(x => x.source === b).length;
+      return totalB - totalA;
+    });
+    new Chart(document.getElementById('catBySource'), {
+      type: 'bar',
+      data: {
+        labels: srcSorted.map(srcLabel),
+        datasets: catOrder.filter(c => (catCounts[c]||0) > 0).map(c => ({
+          label: CLASS_LABELS[c],
+          data: srcSorted.map(s => catBySource[c]?.[srcLabel(s)] || 0),
+          backgroundColor: CLASS_COLORS[c],
+          borderRadius: 2,
+        }))
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } },
+        plugins: { legend: { position: 'top', labels: { usePointStyle: true, font: { size: 10 } } } }
+      }
+    });
+
+    // ── Articles by Category (accordion browser) ───────────
+    const browser = document.getElementById('catArticleBrowser');
+    let accHtml = '';
+    catOrder.forEach(c => {
+      const arts = classified.filter(a => a.classifier_label === c)
+        .sort((a,b) => b.published_at.localeCompare(a.published_at));
+      if (arts.length === 0) return;
+      accHtml += `<div class="cat-group">
+        <div class="cat-header" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+          <span class="cat-badge" style="background:${CLASS_COLORS[c]}22;color:${CLASS_COLORS[c]}">${arts.length}</span>
+          <span class="cat-name">${CLASS_LABELS[c]}</span>
+          <span class="cat-count">${(arts.length/classified.length*100).toFixed(0)}% of articles</span>
+          <span class="cat-arrow">▶</span>
+        </div>
+        <div class="cat-body">`;
+      arts.forEach(a => {
+        const match = a.keyword_label === a.classifier_label;
+        const marker = match ? '✓' : '✗';
+        const markerClass = match ? 'cat-match' : 'cat-mismatch';
+        const src = srcLabel(a.source);
+        accHtml += `<div class="cat-article">
+          <span class="${markerClass} cat-marker">${marker}</span>
+          <span class="cat-src">${src}</span>
+          <span class="cat-date"> · ${a.published_at.slice(0,10)}</span>
+          ${!match ? `<span class="cat-mismatch"> (keyword: ${CLASS_LABELS[a.keyword_label]||a.keyword_label})</span>` : ''}
+          <div class="cat-title"><a href="${a.url}" target="_blank">${a.title}</a></div>
+        </div>`;
+      });
+      accHtml += `</div></div>`;
+    });
+    browser.innerHTML = accHtml;
+  }
+
+})();
+</script>
+</body>
+</html>

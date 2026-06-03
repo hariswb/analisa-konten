@@ -1,0 +1,140 @@
+[
+  {
+    "date": "2025-12-01",
+    "positive": 0,
+    "negative": 3,
+    "neutral": 0
+  },
+  {
+    "date": "2025-12-08",
+    "positive": 1,
+    "negative": 3,
+    "neutral": 0
+  },
+  {
+    "date": "2025-12-29",
+    "positive": 1,
+    "negative": 1,
+    "neutral": 0
+  },
+  {
+    "date": "2026-01-05",
+    "positive": 1,
+    "negative": 2,
+    "neutral": 0
+  },
+  {
+    "date": "2026-01-12",
+    "positive": 3,
+    "negative": 5,
+    "neutral": 0
+  },
+  {
+    "date": "2026-01-19",
+    "positive": 3,
+    "negative": 5,
+    "neutral": 0
+  },
+  {
+    "date": "2026-01-26",
+    "positive": 2,
+    "negative": 10,
+    "neutral": 0
+  },
+  {
+    "date": "2026-02-02",
+    "positive": 0,
+    "negative": 2,
+    "neutral": 0
+  },
+  {
+    "date": "2026-02-09",
+    "positive": 0,
+    "negative": 2,
+    "neutral": 1
+  },
+  {
+    "date": "2026-02-16",
+    "positive": 0,
+    "negative": 2,
+    "neutral": 0
+  },
+  {
+    "date": "2026-02-23",
+    "positive": 2,
+    "negative": 3,
+    "neutral": 0
+  },
+  {
+    "date": "2026-03-02",
+    "positive": 1,
+    "negative": 1,
+    "neutral": 1
+  },
+  {
+    "date": "2026-03-09",
+    "positive": 0,
+    "negative": 2,
+    "neutral": 0
+  },
+  {
+    "date": "2026-03-16",
+    "positive": 1,
+    "negative": 2,
+    "neutral": 0
+  },
+  {
+    "date": "2026-03-23",
+    "positive": 1,
+    "negative": 0,
+    "neutral": 0
+  },
+  {
+    "date": "2026-03-30",
+    "positive": 0,
+    "negative": 1,
+    "neutral": 0
+  },
+  {
+    "date": "2026-04-06",
+    "positive": 0,
+    "negative": 2,
+    "neutral": 0
+  },
+  {
+    "date": "2026-04-20",
+    "positive": 0,
+    "negative": 5,
+    "neutral": 0
+  },
+  {
+    "date": "2026-04-27",
+    "positive": 0,
+    "negative": 3,
+    "neutral": 0
+  },
+  {
+    "date": "2026-05-04",
+    "positive": 1,
+    "negative": 3,
+    "neutral": 0
+  },
+  {
+    "date": "2026-05-11",
+    "positive": 0,
+    "negative": 2,
+    "neutral": 0
+  },
+  {
+    "date": "2026-05-18",
+    "positive": 1,
+    "negative": 1,
+    "neutral": 0
+  },
+  {
+    "date": "2026-05-25",
+    "positive": 2,
+    "negative": 1,
+    "neutral": 0
+  }
+]

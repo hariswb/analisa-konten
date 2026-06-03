@@ -1,0 +1,187 @@
+[
+  {
+    "word": "republika. co. id",
+    "entity_group": "ORG",
+    "mention_count": 12,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "danantara",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "esdm",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "eudr",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "kumparan",
+      "republika"
+    ]
+  },
+  {
+    "word": "european union deforestation regulation",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "forest watch indonesia",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "inru",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "ipb university",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "jaringan advokasi tambang ( jatam",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "kesatuan pengelolaan hutan",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "pakar ugm",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "perhutani dan mind id",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "cnbc_news"
+    ]
+  },
+  {
+    "word": "perkuat pencegahan",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "program officer natural resources and climate justice tifa foundation",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "pt bja",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "media_indonesia"
+    ]
+  },
+  {
+    "word": "sucofindo",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "tim investigasi pembalakan liar",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "tim operasi gabungan merah putih",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "republika"
+    ]
+  },
+  {
+    "word": "toba pulp",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "toba pulp lestari",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "kompas"
+    ]
+  },
+  {
+    "word": "ugm",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "liputan6_news"
+    ]
+  },
+  {
+    "word": "balai tngc",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "tirto"
+    ]
+  },
+  {
+    "word": "universitas",
+    "entity_group": "ORG",
+    "mention_count": 1,
+    "top_sources": [
+      "cnn_nasional"
+    ]
+  }
+]

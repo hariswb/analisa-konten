@@ -1,0 +1,382 @@
+[
+  {
+    "source": "media_indonesia",
+    "article_count": 24,
+    "avg_sentiment_score": -5.83,
+    "sentiment_distribution": {
+      "positive": 8,
+      "negative": 14,
+      "neutral": 2,
+      "total": 24
+    },
+    "top_entities": [
+      {
+        "word": "gakkum kehutanan",
+        "entity_group": "NOR",
+        "count": 4
+      },
+      {
+        "word": "pemerintah",
+        "entity_group": "NOR",
+        "count": 4
+      },
+      {
+        "word": "dua",
+        "entity_group": "CRD",
+        "count": 2
+      },
+      {
+        "word": "indonesia",
+        "entity_group": "GPE",
+        "count": 2
+      },
+      {
+        "word": "satu",
+        "entity_group": "CRD",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "source": "tirto",
+    "article_count": 13,
+    "avg_sentiment_score": -6.85,
+    "sentiment_distribution": {
+      "positive": 3,
+      "negative": 10,
+      "neutral": 0,
+      "total": 13
+    },
+    "top_entities": [
+      {
+        "word": "kemenhut",
+        "entity_group": "NOR",
+        "count": 3
+      },
+      {
+        "word": "aceh",
+        "entity_group": "GPE",
+        "count": 3
+      },
+      {
+        "word": "sumatra barat",
+        "entity_group": "GPE",
+        "count": 2
+      },
+      {
+        "word": "polri",
+        "entity_group": "NOR",
+        "count": 2
+      },
+      {
+        "word": "sumatra utara",
+        "entity_group": "GPE",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "source": "republika",
+    "article_count": 12,
+    "avg_sentiment_score": -11.5,
+    "sentiment_distribution": {
+      "positive": 2,
+      "negative": 10,
+      "neutral": 0,
+      "total": 12
+    },
+    "top_entities": [
+      {
+        "word": "republika. co. id",
+        "entity_group": "ORG",
+        "count": 12
+      },
+      {
+        "word": "jakarta",
+        "entity_group": "GPE",
+        "count": 6
+      },
+      {
+        "word": "kawasan",
+        "entity_group": "LOC",
+        "count": 3
+      },
+      {
+        "word": "indonesia",
+        "entity_group": "GPE",
+        "count": 3
+      },
+      {
+        "word": "gunung ciremai",
+        "entity_group": "LOC",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "source": "liputan6_news",
+    "article_count": 9,
+    "avg_sentiment_score": -5.0,
+    "sentiment_distribution": {
+      "positive": 1,
+      "negative": 8,
+      "neutral": 0,
+      "total": 9
+    },
+    "top_entities": [
+      {
+        "word": "kementerian kehutanan",
+        "entity_group": "NOR",
+        "count": 2
+      },
+      {
+        "word": "kemenhut",
+        "entity_group": "NOR",
+        "count": 2
+      },
+      {
+        "word": "aceh",
+        "entity_group": "GPE",
+        "count": 2
+      },
+      {
+        "word": "11 tahun",
+        "entity_group": "QTY",
+        "count": 1
+      },
+      {
+        "word": "128 kk",
+        "entity_group": "QTY",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "kompas",
+    "article_count": 7,
+    "avg_sentiment_score": -7.29,
+    "sentiment_distribution": {
+      "positive": 2,
+      "negative": 5,
+      "neutral": 0,
+      "total": 7
+    },
+    "top_entities": [
+      {
+        "word": "kemenhut",
+        "entity_group": "NOR",
+        "count": 3
+      },
+      {
+        "word": "anies",
+        "entity_group": "PER",
+        "count": 2
+      },
+      {
+        "word": "97 persen",
+        "entity_group": "PRC",
+        "count": 2
+      },
+      {
+        "word": "indonesia",
+        "entity_group": "GPE",
+        "count": 2
+      },
+      {
+        "word": "ri",
+        "entity_group": "GPE",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "source": "kumparan",
+    "article_count": 5,
+    "avg_sentiment_score": -10.6,
+    "sentiment_distribution": {
+      "positive": 0,
+      "negative": 5,
+      "neutral": 0,
+      "total": 5
+    },
+    "top_entities": [
+      {
+        "word": "2026",
+        "entity_group": "EVT",
+        "count": 1
+      },
+      {
+        "word": "anggrek indonesia",
+        "entity_group": "PRD",
+        "count": 1
+      },
+      {
+        "word": "eropa",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "eudr",
+        "entity_group": "ORG",
+        "count": 1
+      },
+      {
+        "word": "indonesia",
+        "entity_group": "GPE",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "cnbc_news",
+    "article_count": 5,
+    "avg_sentiment_score": -12.0,
+    "sentiment_distribution": {
+      "positive": 1,
+      "negative": 4,
+      "neutral": 0,
+      "total": 5
+    },
+    "top_entities": [
+      {
+        "word": "28",
+        "entity_group": "CRD",
+        "count": 3
+      },
+      {
+        "word": "bumn",
+        "entity_group": "NOR",
+        "count": 1
+      },
+      {
+        "word": "indonesia",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "pemerintah",
+        "entity_group": "NOR",
+        "count": 1
+      },
+      {
+        "word": "aceh",
+        "entity_group": "GPE",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "cnn_nasional",
+    "article_count": 4,
+    "avg_sentiment_score": -0.75,
+    "sentiment_distribution": {
+      "positive": 1,
+      "negative": 3,
+      "neutral": 0,
+      "total": 4
+    },
+    "top_entities": [
+      {
+        "word": "17 hektar",
+        "entity_group": "QTY",
+        "count": 1
+      },
+      {
+        "word": "85, 3 persen",
+        "entity_group": "PRC",
+        "count": 1
+      },
+      {
+        "word": "aceh barat",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "banjir banda",
+        "entity_group": "LOC",
+        "count": 1
+      },
+      {
+        "word": "12 hektar",
+        "entity_group": "QTY",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "detik_berita",
+    "article_count": 2,
+    "avg_sentiment_score": -5.5,
+    "sentiment_distribution": {
+      "positive": 0,
+      "negative": 2,
+      "neutral": 0,
+      "total": 2
+    },
+    "top_entities": [
+      {
+        "word": "aceh",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "dittipidter bareskrim polri",
+        "entity_group": "NOR",
+        "count": 1
+      },
+      {
+        "word": "megawati",
+        "entity_group": "PER",
+        "count": 1
+      },
+      {
+        "word": "megawati soekarnoputri",
+        "entity_group": "PER",
+        "count": 1
+      },
+      {
+        "word": "sumatera",
+        "entity_group": "GPE",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "source": "tempo_nasional",
+    "article_count": 2,
+    "avg_sentiment_score": 4.5,
+    "sentiment_distribution": {
+      "positive": 2,
+      "negative": 0,
+      "neutral": 0,
+      "total": 2
+    },
+    "top_entities": [
+      {
+        "word": "ketua umum pdi perjuangan",
+        "entity_group": "NOR",
+        "count": 1
+      },
+      {
+        "word": "megawati",
+        "entity_group": "PER",
+        "count": 1
+      },
+      {
+        "word": "megawati soekarnoputri",
+        "entity_group": "PER",
+        "count": 1
+      },
+      {
+        "word": "sumatra",
+        "entity_group": "GPE",
+        "count": 1
+      },
+      {
+        "word": "virus nipah",
+        "entity_group": "PRD",
+        "count": 1
+      }
+    ]
+  }
+]

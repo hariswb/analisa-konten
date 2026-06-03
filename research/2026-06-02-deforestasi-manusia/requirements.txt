@@ -1,0 +1,4 @@
+# Runtime dependencies (for chart generation only)
+# Bronze/silver/gold scripts use pure Python stdlib
+matplotlib>=3.8
+numpy>=1.24

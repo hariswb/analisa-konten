@@ -1,0 +1,234 @@
+{
+  "entity_word": "kemenhut",
+  "topic_scoped": true,
+  "mention_count": 8,
+  "co_occurring_entities": [
+    {
+      "word": "indonesia",
+      "entity_group": "GPE",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "kementerian kehutanan",
+      "entity_group": "NOR",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "menhut",
+      "entity_group": "NOR",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "97 persen",
+      "entity_group": "PRC",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "anies",
+      "entity_group": "PER",
+      "co_occurrence_count": 2
+    },
+    {
+      "word": "agoli",
+      "entity_group": "GPE",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "dpr",
+      "entity_group": "NOR",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "2",
+      "entity_group": "CRD",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "cagar alam napabalano",
+      "entity_group": "LOC",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "anies baswedan",
+      "entity_group": "PER",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "30 hari",
+      "entity_group": "QTY",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "garuga",
+      "entity_group": "GPE",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "anggota",
+      "entity_group": "NOR",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "jepang",
+      "entity_group": "GPE",
+      "co_occurrence_count": 1
+    },
+    {
+      "word": "2025",
+      "entity_group": "DAT",
+      "co_occurrence_count": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "97 persen",
+      "target": "kemenhut",
+      "weight": 5
+    },
+    {
+      "source": "cagar alam napabalano",
+      "target": "kemenhut",
+      "weight": 4
+    },
+    {
+      "source": "indonesia",
+      "target": "kemenhut",
+      "weight": 3
+    },
+    {
+      "source": "kemenhut",
+      "target": "kementerian kehutanan",
+      "weight": 3
+    },
+    {
+      "source": "anies",
+      "target": "kemenhut",
+      "weight": 3
+    },
+    {
+      "source": "97 persen",
+      "target": "anies",
+      "weight": 3
+    },
+    {
+      "source": "kemenhut",
+      "target": "satgas pkh",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "pbph",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "wood",
+      "weight": 2
+    },
+    {
+      "source": "jepang",
+      "target": "kemenhut",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "kepolisian",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "menhut",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "polisi hutan",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "cagar alam napabalano",
+      "target": "kepolisian",
+      "weight": 2
+    },
+    {
+      "source": "juli",
+      "target": "polisi hutan",
+      "weight": 2
+    },
+    {
+      "source": "anies baswedan",
+      "target": "satgas pkh",
+      "weight": 2
+    },
+    {
+      "source": "anies",
+      "target": "satgas pkh",
+      "weight": 2
+    },
+    {
+      "source": "11 tahun",
+      "target": "kemenhut",
+      "weight": 2
+    },
+    {
+      "source": "cagar alam napabalano",
+      "target": "r",
+      "weight": 2
+    },
+    {
+      "source": "indonesia",
+      "target": "polisi hutan",
+      "weight": 2
+    },
+    {
+      "source": "2025",
+      "target": "kemenhut",
+      "weight": 2
+    },
+    {
+      "source": "11 tahun",
+      "target": "cagar alam napabalano",
+      "weight": 2
+    },
+    {
+      "source": "cagar alam napabalano",
+      "target": "kementerian kehutanan",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "lestari",
+      "weight": 2
+    },
+    {
+      "source": "97 persen",
+      "target": "ri",
+      "weight": 2
+    },
+    {
+      "source": "97 persen",
+      "target": "satgas pkh",
+      "weight": 2
+    },
+    {
+      "source": "166 ribu ha",
+      "target": "kemenhut",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "r",
+      "weight": 2
+    },
+    {
+      "source": "kemenhut",
+      "target": "wood pellet",
+      "weight": 2
+    }
+  ]
+}
